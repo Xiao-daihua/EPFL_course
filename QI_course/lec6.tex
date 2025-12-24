@@ -1,0 +1,153 @@
+\subsection{Choi Representation继续}
+
+
+我们之前研究知道通过Vectorization我们可以将一组Kraus Operators映射为一个Choi State。下面我们希望反过来通过Choi State来得到Channel的Kraus Operators。
+
+\bigskip
+\hlr{例子：一个特殊channel的choi state}
+
+首先我们计算一个特别的channel的Choi State。我们考虑下面的channel：
+\begin{align}
+  \mathcal{E}(\rho)=\frac{1}{3}\left(\mathrm{Tr}(\rho)I+\rho^T\right).
+\end{align}
+我们计算这个channel的Choi State，也就是对于$ \ket{Vec(I)} $进行$ \mathcal{E}(\rho) $的作用我们计算的时候会把前一个和后一个qubit进行区分开来计算：
+\begin{align}
+  J(\mathcal{E})=\sum_{i,j}\mathcal{E}(|i\rangle\langle j|)\otimes|i\rangle\langle j|
+\end{align}
+于是我们给出结果是：
+\begin{align}
+  J(\mathcal{E}) = =\frac{1}{3}\left(\sum_iI\otimes|i\rangle\langle i|+\sum_{i,j}\lvert j\rangle\langle i|\otimes|i\rangle\langle j|\right)\\
+=\frac{1}{3}\left(\sum_iI\otimes|i\rangle\langle i|+\sum_{i,j}\lvert j\rangle\langle i|\otimes|i\rangle\langle j|\right)
+\end{align}
+我们会发现这个Choi State的第二个部分是一个SWAP Operator。我们下面定义：
+\begin{itemize}
+  \item SWAP Operator:
+    \begin{align}
+      S=\sum_{i,j}|i\rangle\langle j|\otimes|j\rangle\langle i|
+    \end{align}
+    \item SWAP Operator的本征态，就是所有的Bell State并且除了最后一个本征值都是1，我们可以decompose成为下面的形式：
+      \begin{align}
+        SWAP = | \phi^+ \rangle \langle \phi^+ | + | \phi^- \rangle \langle \phi^- | + | \psi^+ \rangle \langle \psi^+ | - | \psi^- \rangle \langle \psi^- |
+      \end{align}
+    \item SWAP Operator相当于对于一个2qubit系统进行「转置」也就是：
+\begin{align}
+  SWAP|ij\rangle=|ji\rangle
+\end{align}
+\end{itemize}
+根据这个信息我们发现Choi State可以写作：
+\begin{align}
+  J(\mathcal{E})=&\frac{1}{3}\left(I\otimes I + SWAP\right)\\ 
+   = &\frac{2}{3}(|\phi^+\rangle\langle\phi^+|+ |\phi^-\rangle\langle\phi^-| + |\psi^+\rangle\langle\psi^+|)
+\end{align}
+于是很显然我们发现这个Choi State可以写作三个vectorization的矩阵的形式：
+\begin{align}
+  \begin{aligned}A_0&=\frac{|0\rangle\langle0|+|1\rangle\langle1|}{\sqrt{3}}=\frac{1}{\sqrt{3}}I,\\
+    A_1&=\frac{|0\rangle\langle0|-|1\rangle\langle1|}{\sqrt{3}}=\frac{1}{\sqrt{3}}Z,\\
+  A_2&=\frac{|0\rangle\langle1|+|1\rangle\langle0|}{\sqrt{3}}=\frac{1}{\sqrt{3}}X.\end{aligned}
+\end{align}
+并且我们可以验证这些Kraus Operators满足完备关系：
+\begin{align}
+  \sum_iA_i^\dagger A_i=\frac{1}{3}{\left(I^2+Z^2+X^2\right)}=\frac{1}{3}(3I)=I.
+\end{align}
+所以我们成功地通过Choi State得到了Kraus Operators。
+
+\bigskip
+\hlr{不唯一的Kraus Operators表示}
+
+但是另一个观察会发现这个Kraus Operators的表示并不是唯一的。我们可以进行一个unitary变换，可以得到：
+\begin{align}
+J(\mathcal{E})=\frac{2}{3}|00\rangle\langle00|+\frac{2}{3}|11\rangle\langle11|+\frac{2}{3}|\psi^+\rangle\langle\psi^+|.  
+\end{align}
+我们分别验证这个Choi State对应的Kraus Operators：
+\begin{align}
+  A_0^{\prime}=\sqrt{\frac{2}{3}}|0\rangle\langle0|,\quad A_1^{\prime}=\sqrt{\frac{2}{3}}|1\rangle\langle1|,\quad A_2^{\prime}=\frac{1}{\sqrt{3}}X. 
+\end{align}
+发现他们也满足完备关系。
+
+\bigskip
+\hlr{通过Choi State得到Kraus Operators的一般方法}
+
+我们，嗯分析上面的方法发现可以一套完备的方法通过Quantum Channel得到Choi State再得到Kraus Operators：
+\begin{enumerate}
+  \item \textbf{计算量子态的Choi State}： 通过$ J(\mathcal{E}) = (\mathcal{E} \otimes I)(|Vec(I)\rangle\langle Vec(I)|) $计算Choi State。
+  \item \textbf{Choi State的谱分解}： 计算Choi State的谱分解$ J(\mathcal{E}) = \sum_i \lambda_i |\psi_i\rangle\langle \psi_i| $。
+  \item \textbf{得到Kraus Operators}： 通过$ A_i = \sqrt{\lambda_i} \ket{\psi_i}\ket{\psi_i} $得到Kraus Operators。
+  \item \textbf{检查完备关系}： 检查$ \sum_i A_i^\dagger A_i = I $是否成立。
+\end{enumerate}
+
+\bigskip
+\hlr{Unitary Mixing Freedom}
+
+上面已经发现Kraus Operators的表示并不是唯一的。我们可以通过一个unitary变换得到另外一组Kraus Operators。我们总结一下这个结论：
+\thm{Unitary Mixing
+
+对于任意的一个量子态(显然Choi State是一个量子态)的两种不同的谱分解：
+\begin{align}
+  \rho=&\sum_k\lambda_k|\lambda_k\rangle\langle\lambda_k|.\\ 
+  \rho=&\sum_ip_i|\varphi_i\rangle\langle\varphi_i|.
+\end{align}
+那么这两组本征态之间存在一个unitary变换$ U $使得：
+\begin{align}
+  \sqrt{p}_i|\varphi_i\rangle=\sum_kU_{ik}\sqrt{\lambda_k}|\lambda_k\rangle.
+\end{align}
+}
+下面我们证明这个结论。首先根据两种谱分解我们给出两种将$ \rho $ purification的方式：
+\begin{align}
+  |\psi\rangle=\sum_k\sqrt{\lambda_k}|\lambda_k\rangle\otimes|k\rangle,\quad|\varphi\rangle=\sum_i\sqrt{p_i}|\varphi_i\rangle\otimes|i\rangle.
+\end{align}
+Schmidt Decomposition定理告诉我们这两种purification方式之间存在一个unitary变换$ U $使得：
+\begin{align}
+  |\varphi\rangle=(I\otimes U)|\psi\rangle.
+\end{align}
+我们写开会发现：
+\begin{align}
+  \begin{aligned}\sqrt{p_i}|\varphi_i\rangle&\large=(I\otimes\langle i|)(I\otimes U)|\psi\rangle\\&=\sum_k\sqrt{\lambda_k}(I\otimes\langle i|U)(|\lambda_k\rangle\otimes|k\rangle)\\&=\sum_k\sqrt{\lambda_k}|\lambda_k\rangle\cdot(\langle i|U|k\rangle)\\&=\sum_k\sqrt{\lambda_k}U_{ik}|\lambda_k\rangle.\end{aligned}
+\end{align}
+\qed 
+然后我们会发现上面的general量子态的定理如果使用在Choi State上面就得到了我们下面的结论：
+\thm{
+  Unitary Mixing Freedom for Kraus Operators
+
+  对于任意的一个Quantum Channel $ \mathcal{E} $的两组不同的Kraus Operators表示$ \{A_i\} $和$ \{B_j\} $，那么这两组Kraus Operators之间存在一个unitary变换$ U $使得：
+  \begin{align}
+    B_j = \sum_i U_{ji} A_i.
+  \end{align}
+}
+其中就是使用了Vectorization线性的性质，可以把外面的unitary拉进去！
+
+
+\subsection{Representation of Quantum Channel}
+
+\hlr{Completely Positive}
+
+我们最后回来讨论一下什么样子的映射才是一个Quantum Channel。这里特别强调一下completely positive的概念。
+\begin{itemize}
+  \item \textbf{Positive Map}： 一个映射$ \mathcal{E} $是positive map如果对于任意的正定矩阵$ \rho\geq0 $都有$ (I \otimes \mathcal{E})(\rho)\geq0 $。
+\end{itemize}
+
+
+\bigskip
+\hlr{例子：Positive Map but not Completely Positive Map}
+  
+一个最基本的例子就是转置映射$ T(\rho)=\rho^T $。我们验证这个映射是positive map但是不是completely positive map。
+
+我们考虑转置映射 $ \otimes $ Identity 映射作用在一个bell state上面：
+\begin{align}
+  (T\otimes I)(|\phi^+\rangle\langle\phi^+|)
+\end{align}
+发现会给出SWAP Operator。我们知道SWAP Operator不是正定的所以这个映射不是completely positive map。
+
+\bigskip 
+\hlr{Representation Thm}
+
+\YL{[我懒得写了真的（（（]}
+
+
+
+\subsection{Questions and Thoughts}
+
+
+
+
+
+

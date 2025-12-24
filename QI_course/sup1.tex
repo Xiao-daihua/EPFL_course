@@ -1,0 +1,205 @@
+这里我们汇总一下做题之中涉及的数学技巧以及容易混淆的常用结论捏
+\subsection{基础数学技巧}
+
+\subsubsection{张量积}
+
+\bigskip
+\hlr{张量积和矩阵加法}
+
+张量积和矩阵加法可以互换，满足关系：
+\begin{align}
+  \sum_i(A_i\otimes B)=\left(\sum_iA_i\right)\otimes B.
+\end{align}
+
+\bigskip
+\hlr{张量积和矩阵乘法}
+
+张量积和矩阵乘法是可以互换的，矩阵乘法可以找到自己对应的张量积子空间对应乘起来就好：
+\begin{align}
+  (A\otimes B)(C\otimes D)=(AC)\otimes(BD)
+\end{align}
+
+
+\bigskip
+\hlr{张量积和Vectorization}
+
+\bigskip
+\hlr{张量积和Tr操作}
+
+我们知道张量积和Tr是可以互换的，并且张量积的Tr其实就是原本Tr的乘积：
+\begin{align}
+  \mathrm{Tr}(A\otimes B)=(\mathrm{Tr}A)\left(\mathrm{Tr}B\right)
+\end{align}
+
+\subsubsection{Unitary}
+
+\bigskip
+\hlr{Unitary变换矩阵}
+
+对于任意算符 $A$，作酉共轭变换
+\begin{equation}
+    A' = U A U^\dagger,
+\end{equation}
+则 $A'$ 与 $A$ 具有完全相同的本征值（包括重数）。即
+\begin{equation}
+    \mathrm{Spec}(A') = \mathrm{Spec}(A).
+\end{equation}
+换言之，unitary 变换仅仅对应于基底变换，不改变物理可观测量的谱。
+
+\bigskip
+
+\begin{proof}[证明要点]
+设 $A|\psi\rangle = \lambda|\psi\rangle$，则
+\begin{equation}
+    A'(U|\psi\rangle)
+    = UAU^\dagger U|\psi\rangle
+    = UA|\psi\rangle
+    = \lambda (U|\psi\rangle),
+\end{equation}
+说明 $U|\psi\rangle$ 是 $A'$ 对应本征值 $\lambda$ 的本征态，从而本征值保持不变。
+\end{proof}
+
+\bigskip
+
+因此，unitary 变换可视为``旋转基底''，保留体系的谱结构：
+\begin{equation}
+    \mathrm{Tr}(A') = \mathrm{Tr}(A),\qquad
+    \det(A') = \det(A),\qquad
+    \|A'\|_1 = \|A\|_1.
+\end{equation}
+
+\bigskip
+\hlr{Unitary和奇异值}
+
+同样的对于一般的矩阵，Unitary变换也不改变矩阵的奇异值。也就是说：
+\begin{align}
+  \sigma_i(UA V^\dagger)=\sigma_i(A)
+\end{align}
+
+
+
+\subsubsection{Trace}
+\hlr{Trace的一个基本trick}
+
+对于一个量子态$ \rho $写作：
+\begin{align}
+  \rho=\sum_{a,b}f(a,b)|a\rangle\langle b|
+\end{align}
+我们求Tr等价于形式化的把ket放在bra的右边：
+\begin{align}
+  \mathrm{Tr}(\rho)=\sum_{a,b}f(a,b)\operatorname{Tr}(|a\rangle\langle b|)=\sum_{a,b}f(a,b)\left\langle b|a\right\rangle
+\end{align}
+
+\bigskip
+\hlr{Trace和Unitary演化}
+
+如果我们有A,B两个系统，然后在其上有一个$ \rho_{AB} $。如果在B系统上面进行Unitary演化以及A系统上面进行任意演化，我们发现这两个过程是可以互换的。所以特殊的对于Partial Trace：
+\begin{align}
+  Tr_A ((I_A \otimes U_B) \rho_{AB} (I_A \otimes U_B^\dagger)) = U_B Tr_A(\rho_{AB}) U_B^\dagger
+\end{align}
+
+\bigskip
+\hlr{SWAP operator 和 Trace}
+
+
+
+\bigskip
+\hlr{Trace of times}
+
+两个密度矩阵的乘积的Trace满足不等式：
+\begin{align}
+ & |\mathrm{Tr}(\rho\sigma)|\leq\sqrt{\mathrm{Tr}(\rho^2)\operatorname{Tr}(\sigma^2)} \\ 
+ &\mathrm{Tr}(\rho^2)\leq1,\quad\mathrm{Tr}(\sigma^2)\leq1 \Rightarrow \mathrm{Tr}(\rho\sigma)\leq1
+\end{align}
+
+\bigskip
+\hlr{单bit measure的TR}
+
+对于两个单比特态$ \rho_1,\rho_2 $，我们有：
+
+
+\subsection{Pauli矩阵的特殊性质}
+
+由于Pauli矩阵在计算之中太过于常见，我们下面列出计算之中常用的Pauli矩阵性质
+
+\subsubsection{基本定义}
+
+
+
+\subsubsection{基本乘法性质}
+
+
+
+
+\subsubsection{对易反对易关系}
+
+
+
+\subsubsection{互相作用，pauli矩阵作用在pauli基上}
+
+
+\subsubsection{指数形式的Pauli矩阵}
+
+
+\subsubsection{Pauli矩阵的本征值与本征基}
+
+单比特的Pauli矩阵定义为
+\[
+I=\begin{pmatrix}1&0\\0&1\end{pmatrix},\quad
+X=\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad
+Y=\begin{pmatrix}0&-i\\ i&0\end{pmatrix},\quad
+Z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\]
+
+其中 $I$ 是单位算符，而 $X,Y,Z$ 均为厄米且酉的算符，满足 $P^2=I$。因此，对于任意 Pauli 矩阵 $P\in\{X,Y,Z\}$ 有
+\[
+P^2=I \quad \Rightarrow \quad \lambda^2=1,
+\]
+即其本征值为
+\[
+\boxed{\lambda=\pm 1}.
+\]
+
+更具体地，本征值与本征态如下：
+\[
+X:\quad X\ket{\pm}=\pm\ket{\pm},\qquad
+\ket{\pm}=\frac{1}{\sqrt{2}}(\ket{0}\pm\ket{1}),
+\]
+\[
+Y:\quad Y\ket{\pm i}=\pm\ket{\pm i},\qquad
+\ket{\pm i}=\frac{1}{\sqrt{2}}(\ket{0}\pm i\ket{1}),
+\]
+\[
+Z:\quad Z\ket{0}=+1\ket{0},\qquad Z\ket{1}=-1\ket{1}.
+\]
+
+\paragraph{Pauli算符期望值的取值范围}
+
+对任意量子态 $\rho$，Pauli算符 $P$ 的期望值定义为
+\[
+\langle P\rangle_\rho = \operatorname{Tr}(\rho P).
+\]
+
+由于 Pauli 矩阵的本征值仅为 $\pm 1$，其测量结果可以看作一个取值为 $\pm 1$ 的随机变量，因此期望值必定满足
+\[
+-1 \leq \langle P\rangle_\rho \leq 1.
+\]
+
+更严格地，利用谱分解 $P=\sum_i \lambda_i\ket{i}\bra{i}$，并注意 $\rho$ 为正定且 $\operatorname{Tr}\rho=1$，可得
+\[
+\langle P\rangle_\rho = \sum_i \lambda_i p_i,\qquad p_i\ge 0,\quad \sum_i p_i=1,
+\]
+即为 $\pm 1$ 的加权平均，从而有
+\[
+\boxed{-1 \leq \langle P\rangle_\rho \leq 1}.
+\]
+
+\subsection{常用不等式}
+
+\bigskip
+\hlr{平方和和和的平方}
+对于任意实数$ a_i $，我们有下面不等式：
+\begin{align}
+  M\sum_{i=1}^Ma_i^2\geq\left(\sum_{i=1}^Ma_i\right)^2
+\end{align}
+

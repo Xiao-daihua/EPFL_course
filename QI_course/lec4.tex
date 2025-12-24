@@ -1,0 +1,163 @@
+\subsection{Kraus Representation of Quantum Channels}
+
+\hlr{Quantum Channels}
+
+对于一个Quantum Channel来说需要满足下面四个性质：
+\begin{enumerate}
+  \item Trace Preserving $ Tr(\mathcal{E}(\rho)) = Tr(\rho) $
+  \item Preserve positivity $ \mathcal{E}(\rho) \geq 0 $ 也就是本征值是都需要非负的
+  \item Linear $ \mathcal{E}(a\rho_1 + b\rho_2) = a\mathcal{E}(\rho_1) + b\mathcal{E}(\rho_2) $
+  \item Completely Positive
+    \begin{align}
+      (\mathcal{I} \otimes \mathcal{E})(\rho) \geq 0
+    \end{align}
+    也就是对于任意的辅助系统A，$ \mathcal{I}_A \otimes \mathcal{E}_S $作用在系统S上，结果依然是一个正定矩阵。这是一个特别重要的性质！！
+\end{enumerate}
+
+
+\bigskip
+\hlr{Kraus Representation Theorem}
+
+对于这样的Quantum Channel，我们可以使用Kraus Operators进行描述，存在下面的定理：
+\thm{Kraus Representation
+
+  满足上面四个条件的Quantum Channel可以通过一组Kraus Operators $ \{ A_i\} $进行实现，满足下面的两个要求：
+  \begin{itemize}
+    \item $ \mathcal{E}(\rho) = \sum_i A_i \rho A_i^\dagger $
+    \item $ \sum_i A_i^\dagger A_i = I $
+  \end{itemize}
+}
+我们可以很容易证明这个演化的构造是满足前面三个条件的！！
+
+\bigskip
+\hlr{Quantum Channel基础例子}
+
+下面给出几个比较基础的Quantum Channel例子：
+\begin{itemize}
+  \item \textbf{Unitary Operator  }
+
+    显然一个Unitary Operator也就是一个Quantum Channel。像是Pauli Gate, Hadamard Gate... 等等
+  \item \textbf{ Dephasing Channel} 
+
+    这个是我们如果把一组基下面的所有projector放在一起作为一组Kraus Operator那么可以得到一个Dephasing Channel。比如说：
+\begin{align}
+  A_0=|0\rangle\langle0|,\quad A_1=|1\rangle\langle1|. 
+\end{align}
+    对于2bit上面这样的情况，我们相当于只考虑bloch球的z方向投影。
+
+    \rmk{
+      Dephasing Channel的一个作用我们可以理解为「把一个量子的态变成经典的」。因为经典的态其实就等价于在z方向的一个概率分布。量子和经典的区别就在于两字的态可以有x和y方向的分量。
+
+    这样的一个过程我们称之为decoherence。也就是退相干。
+    }
+  \item \textbf{Convex combination of unitary channels}
+
+      也就是按照一定概率进行一组unitary channel的选择：$ \mathcal{E}(\rho) = \sum p_i U_i \rho U_i^\dagger $。存在一定的概率进行每一个Unitary Channel的作用。
+    \item \textbf{Complete Depolarizing Channel}
+
+      这个channel的作用是消灭一个态并直接变成另外的一个态：$ \mathcal{E}(\rho) = \sigma $ 我们可以按照如下方法 构造Kraus Operator：
+    \begin{align}
+      A_{ij} = \sqrt{\lambda_j} |j\rangle \langle i|
+    \end{align}
+    其中$ \sigma = \sum_j \lambda_j |j\rangle \langle j| $是$ \sigma $的谱分解。我们可以验证这个channel的Kraus Operator满足$ \sum_{ij} A_{ij}^\dagger A_{ij} = I $，并且$ \mathcal{E}(\rho) = \sigma $。
+  \item \textbf{Partial Trace}
+
+      这个显然也是一个channel，这个channel的$ A_k $ Operator比较古怪因为它是一个从大空间到小空间的operator。我们写作这个样子$ A_k = I_A \otimes \bra{k}_B $
+
+
+\end{itemize}
+
+
+
+\bigskip
+\hlr{Measure record and Update}
+
+下面我们讨论一个特殊的channel，存在一个特殊的测量记录和更新的功能：
+\begin{align}
+  \mathcal{E}(\rho) = \sum_k \ket{k}\bra{k} \otimes B_k \rho B_k^\dagger
+\end{align}
+其中$ B_k $本身就是一组第二个子系统上的Kraus Operator。
+
+对于这个channel我们把测量的结果「每一种结果的概率」记录在第一个子系统，并让第二个系统「变成测量后坍缩的状态」。
+\begin{align}
+  Tr_s(\mathcal{E}(\rho)) &= \sum_k \ket{k}\bra{k} Tr(B_k \rho B_k^\dagger) = \sum_k p_k \ket{k}\bra{k}\\ 
+  Tr_a(\mathcal{E}(\rho)) &= \sum_k B_k \rho B_k^\dagger
+\end{align}
+
+
+\subsection{POVM as a Quantum Channel}
+
+\bigskip
+\hlr{POVM测量以及坍缩}
+
+并且我们会发现，这个channel其实给出了一组POVM测量：
+\begin{align}
+  M_k = B_k^\dagger B_k
+\end{align}
+这样子定义的$ M_k $矩阵是一个良定的POVM测量！那么我们可以理解a系统其实就是一个POVM测量之后的坍缩结果。
+\thm{POVM测量后坍缩结果
+
+进行一个POVM测量之后，测量结果坍缩到某一个态是：
+\begin{align}
+  \rho \rightarrow \rho_k = \frac{B_k \rho B_k^\dagger}{\tr(B_k \rho B_k^\dagger)} 
+\end{align}
+其中$ B_k = \sqrt{M_k} $。「注意，这是一个记号，我们写出来意思其实是：$ M_k = B_k^{\dagger} B_k $」分母是一个归一化条件。因为所有的density matrix是需要保证trace为1的。
+}
+
+\bigskip
+\hlr{Naimark Dilation Theorem}
+
+我们之前讨论POVM之于projective measurement很像是mix state和pure state的关系。确实，我们也可以通过选择一个辅助系统对于一个POVM进行purification变成一个projective measurement。下面定理给出了操作：
+
+\thm{Naimark Dilation Theorem
+
+  如果$ \{M_i\} $是一个良定的POVM测量作用在一个系统A上面。那么我们存在一个isometry「一个可逆的向更大的系统的映射」保证：
+  \begin{align}
+    M_i = V^\dagger (\Pi_i) V
+  \end{align}
+  其中$ \Pi_i $是一组projective measurement作用在更大的系统$ A \otimes B $上面，并且$ V: \mathcal{H}_A \rightarrow \mathcal{H}_A \otimes \mathcal{H}_B $是一个isometry。
+}
+我们可以严格构造这个isometry是：
+\begin{align}
+  V = \sum_k \ket{k} \otimes B_k
+\end{align}
+并且这个projective Operator需要满足：
+\begin{align}
+  \Pi_k=|k\rangle\langle k|\otimes I
+\end{align}
+在这样的构造下面，我们可以证明，这个projective measurement等价于POVM测量。我们的操作是，先把所有的系统A的态映射到整个更大的系统上面：
+\begin{align}
+  \rho_A \rightarrow V \rho_A V^\dagger = \sum_{k,k'} |k\rangle\langle k'| \otimes B_k \rho_A B_{k'}^\dagger 
+\end{align}
+然后我们对其进行projective measurement，可以证明最后的结果就是POVM测量的结果。
+\begin{align}
+  Tr(\Pi_i V \rho_A V^\dagger) = Tr(M_i \rho_A)
+\end{align}
+
+\rmk{
+  注意，如果我们希望在一个更大的系统上用Projective Measurement实现这个POVM的话我们需要引入一个辅助系统B，并且使用两个操作：
+\begin{enumerate}
+  \item 先把系统A的态通过isometry映射到更大的系统上面
+  \item 然后在更大的系统上进行Projective Measurement
+\end{enumerate}
+其中最关键的不是构造Projective Measurement，而是构造这个isometry！！
+}
+
+\bigskip
+\hlr{一般POVM的Channel}
+
+对于一般的POVM测量，我们可以构造一个Channel来实现POVM之后Update的效果。给定一个合理的测量的POVM $ \{ M_k \} $，我们可以定义一个Channel：
+\begin{align}
+  M_i=\sum_\alpha K_{i\alpha}^\dagger K_{i\alpha}
+\end{align}
+其中$ K_{i\alpha} $是一组Kraus Operator。如果测量到了结果i，那么系统坍缩到的态是：\begin{align}
+  \rho \rightarrow \rho_i = \frac{\sum_\alpha K_{i\alpha} \rho K_{i\alpha}^\dagger}{\tr(\sum_\alpha K_{i\alpha} \rho K_{i\alpha}^\dagger)}
+\end{align}
+
+
+
+
+\subsection{Questions and thoughts}
+没有什么问题耶！好耶！！
+
+

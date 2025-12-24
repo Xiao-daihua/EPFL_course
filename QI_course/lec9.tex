@@ -1,0 +1,286 @@
+\subsection{区分量子态}
+\hlr{量子态区分概率最大化}
+
+给定两个量子态$ \rho_0 $以及$ \rho_1 $我们希望通过POVM对其进行区分。假设我们使用的POVM是有两个元素$ \{ M_0,M_1\} $。其中$ M_i $回答的问题是是不是$ \rho_i $态。我们给出下面定理：
+\thm{
+  量子态区分概率
+  
+  给定两个量子态$ \rho_0 $以及$ \rho_1 $，其先验概率分别假设为$ 1/2 $。我们使用POVM$ \{ M_0,M_1\} $对其进行区分，我们\textbf{【主观上认为】测量到$ M_0 $结果量子态就是$ \rho_0 $，测量到$ M_1 $结果量子态就是$ \rho_1 $}。那么我们成功区分的概率为：
+  \begin{align}
+    p=\frac{1}{2}+\frac{1}{2}\tr(M_0 (\rho_0 - \rho_1))\mathrm{~.}
+  \end{align}
+}
+
+Proof: 我们计算成功概率：
+\begin{align}
+  \mathbb{P}(\mathrm{succes})&=\mathbb{P}(\rho=\rho_0)\mathbb{P}(\mathrm{measure~}0\mid\rho=\rho_0)+\mathbb{P}(\rho=\rho_1)\mathbb{P}(\mathrm{measure~}1\mid\rho=\rho_1)\\
+                             &=\frac{1}{2}\operatorname{Tr}(M_0\rho_0)+\frac{1}{2}\operatorname{Tr}(M_1\rho_1).
+\end{align}
+根据POVM的完备性我们有$ M_1=I-M_0 $，可以直接给出上面的结论。
+\rmk{
+  注意，我们是主观上认为测量到$ M_0 $结果量子态就是$ \rho_0 $，测量到$ M_1 $结果量子态就是$ \rho_1 $。实际上如果不小心设计了一个$ M_0 $导致$ \rho_0 $永远测不到这个结果，我们只能说这个测量设定很不合理，但是也不是不行。
+}
+
+\thm{
+量子态区分最优POVM 
+
+给定两个量子态$ \rho_0 $以及$ \rho_1 $，其先验概率分别假设为$ 1/2 $。我们使用POVM$ \{ M_0,M_1\} $对其进行区分，我们主观上认为测量到$ M_0 $结果量子态就是$ \rho_0 $，测量到$ M_1 $结果量子态就是$ \rho_1 $。那么使得成功区分概率最大的POVM为：
+\begin{align}
+   p_{opt}=\max_{0\leq M_0\leq I}\frac{1+\mathrm{Tr}(M_0(\rho_0-\rho_1))}{2}
+\end{align}
+其中$ M_0 $是任意的正半定矩阵且$ M_0\leq I $。
+}
+
+\bigskip
+\hlr{例：纯态区分}
+
+我们考虑区分两个纯态$ |\psi_0\rangle $以及$ |\psi_1\rangle $。我们不妨构建一个POVM保证$ M_0 = \ketbra{0}{0} $ 以及$ M_1 = \ketbra{1}{1} $，其中$ |0\rangle $以及$ |1\rangle $是两个态的正交归一化基底。我们计算成功概率：
+\begin{align}
+  p=\frac{1+\mathrm{Tr}(M_0(\rho_0-\rho_1))}{2}=\frac{1+1}{2}=1.
+\end{align}
+因此我们可以完美区分两个纯态。
+
+\bigskip
+\hlr{例：混态区分}
+
+对于single qubit的混态我们考虑区分下面两个态：
+\begin{align}
+  \rho_0 = \frac{1}{2}\left( I + \vec{r}_0 \cdot \vec{\sigma} \right), \quad
+\rho_1 = \frac{1}{2}\left( I + \vec{r}_1 \cdot \vec{\sigma} \right).
+\end{align}
+我们不妨更一般的构建下面一个POVM:
+\begin{align}
+  M_0 = a\!\left(I + \vec{x}\!\cdot\!\vec{\sigma}\right),
+\quad
+M_1 = I - M_0 .
+\end{align}
+但是generally这两个矩阵需要满足一些约束条件才能是一个合理的POVM，我们下面给出定理：
+\thm{
+  Single qubit POVM的约束条件
+
+  给定一个single qubit的POVM$ \{ M_0,M_1\} $，其中$ M_0 = a\!\left(I + \vec{x}\!\cdot\!\vec{\sigma}\right) $以及$ M_1 = I - M_0 $。那么其需要满足下面的约束条件：
+  \begin{align}
+    \left\|\vec{x}\right\|\leq1 \quad a\in\left[0,1/\left(1+\left\|\boldsymbol{\vec{x}}\right\|^2\right)\right]
+  \end{align}
+}
+Proof: 我们干的事情就是计算两个的本征值，保证本征值非复即可。
+
+\bigskip
+在这个基础上我们计算这两个混态的区分概率：
+\thm{
+  Single qubit混态区分概率
+
+  给定两个single qubit混态$ \rho_0 = \frac{1}{2}\left( I + \vec{r}_0 \cdot \vec{\sigma} \right) $以及$ \rho_1 = \frac{1}{2}\left( I + \vec{r}_1 \cdot \vec{\sigma} \right) $，其先验概率分别假设为$ 1/2 $。我们使用POVM$ \{ M_0,M_1\} $对其进行区分，我们主观上认为测量到$ M_0 $结果量子态就是$ \rho_0 $，测量到$ M_1 $结果量子态就是$ \rho_1 $。那么成功区分的概率为：
+  \begin{align}
+    p \;=\; \frac12 \;+\; \frac{a}{4}\bigl( 2\,\vec{x}\!\cdot\!(\vec{r}_0 - \vec{r}_1) \bigr).
+  \end{align}
+}
+这个计算之中我们使用了Pauli矩阵的trace性质：
+\begin{align}
+  \mathrm{Tr}(\sigma_i\sigma_j)=2\delta_{ij}, \quad \tr (\sigma_i)=0.
+\end{align}
+我们使用Pauli Basis展开single qubit的量子态的原因正是因为这个性质。
+\thm{
+  Single qubit混态区分最优概率
+
+  对于上方的set up，使得成功区分概率最大的POVM为：
+  \begin{align}
+    \vec{x}_{\mathrm{opt}}
+= \frac{\vec{r}_0 - \vec{r}_1}{\|\vec{r}_0 - \vec{r}_1\|},
+\qquad
+M_{0,\mathrm{opt}}
+= \frac12\!\left( I + \vec{x}_{\mathrm{opt}}\!\cdot\!\vec{\sigma} \right).
+  \end{align}
+  此时成功区分的最优概率为：
+  \begin{align}
+    p_{\mathrm{opt}}
+= \frac12 + \frac14 
+\left(
+\frac{(\vec{r}_0 - \vec{r}_1)\!\cdot\!(\vec{r}_0 - \vec{r}_1)}
+{\|\vec{r}_0 - \vec{r}_1\|}
+\right)
+= \frac12 + \frac14 \|\vec{r}_0 - \vec{r}_1\|.
+  \end{align}
+}
+Proof:在上面约束条件下面进行放缩就好了！！这里我们最后一步放缩的时候会使用：
+\begin{align}
+  p=\frac{1}{2}+\frac{1}{2}\cdot\frac{1}{1+\left\|\boldsymbol{\vec{x}}\right\|^{2}}\|\boldsymbol{\vec{x}}\|\|\boldsymbol{\vec{r}}_{0}-\boldsymbol{\vec{r}}_{1}\|\cos(\boldsymbol{\vec{x}};\boldsymbol{\vec{r}}_{0}-\boldsymbol{\vec{r}}_{1}).
+\end{align}
+然后我们对此考虑到函数：
+\begin{align}
+  f(t)=\frac{t}{1+t^2},\quad t\geq0
+\end{align}
+在$ t=1 $处取得最大值$ 1/2 $。然后我们带回去就得到了最终结果！！
+
+\bigskip
+\hlr{数学工具：1-Norm}
+
+上面讨论的都是单个bit的情况，我们考虑更高维度的量子态区分。为此我们先要定义1-norm的数学工具：
+\defi{
+  Matrix 1-Norm
+
+  对于一个矩阵$ X $我们定义其1-Norm为：
+  \begin{align}
+    \left\|X\right\|_1=\mathrm{Tr}\left(\sqrt{X^\dagger X}\right)=\sum_i\sqrt{\lambda_i(X^\dagger X)},
+  \end{align}
+  其中$ \lambda_i(X^\dagger X) $是矩阵$ X^\dagger X $的本征值。
+}
+显然对于Unitary的矩阵$ U $我们有$ \left\|U\right\|_1=\mathrm{Tr}(I)=d $，其中$ d $是矩阵的维度。对于Hermitean矩阵$ H $我们有$ \left\|H\right\|_1=\sum_i|\lambda_i(H)| $，其中$ \lambda_i(H) $是矩阵$ H $的本征值。
+
+
+\bigskip
+\hlr{highier dimension state区分}
+
+我们考虑区分两个高维度量子态$ \rho_0 $以及$ \rho_1 $。我们有下面定理：
+\thm{
+  Highier dimension量子态区分概率
+
+  给定两个量子态$ \rho_0 $以及$ \rho_1 $，其先验概率分别假设为$ 1/2 $。我们使用POVM$ \{ M_0,M_1\} $对其进行区分，我们主观上认为测量到$ M_0 $结果量子态就是$ \rho_0 $，测量到$ M_1 $结果量子态就是$ \rho_1 $。那么成功区分的概率为：
+  \begin{align}
+    p_{opt}=\frac{1}{2}\left(1+\max_{0\leq M\leq I}\tr(M(\rho_0-\rho_1))\right)= \displaystyle\frac{1}{2}+\frac{1}{4}\|\rho_0-\rho_1\|_1.
+  \end{align}
+}
+Proof：其中我们显然使用了一个恒成立的数学关系：
+\begin{align}
+  \frac{1}{2}\|\rho_0-\rho_1\|_1=\max_{0\leq M\leq I}\operatorname{Tr}(M(\rho_0-\rho_1)).
+\end{align}
+证明的核心是构造一个只有$ \rho_0 - \rho_1 $本征值为正的本征子空间的投影算符作为POVM的一个元素。
+
+\subsection{矩阵模长}
+
+\bigskip
+\hlr{一般定义}
+
+上面我们给出了1-Norm的定义，下面我们逐渐给出一些常用的定义与性质。
+\defi{
+  一般矩阵Norm
+
+  对于一个矩阵如果我们希望赋予一个Norm的概念$ \|.\|:K^{m\times n}\mapsto\mathbb{R} $，那么需要满足一些必要的性质：
+  \begin{itemize}
+    \item 非负性：$ \|A\|\geq0 $
+      \item 零点对应：$ \|A\|=0\Leftrightarrow A=0 $
+      \item 三角不等式：$ \|A+B\|\leq\|A\|+\|B\| $
+      \item 齐次性：$ \|\alpha A\|=|\alpha|\|A\| $
+  \end{itemize}
+}
+辅助定义我们还需要定义一些概念：
+\defi{
+  Normal Matrix
+
+  对于一个矩阵$ A\in K^{n\times n} $，如果其满足$ AA^\dagger=A^\dagger A $，那么我们称其为Normal Matrix。
+}
+显然Hermitean矩阵、Unitary矩阵都是Normal Matrix。我们考虑之前对于这两种normal矩阵的1-Norm的讨论可以有下面的定理：
+\thm{
+  Normal Matrix的1-Norm
+
+  对于一个Normal Matrix $ A\in K^{n\times n} $，其1-Norm可以表示为：
+  \begin{align}
+    \left\|A\right\|_1=\sum_i|\lambda_i(A)|,
+  \end{align}
+  其中$ \lambda_i(A) $是矩阵$ A $的本征值。
+}
+我们一般都只考虑Normal Matrix的情况，因为演化算子是Unitary的量子态和测量算子是Hermitean的。所以基本上都是Normal Matrix。
+
+\rmk{
+  我们需要注意，对于Unitary矩阵来说$ \left\|U\right\|_1=d $，其中$ d $是矩阵的维度。这意味着：
+  \begin{itemize}
+    \item Unitary矩阵的\textbf{本征值模长}之和等于矩阵的维度。
+      \item Unitary矩阵的本征值求和不一定等于矩阵的维度。
+  \end{itemize}
+  请区分模长求和与直接求和！！
+}
+
+\bigskip
+\hlr{Schatten p-Norm}
+
+\defi{
+  Schatten p-Norm
+
+  对于一个矩阵$ A\in K^{m\times n} $，我们定义其Schatten p-Norm为：
+  \begin{align}
+    \left\|A\right\|_p=\left(\sum_{i=1}^d\left|\sqrt{\lambda_i(A^\dagger A)}\right|^p\right)^{1/p}.
+  \end{align}
+  其中$ \lambda_i(A^\dagger A) $是矩阵$ A^\dagger A $的本征值。
+}
+对于一般的矩阵我们可以使用奇异值分解来分析其Schatten p-Norm的性质。我们有定理：
+\thm{
+  矩阵的奇异值分解与Schatten p-Norm 
+
+  对于一个矩阵$ A\in K^{m\times n} $，其奇异值分解为$ A=U\Sigma V^\dagger $，其中$ U\in K^{m\times m} $以及$ V\in K^{n\times n} $是Unitary矩阵，$ \Sigma\in K^{m\times n} $是一个对角矩阵，其对角线元素为矩阵$ A $的奇异值。我们有：
+  \begin{align}
+    \left\|A\right\|_p=\left(\sum_{i=1}^d\sigma_i(A)^p\right)^{1/p},
+  \end{align}
+}
+Proof: 这是因为矩阵的奇异值和$ A^\dagger A $的本征值有关系：
+\begin{align}
+  \sigma_i=\sqrt{\lambda_i(A^\dagger A)}
+\end{align}
+同样的考虑对于Normal Matrix的情况，我们存在一个特例：
+\thm{
+  Normal Matrix的Schatten p-Norm
+
+  对于一个Normal Matrix $ A\in K^{n\times n} $，其Schatten p-Norm可以表示为：
+  \begin{align}
+    \left\|A\right\|_p=\left(\sum_i|\lambda_i(A)|^p\right)^{1/p},
+  \end{align}
+  其中$ \lambda_i(A) $是矩阵$ A $的本征值。
+}
+\begin{itemize}
+  \item 我们从此只考虑Normal Matrix的情况。
+\end{itemize}
+
+\bigskip
+\hlr{Examples of Schatten p-Norm}
+
+如果$ p = 1 $那么Schatten 1-Norm就是我们之前定义的1-Norm。对于Normal Matrix来说：
+\thm{
+  Normal Matrix的Schatten 1-Norm
+
+  对于Normal Matrix $ A\in K^{n\times n} $，其Schatten 1-Norm可以表示为：
+\begin{align}
+  \lVert A\rVert_1=\sum_i\lvert\lambda_i\rvert.
+\end{align}
+}
+对于$ p = 2 $我们有Schatten 2-Norm：
+\begin{align}
+  \lVert A\rVert_2=\left(\sum_i\lvert\lambda_i\rvert^2\right)^{1/2}.
+\end{align}
+但是我们可以证明对于Normal Matrix其存在另一种更漂亮的形式
+\thm{
+  Normal Matrix的Schatten 2-Norm
+
+  对于Normal Matrix $ A\in K^{n\times n} $，其Schatten 2-Norm可以表示为：
+  \begin{align}
+    \lVert A\rVert_2=\sqrt{\mathrm{Tr}(A^\dagger A)}.
+  \end{align}
+  等价的也可以表示为：
+  \begin{align}
+    \left\| A\right\|_2=\sqrt{\sum_{i,j}\lvert A_{ij}\rvert^2}.
+  \end{align}
+}
+我们可以使用量子计算机来计算两个量子态区别的Schatten 2-Norm，因为数学上我们有：
+\begin{align}
+  \begin{aligned}\left\|\rho_0-\rho_1\right\|_2&=\sqrt{\mathrm{Tr}((\rho_0-\rho_1)(\rho_0-\rho_1))}\\&=\sqrt{\mathrm{Tr}(\rho_0^2)+\mathrm{Tr}(\rho_1^2)-2\mathrm{~Tr}(\rho_0\rho_1)}.\end{aligned}
+\end{align}
+其中的信息可以通过SWAP测试来获得。
+\begin{align}
+  \mathrm{Tr}\left(\rho_i^2\right)=\mathrm{Tr}((\rho_i\otimes\rho_i)SWAP),\quad\mathrm{Tr}(\rho_1\rho_2)=\mathrm{Tr}((\rho_1\otimes\rho_2)SWAP).
+\end{align}
+
+\bigskip
+\hlr{Infinity Norm}
+
+我们考虑Schatten p-Norm在$ p\to\infty $的极限情况，我们有下面定理：
+\thm{
+  Normal Matrix的Infinity Norm
+
+  对于Normal Matrix $ A\in K^{n\times n} $，其Schatten Infinity-Norm可以表示为：
+  \begin{align}
+    \lVert A\rVert_\infty=\max_i|\lambda_i(A)|,
+  \end{align}
+  其中$ \lambda_i(A) $是矩阵$ A $的本征值。
+}
+也就是说这个给出了矩阵的最大本征值模长。一个很现实的意义就是他给出了一个算子的最大期望值：
+\begin{align}
+  \left|\mathrm{Tr}(M\rho)\right|\leq\left|\lambda_{max}\right|=\left\|M\right\|_\infty.
+\end{align}

@@ -1,0 +1,244 @@
+\subsection{Steinspring Representation}
+
+\hlr{环境相互作用下的Unitary演化}
+
+我们考虑一个量子体系S和一个环境E的相互作用。假设环境E的初始态是$ |0\rangle_E $，那么我们可以把体系S和环境E看成一个联合体系。我们把这个体系记作：
+\begin{align}
+  \rho_{SE} = \rho_S \otimes |0\rangle_E \langle0|.
+\end{align}
+
+下面我们把这个联合体系进行一个整体的unitary演化$ U $，我们使用这样的演化算符：
+\begin{align}
+  U=|0\rangle\langle0|\otimes U_0+|1\rangle\langle1|\otimes U_1.
+\end{align}
+
+下面我们计算这个整体的演化之后只看S体系的状态，我们得到：
+\begin{align}
+  \mathrm{Tr}_E\left(U(\rho\otimes|0\rangle\langle0|)U^\dagger\right)=\rho_{00}|0\rangle\langle0|+\rho_{11}|1\rangle\langle1|+\rho_{01}|0\rangle\langle1|C+\rho_{10}|1\rangle\langle0|C^*,
+\end{align}
+其中我们引入的C常数是： $ C=\langle0|U_1^\dagger U_0|0\rangle. $这个是由我们的channel以及环境的初始态共同决定的。
+
+\bigskip
+\hlr{Partial Dephasing Channel结果}
+
+观察这个结果，我们会发现这个更大系统的Unitary配上合适的环境的出事状态，我们可以得到一个partial dephasing的效果下面我们证明一下，上面的结果$ \mathrm{Tr}_E\left(U(\rho\otimes|0\rangle\langle0|)U^\dagger\right) = \sigma=p\rho+(1-p)Z\rho Z $成立，我们直接进行计算：
+\begin{align}
+  p\rho+(1-p)Z\rho Z=\rho_{00}|0\rangle\langle0|+\rho_{11}|1\rangle\langle1|+(2p-1)(\rho_{01}|0\rangle\langle1|+\rho_{10}|1\rangle\langle0|), 
+\end{align}
+
+我们对比系数会发现如果选取合适的Unitary $ U_1, U_2 $满足关系：
+\begin{align}
+  2 p - 1 = C = \langle0|U_1^\dagger U_0|0\rangle,
+\end{align}
+那么之前更大系统的Uunitary就相当于一个partial dephasing channel。
+这给我们一个很重要的启示：\textbf{任何一个Quantum Channel都可以通过引入一个环境系统，然后对联合系统进行Unitary演化，最后对环境系统进行Partial Trace来实现！！}
+
+
+\bigskip
+\hlr{Steinspring Diation Thm}
+
+于是在上面的启示下面我们给出下面的定理：
+\thm{Steinspring Dilation Theorem
+
+  对于任意的一个quantum channel $ \mathcal{E} $，都存在一个辅助系统E的Hilbert空间$ \mathcal{H}_E $，一个环境的初始态$ |0\rangle_E \in \mathcal{H}_E $，以及一个联合系统的unitary演化$ U $使得对于任意的输入态$ \rho_S $，都有：
+  \begin{align}
+    \mathcal{E}(\rho_S) = \mathrm{Tr}_E\left(U(\rho_S \otimes |0\rangle\langle0|_E)U^\dagger\right).
+  \end{align}
+}
+
+下面我们进行证明，我们使用Kraus表示进行证明，假设有一个quantum channel 使用Kraus表示写出来是：
+\begin{align}
+  \mathcal{E}(\rho)=\sum_iA_i\rho A_i^\dagger,\quad\sum_iA_i^\dagger A_i=I. 
+\end{align}
+下面我们希望能够使用Steinspring表示来表示这个channel。我们试图构造一个Unitary满足下面的条件：
+\begin{align}
+  U(|0\rangle\otimes|\psi\rangle)=\sum_i\lvert i\rangle\otimes A_i\lvert\psi\rangle. 
+\end{align}
+这样子的话如果我们tr掉E，就会得到： $ \sum A_i \ket{\psi} $我们用张量积的形式写开来，我们知道始末两个量子态可以写作
+\begin{align}
+  |0\rangle\otimes|\psi\rangle=\begin{pmatrix}|\psi\rangle\\0\\\vdots\end{pmatrix},\quad\sum_i\lvert i\rangle\otimes A_i\lvert\psi\rangle=\begin{pmatrix}A_0\lvert\psi\rangle\\A_1\lvert\psi\rangle\\\vdots\end{pmatrix}.
+\end{align}
+所以我们最终呈现的Unitary矩阵一定是，第一列是$ A_i $后面的列待定。我们可以根据Unitary的条件确定后面列的数值。
+
+当我们写出来 $ U(\ket{0} \otimes \ket{\psi}) = \sum_i \ket{i} \otimes A_i \ket{\psi} $的时候，我们考虑作用在一般的一个密度矩阵上面：
+
+\begin{align}
+  \mathrm{Tr}_E\left(U(|0\rangle\langle0|\otimes|\psi\rangle\langle\psi|)U^\dagger\right)=\sum_{i,j}\mathrm{Tr}_E\left(|i\rangle\langle j|\otimes A_i|\psi\rangle\langle\psi|A_j^\dagger\right)
+\end{align}
+
+我们tr掉E之后就会发现，non-diagnonal的部分自然就消失了，剩下的就是我们需要的Kraus Operator作用的Channel的形式：
+\begin{align}
+  \sum_iA_i|\psi\rangle\langle\psi|A_i^\dagger
+\end{align}
+对于纯态的Channel我们证明完毕，对于混态其实就是一个直接的推广，上面的操作和线性组合是兼容的，我们只需要推广：
+\begin{align}
+  \rho=\sum_ip_i|\psi_i\rangle\langle\psi_i|
+\end{align}
+然后对于纯态使用上面的操作就可以了！！
+\line
+
+\hlr{补充内容：如何寻找Steinspring Operator？}
+
+我们给定一组Kraus Opertaor，我们在想如何具体的构造Steinspring Operator $ U $。上面给出了理论的方法，下面我们讨论实操的每一个步骤。对于具体的计算，我们比较方便的有两种操作：
+
+\textbf{方法1: Gram-Schmidt Process}
+
+
+
+
+
+\textbf{方法2: Quantum Computation Method}
+
+
+\YL{[我懒了写了，具体看第五次作业的1.(c)。这里给出了极其具体的操作方法]}
+
+
+
+\subsection{Choi Representation}
+
+
+\hlr{Vectorization数学技巧}
+
+为了介绍这个representation，我们需要先引入vectorization的技巧，我们定义：
+\defi{Vectorization
+
+也就是把一个矩阵$ A $变成一个向量$ |Vec(A)\rangle $，具体的定义是：
+\begin{align}
+  A=\sum_{ij}A_{ij}|i\rangle\langle j|\quad\rightarrow\quad |Vec(A)\rangle=\sum_{ij}A_{ij}|i\rangle\otimes|j\rangle.
+\end{align}
+}
+在这样的定义下面我们可以证明一个很重要的恒等式：
+\lmm{
+  对于任意的矩阵$ A, B, C $，都有：
+  \begin{align}
+    |Vec(ABC)\rangle=(A\otimes C^T)|Vec(B)\rangle.
+  \end{align}
+}
+这个等式有很多的应用：
+\begin{enumerate}
+  \item Ricochet Identity:
+
+\begin{align}
+  (A\otimes I)|Vec(I)\rangle=(I\otimes A^T)|Vec(I)\rangle.
+\end{align}
+值得注意的是$ \ket{Vect(I)} $其实就是bell state $ \ket{\phi^+}  = \displaystyle\frac{1}{\sqrt{2}} ( \ket{00} + \ket{11} ) $
+
+证明方法就是写作$ \ket{Vec(ABC)} $的形式，但是由于有的矩阵就是Identity所以可以随便换顺序，因此给出了上面的结果。
+  \item Usage of Ricochet Identity:
+
+    比如我们可以推导出来这样的一个结果：
+    \begin{align}
+      \left(UV^{\dagger}\otimes I\right)|\varphi^{+}\rangle=(U\otimes V^{*})|\varphi^{+}\rangle.
+    \end{align}
+    这个给出了两个量子线路是等价的，也就是说我们可以简化量子线路。
+\end{enumerate}
+
+
+\bigskip
+\hlr{Choi Representation定义}
+
+
+上面vectorization的数学技巧的基础上我们发现我们还可以很好的使用量子态来表示一个operator。我们这个思路下，我们也或许可以使用量子态来表示一个quantum channel。我们给出下面的定义：
+
+\defi{Choi Representation
+
+  对于任意的一个Quantum Channel $ \mathcal{E}(\rho) $，我们定义一个与之对应的量子态 \textbf{Choi State} :$ J(\mathcal{E}) $，这个量子态定义为：
+  \begin{align}
+    J(\mathcal{E}) = (\mathcal{E} \otimes I )(|Vec(I)\rangle\langle Vec(I)|),
+  \end{align}
+}
+
+\bigskip
+\hlr{Kraus Operator表示的Channel的Choi State}
+
+显然对于Kraus Channel我们可以计算出来Choi State的形式，来考虑下面这样的一个Kraus Operators：
+\begin{align}
+  \left(UV^{\dagger}\otimes I\right)|\varphi^{+}\rangle=(U\otimes V^{*})|\varphi^{+}\rangle. 
+\end{align}
+通过计算我们知道的结论是：
+\thm{
+  Choi State和Kraus Operators的关系
+
+\begin{align}
+  J(\mathcal{E}) = \sum_i |Vec(A_i)\rangle\langle Vec(A_i)|.
+\end{align}
+
+}
+
+\rmk{
+  所以Choi State某种意义上可以理解为Kraus Operators的Vectorization之后的结果。
+}
+
+一个例子，我们可以计算出dephasing channel的Choi State：
+\begin{align}
+  J(\mathcal{E})=&(\mathcal{E}\otimes I)(|00\rangle\langle00|+|11\rangle\langle11|+|00\rangle\langle11|+|11\rangle\langle11|)\\
+  =&|00\rangle\langle00|+|11\rangle\langle11|\\ 
+  =&|Vec(A_0)\rangle\langle Vec(A_0)| + |Vec(A_1)\rangle\langle Vec(A_1)|.
+\end{align}
+
+
+
+
+\subsection{Questions and Thoughts}
+
+\question{为什么Steinspring Operator 我们证明作用在一个量子态上面给出需要的结果就可以了？不需要在密度矩阵吗？感觉不够general？}
+
+其实是足够的，我在正文内容补充了解释看上面吧！
+\qed
+
+
+\bigskip
+\question{一个general 的choi state我们怎么找到一组基进行对角化？}
+
+我们如果想把一个Choi State给出一组Kraus Operator的话那么需要对于其进行对角化，下面我们讨论对于一个general的Choi State我们怎么计算对角化！
+
+在computational Basis下面一个General的Choi State可以写作下面的形式：
+\begin{align}
+  \rho=\sum_{i,j,k,l\in\{0,1\}}\rho_{ij,kl}|ij\rangle\langle kl|
+\end{align}
+我们首先需要对于Computational Basis的向量形式有一个conventon（因为对角化都是用矩阵进行mma操作的）。我们写：
+\begin{align}
+ |00\rangle=\begin{bmatrix}1\\0\\0\\0\end{bmatrix}, \quad  |01\rangle=\begin{bmatrix}0\\1\\0\\0\end{bmatrix},\quad|10\rangle=\begin{bmatrix}0\\0\\1\\0\end{bmatrix},\quad|11\rangle=\begin{bmatrix}0\\0\\0\\1\end{bmatrix}
+\end{align}
+在这样的设定基础上我们可以把$ \rho $写成一个4x4的矩阵：
+\begin{align}
+  \rho=\begin{bmatrix}\rho_{00,00}&\rho_{00,01}&\rho_{00,10}&\rho_{00,11}\\\rho_{01,00}&\rho_{01,01}&\rho_{01,10}&\rho_{01,11}\\\rho_{10,00}&\rho_{10,01}&\rho_{10,10}&\rho_{10,11}\\\rho_{11,00}&\rho_{11,01}&\rho_{11,10}&\rho_{11,11}\end{bmatrix}
+\end{align}
+然后我们就可以直接对于这个矩阵进行对角化，得到一组本征值和本征向量。然后我们把本征向量重新写成$ |Vec(A_i)\rangle $的形式，然后使用vectorization的反操作就可以得到Kraus Operator了！！
+\qed
+
+
+
+\bigskip
+\question{一个general的密度矩阵我们怎么使用bell basis和computational basis进行展开？}
+
+我们知道2qubit这两个basis构成了2qubit系统的完备基，那么我们可以使用这两个basis进行展开。我们具体计算的方法就是逐个分量进行计算：
+\begin{align}
+  \rho_{ij,kl}= \langle ij|\rho|kl\rangle
+\end{align}
+\qed
+
+
+
+\subsection{Bell State 以及2Qubit的基}
+
+我们常用的一组state就是bell state，我们定义；
+\begin{align}
+  \begin{gathered}\left|\Phi^{+}\right\rangle=\frac{1}{\sqrt{2}}(|00\rangle+|11\rangle),\\\left|\Phi^{-}\right\rangle=\frac{1}{\sqrt{2}}(|00\rangle-|11\rangle),\\\left|\Psi^{+}\right\rangle=\frac{1}{\sqrt{2}}(|01\rangle+|10\rangle),\\\left|\Psi^{-}\right\rangle=\frac{1}{\sqrt{2}}(|01\rangle-|10\rangle).\end{gathered}
+\end{align}
+这组state有很多特殊的性质。
+\begin{itemize}
+  \item 四个Bell State 互相正交，并且构成了2-bit 系统的一个完备基础。
+  \item Bell State 是最大纠缠态，代表着两个bit能够有的最大的纠缠
+  \item Bell State 其实都是正比于Pauli Matrix 的 Vectorization 形式：
+    \begin{align}
+      |\Phi^+\rangle = \frac{1}{\sqrt{2}} |Vec(I)\rangle,\quad& |\Phi^-\rangle = \frac{1}{\sqrt{2}} |Vec(Z)\rangle, \\
+      |\Psi^+\rangle = \frac{1}{\sqrt{2}} |Vec(X)\rangle,\quad& |\Psi^-\rangle = \frac{i}{\sqrt{2}} |Vec(Y)\rangle.
+    \end{align}
+\end{itemize}
+
+对于2Qubit的系统我们还有一组基也就是computational basis，写作：
+\begin{align}
+  \{|00\rangle, |01\rangle, |10\rangle, |11\rangle\}.
+\end{align}
+这组基和Bell State基是等价的，我们可以通过下面的变换进行互相转换。

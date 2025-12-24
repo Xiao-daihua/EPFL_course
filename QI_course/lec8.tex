@@ -1,0 +1,209 @@
+\subsection{Shot Noise 讨论}
+测量一个量子系统对于某个客观测量$ M $的期望值的时候我们从不可以只测一次，需要进行多次测量然后取平均得到。我们称这个结果是estimator，也就是一个期望值的估量，同时也是一个随机变量。
+
+我们下面希望研究这个随机变量在什么程度上可以近似真实的期望值，同时也希望定量的描述其误差。
+
+\subsubsection{Estimator的基本概念}
+
+\hlr{Estimator的定义}
+
+我们根据实际情况进行下面的定义：
+\defi{
+  Estimator 
+
+  对于一个系通$ \rho $，我们希望测量某个观测量$ M $的期望值$ \langle M \rangle = \mathrm{Tr}(\rho M) $。我们在$ M = \sum_n^d \lambda_n \ketbra{n}{n} $。我们制备$ N $份这样的系统并进行独立测量。对于第$ s $次测量给出的结果为$ \lambda_{ms} $，那么我们定义Estimator为：
+  \begin{align}
+    M_N = \frac{1}{N}\sum_{s=1}^N \lambda_{m(s)}\mathrm{~.}
+  \end{align}
+}
+
+\bigskip
+\hlr{Estimator概率论计算}
+
+对于Estimator本身就是一个随机变量，其意义是测量N次的平均结果。并且我们可以计算其期望值和方差：
+\thm{
+  Estimator的期望值和方差
+
+  对于上面的定义，我们有：
+  \begin{align}
+    \mathbb{E}(M_N) = \langle M \rangle = \mathrm{Tr}(\rho M)\mathrm{~,}
+  \end{align}
+  并且
+  \begin{align}
+    \mathrm{Var}(M_N) = \frac{\mathrm{Var}_\rho(M)}{N} 
+  \end{align}
+  其中：
+  \begin{align}
+    \mathrm{Var}_\rho(M)=\mathrm{Tr}(\rho M^2)-\left(\mathrm{Tr}(\rho M)\right)^2
+  \end{align}
+}
+其具体证明的核心在于，我们知道每一次测量结果是独立的。所以可以把每一次测量当作一个随机过程，然后使用概率论的独立随机变量的性质进行计算。我们可以写作一个定理：
+\thm{
+  独立随机变量的期望值和方差
+
+  对于N个独立随机变量$ X_1, X_2, \cdots, X_N $，我们有：
+  \begin{align}
+    \mathbb{E}\left(\sum_{i=1}^N X_i\right)=\sum_{i=1}^N \mathbb{E}(X_i),\quad \mathrm{Var}\left(\sum_{i=1}^N X_i\right)=\sum_{i=1}^N \mathrm{Var}(X_i)\mathrm{~.} \quad \mathrm{Var}(\alpha X)=\alpha^2\mathrm{Var}(X)
+  \end{align}
+}
+\rmk{
+  直观上，后两个条件是有点矛盾的。但是中间的条件说的是独立随机变量可以直接求和；后面一个条件说的是如果是两个不独立的随机变量相加，但是正好两个一模一样，那么方差就会变成$ 4\mathrm{Var}(X) $。所以并不矛盾。
+}
+因此对于Estimator的情况我们就有：
+\begin{align}
+  \mathbb{E}\left(\hat{M}_N\right)=\frac{1}{N}\sum_{s=1}^N\mathbb{E}\left(\lambda_{m(s)}\right) \quad \mathrm{Var}\left(\hat{M}_N\right)=\frac{1}{N^2}\sum_{s=1}^N\mathrm{Var}\left(\lambda_{m(s)}\right)
+\end{align}
+下面分别计算每一个独立随机变量的期望值和方差。我们知道每一个随机变量的取值为$ \lambda_{m(s)} $，并且其概率以及平均值为：
+\begin{align}
+  \mathbb{E}\left(\lambda_{m(s)}\right)=\sum_{m(s)}\lambda_{m(s)}\mathbb{P}\left(\lambda_{m(s)}\right).\quad \mathbb{P}(\lambda_{m(s)})=\left\langle\lambda_{m(s)}|\rho|\lambda_{m(s)}\right\rangle
+\end{align}
+\begin{align}
+  \mathbb{E}{\left(\lambda_{m(s)}^2\right)}=\sum_{m(s)}\lambda_{m(s)}^2\mathbb{P}{\left(m(s)\right)}=\sum_{m(s)}\lambda_{m(s)}^2{\left\langle\lambda_{m(s)}{\left|\rho\right|}\lambda_{m(s)}\right\rangle}=\mathrm{Tr}{\left(\rho M^2\right)}.
+\end{align}
+带入最初的公式也就得到了estimator的方差和期望值！！
+\rmk{
+  对于测量一个系统，我们设计一个Estimator，我们需要保证其是unbiased的（也就是期望值等于真实值）。同时我们希望其方差尽可能小，这样才能保证测量结果的可靠性。因此我们需要验证期望值以及尽量减小方差。
+}
+
+\subsubsection{测量方法的影响}
+
+我们会发现对于同一个物理量，我们可以有不同的测量方法。我们分析一下不同的测量方法的性质区别。然后下一小节我们会意识到，选择不同的测量方法会影响Estimator的收敛性质。
+
+\bigskip
+\hlr{两个纯态Fidelity测量}
+
+对于两个纯态的重叠度 Fidelity 我们存在两种测量方法：
+\begin{itemize}
+  \item 对于两个态寻找一个Unitary的演化保证$ |\psi\rangle=U_\psi|0\rangle,\quad|\varphi\rangle=U_\varphi|0\rangle. $然后我们进行测量：
+    \begin{align}
+      M = \ketbra{0}{0} \quad \rho = U_\varphi^\dagger|\psi\rangle\langle\psi|U_\varphi
+    \end{align}
+    \item 直接进行测量，使用SWAP算符作为测量算符：
+      \begin{align}
+  M = \mathrm{SWAP} \quad \rho = |\psi\rangle\langle\psi| \otimes |\varphi\rangle\langle\varphi|
+      \end{align}
+\end{itemize}
+对于第一种情况我们计算：
+\begin{align}
+  \mathrm{Var}_\rho(M) = \left|\langle\varphi|\psi\rangle\right|^2-\left|\langle\varphi|\psi\rangle\right|^4.
+\end{align}
+而对于第二种情况我们计算：
+\begin{align}
+  \mathrm{Var}_\rho(M)=1-\left|\langle\varphi|\psi\rangle\right|^4.
+\end{align}
+因此明显对于第一种方法方差更小，也就预示着我们的Estimator的方差更小。
+
+\bigskip
+\hlr{多比特Z测量}
+
+这种情况下可观测量的谱更加小！！但是方差一样
+\YL{[回头补充]}
+
+
+\subsubsection{概率上界与收敛}
+
+下面我们使用随机过程的方法，研究Estimator的收敛性质。对于一个随机变量的收敛情况我们可以用下面的概率进行描述：
+\begin{align}
+  \mathbb{P}(|Z-\mathbb{E}(Z)|\geq t)
+\end{align}
+如果随机变量距离期望很远的概率很小，那么我们就认为这个随机变量是收敛的。下面我们将给出不等式约束这个取值。
+
+\bigskip
+\hlr{Markov不等式}
+
+\thm{
+  Markov不等式
+
+  对于一个非负随机变量$ Z \geq 0 $，我们有对于任意$ t > 0 $：
+  \begin{align}
+    \mathbb{P}(Z \geq t) \leq \frac{\mathbb{E}(Z)}{t}\mathrm{~.}
+  \end{align}
+}
+具体证明也就是把随机变量的取值分为大于和小于t的两个部分然后进行估算。
+
+\bigskip
+\hlr{Chebyshev不等式}
+
+\thm{
+  Chebyshev不等式
+
+  对于一个随机变量$ Z $，我们有对于任意$ t > 0 $：
+  \begin{align}
+    \mathbb{P}(|Z - \mathbb{E}(Z)| \geq t) \leq \frac{\mathrm{Var}(Z)}{t^2}\mathrm{~.}
+  \end{align}
+}
+证明暂且省略。但是我们发现如果这个随机变量$ Z = M_N $的情况下，我们有：
+\begin{align}
+  \mathbb{P}{\left(\left|\hat{M_n}-\mathrm{Tr}(M\rho)\right|\geq t\right)}\leq\frac{\mathrm{Var}{\left(\hat{M_N}\right)}}{t^2}=\frac{\mathrm{Var}_\rho(M)}{Nt^2}.
+\end{align}
+我们考虑我们希望误差小于$ \epsilon $，概率大于$ 1-\delta $。【其中$ \epsilon, \delta $都是小量】。数学上就是满足：
+\begin{align}
+  \mathbb{P}{\left(\left|\hat{M}_n-\mathrm{Tr}(M\rho)\right|\geq\varepsilon\right)}\leq\delta.
+\end{align}
+
+那么我们带入上面的不等式就知道，充分条件「并不必要」：
+\begin{align}
+  \frac{\mathrm{Var}_\rho(M)}{N\varepsilon^2}\leq\delta\Longrightarrow N\geq\frac{\mathrm{Var}_\rho(M)}{\delta\varepsilon^2}
+\end{align}
+也就是说：
+\begin{itemize}
+  \item 测量次数多余于$ \displaystyle\frac{\mathrm{Var}_\rho(M)}{\delta\varepsilon^2} $次就可以！那么显然如果$ \mathrm{Var}_\rho(M) $比较小，那么测量次数就可以少一些。
+\end{itemize}
+所以我们倾向于选择方差比较小的测量方法进行测量，这样可以减少测量次数。
+
+
+\bigskip
+\hlr{Hoeffding不等式}
+
+我们知道$ M_N $是N个独立随机变量的平均值，如果我们知道每一个随机变量的取值范围，那么我们可以使用Hoeffding不等式进行更紧的约束。
+\thm{
+  Hoeffding不等式
+
+  对于N个独立随机变量$ X_1, X_2, \cdots, X_N $，并且每一个随机变量的取值范围为$ a_i \leq X_i \leq b_i $。那么考虑另一个随机变量$ S_N = \sum_{i=1}^N X_i $，我们有对于任意$ t > 0 $：
+  \begin{align}
+    \mathbb{P}(|S_n-\mathbb{E}(S_n)|\geq t)\leq2\exp\left(-\frac{2t^2}{\sum_i\left(b_i-a_i\right)^2}\right).
+  \end{align}
+}
+我们省略证明，讨论对于Esitimator的情况。Esitimator可以写作：
+\begin{align}
+  \hat{M}_N=\frac{1}{N}\sum_{s=1}^N\lambda_{m(s)}=\sum_{s=1}^N\frac{\lambda_{m(s)}}{N}.
+\end{align}
+我们考虑测量的客观测量的谱的上下界是：
+\begin{align}
+  \frac{\lambda_{min}}{N}\leq\frac{\lambda_{m(s)}}{N}\leq\frac{\lambda_{max}}{N}.
+\end{align}
+我们记：
+\begin{align}
+  \sum_i(b_i-a_i)^2=\sum_{s=1}^N\left(\frac{\lambda_{max}-\lambda_{min}}{N}\right)^2=\frac{\Delta\lambda^2}{N}.
+\end{align}
+也就是说：
+\begin{align}
+  \mathbb{P}{\left(\left|\hat{M}_N-\mathrm{Tr}(\rho M)\right|\geq t\right)}\leq2\exp{\left(-\frac{2Nt^2}{\Delta\lambda^2}\right)}.
+\end{align}
+
+
+如果我们希望误差小于$ \epsilon $，概率大于$ 1-\delta $。【其中$ \epsilon, \delta $都是小量】。数学上就是满足：
+\begin{align}
+  2\exp\left(-\frac{2N\varepsilon^2}{\Delta\lambda^2}\right)\leq\delta\mathrm{~}\Longrightarrow\mathrm{~}N\geq\frac{\Delta\lambda^2}{2\varepsilon^2}\ln\left(\frac{2}{\delta}\right).
+\end{align}
+这告诉我们：
+\begin{itemize}
+  \item 可观测量的谱范围$ \Delta \lambda $越小，测量次数就可以越少。
+\end{itemize}
+
+\subsection{Question and thoughts}
+
+\question{什么叫一个Estimator是unbiased的？}
+
+也就是我们计算这个Estimator的期望值，会发现等于我们希望测量的真实数值。一般我们都是希望使用Estimator测量一个系统的可观测量的期望值，所以我们就是需要证明：
+\begin{align}
+  \mathbb{E}(M_N)=\mathrm{Tr}(\rho M)
+\end{align}
+左边的证明也就用到我们最初求解Estimator期望值的过程。
+\qed 
+
+\question{
+  Unitary可以把一个纯态变成混态吗
+}
+不可以。因为Unitary演化保持态的纯度不变。也就是说如果$ \rho^2=\rho $，那么$ U\rho U^\dagger U\rho U^\dagger=U\rho U^\dagger $也是成立的。
+\qed

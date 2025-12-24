@@ -1,0 +1,90 @@
+\subsection{Schwarzschild Metric}
+
+\subsubsection{Schwarzschild Metric Solution}
+
+\bigskip
+\hlr{On shell求解}
+
+我们使用上面讨论的ansatz带入真空的Einstein Field Equation进行求解：
+\begin{align}
+  R_{\mu\nu} = 0 \quad 
+  \Rightarrow \quad \frac{2}{r}(\partial_r\alpha+\partial_r\beta) = 0 , \quad \partial_r\left(re^{2\alpha}\right)=1\mathrm{~,}
+\end{align}
+最后得到的解为：
+\begin{align}
+  e^{2 \alpha} = e^{-2 \beta} = 1-\frac{R_s}{r}
+\end{align}
+于是我们给出Schwarzschild Metric：
+\defi{
+Schwarzschild Metric 
+
+对于真空Einstein Field Equation存在一系列使用$ R_s $标定的解：
+\begin{align}
+  ds^2=-\left(1-\frac{R_S}{r}\right)dt^2+\left(1-\frac{R_S}{r}\right)^{-1}dr^2+r^2d\Omega^2.
+\end{align}
+}
+对于这个解，我们会发现其很像是描述这0点有一个质量为$ M $的球对称物体引发的引力场【虽然这个解是一个Vaccum Solution】。我们可以通过在$ r\to\infty $处的Newtonian Limit来确定$ R_S $和$ M $的关系：
+\begin{align}
+  R_s = 2GM.
+\end{align}
+
+\subsubsection{Schwarzschild Metric的性质}
+
+\bigskip
+\hlr{schwarzschild Metric行为}
+
+我们研究这个metric的行为，比较trivial的会发现：
+\begin{itemize}
+  \item $ r >> R_s $的时候，metric的行为很像是中心有一个质量为$ M $的物体引发的Newtonian引力场；
+    \item $ r \to \infty $的时候，metric的行为很像是flat Minkowski space-time；
+      \item $ M \to 0 $的时候，metric的行为也很像是flat Minkowski space-time；
+\end{itemize}
+
+\bigskip
+\hlr{Singularity}
+
+下面我们进一步观察会发现：
+\begin{itemize}
+  \item $ r = R_s $以及$ r = 0 $的时候这个metric都存在分量会发生发散！
+\end{itemize}
+但是我们会发现不一定发散就意味着我们的时空存在奇异性。因为有的时候仅仅是因为我们选择了一个并不太好的coordinate导致某一些点不能覆盖到。需要有很多手段来验证一个点是不是intrisically singular。总之：
+\begin{itemize}
+  \item $ r = R_s $的时候仅仅是一个coordinate singularity，可以通过更换坐标系来消除这个奇异性；
+    \item $ r = 0 $的时候是真正的intrinsic singularity; 而$ r = 0 $处则是时空真正的奇异点。
+\end{itemize}
+
+\bigskip
+\hlr{Brikhoff's Theorem}
+
+实际上我们可以给出一个定理：
+\begin{itemize}
+  \item Brikhoff's Theorem：任何stationary + spherically symmetric的vacuum solution都是static的，并且是Schwarzschild Metric。
+\end{itemize}
+
+
+\subsection{Schwarzschild Metric上的Geodesics}
+
+下面我们研究一个自由例子是怎么在一个Schwarzschild 时空之中运动的。由于我们在这个常用的coordinate system下面考虑，所以我们不研究$ r < R_s $的行为，因为这个metric会发生奇异。
+
+\bigskip
+\hlr{自由粒子的Geodesic！}
+
+我们知道Geodesic是满足Geodesic Equation的解。但是这个解在任何Affine Parameter下面都是成立的，但这不意味着所有的paramter的解都有合理的物理意义。真正能被理解为自由粒子运动轨迹的参数化 $ \lambda $ 对应的切矢量$ u^\mu = \frac{d x^\mu}{d \lambda} $需要存在如下归一化：
+\begin{itemize}
+  \item 对于有质量粒子，我们需要选择normalization保证：$ u^\mu u_\mu = -1 $
+    等价的，我们可以选择粒子的proper time作为affine parameter；
+      \item 对于无质量粒子，我们需要选择normalization保证：$ p^\mu = u^\mu $。其中$ p^\mu $是粒子的物理动量。
+\end{itemize}
+
+\subsubsection{Killing Vector求解Geodesic}
+
+一般的我们可以列出Geodesic Equation进行求解。但问题是这个方程组过于复杂。于是我们回忆之前知道Geodesic在Killing Vector方向的分量必然守恒的事实，我们会发现，我们可以寻找Killing Vector，然后利用守恒量来简化方程组。
+
+\bigskip
+\hlr{Killing Vector Field}
+
+
+
+\subsection{GR验证I: 水星进动解}
+
+

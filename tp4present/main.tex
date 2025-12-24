@@ -1,0 +1,708 @@
+%----------------------------------------------------------------------------------------
+%    PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
+\usetheme{SimplePlus}
+
+\usepackage{hyperref}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{physics}             % 物理公式快捷命令
+\definecolor{YLcolor}{rgb}{0.1,0,1}
+\newcommand{\YL}[1]{\textcolor{YLcolor}{#1}}
+
+\setbeamertemplate{subsection in toc}{
+  \centering
+  \vspace{0.3em}
+  \inserttocsubsection
+  \par
+}
+
+\AtBeginSection[]{
+  \begin{frame}[plain]
+    \vfill
+    \centering
+
+    {\Huge\bfseries \insertsection}
+
+    \vspace{1.2em}
+
+    \tableofcontents[
+      currentsection,
+      hideothersubsections
+    ]
+
+    \vfill
+  \end{frame}
+}
+
+%----------------------------------------------------------------------------------------
+%    TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{Boundary Majorana CFT and Bosonization}
+
+\author{Yu Liu}
+
+\date{\today} % Date, can be changed to a custom date
+
+%----------------------------------------------------------------------------------------
+%    PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{frame}
+    % Print the title page as the first slide
+    \titlepage
+\end{frame}
+%------------------------------------------------
+\section{Introduction}
+
+
+
+\begin{frame}{Majorana BCFT}
+  CFT on a Complex Plane $ \Rightarrow $ CFT with Boundaries (BCFT)
+
+  \bigskip
+  Here we want to study the behaviour of 2D Free Majorana Fermion (Majorana CFT) on a Manifold with boundaries:
+  \begin{itemize}
+    \item Boundary Conditions, Partition Function and Boundary States
+      \bigskip
+
+    \item Majorana CFT is a $ c = 1/2 $ CFT, we might guess it is related to Ising Model (which also has $ c = 1/2 $ but is a bosonic minimal model). But how are they related in a BCFT setup?
+  \end{itemize}
+\end{frame}
+
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=0.4\textwidth]{assets/diagall.png}
+%   \label{fig:diagall}
+% \end{figure}
+%------------------------------------------------
+\section{Preliminaries}
+%------------------------------------------------
+\subsection{Introduction to BCFT}
+
+\begin{frame}{Boundary Conformal Field Theory}
+  \begin{itemize}
+    \item How to Induce a Parent CFT on a full plane to a CFT on a Manifold with boundaries? (e.g. UHP) suitable conditions for the boundary?
+      \bigskip
+
+      \begin{itemize}
+        \item \textbf{Gluing Conditions:} $ T_{01}(x,0)=0\quad  \Rightarrow \quad T(z)=\bar{T}(\bar{z}) \quad \text{at } z = \bar{z}$
+          \bigskip
+      \end{itemize}
+      Gluing condition is not enough to characterize the boundary conditions, we can have different boundary conditions $ \{\alpha\} $ satisfying the same gluing condition.
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{assets/uhpbcft.png}
+        \label{fig:uhpbcft}
+      \end{figure}
+    \item  Question: how to characterize the boundary conditions? Boundary States!
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Boundary States Formalism}
+
+Boundary States are state of the Parent CFT on a full plane that characterize the boundary conditions of the BCFT. which defined to satisfy two conditions:
+  \bigskip
+
+  \begin{itemize}
+    \item \textbf{(1)} \textbf{Cardy's Condition} 
+
+      BCFT partition function with $ \alpha, \beta $ boundary conditions on two edges
+
+      $ \sim $ 
+
+      Parent CFT amplitude between Boundary State $ \ket{\alpha}, \ket{\beta} $
+      \begin{align}
+        \mathrm{Tr}_{\mathcal{H}_{\alpha\beta}}e^{-\beta H_{\text{open}}}=\langle\alpha|e^{-L H_{\text{close}}}|\beta\rangle
+      \end{align}
+  \end{itemize}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{assets/cleantorus.png}
+    \label{fig:cleantorus}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Boundary States Formalism}
+ \begin{itemize}
+   \item \textbf{(2)} Being "consistent with" the \textbf{Gluing Conditions}
+     \bigskip
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{assets/boudanrystatescgl.png}
+  \label{fig:boudanrystatescgl}
+\end{figure}
+     \begin{align}
+       T(z) = \bar{T}(\bar{z}) \quad \Rightarrow \quad \left(L_n^P-\bar{L}^P_{-n}\right)|\alpha\rangle=0
+     \end{align}
+ \end{itemize}
+\textbf{Boundary States} thus is believed to characterize the boundary conditions.
+\end{frame}
+
+% \begin{frame}{Ising BCFT}
+%   \textbf{Ising BCFT} has three boundary states satisfying the conditions $ \ket{+}, \ket{-}, \ket{f} $. Partition functions are:
+%   \bigskip
+%
+%  \begin{table}[H]
+% \centering
+% \small
+% \renewcommand{\arraystretch}{1.6}
+% \begin{tabular}{cccc}
+% \hline\hline
+% Partition Function & Close Channel & Expression in $\tilde q$ & Expression in $q$ \\
+% \hline\hline
+%
+% $Z_{++} = Z_{--}$ 
+%                    & $\langle \pm | e^{-L H} | \pm \rangle$
+% & $\frac12 \chi_0(\tilde q) + \frac12 \chi_{1/2}(\tilde q) + \frac{1}{\sqrt{2}} \chi_{1/16}(\tilde q)$
+% & $\chi_0(q)$
+% \\
+%
+% $Z_{+-} = Z_{-+}$ 
+% & $\langle \pm | e^{-L H} | \mp \rangle$
+% & $\frac12 \chi_0(\tilde q) + \frac12 \chi_{1/2}(\tilde q) - \frac{1}{\sqrt{2}} \chi_{1/16}(\tilde q)$
+% & $\chi_{1/2}(q)$
+% \\
+%
+% $Z_{+f} = Z_{-f}$
+% & $\langle \pm | e^{-L H} | f \rangle$
+% & $\frac{1}{\sqrt{2}} \chi_0(\tilde q) - \frac{1}{\sqrt{2}} \chi_{1/2}(\tilde q)$
+% & $\chi_{1/16}(q)$
+% \\
+%
+% $Z_{ff}$
+% & $\langle f | e^{-L H} | f \rangle$
+% & $\chi_0(\tilde q) + \chi_{1/2}(\tilde q)$
+% & $\chi_0(q) + \chi_{1/2}(q)$
+% \\
+%
+% \hline\hline
+% \end{tabular}
+% \label{tab:ising_partition_functions}
+% \end{table}
+% \end{frame}
+
+
+\subsection{Majorana CFT}
+
+\begin{frame}{Majorana CFT}
+  Majorana CFT is the 2 Dimensional theory of free massless real fermion:
+  \begin{align}
+    S=\frac{1}{2\pi}\int d^2z\left(\psi\bar{\partial}\psi+\bar{\psi}\partial\bar{\psi}\right)
+  \end{align}
+  \bigskip
+
+  \begin{itemize}
+    \item \textbf{Neveu-Schwarz (NS) Boundary Condition}:
+        \begin{align}
+          \psi(e^{2\pi i} z) = \psi(z),
+        \end{align}
+      \item \textbf{Ramond (R) Boundary Condition}: 
+        \begin{align}
+          \psi(e^{2\pi i} z) = - \psi(z), 
+        \end{align}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Majorana CFT Quantization}
+  \begin{itemize}
+    \item \textbf{Mode Expansion:} 
+      \begin{align}
+          \psi(z)=\sum_kb_kz^{-k-1/2} \quad \bar{\psi}(\bar{z})=\sum_k\bar{b}_k\bar{z}^{-k-1/2}
+      \end{align}
+      where $ k\in\mathbb{Z}+1/2 $ for NS sector and $ k\in\mathbb{Z} $ for R sector.
+      \begin{align}
+          \{ b_k, b_l \} = \delta_{k+l,0}, \quad \{ \bar{b}_k, \bar{b}_l \} = \delta_{k+l,0}, \quad \{ b_k, \bar{b}_l \} = 0.
+      \end{align}
+    \item \textbf{Hamiltonian:}
+      \begin{align}
+H = L_0 + \bar L_0 , \qquad
+L_0 =
+\begin{cases}
+\  \sum_{k>0} k\, b_{-k} b_k ,
+& \text{NS } (k\in\mathbb{Z}+\tfrac12), \\[0.6em]
+\ \sum_{k>0} k\, b_{-k} b_k + \frac{1}{16},
+& \text{R } (k\in\mathbb{Z}),
+\end{cases}
+      \end{align}
+    \item \textbf{Hilbert Space:}
+      $ b_{-k}, k>0 $ act on Ground State (?)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Ground States and R Sector Zero Mode}
+There's something special about the Ground States in two sectors:
+
+\begin{itemize}
+  \item \textbf{NS Sector}
+
+    Ground state $ |0\rangle_{NS} $ is unique, defined by:
+      \begin{align}
+          b_k |0\rangle_{NS} = 0, \quad \bar{b}_k |0\rangle_{NS} = 0, \quad k>0.
+      \end{align}
+    \item \textbf{R Sector} 
+      \begin{align}
+          \{ b_0, b_0 \} = 1, \quad \{ \bar{b}_0, \bar{b}_0 \} = 1, \quad \{ b_0, \bar{b}_0 \} = 0.
+      \end{align}
+      2d clifford algebra $ \Rightarrow $ 2-dim representation $ \Rightarrow $ ground state is doubly degenerate.
+      \begin{align}
+        \ket{+}_R \quad \text{and} \quad \ket{-}_R
+      \end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fermion Number Operator and Partition Functions}
+  
+We want to define a operator that measure the even and odd of fermion number of a state: 
+% \begin{align}
+%   (-1)^F\psi(z)=-\psi(z)(-1)^F \quad \left((-1)^F\right)^2=1 \Rightarrow \{(-1)^F,b_n\}=0
+% \end{align}
+\begin{itemize}
+  \item \textbf{NS Sector:} $   (-1)^F = (-1)^{F_{nz}} = (-1)^{\sum_{k>0} b_{-k} b_k + \sum_{k>0} \bar{b}_{-k} \bar{b}_k} $
+    \item \textbf{R Sector:} we can define $  (-1)^{F} = -2 i\, b_0 \bar b_0 \ (-1)^{F_{nz}}$
+\end{itemize}
+\bigskip
+
+\textbf{Partition Function:}
+\begin{align}
+  Z_+ = \mathrm{Tr}_{\mathcal{H}} \left[ e^{ - \beta H^C } \right] \quad \text{and} \quad Z_- = \mathrm{Tr}_{\mathcal{H}} \left[ (-1)^F e^{ - \beta H^C } \right] 
+\end{align}
+\end{frame}
+
+% \begin{frame}{Partition Functions}
+%  In CFT Partition Functions are defined as:
+%  \begin{itemize}
+%    \item Transform the Theory onto a Cylinder (a symmetry transformation):$ H \to H^C $
+%    \item Compatify the cylinder to a Torus and define:
+%      \begin{align}
+%        Z = \mathrm{Tr}_{\mathcal{H}} \left[ e^{ - \beta H^C } \right] 
+%      \end{align}
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=0.75\textwidth]{assets/2025-12-14-11-28-13.png}
+%   \label{fig:2025-12-14-11-28-13}
+% \end{figure}
+% \end{itemize}
+% \end{frame}
+
+\section{Majorana CFT with Boundaries}
+\subsection{Majorana BCFT}
+
+\begin{frame}{Majorana BCFT}
+  \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+        \column{.45\textwidth} % Left column and width
+         $ T(z)=\bar{T}(\bar{z}) $ leads to:
+\begin{itemize}
+  \item \textbf{Free $ (+) $ Boundary Condition:} $ \psi(x) = \bar{\psi}(x) $
+  \item \textbf{Fixed $ (-) $ Boundary Condition:} $ \psi(x) = -\bar{\psi}(x) $
+  \end{itemize}
+        \column{.45\textwidth} % Right column and width
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{assets/boundarycondition.png}
+  \label{fig:boundarycondition}
+\end{figure}
+    \end{columns}
+    \bigskip
+
+Then we want to study the Majorana CFT on a Stip to calculate the Partition Function
+
+    Doubling Trick:
+   \textbf{Majorana BCFT on a Strip} $ \psi, \bar{\psi} $ $ \sim $ \textbf{Chiral Majorana CFT on a Cylinder} $ \Psi $
+  \bigskip
+
+  \textbf{Boundary conditions} after doubling trick:
+  \begin{itemize}
+    \item \textbf{Same BCs at two edges} $ \to $ Neveu-Schwarz (NS) BC of $ \Psi $
+    \item \textbf{Different BCs at two edges} $ \to $ Ramond (R) BC of $ \Psi $
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Majorana BCFT Quantization}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{assets/doubling.png}
+  \label{fig:doubling}
+\end{figure}
+  \begin{itemize}
+    \item \textbf{Hamiltonian:}
+      \begin{align}
+              H =   \sum_{k>0} k b_{-k} b_k +E_0 
+      \end{align}
+
+    \item \textbf{Hilbert Space:} 
+      \begin{itemize}
+        \item \textbf{Same BCs at two edges:} NS Sector similar to full Majorana CFT
+        \item \textbf{Different BCs at two edges:} R Sector with only one ground state!!! 
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\subsection{Close Channel Partition Functions}
+
+\begin{frame}{Majorana BCFT Partition Functions}
+  \textbf{Partition Functions} for fermionic theory
+  \begin{align}
+    Z_-=\mathrm{Tr}_{\mathcal{H}}\left[(-1)^Fe^{-\beta H}\right]\quad Z_+=\mathrm{Tr}_{\mathcal{H}}\left[e^{-\beta H}\right]
+  \end{align}
+  \bigskip
+
+  \textbf{Something Bizzar Here}: 
+  \bigskip
+
+  \begin{itemize}
+    \item Is $ (-1)^F $ well defined in a Chiral Majorana CFT? NO!! 
+      \bigskip
+
+    \item Partition Function is irrelevant with boundary conditions?? Only depends on whether two boundaries are the same or not? Boundary condition can not be characterized by partition functions and thus boundary states?? NO!!
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Boundary Fermion}
+  Resolution of above problems: \textbf{Add a Boundary Free Fermion to free boundary conditions $ (+) $}
+\begin{align}
+  S_\xi=\frac{i}{4}\int dt\mathrm{~}\xi(t)\frac{d}{dt}\xi(t) \quad S = S_{\text{Majorana}} + S_\xi
+\end{align}
+Under Quantization:
+\begin{align}
+  \{\xi,\xi\}=2\quad\xi^2=2,\quad\{\xi,b_k\}=0\mathrm{~}\forall\mathrm{~}k
+\end{align}
+\begin{itemize}
+  \item \textbf{two fixed boundary conditions:} nothing changes 
+  \item \textbf{fixed-free boundary conditions:} $ \xi $ and $ b_0 $ forms a 2d clifford algebra $ \Rightarrow $ ground state degeneracy \& well defined fermion number operator $ - i\sqrt{2} b_0 \xi (-1)^{F_{nz}} $
+  \item \textbf{two free boundary conditions:} $ \xi_1, \xi_2 $ forms a 2d clifford algebra $ \Rightarrow $ ground state degeneracy \& well defined fermion number operator $ -i \xi_1 \xi_2 (-1)^{F_{nz}} $
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Majorana BCFT Partition Functions with Boundary Fermion}
+ \begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{ccc}
+\hline
+Partition Function & $ q $ character & $ \tilde{q} $ character \\ 
+\hline\hline
+
+$Z_{(--),-}$ 
+& $\chi_0(q) - \chi_{1/2}(q)$
+& $\sqrt{2}\,\chi_{1/16}(\tilde q)$
+\\
+
+$Z_{(--),+}$ 
+& $\chi_0(q) + \chi_{1/2}(q)$
+& $\chi_0(\tilde q) + \chi_{1/2}(\tilde q)$
+\\
+
+$Z_{(++),-}$ 
+& 0
+& 0
+\\
+
+$Z_{(++),+}$ 
+& $2\big(\chi_0(q) + \chi_{1/2}(q)\big)$
+& $2\big(\chi_0(\tilde{q}) + \chi_{1/2}(\tilde{q})\big)$
+\\
+
+$Z_{(-+),-}$ 
+& 0
+& 0
+\\
+
+$Z_{(-+),+}$ 
+& $2\,\chi_{1/16}(q)$
+& $\sqrt{2}\big(\chi_0(\tilde q) - \chi_{1/2}(\tilde q)\big)$
+\\
+
+\hline\hline
+\end{tabular}
+\label{tab:open channel partition functions}
+\end{table}
+ 
+\end{frame}
+
+\subsection{Boundary States}
+
+\begin{frame}{Spin Cardy's Condition}
+  For a Fermion Theory, we have two kinds of partiton functions for a given boundary condition. We need to generalize Cardy's Condition to \textbf{Spin Cardy's Condition}.
+ \bigskip
+
+ \begin{itemize}
+   \item \textbf{Spin Cardy's Condition:} for a boundary condition we define two boundary states as $ \ket{\alpha, NS} $ and $ \ket{\alpha, R} $ satisfying:
+     \begin{align}
+        &\bra{\alpha,NS}  e^{-L_1 H_{\mathrm{closed}}} \ket{\beta,NS}
+  \;=\; \mathrm{Tr}_{\mathcal{H}_{\alpha\beta}}\!\left( e^{-L_2 H_{\mathrm{open}}} \right) = Z_{(\alpha\beta),+},
+    \\
+  &\bra{\alpha,R } e^{-L_1 H_{\mathrm{closed}}}  \ket{\beta,\mathrm{R}}
+  \;=\; \mathrm{Tr}_{\mathcal{H}_{\alpha\beta}}\!\left( (-1)^F e^{-L_2 H_{\mathrm{open}}} \right) = Z_{(\alpha\beta),-}.
+     \end{align}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Majorana BCFT Boundary States}
+4 boundary states satisfying Gluing Conditon and Spin Cardy's Condition are:  
+\begin{align}
+   & \ket{-,NS} = | -,NS\rangle\rangle\\ 
+ &\ket{-,R} = \sqrt[4]{2}|-,R\rangle\rangle, \\ 
+ & \ket{+,NS} = \sqrt{2}|+,NS\rangle\rangle, \\ 
+ & \ket{+,R} = 0|+,R\rangle\rangle = 0.
+\end{align}
+where:
+ \begin{align}
+      |\pm,NS\rangle\rangle=\prod_{k\in\mathbb{N}_+-1/2}e^{i\pm b_{-k}\bar{b}_{-k}}|0\rangle_{\mathrm{NS}} \quad |\pm,R \rangle\rangle=\prod_{k\in\mathbb{N}_+}e^{i\pm b_{-k}\bar{b}_{-k}}|\pm\rangle_{\mathrm{R}}
+ \end{align} 
+\end{frame}
+
+\begin{frame}{Partition Functions }
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{cccc}
+\hline\hline
+Open Channel & $ q $ character & $ \tilde{q} $ character & Closed Channel \\ 
+\hline\hline
+
+$Z_{(--),-}$ 
+& $\chi_0(q) - \chi_{1/2}(q)$
+& $\sqrt{2}\,\chi_{1/16}(\tilde q)$
+& $\langle -,R | e^{-L H_{\rm closed}} | -,R \rangle$
+\\
+
+$Z_{(--),+}$ 
+& $\chi_0(q) + \chi_{1/2}(q)$
+& $\chi_0(\tilde q) + \chi_{1/2}(\tilde q)$
+& $\langle -,NS | e^{-L H_{\rm closed}} | -,NS \rangle$
+\\
+
+$Z_{(++),-}$ 
+& 0
+& 0
+& $\langle +,R | e^{-L H_{\rm closed}} | +,R \rangle$
+\\
+
+$Z_{(++),+}$ 
+& $2\big(\chi_0(q) + \chi_{1/2}(q)\big)$
+& $2\big(\chi_0(\tilde{q}) + \chi_{1/2}(\tilde{q})\big)$
+& $\langle +,NS | e^{-L H_{\rm closed}} | +,NS \rangle$
+\\
+
+$Z_{(-+),-}$ 
+& 0
+& 0
+& $\langle -,R | e^{-L H_{\rm closed}} | +,R \rangle$
+\\
+
+$Z_{(-+),+}$ 
+& $2\,\chi_{1/16}(q)$
+& $\sqrt{2}\big(\chi_0(\tilde q) - \chi_{1/2}(\tilde q)\big)$
+& $\langle -,NS | e^{-L H_{\rm closed}} | +,NS \rangle$
+\\
+
+\hline\hline
+\end{tabular}
+\label{tab:open-closed-partition-single}
+\end{table}
+  
+\end{frame}
+
+\section{Bosonization}
+\subsection{Naive Procedure of Bosonization}
+
+\begin{frame}{Naive Idea of Bosonization}
+  \textbf{Main Idea}: A fermion theory, if we restrict that all fermions exist in pairs then it behaves like a bosonic theory. 
+
+\bigskip
+\textbf{Mathematically Realization:} Project the Hilbert Space with $ P = (1 + (-1)^F)/2 $
+
+\bigskip
+\textbf{BCFT:} Not only have to project the Hilbert Space, but also the Boundary Conditions must be "bosonized". Boundary State provide a perfect platform for us to do this for we can project the Boundary States directly:
+
+\bigskip
+\textbf{Idea of Bosonizing Boundary States}
+\begin{itemize}
+  \item \textbf{Step 1:} Project the Boundary States with $ P $ projector
+  \item \textbf{Step 2:} Combine the NS states and R states to satisfy the normal Cardy's Condition of BCFT.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bosonization of Boundary State}
+
+  Project the Boundary States with $ P $ projector:
+\begin{align}
+  \ket{\pm,NS} = P \ket{\pm,NS} \quad \ket{-,R} = P \ket{-,R} \quad P \ket{+,R} = 0
+\end{align}
+Then we find states that satisfy Cardy's Condition and Assume that the Bosonic Theory is Diagonal RCFT:
+\begin{align}
+  &\left|f\right\rangle=\frac{1}{\sqrt{2}}|+,NS\rangle\oplus0\\&\left|+\right\rangle=\frac{1}{\sqrt{2}}\left(|-,NS\rangle\oplus|-,R\rangle\right)\\&\left|-\right\rangle=\frac{1}{\sqrt{2}}\left(|-,NS\rangle\oplus-|-,R\rangle\right)
+\end{align}
+\end{frame}
+
+\begin{frame}{Bosonized Partition Functions}
+We then Calculate the Partition Functions with the Bosonized Boundary States:
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{ccc}
+\hline\hline
+$q$ character & $\tilde q$ character & Closed Channel \\
+\hline\hline
+
+$\chi_0(q) $
+              & $ \frac{1}{2}\big(\chi_0(\tilde q) + \chi_{1/2}(\tilde q) \big) + \frac{1}{\sqrt{2}}\chi_{1/16}(\tilde q)$
+& $\langle + | e^{-L H_{\rm closed}} | + \rangle$
+\\
+$\chi_0(q) $
+              & $ \frac{1}{2}\big(\chi_0(\tilde q) + \chi_{1/2}(\tilde q) \big) + \frac{1}{\sqrt{2}}\chi_{1/16}(\tilde q)$
+& $\langle - | e^{-L H_{\rm closed}} | - \rangle$
+\\
+
+$ \chi_{1/2}(q) $
+&  $ \frac{1}{2}\big(\chi_0(\tilde q) + \chi_{1/2}(\tilde q) \big) + \frac{1}{\sqrt{2}}\chi_{1/16}(\tilde q)$
+& $\langle - | e^{-L H_{\rm closed}} | + \rangle$
+\\
+
+$ \chi_0(q) + \chi_{1/2}(q) $
+& $ \chi_0(\tilde{q}) + \chi_{1/2}(\tilde{q}) $
+& $\langle f | e^{-L H_{\rm closed}} | f \rangle$
+\\
+
+$ \chi_{1/16}(q)$
+& $\frac{1}{\sqrt{2}}\big(\chi_0(\tilde q) - \chi_{1/2}(\tilde q)\big)$
+& $\langle + | e^{-L H_{\rm closed}} | f \rangle$
+\\
+
+$ \chi_{1/16}(q)$
+& $\frac{1}{\sqrt{2}}\big(\chi_0(\tilde q) - \chi_{1/2}(\tilde q)\big)$
+& $\langle - | e^{-L H_{\rm closed}} | f \rangle$
+\\
+
+\hline\hline
+\end{tabular}
+\end{table}
+\textbf{Exactly the Ising BCFT Partition Functions!!!}
+\end{frame}
+
+\subsection{More to ask}
+
+\begin{frame}{What else can we ask?}
+  \begin{itemize}
+    \item \textbf{Non-Diagonal CFT:} in the bosonization procedure, we use an assumption that the bosonized theory is a diagonal CFT, what if there are other opentions? 
+
+      \bigskip
+    \item \textbf{Bosonization in Closed Channel:} can we do this procedure in the closed channel directly? 
+      certainly we can find that:
+      \begin{align}
+        & Z^{Ising}_{++} = \displaystyle\frac{1}{2} (Z_{(--),-} + Z_{(--),+})  \\ 
+        & Z^{Ising}_{+-} = \displaystyle\frac{1}{2} (Z_{(--),-} - Z_{(--),+}) \\ 
+        & Z^{Ising}_{ff} = \displaystyle\frac{1}{2} Z_{(++),+}
+      \end{align}
+      But what is the physical meaning?
+  \end{itemize}
+\end{frame}
+
+% %------------------------------------------------
+%
+% \begin{frame}{Blocks of Highlighted Text}
+%     In this slide, some important text will be \alert{highlighted} because it's important. Please, don't abuse it.
+%
+%     \begin{block}{Block}
+%         Sample text
+%     \end{block}
+%
+%     \begin{alertblock}{Alertblock}
+%         Sample text in red box
+%     \end{alertblock}
+%
+%     \begin{examples}
+%         Sample text in green box. The title of the block is ``Examples".
+%     \end{examples}
+% \end{frame}
+%
+% %------------------------------------------------
+%
+% \begin{frame}{Multiple Columns}
+%     \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+%
+%         \column{.45\textwidth} % Left column and width
+%         \textbf{Heading}
+%         \begin{enumerate}
+%             \item Statement
+%             \item Explanation
+%             \item Example
+%         \end{enumerate}
+%
+%         \column{.45\textwidth} % Right column and width
+%         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+%
+%     \end{columns}
+% \end{frame}
+%
+% %------------------------------------------------
+% \section{Second Section}
+% %------------------------------------------------
+%
+% \begin{frame}{Table}
+%     \begin{table}
+%         \begin{tabular}{l l l}
+%             \toprule
+%             \textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2} \\
+%             \midrule
+%             Treatment 1         & 0.0003262           & 0.562               \\
+%             Treatment 2         & 0.0015681           & 0.910               \\
+%             Treatment 3         & 0.0009271           & 0.296               \\
+%             \bottomrule
+%         \end{tabular}
+%         \caption{Table caption}
+%     \end{table}
+% \end{frame}
+%
+% %------------------------------------------------
+%
+% \begin{frame}{Theorem}
+%     \begin{theorem}[Mass--energy equivalence]
+%         $E = mc^2$
+%     \end{theorem}
+% \end{frame}
+%
+% %------------------------------------------------
+%
+% \begin{frame}{Figure}
+%     Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
+%     %\begin{figure}
+%     %\includegraphics[width=0.8\linewidth]{test}
+%     %\end{figure}
+% \end{frame}
+%
+% %------------------------------------------------
+%
+% \begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+%     \frametitle{Citation}
+%     An example of the \verb|\cite| command to cite within the presentation:\\~
+%
+%     This statement requires citation \cite{p1}.
+% \end{frame}
+%
+% %------------------------------------------------
+%
+% \begin{frame}{References}
+%     \footnotesize
+%     \bibliography{reference.bib}
+%     \bibliographystyle{apalike}
+% \end{frame}
+%
+% %------------------------------------------------
+
+\begin{frame}
+  \Huge{\centerline{\textbf{Thank You !!!! Questions?}}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

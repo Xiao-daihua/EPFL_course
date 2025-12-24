@@ -1,0 +1,289 @@
+
+\subsection{Vectorization和Quantum Channel结合}
+
+\bigskip
+\hlr{Vectorization的定义}
+
+基本定义我重新copy paste在这里。
+\defi{Vectorization
+
+也就是把一个矩阵$ A $变成一个向量$ |Vec(A)\rangle $，具体的定义是：
+\begin{align}
+  A=\sum_{ij}A_{ij}|i\rangle\langle j|\quad\rightarrow\quad |Vec(A)\rangle=\sum_{ij}A_{ij}|i\rangle\otimes|j\rangle.
+\end{align}
+}
+一个很重要的恒等式：
+\lmm{
+  对于任意的矩阵$ A, B, C $，都有：
+  \begin{align}
+    |Vec(ABC)\rangle=(A\otimes C^T)|Vec(B)\rangle.
+  \end{align}
+}
+
+
+\bigskip
+\hlr{Vectorization以及内积}
+
+对于Matrix我们可以定义一个内积：
+\begin{align}
+  \langle A,B\rangle_{\mathrm{HS}}:=\mathrm{Tr}\left(A^{\dagger}B\right)\mathrm{~.}
+\end{align}
+然后我们通过计算会发现这个内积和vectorization的内积是等价的：
+\begin{align}
+  \mathrm{Tr}\left(A^\dagger B\right)=\langle\mathrm{vec}(A)|\mathrm{vec}(B)\rangle
+\end{align}
+然后我们会发现。【期望值可以理解为Hermite Observable】和density matrix的内积，所以我们有：
+\begin{align}
+  \mathrm{Tr}{\left[O\mathcal{E}(\rho)\right]}=\langle\mathrm{vec}(O)|\mathrm{vec}(\mathcal{E}(\rho))\rangle
+\end{align}
+所以，我们就可以使用内积的方法来计算量子态的期望值了！
+
+\bigskip
+\hlr{Quantum Channel的Vectorization表示}
+
+下一个问题就是怎么一个density matrix的vectorization和其经过Quantum Channel作用之后的vectorization联系起来。对于一个Unitary Channel我们有：
+\begin{align}
+  \left|\operatorname{vec}(U\rho U^\dagger)\right\rangle=\left(U\otimes U^*\right)\left|\operatorname{vec}(\rho)\right\rangle\mathrm{~.}
+\end{align}
+因此对于一般的Kraus Operator定义的Quantum Channel我们有：
+\begin{align}
+  \left|\mathrm{vec}(\mathcal{E}(\rho))\right\rangle=\sum_K\left(K\otimes K^*\right)\left|\mathrm{vec}(\rho)\right\rangle.
+\end{align}
+
+
+
+\bigskip
+\hlr{复合的channel}
+
+我们考虑一个Quantum Channel是由一系列Unitary Operator的乘积构成的：
+\begin{align}
+U&=U_nU_{n-1}\cdots U_1.\\
+\rho&\longrightarrow U\rho U^\dagger
+\end{align}
+那么我们考虑一般的复合Channel定义，考虑两组Kraus Operator给出的Channel：
+\begin{align}
+  \mathcal{E}^{(1)}(\rho)=\sum_jK_j^{(1)}\rho\left(K_j^{(1)}\right)^\dagger,\quad\mathcal{E}^{(2)}(\rho)=\sum_kK_k^{(2)}\rho\left(K_k^{(2)}\right)^\dagger.
+\end{align}
+我们考虑复合的Channel我们发现Vectorization我们有：
+\begin{align}
+  |\mathrm{vec}(\mathcal{E}(\rho))\rangle=\left[\sum_k\left(K_k^{(2)}\otimes\left(K_k^{(2)}\right)^*\right)\right]\left[\sum_j\left(K_j^{(1)}\otimes\left(K_j^{(1)}\right)^*\right)\right]|\mathrm{vec}(\rho)\rangle.
+\end{align}
+
+\subsection{Average Over Unitary}
+
+\hlr{基本概念}
+
+我们考虑一个客观测量的期望值，但是我们考虑如果量子态进行了一些随机的Unitary变换之后的期望值。也就是说我们考虑下面这个量子态：
+\begin{align}
+  E_{\boldsymbol{\theta}}\operatorname{Tr}{\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]},
+\end{align}
+我们发现使用Vectorization的语言我们有：
+\begin{align}
+  \mathrm{Tr}{\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]}=\langle\mathrm{vec}(O)|\left(U_{\boldsymbol{\theta}}\otimes U_{\boldsymbol{\theta}}^{*}\right)|\mathrm{vec}(\rho)\rangle\mathrm{~.}
+\end{align}
+\defi{
+  Average Over Unitary
+
+  对于进行随机Unitary演化之后的期望值，满足关系：
+  \begin{align}
+    E_{\boldsymbol{\theta}}\operatorname{Tr}\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]=\left\langle\operatorname{vec}(O)\right|\left(E_{\boldsymbol{\theta}}{\left[U_{\boldsymbol{\theta}}\otimes U_{\boldsymbol{\theta}}^{*}\right]}\right)\left|\operatorname{vec}(\rho)\right\rangle. 
+  \end{align}
+  其中我们定义\textbf{Moment Operator}为：
+  \begin{align}
+    M\equiv E_{\boldsymbol{\theta}}{\left[U_{\boldsymbol{\theta}}\otimes U_{\theta}^{*}\right]},
+  \end{align}
+}
+
+\bigskip
+\hlr{例子：随机Z方向旋转}
+
+我们考虑一个随机Unitary的在Bloch球上沿Z方向转动的例子，每一个转动角度的概率都是一样的。我们定义Unitary算符是：
+\begin{align}
+  U_z(\theta)=e^{-i\theta Z/2}=\begin{pmatrix}e^{-i\theta/2}&0\\0&e^{i\theta/2}\end{pmatrix},
+\end{align}
+我们计算这个算符的$ U_\theta \otimes U_\theta^* $然后写成矩阵形式！并且对于$ \theta $进行均匀分布的average，我们得到：
+\begin{align}
+  \begin{aligned}M&=\frac{1}{2\pi}\int_{0}^{2\pi}\mathrm{diag}{\left(1,e^{-i\theta},e^{i\theta},1\right)}d\theta.\\
+&\frac{1}{2\pi}\int_{0}^{2\pi}e^{\pm i\theta}d\theta=0,\\
+&M=\mathrm{diag}{\left(1,0,0,1\right)}.\end{aligned}
+\end{align}
+中间两个0是因为我们平均的时候average掉了所有的震动。所以写作bra和ket的形式有：
+\begin{align}
+  M=|00\rangle\langle 00|+|11\rangle\langle 11|.
+\end{align}
+我们再把这个Moment Operator写作Kraus Operator作用在vectorization之后的density matrix上面：
+\begin{align}
+  |\mathrm{vec}(\mathcal{E}(\rho))\rangle&=M|\mathrm{vec}(\rho)\rangle\\
+&=\left(\ket{0}\bra{0}\otimes\ket{0}\bra{0}+ \ket{1}\bra{1}\otimes\ket{1}\bra{1}\right)|\mathrm{vec}(\rho)\rangle\\
+\end{align}
+我们从中读出两个Kraus Operator于是发现这个随机channel就是complete dephasing channel！
+
+\bigskip
+\hlr{高阶的Moment Operator}
+
+我们考虑客观测量的的「更高阶」平均值，类比$ <x^2> $我们有：
+\begin{align}
+  E_{\boldsymbol{\theta}}\left(\mathrm{Tr}{\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]}^{k}\right).
+\end{align}
+\textbf{注意！我们是先取Tr再取k次方！}我们知道Tr的k次方可以写作下面的形式：
+\begin{align}
+  \mathrm{Tr}[X]^2=\mathrm{Tr}[X\otimes X]
+\end{align}
+因此我们有
+\begin{align}
+  E_{\boldsymbol{\theta}}\left(\mathrm{Tr}{\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]}^{k}\right)=E_{\boldsymbol{\theta}}\left(\mathrm{Tr}{\left[(U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O)^{\otimes k}\right]}\right)=E_{\boldsymbol{\theta}}\left(\mathrm{Tr}{\left[(U_{\boldsymbol{\theta}}^{\otimes k}\rho^{\otimes k}(U_{\boldsymbol{\theta}}^{\dagger})^{\otimes k})O^{\otimes k}\right]}\right).
+\end{align}
+第三步之中我们意识到，矩阵的乘法和张量积的顺序是可以交换的，因为两个操作互不干扰！所以我们使用Vectorization的语言就可以有：
+\begin{align}
+  E_{\boldsymbol{\theta}}\left(\mathrm{Tr}{\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]}^{k}\right) = E_{\boldsymbol{\theta}}\left(\langle\mathrm{vec}(O^{\otimes k})|U_{\boldsymbol{\theta}}^{\otimes k}\otimes U_{\boldsymbol{\theta}}^{*\otimes k}|\mathrm{vec}(\rho^{\otimes k})\rangle\right)=\langle\mathrm{vec}(O^{\otimes k})|M_k|\mathrm{vec}(\rho^{\otimes k})\rangle
+\end{align}
+  其中我们定义高阶的Moment Operator为：
+  \defi{
+    高阶Moment Operator
+
+    我们定义高阶的Moment Operator为：
+    \begin{align}
+      M_k=E_{\boldsymbol{\theta}}\left[U_{\boldsymbol{\theta}}^{\otimes k}\otimes U_{\boldsymbol{\theta}}^{*\otimes k}\right].
+    \end{align}
+  }
+\rmk{
+  注意！张量积是不能定义顺序的！所以我们高阶moment operator一定不可以写作$ \left(E_{\boldsymbol{\theta}}\left[U_{\boldsymbol{\theta}}\otimes U_{\boldsymbol{\theta}}^{*}\right]\right)^{\otimes k} $这种形式！这是完全错误的。
+}
+
+\bigskip
+\hlr{张量积和Vectorization不可换}
+
+我们需要注意的是，有两个很像的东西是完全不一样的：
+\begin{align}
+  \ket{Vec(A \otimes B)} \neq \ket{Vec(A)} \otimes \ket{Vec(B)}.
+\end{align}
+但是这两个东西长得很像但是有一点点特别需要注意的差距。我们分别展开计算得到：
+\begin{align}
+  |\mathrm{vec}(A)\rangle\otimes|\mathrm{vec}(B)\rangle=\sum_{i,j,k,l=1}^na_{ij}\left.b_{kl}\right.|ij\rangle\otimes|kl\rangle=\sum_{i,j,k,l=1}^na_{ij}\left.b_{kl}\right.|ijkl\rangle
+\end{align}
+但是，计算$ |\mathrm{vec}(A\otimes B)\rangle $我们有：
+\begin{align}
+  |\mathrm{vec}(A\otimes B)\rangle=\sum_{i,j,k,l=1}^na_{ij}\left.b_{kl}\right.\left|ik\right\rangle\otimes\left|jl\right\rangle=\sum_{i,j,k,l=1}^na_{ij}\left.b_{kl}\right.\left|ikjl\right\rangle.
+\end{align}
+其中唯一的区别是\textbf{ket的张量积的顺序是不一样的}。导致这个区别的主要问题是，vectorization的定义是把所有的bra变成的ket张量积在原有的ket后面的。这需要特别注意。
+
+所以我们还有一个超级重要的结论就是：
+\begin{align}
+  \langle\mathrm{vec}(C\otimes D)|\mathrm{vec}(A\otimes B)\rangle=\langle\mathrm{vec}(C)|\mathrm{vec}(A)\rangle\langle\mathrm{vec}(D)|\mathrm{vec}(B)\rangle,
+\end{align}
+
+
+\bigskip
+\hlr{例子：计算方差}
+
+我们计算一个random unitary变换之后的期望值的方差：
+\begin{align}
+  \begin{aligned}\mathrm{Var}_{\boldsymbol{\theta}}[f_{\boldsymbol{\theta}}]&=E_{\boldsymbol{\theta}}\left(\mathrm{Tr}\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^\dagger O\right]^2\right)-\left(E_{\boldsymbol{\theta}}\left(\mathrm{Tr}\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^\dagger O\right]\right)\right)^2\\&=\langle\mathrm{vec}(O^{\otimes2})|M_2|\mathrm{vec}(\rho^{\otimes2})\rangle-(\langle\mathrm{vec}(O)|M_1|\mathrm{vec}(\rho)\rangle)^2.\end{aligned}
+\end{align}
+其中就是使用了方差的计算公式。并且二阶的Moment Operator帮助我们完成了计算。
+
+
+\subsection{General map Vectorization}
+
+\hlr{General map的Vectorization表示}
+
+
+我们考虑一个一般的map作用在一个state上面，前后vectorization的关系。我们考虑作用在一个density matrix上的一般map：
+\begin{align}
+  \mathcal{E}\left(\left|i\rangle\langle j\right|\right)=\sum_{k,l}c_{kl}^{ij}\left|k\rangle\langle l\right|.
+\end{align}
+前后的state我们可以使用vectorization进行表示：
+\begin{align}
+  \left|\mathrm{vec}(\mathcal{E}(\rho))\right\rangle=\sum_{i,j}\sum_{k,l}\rho_{ij}c_{kl}^{ij}\left|k\left.l\right\rangle\right..
+\end{align}
+为此我们可以定义一个Operator进行描述这个general的操作：
+\begin{align}
+  M=\sum_{i,j,k,l}c_{kl}^{ij}\left|k\left.l\right\rangle\left\langle i\left.j\right|\right..\right. \quad \left|\mathrm{vec}(E(\rho))\right\rangle=M\left|\mathrm{vec}(\rho)\right\rangle,
+\end{align}
+
+
+
+\bigskip
+\hlr{Transpose的Vectorization表示}
+
+我们知道transpose并不是一个Quantum Channel，因为它不满足complete positivity。但是我们依然可以考虑transpose map的vectorization表示。我们有：
+\begin{align}
+  \mathcal{E}{\left(\left|i\rangle\langle j\right|\right)}=\left|j\rangle\langle i\right|.
+\end{align}
+然后进行vectorization我们有：
+\begin{align}
+  M=\sum_{i,j}\left|j\left.i\right\rangle\left\langle i\right.j\right|=\begin{pmatrix}1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1\end{pmatrix}=\mathrm{SWAP}
+\end{align}
+
+\subsection{Pauli Transfer Matrix}
+
+对于1 qubit上面的任意quantum operation我们前面一直在使用其对于computational basis的作用描述这个operation。但是我们也可以使用Pauli basis来描述这个quantum operation。这种描述方式叫做Pauli Transfer Matrix (PTM) representation。
+
+我们首先定义一个quantum operation作用在Pauli Matrix上面，得到的结果是：
+\begin{align}
+  \mathcal{E}(P_i)=\sum_jC_j^iP_j,
+\end{align}
+其中$ P_i, P_j \in \{I,X,Y,Z\} $。我们可以为每一个Pauli矩阵赋予一个ket进行表示：
+\begin{align}
+  I\equiv\left|0\right\rangle,\quad X\equiv\left|1\right\rangle,\quad Y\equiv\left|2\right\rangle,\quad Z\equiv\left|3\right\rangle.
+\end{align}
+下面我们就可以把quantum operation写作一个矩阵作用在这些ket上面，这个矩阵我们定义为\textbf{Pauli Transfer Matrix}，我们有：
+\begin{align}
+  M=\sum_{ij}C_j^i|j\rangle\langle i|\mathrm{~,}
+\end{align}
+
+\bigskip
+\hlr{Hadamard Gate的PTM表示}
+
+考虑下面这样的Hadamard Gate:
+\begin{align}
+  H=\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}.
+\end{align}
+我们计算其作用在Pauli矩阵之后的结果，使用Pauli矩阵进行展开：
+\begin{align}
+  HIH^\dagger=I,\quad HXH^\dagger=Z,\quad HYH^\dagger=-Y,\quad HZH^\dagger=X.
+\end{align}
+因此我们可以写出Hadamard Gate的PTM表示：
+\begin{align}
+  M=\begin{pmatrix}1&0&0&0\\0&0&0&1\\0&0&-1&0\\0&1&0&0\end{pmatrix}.
+\end{align}
+
+
+\bigskip
+\hlr{PTM表示与Vectorization后的表示}
+
+对于一个Channel我们发现PTM的表示和Vectorization的表示是有联系的。我们考虑Hadmand Gate作用前后的Vectorization：
+\begin{align}
+  \left|\mathrm{vec}(E(\rho))\right\rangle=M\left|\mathrm{vec}(\rho)\right\rangle,
+\end{align}
+可以求出其中矩阵是：
+\begin{align}
+  M=H\otimes H^*=\frac{1}{2}\begin{pmatrix}1&1&1&1\\1&-1&1&-1\\1&1&-1&-1\\1&-1&-1&1\end{pmatrix}.
+\end{align}
+我们发现只要对其做一个相似变换，换一组基就可以得到PTM表示。并且换的基正好就是Pauli矩阵Vectorization之后的基，也就是Bell Basis。
+
+
+
+
+\subsection{Questions and Thoughts}
+
+\question{Vectorization可以跟那些操作进行互换？}
+
+我们发现求和是和vectorization可以互换的！！所以数乘和求和对于vectorization是可以互换的。
+\qed 
+
+\question{对于一个系统，我们对于一部分进行Unitary演化和对于另一部分进行Tr是可以交换的吗？}
+
+是的！！！啊啊啊啊啊啊啊啊！！
+
+\qed
+
+
+\question{
+张量积的Tr和之前是什么关系捏？
+}
+
+我们考虑关系：
+\begin{align}
+  \mathrm{Tr}(A\otimes B)=(\mathrm{Tr}A)\left(\mathrm{Tr}B\right)
+\end{align}

@@ -1,0 +1,100 @@
+\subsection{Take home message}
+\hlr{2 bit 经典系统}
+
+对于2bit经典系统我们使用一个向量描述这个系统处于各个状态的概率：
+\begin{align}
+  v = (p, 1-p)
+\end{align}
+并且向量要满足所有项的和为1，并且每一项都是非负实数。所以其参数空间也很好找就是一个线段！！线段上面的每一个点都对应一个经典的2 bit system。
+
+\bigskip
+\hlr{2bit 量子系统的空间}
+
+推广到量子系统我们下面使用一个$ 2 \times 2 $ Hermite复矩阵进行描述，我们称为density matrix，这个矩阵需要满足下面的性质：
+\begin{itemize}
+  \item Hermite Matrix 也就是$ \rho = \rho^\dagger $
+  \item Trace 1 也就是$ \mathrm{Tr}(\rho)=1 $
+  \item Positive Semi-definite 也就是$ \text{Eigen} \rho \geq 0 $
+\end{itemize}
+
+\bigskip
+\hlr{参数空间：Density Matrix的Pauli基展开}
+
+对于所有的$ 2 \times 2 $ Hermite矩阵我们都可以使用Pauli矩阵进行展开，对于density matrix我们发现有三个实数自由度写在pauli基下面就是：
+\begin{align}
+  \rho = \frac{1}{2}(I + r_x \sigma_x + r_y \sigma_y + r_z \sigma_z) = \frac{1}{2}(I + \vec{r} \cdot \vec{\sigma})
+\end{align}
+可以确定我们只需要三个实参数就可以描述。
+
+
+\bigskip
+\hlr{Bloch Sphere以及量子态}
+
+对于这三个实数自由度的选取我们存在限制条件的根据【density matrix的所有特征值都大于0】我们发现：
+\begin{align}
+  \lambda_1 = \frac{1 + |\vec{r}|}{2} \geq 0, \quad \lambda_2 = \frac{1 - |\vec{r}|}{2} \geq 0 \quad \Rightarrow \quad |\vec{r}| \leq 1
+\end{align}
+所以我们如果在$ \mathbb{R}^3 $之中画出来，所有可能的量子态就在一个半径为1的球之内，这个球我们称为Bloch Sphere。
+
+对于经典的2 bit system其实参数空间就是一个线段，但是量子的参数空间是一个球！！所以量子系统的参数空间更大！并且其实经典的参数空间也就是bloch球的y轴这个直径。
+
+\bigskip
+\hlr{Pure State 和 Mixed State}
+
+我们定义pure state和mix state 如下。
+\defi{Pure State and Mixed State
+
+  如果一个态不能写作$ \rho = p \sigma_a +(1=p) \sigma_b $的形式，那么我们称这个态为pure state。否则称为mixed state。
+}
+如果使用bloch球的表示，pure state就是球面上的点，mixed state就是球面之内的点。
+
+\bigskip
+\hlr{Ensemble Ambiguity paradox}
+
+这并不是一个悖论而是量子信息上一个很神奇的点，也就是$ \rho = I/2 $这个Maximally Mixed State。这个态可以有无数种ensemble realization。比如：
+\begin{align}
+  \rho = \frac{1}{2}|0\rangle\langle0| + \frac{1}{2}|1\rangle\langle1| = \frac{1}{2}|+\rangle\langle+| + \frac{1}{2}|-\rangle\langle-|
+\end{align}
+这说明我们不能通过实验测量区分这个态是怎么进行制备的，不论是经典的制备还是量子的制备。
+
+\bigskip
+\hlr{Multi Qubit System}
+
+对于一般的$ \rho $我们会发现满足了三个条件之后我们有$ N=d^2- 1 $的自由度。需要这么多个实数参数才能描述一个$ d $维的量子系统。
+
+但是我们有一个点就是，更大的量子系统我们可以通过tensor product进行构造也就是：
+\begin{align}
+  \rho_{AB} = \sum_i p_i \rho_A^i \otimes \rho_B^i
+\end{align}
+
+\bigskip
+\hlr{纠缠态}
+
+我们进行构造的时候我们会发现有一些态并不能够写作上面的子系统张量积的形式「至少对于某两个特定子系统来说」我们认为这个子系统存在entanglement并且这个态是entangled state。
+\defi{Entangled State
+
+  如果一个态不能写作$ \rho_{AB} = \sum_i p_i \rho_A^i \otimes \rho_B^i $的形式，那么我们称这个态为entangled state。
+}
+
+
+\bigskip
+\hlr{Partial Trace of System}
+
+如果考虑一个多系统体系，但是我们仅仅关心一个子系统的行为我们可以focus on 子系统，同时取一个partial trace这样子我们期望的情况是不变的。我们得到子系统A上面的reduced density matrix：
+\begin{align}
+  \rho_A = \mathrm{Tr}_B(\rho_{AB}) = \sum_i \bra{Id \otimes i} \rho_{AB} \ket{Id \otimes i}
+\end{align}
+这个reduced density matrix可以让我们在子系统A上面进行所有的测量，并且得到整体系统一样的结果。
+
+
+我个人理解这就是一个方便的工具。让我们等效的只看一个子系统！！！在纠缠下的行为。
+
+
+\subsection{Questions and thoughts}
+
+\question{对于一个$ \rho $表示的system，到底有多少参数是basis invariant的，还有哪些参数其实是因为basis transformation引入的？到底什么是basis？？}
+
+注意，这些东西都是抽象的。其中的coordinate并不是我们日常的。很可能是很抽象的事件。但是同时，我们也可以考虑进行Similar Transformation。那么得到的就是另一个新的体系，可以理解为过了一个量子门（（！！  
+\qed 
+
+

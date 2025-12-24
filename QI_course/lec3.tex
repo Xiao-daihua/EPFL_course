@@ -1,0 +1,265 @@
+\subsection{Take home messages}
+
+\subsubsection{基础量子计算}
+\hlr{pauli矩阵分解}
+
+pauli矩阵分解可以通过矩阵的norm来描述，我们用Tr来定义矩阵的内积：
+\begin{align}
+  \langle A|B \rangle =\mathrm{Tr}(A^{\dagger}B)
+\end{align}
+于是pauli基下面就可以写作：
+\begin{align}
+  \rho = \displaystyle\frac{1}{2} (Tr(\rho)I + \sum_{i=1}^3 \mathrm{Tr}(\rho \sigma_i)\sigma_i)
+\end{align}
+
+\bigskip
+\hlr{partial Tr的一些comment}
+
+Patial Trace的操作其实是让对于A系统的求和概率dept
+ on B系统的所有可能性！！这样可以让只看A系统的时候还能描述AB系统的纠缠行为！
+
+
+\bigskip
+\hlr{量子计算基础}
+
+对于量子计算来说，我们需要manipulate qubit system。我们可以通过量子门来进行manipulate。
+
+\textbf{量子门是一堆Unitary Operator}我们可以通过一系列的量子门来进行量子计算。
+
+
+\bigskip
+\hlr{单比特门}
+
+下面介绍几个比较重要的single qubit gate：
+\begin{itemize}
+  \item \textbf{Pauli Gate}：$ X=\sigma_x, Y=\sigma_y, Z=\sigma_z $
+  \item \textbf{Hadamard Gate}：$ H=\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix} $
+\end{itemize}
+Hadamard Gate的作用是把$ |0\rangle $变成$ |+\rangle $，把$ |1\rangle $变成$ |-\rangle $。也就是把Z基变成X基。我们有：
+\begin{align}
+  HXH=Z, \quad HYH=-Y, \quad HZH=X 
+\end{align}
+这样的关系让我们可以通过这个Gate改变测量方向。
+
+\bigskip
+\hlr{单比特一般演化}
+
+单比特态的演化我们可以把一个Unitary Operator写作这样的形式：
+\begin{align}
+  U = exp(-i \theta s \dot \sigma )
+\end{align}
+也就是我们把指数上面的Hermite矩阵进行展开！我们研究这个矩阵对于Bloch球向量的作用：
+\begin{align}
+  U \rho U^{\dagger} = \frac{1}{2}(I + \vec{r}' \cdot \vec{\sigma}),  
+\end{align}
+\textbf{其中$ \vec{r}' = R \vec{r} $，$ R $是一个绕着$ s $轴旋转$ 2\theta $的旋转矩阵。}
+
+\bigskip
+\hlr{多比特门}
+
+多比他们最重要的是CNOT门，这个门的矩阵表示是：
+\begin{align}
+  \mathrm{CNOT} = \begin{pmatrix}1&0&0&0\\0&1&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix}
+\end{align}
+他的作用是第一个bit决定我们是不是反转第二个bit。
+
+\thm{所有Unitary Operator都可以通过CNOT和单比特门进行构造！！}
+
+
+\subsubsection{Purification相关}
+
+\hlr{Purification基本操作}
+
+对于一个mix state我们可以通过引入辅助系统来把这个mix state变成pure state。这个过程我们称为purification。\thm{任何一个Generic Mix State $ \rho_a $都存在一个state $ \ket{\psi_{AB}} $使得：
+\begin{align}
+  \rho_A = \mathrm{Tr}_B(|\psi_{AB}\rangle\langle\psi_{AB}|)
+\end{align}
+}
+purification并不是唯一，但是存在一个general的构造方法：
+\begin{itemize}
+  \item 首先把$ \rho_A $进行谱分解：
+    \begin{align}
+      \rho_A = \sum_i p_i |i_A\rangle\langle i_A|
+    \end{align}
+  \item 然后引入一个辅助系统B，构造一个纯态：
+    \begin{align}
+      |\psi_{AB}\rangle = \sum_i \sqrt{p_i} |i_A\rangle |i_B\rangle
+    \end{align}
+\end{itemize}
+\rmk{
+  注意purification前后存在一个$ \sqrt{p_i} $的区别，记得开根号！！
+}
+这个方法下我们的B系统的维度至少和A系统的rank一样大（也就是A系统有非0本征值的维度！）并且这是进行purification的最小维度！！不会比这个小，否则就会丢失信息。
+
+\bigskip
+\hlr{Purification After Evolve}
+
+我们考虑对于B系统进行一个unitary演化，我们会发现演化后的purifictaion仍然是一个purification！！
+
+
+
+\bigskip
+\hlr{Proper and Improper Mixture}
+
+对于同一个density matrix表达的state我们很可能有不同的实现或者理解方式，比如对于一个maximally mixed state $ \rho = \frac{1}{2}I $，我们可以有两种理解：
+\begin{itemize}
+  \item \textbf{Proper Mixture}：我们可以把这个态理解为$ |0\rangle $和$ |1\rangle $我们各自有50\%的概率进行制备
+  \item \textbf{Improper Mixture}：我们也可以把这个态理解为一个entangled态$ \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle) $的一个子系统。
+\end{itemize}
+两者的物理完全不一样的！
+\begin{itemize}
+  \item Proper Mixture是经典的，他是源于我们对于制备情况的无知
+  \item Improper Mixture是对于一个纠缠态的子系统的表述
+\end{itemize}
+
+
+
+
+\subsubsection{Fundamental POVM measurement}
+
+\hlr{回顾怎么测量经典系统}
+
+对于一个经典系统，所谓\textbf{测量}就是我们去问这个系统一个问题，然后得到一个答案。
+\begin{itemize}
+  \item 每一个问出的问题可以通过一组向量进行表达：$ \{ \vec{m_k}\} $每一个向量$ \vec{m}_k $代表一种可能测量结果。这个向量需要满足两个条件：
+    \begin{itemize}
+      \item $ m_k $的所有分量都是非负的【半正定矩阵】
+      \item $ \sum_k m_k = 1 $，也就是所有可能结果
+    \end{itemize}
+  \item 测量得到k结果的概率是$ p_k = m_k \cdot p  $，其中$ p $是用来描述经典状态的向量
+\end{itemize}
+
+\bigskip
+\hlr{POVM Measurement 的定义}
+
+POVM Measurement 就是对于上面的情况的推广，下面给出详细的定义要求：
+\defi{POVM测量
+
+  对于一个量子系统我们可以用一个密度矩阵进行描述$ \rho $。下面我们对其进行测量：
+  \begin{enumerate}
+    \item 对这个量子系统问出的一个问题可以数学上对应这一组矩阵$ M_k $这组矩阵需要满足下面的条件：
+      \begin{itemize}
+        \item 每一个$ M_k $都是半正定矩阵，也就是本征值$ \geq 0 $
+        \item $ \sum_k M_k = I $【注意是矩阵直接求和出来Id】
+      \end{itemize}
+      \item 对于某一个系统$ \rho $，测量得到k结果的概率是：
+        \begin{align}
+          p_k = \mathrm{Tr}(\rho M_k)
+        \end{align}
+  \end{enumerate}
+}
+
+\bigskip
+\hlr{Projective Measurement as a special POVM}
+
+我们定义projective measurement是一个特殊的POVM测量。需要满足其中矩阵$ M_k $是正交归一化的投影矩阵：$ M_i M_j = \delta_{ij}M_i $
+对于一个d维度的系统，我们需要有d个这样的投影矩阵。
+
+对于测量结果，我们之前讨论的exprectation value可以这样的到。我们为每一个测量结果k赋予一个数值$ \lambda_k $作为一个「具体测量出来的数」，下面给出exprectation value的计算：
+\begin{align}
+  \sum \lambda_k p_k = \sum_k \lambda_k \mathrm{Tr}(\rho M_k) = \mathrm{Tr}(\rho \sum_k \lambda_k M_k)
+\end{align}
+我们定义$ \sum \lambda_k M_k $也就是一个Hermite矩阵，我们把他叫做observable。这就和量子力学里面讨论对应上了。
+
+此外可以研究测量后系统的状态，根据量子力学我们会发现projective measurement后系统的状态变成：
+\begin{align}
+  \rho' = \frac{M_k \rho M_k}{\mathrm{Tr}(\rho M_k)}
+\end{align}
+这是在测量到k结果之后系统的状态。【其中我们使用了一个归一化捏！保证我们的$ \rho' $密度矩阵是$ Tr = 1 $的】
+
+
+\bigskip
+\hlr{State Discrimination Problem}
+
+下面思考一个问题，我们现在手里有一个量子态，可能是$ \ket{0} $也可能是$ \displaystyle\frac{1}{\sqrt{2}}(\ket{0}+\ket{1}) $。使用【唯一一次测量】试图确认我们到底是哪一个态！！
+
+\textbf{答案是：不可能！！我们永远不能仅仅一次测量就能保证确认是某一个态！！}
+
+但是我们可以通过设计一个测量方案来最大化我们正确识别的概率！！这个问题就是State Discrimination Problem。我们选择下面POVM：
+\begin{align}
+  M_1 = a |1\rangle\langle1|, \quad M_2 = b |-\rangle\langle-|,\quad M_3 = I - M_1 - M_2
+\end{align}
+并且给出约束条件$ a, b \geq 0  $同时选择的$ a,b $需要保证$ M_3 $是半正定的！！【这个约束条件很重要！！】在这个测量方案下:
+\begin{itemize}
+  \item 得到结果1我们知道手里是$ \displaystyle\frac{1}{\sqrt{2}}(\ket{0}+\ket{1}) $；
+  \item 得到结果2我们知道手里是$ \ket{0} $；
+  \item 得到结果3我们就不知道了！！【这个结果3我们称为inconclusive result】。
+\end{itemize}
+
+一个值得讨论的问题是：我们怎么选择$ a,b $来最大化我们正确识别的概率呢？
+\bigskip
+
+首先我们需要计算正确识别的概率，在上面的构造之中我们知道给出正确结论的概率可以如下进行计算：
+\defi{正确概率
+
+由于两个态都是随机1/2概率出现的，我们定义正确识别概率为：
+\begin{align}
+  \begin{gathered}P_{\mathrm{correct}}=\frac{1}{2}P(\mathrm{correct}|\psi_1)+\frac{1}{2}P(\mathrm{correct}|\psi_2)\\=\frac{1}{2}\langle\psi_1|M_2|\psi_1\rangle+\frac{1}{2}\langle\psi_2|M_1|\psi_2\rangle\end{gathered}
+\end{align}
+}
+然后我们进行一个假设：【假设$ a = b $】$ M_1, M_2 $这两个POVM有一样的系数。于是我们计算$ M_3 $的本征值，根据半正定的条件我们可以得到最终的结果。
+
+\thm{一般两个量子态的State Discrimination Problem的最优解
+
+对于一般的两个量子态$ |\psi\rangle, |\phi\rangle $，我们可以通过下面的POVM测量来最大化正确识别概率：
+\begin{align}
+  \begin{aligned}&F_{\psi}=\frac{1}{1+|\langle\varphi|\psi\rangle|}|\varphi^\perp\rangle\langle\varphi^\perp|\\&F_{\varphi}=\frac{1}{1+|\langle\varphi|\psi\rangle|}|\psi^\perp\rangle\langle\psi^\perp|\\&F_{?}=\mathrm{I}-F_\psi-F_\varphi=\frac{2|\langle\varphi|\psi\rangle|}{1+|\langle\varphi|\psi\rangle|}|\gamma\rangle\langle\gamma|,\end{aligned}
+\end{align}
+其中量子态是：
+\begin{align}
+  |\gamma\rangle=\frac{1}{\sqrt{2(1+|\langle\varphi|\psi\rangle|)}}(|\psi\rangle+e^{i\arg(\langle\varphi|\psi\rangle)}|\varphi\rangle).
+\end{align}
+}
+比如对于上面区分$ \ket{0}, \ket{+} $这样的两个态，我们可以选择：
+\begin{align}
+  M_1=\frac{\sqrt{2}}{1+\sqrt{2}}|1\rangle\langle1|,\quad M_2=\frac{\sqrt{2}}{1+\sqrt{2}}|-\rangle\langle-|,\quad M_3=I-M_1-M_2.
+\end{align}
+这样的一个解！
+
+
+
+
+
+
+\bigskip
+\hlr{Convex Mixture of Projective Measurement}
+
+我们发现如果把一些projective measurement进行convex mixture，我们会得到一个POVM测量！！那么这个POVM的意义是什么呢？
+
+其实是说我们有一定概率进行某一个projective measurement，同时也有一定概率进行另一个projective measurement！
+
+
+
+
+\bigskip
+\hlr{Extra Note on informationally complete measurement}
+
+\YL{[待补充，以及参考第三次的作业题！]}
+
+
+\subsection{Questions and thoughts}
+  
+
+\question{怎么理解projective measurement 是一个特殊的POVM？}
+
+我目前的理解是Projective Measurement仅仅允许测量某一个密度矩阵表示的态，【到一个纯态上面的概率】。因为我们的projective operator其实就是一个纯态的投影。
+
+但是一般的POVM是允许我们讨论一个混态是某个混态的概率的。这个样子，我们量子体系可以问的问题就更多了！！能测量的问题就更多了！
+\qed 
+
+\imp{Pauli矩阵的海量结论}{
+  由于Pauli矩阵在QI之中应用太频繁了，我下面列出海量重要的结论，方便查阅！！
+  \begin{align}
+    \sigma_0=I=\begin{pmatrix}1&0\\0&1\end{pmatrix},\quad\sigma_x=\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad\sigma_y=\begin{pmatrix}0&-i\\i&0\end{pmatrix},\quad\sigma_z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}
+  \end{align}
+  \begin{enumerate}
+    \item 
+  \end{enumerate}
+}
+
+\bigskip
+\question{State Discrimination Problem的最优解是怎么样的？}
+
+这个wiki上面有明确讨论: \href{https://en.wikipedia.org/wiki/POVM#An_example:_unambiguous_quantum_state_discrimination}{wiki最优解}，建议参考这个页面。同时结论我也写在正文内容里面了。
+\qed
+
