@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  24 DEC 2025 16:20
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  25 DEC 2025 21:39
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1490,13 +1490,35 @@ File: assets/inerform.png Graphic file (type bmp)
 
 [83] (./lec12.tex
 
-[84])
+[84]
 
-[85] (./lec13.tex)
+[85]
 
-[86] (./lec14.tex)
+[86]
+File: assets/energypoasd.png Graphic file (type bmp)
+<assets/energypoasd.png>
 
-[87] (./main.aux)
+
+[87]
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 229.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 229.
+
+)
+
+[88] (./lec13.tex
+
+[89]
+
+[90]
+
+[91])
+
+[92] (./lec14.tex)
+
+[93] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1509,15 +1531,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 07D4F0B7371A5F7598B2474720BCEAD4;18110.
+(rerunfilecheck)             Checksum: 36C884DF8EBD5FC841633F1B2B24CDF1;19152.
  ) 
 Here is how much of TeX's memory you used:
- 35937 strings out of 468527
- 796030 string characters out of 5447700
+ 35963 strings out of 468527
+ 796654 string characters out of 5447700
  1216767 words of memory out of 5000000
- 63599 multiletter control sequences out of 15000+600000
- 641147 words of font info for 136 fonts, out of 8000000 for 9000
+ 63622 multiletter control sequences out of 15000+600000
+ 641163 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,21n,121p,646b,667s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (87 pages, 2167600 bytes).
+Output written on main.xdv (93 pages, 2348156 bytes).

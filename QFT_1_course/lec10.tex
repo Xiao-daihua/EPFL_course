@@ -119,6 +119,9 @@
   \end{align}
 }
 我们下面考虑其在不同表示空间的表示。我们会使用一个Trick，也就是先考虑其在Adjoint Representation上的表示，然后利用Adjoint Representation足够抽象的性质来求解其在一般表示空间下的表示。
+\rmk{
+  之后我们使用$ P $表示Parity在Defining Representation上面的形式，使用$ \mathrm{P} $表示Parity在一般表示空间下的表示！！至于一般representation是场构型空间还是Hilbert空间需要靠语境决定！
+}
 
 \bigskip
 \hlr{Parity 在Adjoint Representation上的作用}
@@ -143,12 +146,12 @@
 
   Parity作用在Lorentz群Lie Algebra的抽象的生成元上面的形式为：
   \begin{align}
-    P J^{\mu\nu} P^{-1} = P^\mu{}_\rho P^\nu{}_\sigma J^{\rho\sigma}
+    \mathrm{P} J^{\mu\nu} \mathrm{P}^{-1} = P^\mu{}_\rho P^\nu{}_\sigma J^{\rho\sigma}
   \end{align}
 }
 这个关系可以帮助我们求解Parity在一般表示空间下的表示。因为一般的表示空间下，Parity的表示和Lorentz Algebra的表示的生成元之间都需要满足：
 \begin{align}
-  P J^{\mu\nu} P^{-1} = P^\mu{}_\rho P^\nu{}_\sigma J^{\rho\sigma}
+  \mathrm{P} J^{\mu\nu} \mathrm{P}^{-1} = P^\mu{}_\rho P^\nu{}_\sigma J^{\rho\sigma}
 \end{align}
 的关系。
 
@@ -164,9 +167,9 @@
 \defi{
   Parity作用在Poincare代数
 
-  对于任意Poicare群的表示来说，Parity作用其上的结果为：
+  对于Poicare群的表示来说，Parity作用其上的结果为：
   \begin{align}
-    PU\left(\Lambda,a\right)P^{-1}=U\left(P\Lambda P^{-1},Pa\right),
+    \mathrm{P}U\left(\Lambda,a\right)\mathrm{P}^{-1}=U\left(P\Lambda P^{-1},Pa\right),
   \end{align}
   其中左手边的$ P $在这个表示空间下的表示。右手边的$ P $是Defining Representation下的Parity矩阵。
 }
@@ -178,8 +181,8 @@
 
   Parity作用在Poincare代数生成元上面的表示为：
   \begin{align}
-    P P^\mu P^{-1} &= P^\mu{}_\nu P^\nu, \\
-    P J^{\mu\nu} P^{-1} &= P^\mu{}_\rho P^\nu{}_\sigma J^{\rho\sigma}.
+    \mathrm{P} P^\mu \mathrm{P}^{-1} &= P^\mu{}_\nu P^\nu, \\
+    \mathrm{P} J^{\mu\nu} \mathrm{P}^{-1} &= P^\mu{}_\rho P^\nu{}_\sigma J^{\rho\sigma}.
   \end{align}
 }
 
@@ -188,12 +191,12 @@
 
 我们根据Parity作用在Poicare代数的生成元的结果知道，Parity作用在转动算符和boost算符上面的结果为：
 \begin{align}
-  P J^i P^{-1} &= J^i, \\
-  P K^i P^{-1} &= -K^i.
+  \mathrm{P} J^i \mathrm{P}^{-1} &= J^i, \\
+  \mathrm{P} K^i \mathrm{P}^{-1} &= -K^i.
 \end{align}
 我们考虑Parity作用在一般的Lorentz群表示空间$ (j_1,j_2) $上面的结果。我们发现：
 \begin{align}
-  P J_\pm^i P^{-1} = \frac{P J^i P^{-1} \pm i P K^i P^{-1}}{2} = \frac{J^i \mp i K^i}{2} = J_\mp^i.
+  \mathrm{P} J_\pm^i \mathrm{P}^{-1} = \frac{\mathrm{P} J^i \mathrm{P}^{-1} \pm i \mathrm{P} K^i \mathcal{P}^{-1}}{2} = \frac{J^i \mp i K^i}{2} = J_\mp^i.
 \end{align}
 也就是说，Parity作用在$ (j_1,j_2) $表示空间上面会把$ J_+^i $和$ J_-^i $交换掉！！从而变成一个$ (j_2,j_1) $表示空间！！所以我们总结两点：
 \begin{itemize}
@@ -221,7 +224,7 @@
 
 我们考虑Parity作用在(1/2,0)表示以及(0,1/2)表示上面的形式，我们有：
 \begin{align}
-  P\Lambda_{L/R}(\vec{\theta},\vec{\eta})P=\Lambda_{L/R}(\vec{\theta},-\vec{\eta}) = \Lambda_{R/L}(\vec{\theta},\vec{\eta})
+  \mathrm{P}\Lambda_{L/R}(\vec{\theta},\vec{\eta})\mathrm{P}=\Lambda_{L/R}(\vec{\theta},-\vec{\eta}) = \Lambda_{R/L}(\vec{\theta},\vec{\eta})
 \end{align}
 note 我们右边没有写$ P^{-1} $是因为经典的情况下我们有$ P^2=1 $。一个合理的理论需要这个关系保持的！！
 
@@ -246,11 +249,11 @@ note 我们右边没有写$ P^{-1} $是因为经典的情况下我们有$ P^2=1 
   \end{align}
   Dirac Spinor Field在Parity变换下的变换为：
   \begin{align}
-    \Psi_D(x)=\begin{pmatrix}\psi_L(x)\\\psi_R(x)\end{pmatrix}\mapsto\Psi_D^P(x)\equiv\begin{pmatrix}\psi_R(Px)\\\psi_L(Px)\end{pmatrix}=\begin{pmatrix}0&\mathbb{I}\\\mathbb{I}&0\end{pmatrix}\begin{pmatrix}\psi_L(Px)\\\psi_R(Px)\end{pmatrix}\equiv\gamma_0\Psi_D(Px)
+    \Psi_D(x)=\begin{pmatrix}\psi_L(x)\\\psi_R(x)\end{pmatrix}\mapsto\Psi_D'(x'=Px)\equiv\begin{pmatrix}\psi_R(x)\\\psi_L(x)\end{pmatrix}= \gamma^0 \Psi_D(x)
   \end{align}
   其中变换矩阵为：
   \begin{align}
-    \gamma_0\equiv\begin{pmatrix}0&\mathbb{I}\\\mathbb{I}&0\end{pmatrix}.
+    \gamma^0\equiv\begin{pmatrix}0&\mathbb{I}\\\mathbb{I}&0\end{pmatrix}.
   \end{align}
 }
 对于Dirac Spinor Field来说在Lorentz变换下的变换矩阵和Parity变换下的变换矩阵之间正好满足：

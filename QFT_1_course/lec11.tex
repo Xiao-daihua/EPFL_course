@@ -314,6 +314,9 @@ Proof: 我们证明这两个方程是Lorentz不变的。根据lorentz不变的�
 \begin{align}
   \partial \bar{\partial} \psi_L = \partial_\mu \partial_\nu \sigma^\mu \bar{\sigma}^\nu \psi_L = \displaystyle\frac{1}{2} \partial_\mu \partial_\nu (\sigma^\mu \bar{\sigma}^\nu + \sigma^\nu \bar{\sigma}^\mu) \psi_L = \partial_\mu \partial^\mu \psi_L = \Box \psi_L
 \end{align}
+\rmk{
+  这是一个极其重要的常用的结论也就是$ \partial \bar{\partial} = \Box $！这个结论在后面会经常使用！
+}
 这也就说明：
 \begin{align}
   \bar{\partial} \psi_L = 0 \implies \Box \psi_L = 0
@@ -414,6 +417,11 @@ Weyl Spinor的运动方程告诉我们其描述的是质量为0的spin-1/2粒子
 \begin{align}
   \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
 \end{align}
+我们可以根据Gamma矩阵的构造和之前的讨论验证这个运动方程是Lorentz Invariant的，我们根据Gamma矩阵的构造和之前讨论的(1/2,1/2)表示的结论有：
+\begin{align}
+  \Lambda_D(\theta,\eta)\ds{p}\Lambda_D(\theta,\eta)^{-1}=\Lambda^\mu{}_\nu p^\nu\gamma_\mu=\ds{\Lambda p}.
+\end{align}
+因此这个运动方程在Lorentz变换下依旧成了$ F = 0 \Rightarrow F' = F(\psi'(x'),x') = 0 $。
 
 \hlr{运动方程的物理诠释}
 
@@ -425,7 +433,12 @@ Weyl Spinor的运动方程告诉我们其描述的是质量为0的spin-1/2粒子
 \begin{align}
   (\square + m^2)\psi_L(x)=0, \quad (\square + m^2)\psi_R(x)=0
 \end{align}
-因此我们可以理解为：
+当然这个结果我们也可以直接从4维Dirac Spinor的形式推导出来:
+\begin{align}
+  (i\ds{\partial}+m)(i\ds{\partial}-m)\Psi_D(x)=(\square + m^2)\Psi_D(x)=0
+\end{align}
+其中使用了Clifford Algebra的性质$ \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu} $。和$ \{\sigma^\mu,\bar{\sigma}^\nu\}=2\eta^{\mu\nu} $类似我们可以对称化导数给出上面的结果。
+对于这个结论我们可以理解为：
 \begin{itemize}
   \item Dirac Spinor的运动方程描述质量为$ m $的有电荷粒子！
 \end{itemize}
@@ -433,7 +446,15 @@ Weyl Spinor的运动方程告诉我们其描述的是质量为0的spin-1/2粒子
 
 \hlr{Parity变换性质}
 
-我们特殊note一下这个运动方程在Parity变换下形式依旧不变！！
+我们特殊note一下这个运动方程在Parity变换下形式依旧不变！！回顾一下我们之前定义的Parity变换下Dirac Spinor的变换为：
+\begin{align}
+  \Psi_D(x) \to \gamma^0 \Psi_D(Px), \quad x \to Px = (x^0,-x)
+\end{align}
+对于这个变换我们有：
+\begin{align}
+  (i\ds{\partial}-m)\Psi_D(x) \to (i\gamma^\mu \partial_\mu' - m) \gamma^0 \Psi_D(Px) = \gamma^0 (i\gamma^\nu \partial_\nu - m) \Psi_D(Px)
+\end{align}
+变换后的形式正好是变换前形式乘以一个$ \gamma^0 $，因此如果变换前形式为0，则变换后形式依旧为0！
 
 
 \subsection{Lagrangian Formulation of Spinor Fields}
@@ -480,12 +501,12 @@ Weyl Spinor的运动方程告诉我们其描述的是质量为0的spin-1/2粒子
 
   Dirac Spinor的Lagrangian定义为：
   \begin{align}
-    S_D=\int d^4x\mathcal{L}_D=\int d^4x\mathrm{~}\bar{\Psi}_D(i\phi-m)\Psi_D, \quad \bar{\Psi}_D\equiv\Psi_D^\dagger\gamma^0
+    S_D=\int d^4x\mathcal{L}_D=\int d^4x\mathrm{~}\bar{\Psi}_D(i\slashed{\partial}-m)\Psi_D, \quad \bar{\Psi}_D\equiv\Psi_D^\dagger\gamma^0
   \end{align}
 }
 给出的运动方程为Dirac方程：
 \begin{align}
-  0=\frac{\delta S_D}{\delta\bar{\Psi}_D}=(i\phi-m)\Psi_D
+  0=\frac{\delta S_D}{\delta\bar{\Psi}_D}=(i\ds{\partial}-m)\Psi_D
 \end{align}
 
 

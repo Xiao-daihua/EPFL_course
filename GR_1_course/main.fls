@@ -490,6 +490,9 @@ INPUT lec11.tex
 INPUT ./lec12.tex
 INPUT ./lec12.tex
 INPUT lec12.tex
+INPUT ./assets/energypoasd.png
+INPUT ./assets/energypoasd.png
+INPUT ./assets/energypoasd.png
 INPUT ./lec13.tex
 INPUT ./lec13.tex
 INPUT lec13.tex

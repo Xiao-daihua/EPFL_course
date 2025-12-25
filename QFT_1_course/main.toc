@@ -29,14 +29,14 @@
 \contentsline {section}{\numberline {7}Lecture 7: Symmetry and Conservation Law}{41}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Symmetry变换的定义}{41}{subsection.7.1}%
 \contentsline {subsubsection}{\numberline {7.1.1}Symmetry Transformation for Lagrangian Formalism}{41}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}无限小坐标变换以及场构型空间变分}{42}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2}无限小坐标变换以及场构型空间变分}{43}{subsubsection.7.1.2}%
 \contentsline {subsection}{\numberline {7.2}Noether's Theorem}{44}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}Noether's Theorem的陈述与证明}{44}{subsubsection.7.2.1}%
 \contentsline {subsubsection}{\numberline {7.2.2}Noether Current的计算方法}{46}{subsubsection.7.2.2}%
 \contentsline {subsection}{\numberline {7.3}Noether Current变分计算技巧}{47}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Symmetry and Conservation of Poincare}{47}{subsection.7.4}%
-\contentsline {subsubsection}{\numberline {7.4.1}时空平移对称性}{47}{subsubsection.7.4.1}%
-\contentsline {subsubsection}{\numberline {7.4.2}Lorentz对称性}{48}{subsubsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4}Symmetry and Conservation of Poincare}{48}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}时空平移对称性}{48}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}Lorentz对称性}{49}{subsubsection.7.4.2}%
 \contentsline {subsection}{\numberline {7.5}补充：对称性和守恒流的另一种定义}{51}{subsection.7.5}%
 \contentsline {subsubsection}{\numberline {7.5.1}Symmetry and Conserved Current}{51}{subsubsection.7.5.1}%
 \contentsline {subsubsection}{\numberline {7.5.2}Energy-Momentum Tensor}{54}{subsubsection.7.5.2}%
@@ -83,10 +83,10 @@
 \contentsline {subsubsection}{\numberline {12.3.2}Majorana Spinor的运动方程}{94}{subsubsection.12.3.2}%
 \contentsline {subsubsection}{\numberline {12.3.3}Dirac Spinor的运动方程}{95}{subsubsection.12.3.3}%
 \contentsline {subsection}{\numberline {12.4}Lagrangian Formulation of Spinor Fields}{96}{subsection.12.4}%
-\contentsline {subsubsection}{\numberline {12.4.1}Weyl Spinor的Lagrangian}{96}{subsubsection.12.4.1}%
+\contentsline {subsubsection}{\numberline {12.4.1}Weyl Spinor的Lagrangian}{97}{subsubsection.12.4.1}%
 \contentsline {subsubsection}{\numberline {12.4.2}Dirac Spinor的Lagrangian}{97}{subsubsection.12.4.2}%
-\contentsline {subsubsection}{\numberline {12.4.3}Majorana Spinor的Lagrangian}{97}{subsubsection.12.4.3}%
-\contentsline {subsection}{\numberline {12.5}补充讨论: Internal Symmetry以及场论构造}{97}{subsection.12.5}%
+\contentsline {subsubsection}{\numberline {12.4.3}Majorana Spinor的Lagrangian}{98}{subsubsection.12.4.3}%
+\contentsline {subsection}{\numberline {12.5}补充讨论: Internal Symmetry以及场论构造}{98}{subsection.12.5}%
 \contentsline {subsection}{\numberline {12.6}补充：Gamma Matrix in Weyl Representation}{98}{subsection.12.6}%
 \contentsline {subsection}{\numberline {12.7}Questions and Thoughts}{99}{subsection.12.7}%
 \contentsline {section}{\numberline {13}Lecture 12: On Shell Mode Expansion of Dirac Spinor Field}{100}{section.13}%
@@ -119,4 +119,4 @@
 \contentsline {subsection}{\numberline {15.2}固定$ m^2, w^2 $不可约表示}{119}{subsection.15.2}%
 \contentsline {subsubsection}{\numberline {15.2.1}不可约表示基本讨论}{119}{subsubsection.15.2.1}%
 \contentsline {subsubsection}{\numberline {15.2.2}Wigner Little Group方法构建不可约表示}{120}{subsubsection.15.2.2}%
-\contentsline {subsubsection}{\numberline {15.2.3}有质量粒子表示}{122}{subsubsection.15.2.3}%
+\contentsline {subsection}{\numberline {15.3}有质量粒子表示}{122}{subsection.15.3}%
