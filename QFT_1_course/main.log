@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  26 DEC 2025 13:42
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  27 DEC 2025 15:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -9,8 +9,8 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-05-26>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count271
 \c@section=\count272
@@ -1074,26 +1074,26 @@ Package: cjkhl 2012/08/04 v0.01 Highlighting in CJK documents (DPC)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -1101,56 +1101,56 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 82.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 82.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 82.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 82.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 82.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 82.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 82.
-LaTeX Font Info:    Redeclaring math accent \check on input line 82.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 82.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 82.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 82.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 82.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 89.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 89.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 89.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 89.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 89.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 89.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 89.
+LaTeX Font Info:    Redeclaring math accent \check on input line 89.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 89.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 89.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 89.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 89.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 82.
+(Font)              `operators' in the math version `normal' on input line 89.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 82.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 89.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 82.
+(Font)              `operators' in the math version `bold' on input line 89.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 82.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 89.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 82.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 82.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 82.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 82.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 82.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 89.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 82.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 82.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 82.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 82.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 89.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1160,23 +1160,23 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
-* v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=512.14963pt
-* \textheight=759.6886pt
-* \oddsidemargin=-29.59087pt
-* \evensidemargin=-29.59087pt
-* \topmargin=-66.59087pt
+* \textwidth=483.69687pt
+* \textheight=702.78308pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-38.1381pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=44.0pt
+* \marginparwidth=59.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1186,20 +1186,20 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 82.
+Package hyperref Info: Link coloring OFF on input line 89.
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 88.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 95.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) (./main.toc
@@ -1258,6 +1258,11 @@ File: assets/unitchange.png Graphic file (type bmp)
 [5]
 Underfull \hbox (badness 10000) in paragraph at lines 71--71
 
+ []
+
+
+Overfull \hbox (10.90955pt too wide) in paragraph at lines 81--82
+[]\TU/STSong(0)/m/n/10.95 一 是 对 于 \TU/lmr/m/n/10.95 gaussian \TU/STSong(0)/m/n/10.95 单 位 制 的 方 程 我 们 用 $\OML/cmm/m/it/10.95 e$ \TU/STSong(0)/m/n/10.95 实 际 上 表 示 的 是 $\OML/cmm/m/it/10.95 e\OT1/cmr/m/n/10.95 /[]$ \TU/STSong(0)/m/n/10.95 我 们 需 要 补 充 回 来 一 个 $\OT1/cmr/m/n/10.95 1/[]$\TU/STSong(0)/m/n/10.95 ，|
  []
 
 
@@ -1346,6 +1351,11 @@ File: assets/repandparticle.png Graphic file (type bmp)
 [35]
 
 [36]
+Overfull \hbox (11.24062pt too wide) in paragraph at lines 321--322
+[]\TU/STSong(0)/m/n/10.95 自 由 标 量 场 的 构 型 空 间 作 为 \TU/lmr/m/n/10.95 Poincare \TU/STSong(0)/m/n/10.95 群 的 表 示 空 间 为 我 们 提 供 了 一 个 很 好 的 基 础 进 行 研 究 \TU/lmr/m/n/10.95 Poincare
+ []
+
+
 
 [37]
 
@@ -1383,10 +1393,6 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 431.
 [50]
 
 [51]
-Overfull \vbox (1.70012pt too high) detected at line 552
- []
-
-
 
 [52]
 
@@ -1397,6 +1403,11 @@ Overfull \vbox (1.70012pt too high) detected at line 552
 [55]
 
 [56]
+Underfull \hbox (badness 4479) in paragraph at lines 763--763
+[]|\TU/STSong(0)/m/n/10.95 对 称 性 \TU/STSong(0)/b/n/10.95 坐 标 变 换 以 及 场 的 协 变  |\TU/STSong(0)/m/n/10.95 （\TU/lmr/m/n/10.95 coordinate
+ []
+
+
 
 [57])
 
@@ -1421,11 +1432,6 @@ LaTeX Font Warning: Font shape `TU/STSong(0)/b/it' undefined
 
 
 [61]
-Overfull \hbox (12.10907pt too wide) in paragraph at lines 140--141
-[]\TU/STSong(0)/m/n/12 守 恒 荷 量 子 化 的 结 果 变 成 了 \TU/lmr/m/n/12 Hilbert Space \TU/STSong(0)/m/n/12 上 的 算 符 \TU/lmr/m/n/12 (Heisenberg Picture) \TU/STSong(0)/m/n/12 和 态 \TU/lmr/m/n/12 (Schrodinger
- []
-
-
 
 [62]
 
@@ -1437,7 +1443,12 @@ Overfull \hbox (12.10907pt too wide) in paragraph at lines 140--141
 
 [66])
 
-[67] (./lec9.tex
+[67]
+Overfull \hbox (5.86699pt too wide) in paragraph at lines 148--148
+[]\TU/lmr/bx/n/14.4 Lecture 9-10: Spectrum and Lorentz Covariant of Quantum Scalar
+ []
+
+(./lec9.tex
 
 [68]
 
@@ -1518,10 +1529,6 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 312.
 [99] (./lec12.tex
 
 [100]
-Overfull \hbox (3.23036pt too wide) in paragraph at lines 58--59
-[]\TU/STSong(0)/m/n/12 先 选 择 一 个 参 考 动 量 $\OML/cmm/m/it/12 p[] \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 m; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0)$\TU/STSong(0)/m/n/12 ，|  在 这 个 动 量 下 求 解 \TU/lmr/m/n/12 Dirac \TU/STSong(0)/m/n/12 方 程，|  得 到 一 组 基 $\OML/cmm/m/it/12 u[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; v[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m\OT1/cmr/m/n/12 )$\TU/STSong(0)/m/n/12 ；| 
- []
-
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 62.
@@ -1546,8 +1553,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 [103]
-Overfull \hbox (7.73285pt too wide) in paragraph at lines 196--198
-\TU/STSong(0)/m/n/12 其 中 我 们 使 用 了 关 系：| $\OT1/cmr/m/n/12 ([])[] = \OML/cmm/m/it/12 p[]^^[[];  \OT1/cmr/m/n/12 ([])[] = \OML/cmm/m/it/12 p[][]:$ \TU/STSong(0)/m/n/12 以 及 还 有 $[][] \OT1/cmr/m/n/12 = [][] =
+Overfull \hbox (3.0589pt too wide) in paragraph at lines 196--198
+\TU/STSong(0)/m/n/10.95 其 中 我 们 使 用 了 关 系：| $\OT1/cmr/m/n/10.95 ([])[] = \OML/cmm/m/it/10.95 p[]^^[[];  \OT1/cmr/m/n/10.95 ([])[] = \OML/cmm/m/it/10.95 p[][]:$ \TU/STSong(0)/m/n/10.95 以 及 还 有 $[][] \OT1/cmr/m/n/10.95 = [][] =
  []
 
 
@@ -1561,11 +1568,6 @@ Overfull \hbox (7.73285pt too wide) in paragraph at lines 196--198
 [107] (./lec13.tex
 
 [108]
-Overfull \hbox (3.0369pt too wide) in paragraph at lines 73--75
-\TU/STSong(0)/m/n/12 对 于 $\OML/cmm/m/it/12 t \OT1/cmr/m/n/12 = 0$ \TU/STSong(0)/m/n/12 的 等 时 面 上 我 们 不 使 用 协 变 的 指 标 进 行 书 写，|  使 用 $[] \OMS/cmsy/m/n/12 ^^A [] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 x[]p[]$ \TU/STSong(0)/m/n/12 进 行 书 写 $\OML/cmm/m/it/12 exp\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ip[]x[]\OT1/cmr/m/n/12 ) =
- []
-
-
 
 [109]
 
@@ -1575,54 +1577,57 @@ Overfull \hbox (3.0369pt too wide) in paragraph at lines 73--75
 
 [112]
 
-[113]
+[113])
 
-[114])
+[114] (./lec14.tex
+Overfull \hbox (2.29329pt too wide) in paragraph at lines 25--27
+[]\TU/STSong(0)/m/n/10.95 之 前 我 们 讨 论 了 \TU/lmr/m/n/10.95 Lorentz \TU/STSong(0)/m/n/10.95 群 的 表 示 理 论，|  我 们 使 用 的 是 其 \TU/lmr/m/n/10.95 Defining Representation\TU/STSong(0)/m/n/10.95 ，|  而 现 在 \TU/lmr/m/n/10.95 Poincare
+ []
 
-[115] (./lec14.tex
+
+
+[115]
+Overfull \hbox (11.13112pt too wide) in paragraph at lines 48--55
+[]\TU/STSong(0)/m/n/10.95 通 过 无 限 小 的 变 换 以 及 \TU/lmr/m/n/10.95 Poincare \TU/STSong(0)/m/n/10.95 群 的 乘 法 规 则，|  我 们 可 以 得 到 生 成 元 的 对 易 关 系。|  这 也 就 是 \TU/lmr/m/n/10.95 Poincare
+ []
+
+
+Overfull \hbox (3.88101pt too wide) in paragraph at lines 63--65
+\TU/STSong(0)/m/n/10.95 这 就 是 \TU/lmr/m/n/10.95 Poincare \TU/STSong(0)/m/n/10.95 群 的 \TU/lmr/m/n/10.95 Adjoint Representation\TU/STSong(0)/m/n/10.95 。|  同 时 我 们 会 发 现 生 成 元 本 身 在 群 元 素 作 用 下 按 照 \TU/lmr/m/n/10.95 Lorentz
+ []
+
+
 
 [116]
 
 [117]
-Overfull \hbox (11.97578pt too wide) in paragraph at lines 89--91
-\TU/STSong(0)/m/n/12 之 前 的 \TU/lmr/m/n/12 Adjoint Representation \TU/STSong(0)/m/n/12 已 经 告 诉 我 们 群 元 素 作 用 在 生 成 元 上 面 的 结 果。|  因 此 我 们 知 道 \TU/lmr/m/n/12 Poincare
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 142.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 142.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 142.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 142.
 
 
 
 [118]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 142.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 142.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 142.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 142.
-
-
-
 [119]
-Overfull \hbox (0.38211pt too wide) in paragraph at lines 205--206
-[]\TU/STSong(0)/m/n/12 下 面 我 们 介 绍 一 种 使 用 一 个 标 准 动 量 $\OML/cmm/m/it/12 k[]$ \TU/STSong(0)/m/n/12 的 \TU/lmr/m/n/12 Wigner Little Group $\OML/cmm/m/it/12 G[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k[]\OT1/cmr/m/n/12 )$ \TU/STSong(0)/m/n/12 的 表 示 来 诱 导 \TU/lmr/m/n/12 Poincare
- []
-
-
 
 [120]
 
-[121]
+[121])
 
-[122])
-
-[123] (./main.aux)
+[122] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1635,12 +1640,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 6C8B5A0F414A996F76E019F98D26917D;23951.
  ) 
 Here is how much of TeX's memory you used:
- 36108 strings out of 468527
- 800639 string characters out of 5447700
- 1212853 words of memory out of 5000000
- 63748 multiletter control sequences out of 15000+600000
- 643181 words of font info for 152 fonts, out of 8000000 for 9000
+ 36086 strings out of 468527
+ 802087 string characters out of 5447700
+ 1209850 words of memory out of 5000000
+ 63732 multiletter control sequences out of 15000+600000
+ 640931 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,18n,121p,584b,669s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (123 pages, 2693248 bytes).
+Output written on main.xdv (122 pages, 2652416 bytes).

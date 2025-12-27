@@ -41,7 +41,7 @@
 \contentsline {subsubsection}{\numberline {6.1.1}构造Einstein Field Equation的思路}{42}{subsubsection.6.1.1}%
 \contentsline {subsubsection}{\numberline {6.1.2}Einstein Field Equation以及求解}{42}{subsubsection.6.1.2}%
 \contentsline {subsection}{\numberline {6.2}Lagrangian Formulation of GR}{44}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Einstein-Hilbert Action}{44}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.1}Einstein-Hilbert Action}{45}{subsubsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.3}引入物质场}{46}{subsection.6.3}%
 \contentsline {subsubsection}{\numberline {6.3.1}EoM和能动量张量直接推广}{46}{subsubsection.6.3.1}%
 \contentsline {subsubsection}{\numberline {6.3.2}Lagrangian的推广}{49}{subsubsection.6.3.2}%

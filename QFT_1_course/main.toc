@@ -96,10 +96,10 @@
 \contentsline {subsubsection}{\numberline {13.1.3}展开旋量mode $ v(p) $}{103}{subsubsection.13.1.3}%
 \contentsline {subsubsection}{\numberline {13.1.4}On Shell Mode Expansion总结}{103}{subsubsection.13.1.4}%
 \contentsline {subsection}{\numberline {13.2}Spinor Basis性质}{104}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Chirality, Helicity性质}{105}{subsection.13.3}%
-\contentsline {subsubsection}{\numberline {13.3.1}Chirality}{105}{subsubsection.13.3.1}%
-\contentsline {subsubsection}{\numberline {13.3.2}Helicity}{106}{subsubsection.13.3.2}%
-\contentsline {subsubsection}{\numberline {13.3.3}Massless Limit下Chirality和Helicity的关系}{107}{subsubsection.13.3.3}%
+\contentsline {subsection}{\numberline {13.3}Chirality, Helicity性质}{104}{subsection.13.3}%
+\contentsline {subsubsection}{\numberline {13.3.1}Chirality}{104}{subsubsection.13.3.1}%
+\contentsline {subsubsection}{\numberline {13.3.2}Helicity}{105}{subsubsection.13.3.2}%
+\contentsline {subsubsection}{\numberline {13.3.3}Massless Limit下Chirality和Helicity的关系}{106}{subsubsection.13.3.3}%
 \contentsline {section}{\numberline {14}Lecture 13: Quantization of Dirac Field}{108}{section.14}%
 \contentsline {subsection}{\numberline {14.1}Quantization的思路与准备}{108}{subsection.14.1}%
 \contentsline {subsubsection}{\numberline {14.1.1}Quantization的思路}{108}{subsubsection.14.1.1}%
@@ -112,11 +112,11 @@
 \contentsline {subsection}{\numberline {14.5}U(1)对称性与电荷守恒}{113}{subsection.14.5}%
 \contentsline {subsection}{\numberline {14.6}角动量和Boost守恒荷}{114}{subsection.14.6}%
 \contentsline {subsection}{\numberline {14.7}Questions and Thoughts}{114}{subsection.14.7}%
-\contentsline {section}{\numberline {15}Lecture 14: Representation of Poincare Algebra}{116}{section.15}%
-\contentsline {subsection}{\numberline {15.1}Poincare群在Hilbert Space上一般表示}{116}{subsection.15.1}%
-\contentsline {subsubsection}{\numberline {15.1.1}Poincare群的表示一般研究}{116}{subsubsection.15.1.1}%
-\contentsline {subsubsection}{\numberline {15.1.2}Poincare代数不可约表示Casimir算符分类}{117}{subsubsection.15.1.2}%
-\contentsline {subsection}{\numberline {15.2}固定$ m^2, w^2 $不可约表示}{119}{subsection.15.2}%
-\contentsline {subsubsection}{\numberline {15.2.1}不可约表示基本讨论}{119}{subsubsection.15.2.1}%
-\contentsline {subsubsection}{\numberline {15.2.2}Wigner Little Group方法构建不可约表示}{120}{subsubsection.15.2.2}%
-\contentsline {subsection}{\numberline {15.3}有质量粒子表示}{122}{subsection.15.3}%
+\contentsline {section}{\numberline {15}Lecture 14: Representation of Poincare Algebra}{115}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Poincare群在Hilbert Space上一般表示}{115}{subsection.15.1}%
+\contentsline {subsubsection}{\numberline {15.1.1}Poincare群的表示一般研究}{115}{subsubsection.15.1.1}%
+\contentsline {subsubsection}{\numberline {15.1.2}Poincare代数不可约表示Casimir算符分类}{116}{subsubsection.15.1.2}%
+\contentsline {subsection}{\numberline {15.2}固定$ m^2, w^2 $不可约表示}{118}{subsection.15.2}%
+\contentsline {subsubsection}{\numberline {15.2.1}不可约表示基本讨论}{118}{subsubsection.15.2.1}%
+\contentsline {subsubsection}{\numberline {15.2.2}Wigner Little Group方法构建不可约表示}{119}{subsubsection.15.2.2}%
+\contentsline {subsection}{\numberline {15.3}有质量粒子表示}{121}{subsection.15.3}%
