@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  25 DEC 2025 21:39
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  27 DEC 2025 15:35
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1514,11 +1514,62 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 229.
 
 [90]
 
-[91])
+[91]
 
-[92] (./lec14.tex)
+[92]
 
-[93] (./main.aux)
+[93]
+
+[94]
+File: assets/inlightcone.png Graphic file (type bmp)
+<assets/inlightcone.png>
+
+
+[95]
+File: assets/outgogeo.png Graphic file (type bmp)
+<assets/outgogeo.png>
+)
+
+[96] (./lec14.tex
+Overfull \hbox (27.00768pt too wide) detected at line 20
+[]
+ []
+
+File: assets/diagkruskal.png Graphic file (type bmp)
+<assets/diagkruskal.png>
+
+
+[97]
+File: assets/kruskalcausal.png Graphic file (type bmp)
+<assets/kruskalcausal.png>
+
+
+[98]
+File: assets/freefallcoor.png Graphic file (type bmp)
+<assets/freefallcoor.png>
+
+
+[99]
+
+[100]
+
+[101]
+File: assets/minkwskipenrose.png Graphic file (type bmp)
+<assets/minkwskipenrose.png>
+File: assets/penrosesch.png Graphic file (type bmp)
+<assets/penrosesch.png>
+
+
+[102]
+
+[103]
+File: assets/RNp.png Graphic file (type bmp)
+<assets/RNp.png>
+
+
+[104])
+
+[105] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1531,15 +1582,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 36C884DF8EBD5FC841633F1B2B24CDF1;19152.
+(rerunfilecheck)             Checksum: 0BD5DD220813A80314752815DD2A0489;20821.
  ) 
 Here is how much of TeX's memory you used:
- 35963 strings out of 468527
- 796654 string characters out of 5447700
+ 36085 strings out of 468527
+ 800647 string characters out of 5447700
  1216767 words of memory out of 5000000
- 63622 multiletter control sequences out of 15000+600000
+ 63736 multiletter control sequences out of 15000+600000
  641163 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,21n,121p,646b,667s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (93 pages, 2348156 bytes).
+Output written on main.xdv (105 pages, 2741704 bytes).

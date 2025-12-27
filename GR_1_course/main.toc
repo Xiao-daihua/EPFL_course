@@ -21,7 +21,7 @@
 \contentsline {subsubsection}{\numberline {3.3.1}Geodesic Equation definition}{26}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Geodesic as Extremal of Length}{26}{subsubsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.4}Questions and Thoughts}{27}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Lecture 4: }{31}{section.4}%
+\contentsline {section}{\numberline {4}Lecture 4: Geodesics and Curvature}{31}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Geodesic II}{31}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Geodesic as extremal of Length}{31}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Riemann Normal Coordinates}{32}{subsubsection.4.1.2}%
@@ -93,9 +93,16 @@
 \contentsline {subsection}{\numberline {15.2}Star Interior Spacetime and Collapse}{90}{subsection.15.2}%
 \contentsline {subsubsection}{\numberline {15.2.1}EFE for a Star Interior}{90}{subsubsection.15.2.1}%
 \contentsline {subsubsection}{\numberline {15.2.2}Solving EFE for Star Interior}{91}{subsubsection.15.2.2}%
-\contentsline {subsection}{\numberline {15.3}Eddington-Finkelstein coordinates}{92}{subsection.15.3}%
-\contentsline {section}{\numberline {16}Lecture 14: Black Hole Solution and More}{93}{section.16}%
-\contentsline {subsection}{\numberline {16.1}Kruskal Coordinates与最大延拓}{93}{subsection.16.1}%
-\contentsline {subsection}{\numberline {16.2}潮汐力与Speghetification}{93}{subsection.16.2}%
-\contentsline {subsection}{\numberline {16.3}Penrose Diagram}{93}{subsection.16.3}%
-\contentsline {subsection}{\numberline {16.4}Charged and Rotating Black Holes}{93}{subsection.16.4}%
+\contentsline {subsubsection}{\numberline {15.2.3}Stellar Collapse to a Black Hole}{93}{subsubsection.15.2.3}%
+\contentsline {subsection}{\numberline {15.3}Kruskal Extension I}{93}{subsection.15.3}%
+\contentsline {subsubsection}{\numberline {15.3.1}Schwarzschild Coordinate Singularity}{93}{subsubsection.15.3.1}%
+\contentsline {subsubsection}{\numberline {15.3.2}Eddington-Finkelstein Coordinates}{94}{subsubsection.15.3.2}%
+\contentsline {section}{\numberline {16}Lecture 14: Black Hole Solution and More}{97}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Kruskal Coordinates与最大延拓}{97}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}潮汐力与Speghetification}{99}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3}Penrose Diagram}{101}{subsection.16.3}%
+\contentsline {subsubsection}{\numberline {16.3.1}Minkowski时空的Penrose Diagram}{101}{subsubsection.16.3.1}%
+\contentsline {subsubsection}{\numberline {16.3.2}Schwarzschild-Kruskal时空的Penrose Diagram}{102}{subsubsection.16.3.2}%
+\contentsline {subsection}{\numberline {16.4}Charged and Rotating Black Holes}{103}{subsection.16.4}%
+\contentsline {subsubsection}{\numberline {16.4.1}Reissner-Nordström Black Hole}{103}{subsubsection.16.4.1}%
+\contentsline {subsubsection}{\numberline {16.4.2}Kerr Black Hole}{105}{subsubsection.16.4.2}%

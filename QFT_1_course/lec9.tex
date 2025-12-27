@@ -97,19 +97,19 @@
 \begin{itemize}
   \item \textbf{协变产生湮灭算符}
     \begin{align}
-      a_k \to \bar{a}_k = \sqrt{2\omega_k} a_k, \quad \large\left[\bar{a}_{\mathbf{k}},\bar{a}_{\mathbf{p}}^{\dagger}\right]=(2\pi)^32\omega_{\mathbf{k}}\delta^3(\mathbf{k-p}),
+      a_\mathbf{k}\to \bar{a}_{\mathbf{k}} = \sqrt{2\omega_{\mathbf{k}}} a_{\mathbf{k}}, \quad \left[\bar{a}_{\mathbf{k}},\bar{a}_{\mathbf{p}}^{\dagger}\right]=(2\pi)^32\omega_{\mathbf{k}}\delta^3(\mathbf{k-p}),
     \end{align}
   \item \textbf{协变量子态} 
 
     显然我们的Hilbert Space也可以写作这个协变的形式，其定义与内积结构是：
     \begin{align}
-      |\mathbf{k}\rangle\equiv\bar{a}_\mathbf{k}^\dagger|0\rangle,\quad\langle\mathbf{p}|\mathbf{k}\rangle=\langle0|\bar{a}_\mathbf{p}\bar{a}_\mathbf{k}^\dagger|0\rangle=(2\pi)^32\omega_\mathbf{p}\delta^3(\mathbf{p-k}).
+      | \mathbf{k} \rangle\equiv\bar{a}_{\mathbf{k}}^\dagger|0\rangle,\quad\langle \mathbf{p}| \mathbf{k}\rangle=\langle0|\bar{a}_{\mathbf{p}}\bar{a}_{\mathbf{k}}^\dagger|0\rangle=(2\pi)^32\omega_\mathbf{p}\delta^3(\mathbf{p-k}).
     \end{align}
     我们会发现这个内积结构自然的给出了Lorentz不变的形式。之后我们的坐标变换的讨论会知道确实左边的量子态内积也是Lorentz不变的！！
 \end{itemize}
 
 \imp{协变形式}{
-  从此以后未加声明，我们使用协变形式来书写自由标量场的量子态和算符，并且不再使用上横线进行区分！我们写的$ a_k $以后都是$ \bar{a}_k $的意思！
+从此以后未加声明，我们使用协变形式来书写自由标量场的量子态和算符，并且不再使用上横线进行区分！我们写的$ a_k $以后都是$ \bar{a}_k $的意思！并且这里由于我们知道所有$ a_k $全部代表on shell的粒子，因此我们有的时候为了方便使用$ k^\mu=(\omega_\mathbf{k},\mathbf{k}) $来表示其四维动量！$ a_{\mathbf{k}}, a_k $两者是完全没有区别的！！
 }
 协变的产生湮灭算符表示场算符形式为：
 \thm{
@@ -188,6 +188,9 @@
 \begin{align}
   \phi(x)=e^{i(Ht-\mathbf{P}\cdot\mathbf{x})}\phi(0)e^{-i(Ht-\mathbf{P}\cdot\mathbf{x})}=e^{iP_\mu x^\mu }\phi(0)e^{-iP_\mu x^\mu},
 \end{align}
+\rmk{
+  我们这里用了记号，所有$ P^\mu $都是算符而$ p^\mu $是数值！
+}
 
 \subsection{角动量和Boost守恒量}\label{sec:Boost生成元(守恒量)}
 
@@ -204,7 +207,7 @@
         &=-i\int d\omega_\mathbf{k}a_\mathbf{k}^\dagger\left(k^i\frac{\partial}{\partial k^j}-k^j\frac{\partial}{\partial k^i}\right)a_\mathbf{k},
 \end{align}
 \begin{align}
-  j^{j0}&=\int d^3\mathbf{x}\left(x^jT^{00}-tT^{0j}\right)=\int d\omega_{\mathbf{k}}a_{\mathbf{k}}^{\dagger}(t)\left(i\omega_{\mathbf{k}}\frac{\partial}{\partial k^{j}}-tk^{j}\right)a_{\mathbf{k}}(t)\\
+  J^{j0}&=\int d^3\mathbf{x}\left(x^jT^{00}-tT^{0j}\right)=\int d\omega_{\mathbf{k}}a_{\mathbf{k}}^{\dagger}(t)\left(i\omega_{\mathbf{k}}\frac{\partial}{\partial k^{j}}-tk^{j}\right)a_{\mathbf{k}}(t)\\
         &=\int d\omega_\mathbf{k}a_\mathbf{k}^\dagger i\omega_\mathbf{k}\frac{\partial}{\partial k^j}a_\mathbf{k}.
 \end{align}
 \rmk{
@@ -230,6 +233,9 @@
 \begin{align}
   [J^k,a_{\mathbf{p}}^\dagger]=i(\mathbf{p}\wedge\nabla_{\mathbf{p}})^ka_{\mathbf{p}}^\dagger
 \end{align}
+\rmk{
+  注意！这个对易关系的推导之中我们需要使用分部积分，保证导数作用在$ a_p^\dagger $上面！但问题是，我们完全不知道怎么计算导数作用在$ a_p^\dagger $上面的结果！！因此这个对易关系只能作为一个形式结果存在！！我们之后如果使用这个会需要再进行分部积分把导数作用在其他部分上面！
+}
 
 \bigskip
 \hlr{boost算符boost生成元}
@@ -249,6 +255,11 @@
 
 \bigskip
 \hlr{角动量算符作用在单粒子态上}
+
+经典力学告诉我们角动量就是转动变换的守恒荷。我们不妨把这个定义一般沿用，使用转动的守恒荷定义系统的角动量。因而我们前面得到的算符$ J^i $其实就是场论的角动量算符。我们知道角动量算符作用在量子态上会给出其角动量。因此我们不妨研究其作用在单粒子态上面的结果：
+
+
+
 
 \subsection{量子理论的Poincare Covariance}
 现在我们希望研究Poincare变换前后【physical的量子态】的变化。
@@ -296,8 +307,11 @@
 \end{align}
 其中$ P^\mu $是之前定义的量子化动量的算符。根据前面\cref{sec:Heisenberg Picture构造全时空的场算符}的一些结论我们会发现：
 \begin{align}
-  \phi'(x) = \phi(x-a) = e^{-iP_\mu a^\mu }\phi(x)e^{iP_\mu a^\mu}. \quad a_p' = e^{-iP_\mu a^\mu } a_p e^{iP_\mu a^\mu}
+  \phi'(x) = \phi(x-a) = e^{-iP_\mu a^\mu }\phi(x)e^{iP_\mu a^\mu} \quad a_{\mathbf{p}}' = e^{-iP_\mu a^\mu } a_{\mathbf{p}} e^{iP_\mu a^\mu}
 \end{align}
+\rmk{
+  第一个公式前一部分是标量场的定义，后一部分是$ \phi(x-a) $和算符作用的关系是前面证明的数学结果
+}
 也就是说其实时空平移变换前后的场算符和产生湮灭算符可以通过一个Unitary算符作用得到！写作定理：
 \thm{
   Unitary Operator表示时空平移变换
@@ -305,7 +319,7 @@
   对于时空平移变换$ x^\mu \to x'^\mu = x^\mu + a^\mu $，场算符和产生湮灭算符的变换形式为：
   \begin{align}
     \phi'(x) =U^\dagger(a)\phi(x)U(a) = e^{-iP_\mu a^\mu }\phi(x)e^{iP_\mu a^\mu}, \quad 
-    a_p' = U^\dagger(a) a_p U(a) =  e^{-iP_\mu a^\mu } a_p e^{iP_\mu a^\mu}.
+    a_{\mathbf{p}}' = U^\dagger(a) a_{\mathbf{p}} U(a) =  e^{-iP_\mu a^\mu } a_p e^{iP_\mu a^\mu}.
   \end{align}
 }
 
@@ -318,7 +332,7 @@
 
   对于时空平移变换$ x^\mu \to x'^\mu = x^\mu + a^\mu $，量子态的变换形式为：
   \begin{align}
-    |p'\rangle = a_p'|0 \rangle = e^{ip_\mu a^\mu}|p\rangle = U^\dagger(a)|p\rangle.
+    |\mathbf{p}'\rangle = a_{\mathbf{p}}'|0 \rangle = e^{ip_\mu a^\mu}|\mathbf{p}\rangle = U^\dagger(a)|\mathbf{p}\rangle.
   \end{align}
 }
 
@@ -359,7 +373,7 @@
   对于Lorentz变换$ x^\mu \to x'^\mu = \Lambda^\mu_{\ \nu}x^\nu $，场算符和产生湮灭算符的变换形式为：
   \begin{align}
     \phi'(x) =U^\dagger(\Lambda)\phi(x)U(\Lambda) , \quad 
-    a_p' = U^\dagger(\Lambda) a_p U(\Lambda) 
+    a_{\mathbf{p}}' = U^\dagger(\Lambda) a_{\mathbf{p}} U(\Lambda) 
   \end{align}
 }
 
@@ -372,7 +386,7 @@
 
   对于Lorentz变换$ x^\mu \to x'^\mu = \Lambda^\mu_{\ \nu}x^\nu $，量子态的变换形式为：
   \begin{align}
-    |p'\rangle = a_p'|0 \rangle = |\Lambda^{-1}p\rangle = U^\dagger(\Lambda)|p\rangle.
+    |p'\rangle = a_{\mathbf{p}}'|0 \rangle = |\Lambda^{-1}p\rangle = U^\dagger(\Lambda)|p\rangle.
   \end{align}
 }
 
@@ -405,6 +419,8 @@
 
 
 \subsection{Complex Scalar Field}
+
+如果我们希望一个标量场的理论，内部包含一个$ U(1) $对称性，那么单个标量场是不能够包含这个内部对称性的。我们需要引入两个标量场。
 
 
 

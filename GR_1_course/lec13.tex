@@ -173,8 +173,180 @@
   \end{cases}
 \end{align}
 
+\subsubsection{Stellar Collapse to a Black Hole}
 
-\subsection{Eddington-Finkelstein coordinates}
+\hlr{Stellar Collapse}
+
+对于上面给出的constant density star的解，我们会发现一个现象对于$ P(r = 0) $来说当:
+\begin{align}
+  M \to \frac{4R}{9G},
+\end{align}
+这个极限下，$ P(0) \to \infty $。也就是说如果一个恒星的质量足够大，并且半径足够小，那么其中心的压力会变得无限大。
+\begin{itemize}
+  \item 说明当恒星的质量足够大并且半径足够小的时候，引力过大会导致物质无法通过压力来对抗引力塌缩。
+\end{itemize}
+
+
+
+\subsection{Kruskal Extension I}
+
+下面我们开始研究第二种情况，也就是时空纯粹是真空，但是0点存在奇点的特性。为此我们首先讨论关于Schwarzschild Metric的坐标奇异性问题，并进一步选择更好的坐标系来描述时空结构。
+
+\subsubsection{Schwarzschild Coordinate Singularity}
+
+\hlr{Schwarzschild Metric下类光运动}
+
+\textbf{坐标系时间描述光：}
+我们不妨考虑这个坐标系下光的运动，求解null geodesics $ ds^2 = 0 $可以给出：
+\begin{align}
+  \frac{dt}{dr}=\pm\left(1-\frac{2GM}{r}\right)^{-1}.
+\end{align}
+我们会发现当$ r \to 2GM $的时候，$ \frac{dt}{dr} \to \infty $，也就是说光在这个坐标系下观察在$ t \to \infty $也无法到达$ r = 2GM $。
+
+\textbf{固有时间描述光：}
+下面我们再考虑之前研究的schwarzschild的类光geodesics，我们回顾类光的径向方程给出了：
+\begin{align}
+  \dot{r}^2=\frac{2GM}{r}+E^2-1.
+\end{align}
+注意我们使用$ \dot{r} $表示对于固有时间的导数。我们假设初始条件是$ \tau = 0, r = R $并且$ \dot{r} = 0 $，也就是说光从$ r = R $开始自由落体。我们可以得到$ E^2 - 1 = -\frac{2GM}{R} $，于是我们有：
+\begin{align}
+  d\tau=\left(\frac{2GM}{r}-\frac{2GM}{R}\right)^{-1/2}dr,
+\end{align}
+这个方程可以存在一个参数化的解：
+\begin{align}
+  r=\frac{R}{2}(1+\cos\eta)\quad \tau=\sqrt{\frac{R^3}{8GM}}(\eta+\sin\eta).
+\end{align}
+也就是说对于$ r = 0 $只需要$ \tau = \pi \sqrt{\frac{R^3}{8GM}} < \infty $的有限固有时间就可以到达。
+
+
+\bigskip
+\hlr{坐标奇异性讨论}
+
+对比两个描述的结果我们会发现，类光粒子必然可以在有限的固有时间内到达$ r = 2GM $，但是在Schwarzschild坐标系下这个过程需要无限的coordinate时间，是因为这个coordinate不能够很好地描述这个区域的时空结构。我们认为schwarzschild coordinate描述的是无穷远处的观察者测量到的时空结构。也就是说：
+\begin{itemize}
+  \item 对于无限远的观察者，会看到光永远不能达到$ r = 2GM $，停留在其表面；
+  \item 但是对于自由落体的观察者，其实可以在有限的固有时间内穿过$ r = 2GM $，到达奇点$ r = 0 $。
+\end{itemize}
+
+\subsubsection{Eddington-Finkelstein Coordinates}
+
+为此我们需要选择新的坐标系来描述这个区域的时空结构。首先我们引入一个tortoise coordinate。
+
+\bigskip
+\hlr{Tortoise Coordinate}
+
+我们希望引入一个新的径向坐标$ r_* $，使得光锥永远是45度，这样的话我们的causal structure就很清楚，但代价就是时空本身会变形。为此考虑$ r> 2GM $类光曲线的解：
+\begin{align}
+  \frac{dt}{dr}=\pm\left(1-\frac{2GM}{r}\right)^{-1} \quad \Rightarrow \quad t = \pm \left(r + 2GM \ln\left(\frac{r}{2GM} - 1\right)\right) + \text{const}. \quad r>2GM
+\end{align}
+我们形式化的定义一个新的径向坐标：
+\defi{
+  Tortoise Coordinate
+
+  定义tortoise coordinate $ r_* $为：
+  \begin{align}
+    r^* = r + 2GM \ln\left(\frac{r}{2GM} - 1\right).
+  \end{align}
+}
+注意这个坐标系下面我们只能覆盖$ r > 2GM $的区域，并且当$ r \to 2GM $的时候，$ r^* \to -\infty $。在这个坐标系下我们的光的运动轨迹exactly是45度的：
+\begin{align}
+  t = \pm r^* + \text{const}.
+\end{align}
+并且Schwarzschild Metric变为：
+\begin{align}
+  ds^2=\left(1-\frac{2GM}{r}\right)(-dt^2+dr^{*2})+r^2d\Omega^2.
+\end{align}
+
+\bigskip
+\hlr{Light Cone Coordinates}
+
+在这个操作之下我们进一步引入Light Cone Coordinates：
+\defi{
+  Light Cone Coordinates
+
+  定义light cone coordinates为：
+  \begin{align}
+    u = t - r^*, \quad v = t + r^*.
+  \end{align}
+}
+这个坐标系的两个坐标描述着光沿着光锥的两个方向传播的「轨迹长度」。这两个坐标系之中任意一个都可以很好的替代时间坐标成为新的时间坐标，从而避免光在$ r = 2GM $处需要无穷的时间的问题，因为我们$ v $是直接follow光自己运动的轨迹的！
+
+\bigskip
+\hlr{Ingoing Eddington-Finkelstein Coordinates:}
+
+我们选择$ v $作为新的时间坐标，定义新的坐标系：
+\defi{
+  Ingoing Eddington-Finkelstein Coordinates 
+  \begin{align}
+    v = t + r^*, \quad r = r, \quad \theta = \theta, \quad \phi = \phi.
+  \end{align}
+}
+在这个坐标系下Schwarzschild Metric变为：
+\begin{align}
+  ds^2=-\left(1-\frac{2GM}{r}\right)dv^2+(dvdr+drdv)+r^2d\Omega^2.
+\end{align}
+对于这个坐标系下的类光曲线我们有：
+\begin{align}
+  \frac{dr}{dv}=\begin{cases}
+    0 , & \text{ingoing}\\
+    \frac{1}{2}\left(1-\frac{2GM}{r}\right)^{-1}, & \text{outgoing}
+  \end{cases}
+\end{align}
+我们可以使用$ (v,r) $图中画出Light Cone会发现：
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.3\textwidth]{assets/inlightcone.png}
+  \caption{Ingoing Eddington-Finkelstein Light Cone Diagram}
+  \label{fig:inlightcone}
+\end{figure}
+我们考虑$ v = $const 的曲线会发现这个坐标系光锥一直在收缩。但是在$ r = 2GM $的面变成了一个类光的面，进入了这个区域之后光锥就完全向内收缩了。也就是说一旦进入了$ r < 2GM $的区域，任何物质都无法逃脱这个区域。
+\rmk{
+  注意！这个坐标系的选择其实已经意味着我们做了一个延拓。因为之前对于$ r < 2GM $的区域$ r^* $是没有定义的，所以$ v = t + r^* $这个坐标系其实并不能覆盖整个时空结构。但现在我们可以证明这个坐标系下$ r = 2GM $是没有奇异的，我们不妨直接延拓到$ r < 2GM $的区域。
+}
+\rmk{
+  我们注意，Horizon是一个global的概念，Local的observer是看不见Horizon的存在的。
+}
+
+
+\bigskip
+\hlr{Outgoing Eddington-Finkelstein Coordinates:}
+
+类似的我们也可以选择$ u $作为新的时间坐标，定义新的坐标系：
+\defi{
+  Outgoing Eddington-Finkelstein Coordinates
+  \begin{align}
+    u = t - r^*, \quad r = r, \quad \theta = \theta, \quad \phi = \phi.
+  \end{align}
+}
+在这个坐标系下Schwarzschild Metric变为：
+\begin{align}
+  ds^2=-\left(1-\frac{2GM}{r}\right)du^2-(dudr+drdu)+r^2d\Omega^2.
+\end{align}
+这个坐标系下的类光曲线和之前正好相反
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.3\textwidth]{assets/outgogeo.png}
+  \caption{Outgoing Eddington-Finkelstein Light Cone Diagram}
+  \label{fig:outgogeo}
+\end{figure}
+也就是说光只能向外逃逸，无法进入$ r < 2GM $的区域。这个解给出了一个white hole的解。
+
+\bigskip
+\hlr{物理说明}
+
+我们观察这两个coordinate system对于Schwarzschild Metric的extension：
+\begin{itemize}
+  \item Ingoing Eddington-Finkelstein Coordinates其实extend的是时间在接近$ r = 2GM $处的正无穷远的行为，因为$ v = t + r^* $，当$ r \to 2GM $的时候，$ r^* \to -\infty $，所以$ v $取值有限对应着$ t \to +\infty $。也就是说这个坐标系extend的是未来的无穷远。
+  \item Outgoing Eddington-Finkelstein Coordinates其实extend的是时间在接近$ r = 2GM $处的$ t $发散到负无穷远的行为，因为$ u = t - r^* $，当$ r \to 2GM $的时候，$ r^* \to -\infty $，所以$ u $取值有限对应着$ t \to -\infty $。也就是说这个坐标系extend的是过去的无穷远。
+\end{itemize}
+对于物理上的黑洞研究来说，我们认为黑洞在过去就是天体，不存在Schwarzschild Solution。的过去无穷远延拓，所以我们更关心Ingoing Eddington-Finkelstein Coordinates的extension，也就是黑洞的未来无穷远延拓。
+
+
+
+
+
+
+
 
 
 
