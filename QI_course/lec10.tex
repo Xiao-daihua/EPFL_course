@@ -14,5 +14,412 @@
   \end{align}
   注意！对于经典信息理论这里的对数我们一般取以2为底！
 }
+对于经典的Shannon Entropy我们一般有三个Interpretation：
+\begin{itemize}
+  \item Uncertainty of Random Variable before knowing its value
+  \item Learning X所需要的「知识量」
+  \item 平均的 "Surprisal" 也就是$ -\log p_i $ 的平均值
+\end{itemize}
+数学上我们会需要完全不可能的事件$ p_i = 0 $，我们定义$ 0 \log 0 = 0 $作为一个解析延拓。
+
+\bigskip
+\hlr{存储信息的最少bit数}
+
+Shannon Entropy存在一个重要的interpretation就是考虑下面情况：
+\begin{itemize}
+  \item 假设有一组数据$ X_1, X_2, \ldots, X_n $，其中$ X_i $在某一个有限范围内取值，并且这一组数据出现每一个取值的比例是已知为$ p_a $。
+\end{itemize}
+下面我们的问题是：\textbf{为了储存这一组数据，我们最少需要多少bit？}
+
+\bigskip
+\hlr{1234数据例子}
+
+假设现在存在一个存有$ n $个数的数组，其中每一个数据都是1，2，3，4中的一个，并且出现的比率分别为$ 1/2,1/4,1/8,1/8 $。那么我们需要多少bit来储存这个数据呢？我们可以设计下面的编码方法：
+
+\textbf{普通编码方案：}我们使用2 bit来储存每一个数据，$ 1 \to 00, 2 \to 01, 3 \to 10, 4 \to 11 $。这样我们总共需要$ 2n $ bit来储存这组数据。
+
+\textbf{优化编码方案：}我们使用1 bit来储存1，2 bit来储存2，3 bit来储存3和4。也就是$ 1 \to 0, 2 \to 10, 3 \to 110, 4 \to 111 $。我们可以证明这样的编码方法是无歧义的，并且我们总共需要的bit数为：
+\begin{align}
+  n\left(\frac{1}{2} \cdot 1 + \frac{1}{4} \cdot 2 + \frac{1}{8} \cdot 3 + \frac{1}{8} \cdot 3\right) = \frac{7n}{4} < 2n
+\end{align}
+这个例子说明了，如果我们知道一个数组之中的数据的出现的比例「一种概率分布」，我们可以通过优化编码方式来减少储存数据所需要的bit数。
+
+
+\bigskip
+\hlr{Shannon Entropy作为最少bit数的下界}
+
+下面我们会给出Shannon Entropy一个终于要的性质，也就是Shannon Entropy给出了储存数据所需要的最少bit数的下界。
+\thm{
+  Shannon's Noiseless Coding Theorem
+
+  假设有一个数组有$ n $个数据，数据的取值为$ \{x_i\}, i = 1,...,m $，对应的概率分布为$ \{p_i\} $。那么为了储存这个数组，我们至少需要$ n H(X) +1 $ bit，其中$ H(X) $为对应的Shannon Entropy。
+}
+我们下面给出证明的思路。
+
+\textbf{Binary Case：}一个简单的情况就是整个数组只能取0和1两种值，并且0和1出现的概率分别为$ 1- p $和$ p $。因此我们知道，长成这样子的n个数据的数组只有：
+\begin{align}
+  \binom{n}{pn} = \frac{n!}{(pn)!(n-pn)!}
+\end{align}
+种可能性。我们假设一个二进制数来记录这么多个数字，我们考虑需要多少位数，也就是：
+\begin{align}
+  L &\geq \log_2 \binom{n}{pn} \\ 
+  &=\log(n!)-\log((np)!)-\log((n(1-p))!)\\
+  &\approx n\log(n)-n-(np\log(np)-np)-(n(1-p)\log\\
+  &=-np\log(p)-n(1-p)\log(1-p)\\
+  &=nH(p),
+\end{align}
+中间第二步我们使用了Stirling公式 $ \ln(n!)\approx n\ln n-n+\frac{1}{2}\ln(2\pi n) $也是一个重要的近似估计公式。
+
+\textbf{General Case：}对于一般的情况我们可以使用类似的方法进行估计。假设数据的取值为$ \{x_i\}, i = 1,...,m $，对应的概率分布为$ \{p_i\} $。我们考虑这样的序列有多少种构型：
+\begin{align}
+  \# \text{config} = \frac{n!}{(p_1 n)!(p_2 n)! \cdots (p_m n)!}
+\end{align}
+我们同样使用Stirling公式进行近似可以得到：
+\begin{align}
+  L &\geq \log_2 \# \text{config} \\
+  &= \log(n!) - \sum_{i=1}^m \log((p_i n)!) \\
+  &\approx n\log(n) - n - \sum_{i=1}^m (p_i n \log(p_i n) - p_i n) \\
+  &= -n \sum_{i=1}^m p_i \log(p_i) = n H(X).
+\end{align}
+
+
+\subsubsection{2 Random Variables Entropy}
+
+更有趣的是当我们考虑两个随机变量的时候，我们可以定义更多的熵的概念来描述两个随机变量之间的关系。
+
+\bigskip
+\hlr{Joint Entropy}
+
+我们首先定义Joint Entropy的概念：
+\defi{
+  Joint Entropy
+
+  对于两个随机变量$ X $和$ Y $，其联合概率分布为$ p(x_i,y_j) $，我们定义Joint Entropy为：
+  \begin{align}
+    H(X,Y) = -\sum_{i,j} p(x_i,y_j) \log p(x_i,y_j).
+  \end{align}
+}
+我们知道如果这两个随机变量完全独立，那么$ H(X,Y) = H(X) + H(Y) $。否则$ H(X,Y) \leq H(X) + H(Y) $。这个Entropy的interpretation其实就是把两个随机变量看作一个联合的随机变量，然后计算这个联合随机变量的Entropy。
+
+
+\bigskip
+\hlr{Conditional Entropy}
+
+在Joint Entropy的基础上我们可以定义Conditional Entropy的概念：
+\defi{
+  Conditional Entropy
+
+  对于两个随机变量$ X $和$ Y $，其联合概率分布为$ p(x_i,y_j) $，我们定义Conditional Entropy为：
+  \begin{align}
+    H(X|Y) = H(X,Y) - H(Y) 
+  \end{align}
+}
+这个Entropy的意义是：
+\begin{itemize}
+  \item 在知道Y的情况下X的不确定性
+\end{itemize}
+因此这个意义已经说明了$ H(X|Y) \neq H(Y|X) $。并且满足一个不等式： $ 0\leq H(X\mid Y)\leq H(X) $
+
+这个interpretation可以通过一个等价的定义进行理解：
+\defi{
+  Conditional Entropy (equivalent definition)
+
+  对于两个随机变量$ X $和$ Y $，其联合概率分布为$ p(x_i,y_j) $，我们定义Conditional Entropy为：
+  \begin{align}
+    H(X|Y) = \sum_j p(y_j) H(X|Y=y_j) = -\sum_j p(y_j) \sum_i p(x_i|y_j) \log p(x_i|y_j) 
+  \end{align}
+  其中$ p(x_i|y_j) = \frac{p(x_i,y_j)}{p(y_j)} $被interpret为在知道$ Y=y_j $的情况下$ X $的条件概率分布。
+}
+
+\bigskip
+\hlr{Mutual Information}
+
+我们可以定义Mutual Information的概念：
+\defi{
+  Mutual Information
+
+  对于两个随机变量$ X $和$ Y $，其联合概率分布为$ p(x_i,y_j) $，我们定义Mutual Information为：
+  \begin{align}
+    I(X:Y) = H(X) + H(Y) - H(X,Y)
+  \end{align}
+}
+这个Entropy的意义是：
+\begin{itemize}
+  \item 这相当于知道Y之前的X的位置的信息量 $ H(X) $减去知道Y之后X的位置的信息量$ H(X|Y) $，也就是$ I(X:Y) = H(X) - H(X|Y) $  
+    \item 可以被理解为：知道Y之后就知道了多少关于X的信息；由于其对称性也可以被理解为：知道X之后就知道了多少关于Y的信息; 也就是两者之间的共同share信息量
+\end{itemize}
+特别的我们会发现，如果X和Y独立，那么$ I(X:Y) = 0 $。而如果$ X= Y $，那么$ I(X:Y) = H(X) = H(Y) $。我们可以证明其满足不等式：
+\begin{align}
+  0 \leq I(X:Y) \leq \min\{H(X),H(Y)\}
+\end{align}
+上面几个entropy如果被interpret为「未知的信息量」的话，我们可以使用venn图表示如下：
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.55\textwidth]{assets/venndiag.png}
+  \caption{Classical Entropy Venn Diagram}
+  \label{fig:venndiag}
+\end{figure}
+
+\bigskip
+\hlr{Relative Entropy}
+
+我们可以定义Relative Entropy的概念：
+\defi{
+  Relative Entropy
+
+我们考虑对于一个随机变量$ X $，其概率分布为$ p(x_i) $，我们考虑另一个概率分布$ q(x_i) $，我们定义Relative Entropy为：
+  \begin{align}
+    D(p ||q) = \sum_i p(x_i) \log \frac{p(x_i)}{q(x_i)} = -H(X) - \sum_i p(x_i) \log q(x_i)
+  \end{align}
+}
+这个Entropy的意义是：
+\begin{itemize}
+  \item 表示两个概率分布之间的相似性！
+\end{itemize}
+我们可以证明其满足不等式：
+\begin{align}
+  D(p||q) \geq 0 \quad \text{with equality iff } p = q
+\end{align}
+
+\bigskip
+\hlr{Shannon Entropy的另一种interpretation}
+
+我们研究Relative Entropy，不妨选择$ q(x_i) = \frac{1}{d} $为均匀分布，那么我们发现：
+\begin{align}
+  D(p||q) &= \sum_i p(x_i) \log p(x_i) - \sum_i p(x_i) \log \frac{1}{d} \\
+  &= -H(X) + \log d \\
+  \Rightarrow H(X) &= \log d - D(p||q)
+\end{align}
+也就是说，Shannon Entropu表达了一个概率分布和均匀分布之间的距离！越接近均匀分布Entropy越大，越远离均匀分布Entropy越小！
+
+
+\rmk{
+  对于经典信息论里面所有的$ \log $我们都取以2为底。
+}
+
+
+\subsection{Quantum Entropy}
+
+\subsubsection{Single Quantum System Entropy}
+
+\bigskip
+\hlr{Von Neumann Entropy}
+
+下面我们考虑把经典信息论的内容推广到量子信息论之中。我们可以定义Von Neumann Entropy的概念：
+\defi{
+  Von Neumann Entropy
+
+  对于一个量子态$ \rho $，我们定义Von Neumann Entropy为：
+  \begin{align}
+    S(\rho) = -\mathrm{Tr}(\rho \log \rho).
+  \end{align}
+  这里的对数我们一般取以2为底！如果我们可以进行谱分解$ \rho = \sum_i \lambda_i |\psi_i\rangle\langle\psi_i| $，那么我们有：
+  \begin{align}
+    S(\rho) = -\sum_i \lambda_i \log \lambda_i.
+  \end{align}
+}
+一个interpretation就是，这个entropy可以描述一个量子系统存放N个量子态所需要最少的Hilbert Space的维度。如果我们希望用一个量子系统来存放$ \rho^{\otimes N} $量子态，那么这个量子系统的Hilbert Space的维度至少需要为$ 2^{N S(\rho)} $。
+
+
+\bigskip
+\hlr{Properties of Von Neumann Entropy}
+
+我们可以证明Von Neumann Entropy满足下面的性质：
+\begin{itemize}
+  \item 对于pure state我们有$ S(\rho) = 0 $; 对于maximally mixed state我们有$ S(\rho) = \log d $，其中$ d $为Hilbert Space的维度。这是一个量子系统entropy的极限情况。
+    \item 如果我们的State发生了Unitary的演化 $ \rho \to U \rho U^\dagger $，那么Entropy不变。也就说$ S(U \rho U^\dagger) = S(\rho) $
+\end{itemize}
+
+\bigskip
+\hlr{Von Neumann Entropy与Measurement}
+
+我们考虑对于一个物理量的$ M = \sum_i m_i |i\rangle\langle i| $的测量。这个测量可以为我们定义另一个随机变量$ M $，其概率分布为$ p_i = \langle i|\rho|i\rangle $给出$ m_i $的取值。那么我们可以定义这个随机变量的Shannon Entropy为：
+\begin{align}
+  H(M) = -\sum_i p_i \log p_i.
+\end{align}
+我们可以发现下面的结论：
+\begin{align}
+  S(\rho) = - \sum_i \lambda_i \log \lambda_i \leq H(M)
+\end{align}
+这个结论有两种说明的方法：
+\begin{itemize}
+  \item 使用Eigen Basis之外的任意basis然后decoherence(Killing the off-diagonal)，则entropy增加；也可以理解为让这个state更加的mixed
+    \item Measuring Uncertainty在Eigen Basis是最小的
+\end{itemize}
+
+\bigskip
+\hlr{Properties of Von Neumann Entropy II}
+
+我们研究对于多个系统以及组合系统的entropy性质：
+\begin{itemize}
+  \item 对于两个系统$ A $和$ B $，我们有$ S(\rho_A \otimes \rho_B) = S(\rho_A) + S(\rho_B) $
+  \item Von Neumann Entropy满足三角不等式：$ S(\rho_A)+ S(\rho_B) \geq S(\rho_{AB}) \geq |S(\rho_A) - S(\rho_B)| $
+    \item 对于一个系统可以写作很多state的convex combination，比如$ \rho = \sum_i p_i \rho_i $，那么我们有$ S(\rho) \geq \sum_i p_i S(\rho_i) $。也就是说entropy是一个concave函数。或者说：convex mixing会增加entropy。
+\end{itemize}
+
+\subsubsection{2 Quantum Systems Entropy}
+
+\bigskip
+\hlr{Joint Quantum Entropy}
+
+很自然我们对于一个组合系统$ AB $定义Joint Quantum Entropy，也就是这个系统的Von Neumann Entropy：
+\begin{align}
+  S(\rho_{AB}) = -\mathrm{Tr}(\rho_{AB} \log \rho_{AB}).
+\end{align}
+
+\bigskip
+\hlr{Conditional Quantum Entropy and Mutual Quantum Information}
+
+我们可以定义Conditional Quantum Entropy的概念：
+\defi{
+  Conditional Quantum Entropy
+
+  对于一个组合系统$ AB $，我们定义Conditional Quantum Entropy为：
+  \begin{align}
+    S(A|B) = S(\rho_{AB}) - S(\rho_B).
+  \end{align}
+}
+我们可以定义Mutual Quantum Information的概念：
+\defi{
+  Mutual Quantum Information
+
+  对于一个组合系统$ AB $，我们定义Mutual Quantum Information为：
+  \begin{align}
+    I(A:B) = S(\rho_A) + S(\rho_B) - S(\rho_{AB}).
+  \end{align}
+}
+我们考虑一个系统，$ AB $处于一个pure state是一个bell state $ \ket{\phi^+} $我们知道纯态的entropy为0，也就是说$ S(\rho_{AB}) = 0 $。但是我们知道每一个子系统的entropy为1，也就是说$ S(\rho_A) = S(\rho_B) = 1 $。因此我们发现：$ S(A|B) = -1 $，也就是说在知道B的情况下A的entropy变成了-1！这说明量子信息论conditional entropy不一定需要满足大于0的条件！这和经典信息论有很大的不同！
+
+\bigskip
+\hlr{Relative Quantum Entropy}
+
+\defi{
+  Relative Quantum Entropy
+
+  对于两个量子态$ \rho $和$ \sigma $，我们定义Relative Quantum Entropy为：
+  \begin{align}
+    S(\rho || \sigma) = \mathrm{Tr}(\rho \log \rho) - \mathrm{Tr}(\rho \log \sigma).
+  \end{align}
+}
+如果我们使用对角化的basis进行$  \rho = \sum_i \lambda_i |\psi_i\rangle\langle \psi_i| $和$ \sigma = \sum_j \mu_j |\phi_j\rangle\langle \phi_j| $的谱分解，那么我们有：
+\begin{align}
+  S(\rho || \sigma) = \sum_i \lambda_i \log \lambda_i - \sum_{i,j} \langle \psi_i|\phi_j\rangle \langle \phi_j|\psi_i\rangle \lambda_i \log \mu_j,
+\end{align}
+我们可以证明其满足下面的性质：
+\begin{itemize}
+  \item $ S(\rho || \sigma) \geq 0 $，并且当且仅当$ \rho = \sigma $时取等号
+    \item $ S(\rho || \sigma) \neq S(\sigma || \rho) $，也就是说这个量不是对称的
+      \item Unitary Invariance：对于任意的unitary operator $ U $，我们有$ S(U \rho U^\dagger || U \sigma U^\dagger) = S(\rho || \sigma) $
+\end{itemize}
+
+\bigskip
+\hlr{Data Processing Inequality}
+
+对于Relative Entropu我们可以证明其在一个量子信道$ \mathcal{E} $下满足Data Processing Inequality：
+\begin{align}
+  S(\mathcal{E}(\rho) || \mathcal{E}(\sigma)) \leq S(\rho || \sigma).
+\end{align}
+我们回顾Matrix Norm的概念，发现1-norm也同样满足这个关系!!
+
+
+
+\subsection{Fidelity}
+
+\hlr{Classical Fidelity}
+
+我们对于同一个随机变量$ X $，其概率分布分别为$ p(x_i) $和$ q(x_i) $，我们定义Classical Fidelity为：
+\defi{
+  Classical Fidelity
+
+  对于同一个随机变量$ X $，其概率分布分别为$ p(x_i) $和$ q(x_i) $，我们定义Classical Fidelity为：
+  \begin{align}
+    F(p,q) = \left(\sum_i \sqrt{p(x_i)q(x_i)}\right).
+  \end{align}
+}
+
+\bigskip
+\hlr{Properties of Classical Fidelity}
+
+我们可以证明Classical Fidelity满足下面的性质：
+\begin{itemize}
+  \item $ 0 \leq F(p,q) \leq 1 $，并且当且仅当$ p = q $时取$ =1 $.
+    \item $ F(p,q) = 0 $当且仅当完全没有重叠也就是$ \forall i, p(x_i)q(x_i) = 0 $
+\end{itemize}
+注意，Fedility不能够描述两个经典vector之间的距离，因为其不满足三角不等式。
+
+
+\bigskip
+\hlr{Quantum Fidelity}
+
+对于两个量子态$ \rho $和$ \sigma $，我们定义Quantum Fidelity为：
+\defi{
+  Quantum Fidelity  
+
+  对于两个量子态$ \rho $和$ \sigma $，我们定义Quantum Fidelity为：
+  \begin{align}
+    F(\rho,\sigma)=\min_{\{M_{i}\}}\sum_{i}\sqrt{\operatorname{Tr}(M_{i}\rho)\operatorname{Tr}(\sigma M_{i})},
+  \end{align}
+  其中$ \{M_i\} $是一组POVM。也就是说我们选择一组测量让Quantum State给出一组概率分布，然后选择那个让这个概率分布的Classical Fidelity最小的测量给出的数值。
+}
+对于Quantum Fidelity我们存在另一个等价形式：
+\thm{
+  对于两个量子态$ \rho $和$ \sigma $，我们Quantum Fidelity等价为：
+  \begin{align}
+    F(\rho,\sigma) = \mathrm{Tr}\sqrt{\sqrt{\rho}\sigma\sqrt{\rho}}.
+  \end{align}
+}
+
+\bigskip
+\hlr{Properties of Quantum Fidelity}
+
+我们考虑两个state$ \rho $和$ \sigma $，假设他们可以\textbf{在同一组基上}对角化，$ \rho=\sum_ir_i|i\rangle\langle i|,\quad\sigma=\sum_is_i|i\rangle\langle i|. $那么我们有：
+\begin{align}
+  F(\rho,\sigma)=\sum_i\sqrt{r_is_i}.
+\end{align}
+也就退化为这一组基上面的classical fidelity。这个可以直接通过等价形式证明！并且我们注意$ i =\ketbra{i}{i} $是一个projective operator所以$ i^2 = i = \sqrt{i} $。
+
+
+\bigskip
+\hlr{Pure State Fidelity}
+
+如果$ \rho $是一个pure state $ \rho = |\psi\rangle\langle\psi| $，而$ \sigma $是任意的一个量子态，那么我们有：
+\begin{align}
+  F(\rho,\sigma) = \sqrt{\langle\psi|\sigma|\psi\rangle}.
+\end{align}
+这个可以直接通过等价形式证明！并且我们注意$ \rho^2 = \rho = \sqrt{\rho} $。
+
+而如果$ \sigma $也是一个pure state $ \sigma = |\phi\rangle\langle\phi| $，那么我们有：
+\begin{align}
+  F(\rho,\sigma) = |\langle\psi|\phi\rangle|.
+\end{align}
+也就是说fidelity描述了两个pure state之间的overlap。
+
+\bigskip
+\hlr{Uhlmann’s theorem}
+
+我们知道pure state的fidelity可以很好的计算并且有实际意义，因此我们希望考虑mix state纯化之后的fidelity和mix state的fidelity之间的关系。我们有下面的定理：
+\thm{
+  Uhlmann’s theorem
+
+  对于两个量子态$ \rho $和$ \sigma $，我们定义他们在同一个更大的Hilbert Space上的purification分别为$ |\psi_\rho\rangle $和$ |\phi_\sigma\rangle $，那么我们有：
+  \begin{align}
+    F(\rho,\sigma) = \max_{|\psi_\rho\rangle,|\phi_\sigma\rangle} |\langle\psi_\rho|\phi_\sigma\rangle|,
+  \end{align}
+  也就是说mix state的fidelity等于所有纯化之后的pure state fidelity的最大值。
+}
+
+\bigskip
+\hlr{Data Processing Inequality of Fidelity}
+
+我们可以证明Fidelity在量子信道$ \mathcal{E} $下满足Data Processing Inequality：
+\begin{align}
+  F(\mathcal{E}(\rho),\mathcal{E}(\sigma)) \geq F(\rho,\sigma).
+\end{align}
+也就是说我们不能够通过量子信道让两个量子态变得更不相似！量子信道只会让两个态更加相似。
+
+
+
+
+
 
 

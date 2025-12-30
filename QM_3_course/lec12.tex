@@ -1,2 +1,56 @@
-\subsection{Test}
+这一章介绍的是古人对于相对论和量子力学结合的早期探索。内容从现在的观点是错误的，dirac equation是场方程而非波函数的Schrodinger方程。而真正本质的应该是相对论量子场论。
+
+\subsection{Relativistic Schrodinger Equation}
+
+\subsubsection{Failed Attempts}
+古人的理想是使用协变的语言书写量子力学。因此进行了一些尝试。但是一些naive的尝试都最终失败了！
+
+\bigskip
+\hlr{直接使用相对论粒子能量}
+
+我们知道对于相对论点粒子能量是$ E=\sqrt{p^2+m^2} $。因此我们可以尝试直接将Schrodinger方程中的Hamiltonian替换为这个相对论的形式：
+\begin{align}
+  i\frac{\partial\psi}{\partial t}=\sqrt{m^2c^4-\hbar^2c^2\nabla^2}\psi\mathrm{~.}
+\end{align}
+但遇到的问题是这个方程右手边可以改写为：
+\begin{align}
+  \sqrt{m^2c^4-\hbar^2c^2\nabla^2}\psi(x)=\int d^3\mathbf{x}^{\prime}F(\mathbf{x},\mathbf{x}^{\prime})\psi(\mathbf{x}^{\prime}) \quad \text{where} \quad F(\mathbf{x},\mathbf{x}^{\prime})\propto\int d^3\mathbf{p}e^{i\mathbf{p}\cdot(\mathbf{x}-\mathbf{x}^{\prime})}\sqrt{\mathbf{p}^2c^2+m^2c^4}.
+\end{align}
+这意味着波函数一点的时间演化会被整个空间的分布影响。这违反了相对论的locality原则！
+
+\bigskip
+\hlr{Klein-Gordon Equation}
+
+由于上面的方程之中存在算符的平方根，很难处理。因此古人尝试将Schrodinger方程两边平方，得到：
+\begin{align}
+  -\square\psi=\frac{m^2c^4}{\hbar^2}\psi
+\end{align}
+也就是Klein-Gordon Equation。但是会发现这个方程存在两个问题：
+\begin{itemize}
+  \item 负能量解：这个方程显然存在平面波解但是其能量为： $ E=\pm\sqrt{\mathbf{p}^2c^2+m^2c^4}\mathrm{~.} $这表示能量没有下界。
+    \item 概率密度无法定义：普通的Schrodinger Equation的概率密度是守恒的也就是说：
+      \begin{align}
+        \partial_{t} \int d^3\mathbf{x} |\psi|^2 = 0\mathrm{~.} \quad \text{with} \quad \psi^* \psi \geq 0\mathrm{~.}
+      \end{align}
+      这是因为Schrodinger方程是1阶时间导数的方程。但是Klein-Gordon Equation是二阶方程，如果我们希望定义一个概率的interpretation必然不是$ |\psi|^2 $这个形式。因此我们需要重新定义概率密度。古人定义了：
+      \begin{align}
+        \rho = \frac{i\hbar}{2m}(\psi^*\partial_t\psi - \psi\partial_t\psi^*)\mathrm{~.} \quad \text{satisfying} \quad  \partial_t \int d^3\mathbf{x} \rho = 0\mathrm{~.}
+      \end{align}
+      但是这个密度并不是正定的，也就是说这个流并不是永远大于0的，因此不能作为概率密度来解释。
+\end{itemize}
+
+\subsubsection{Dirac Equation}
+
+为了强行构造一个协变的方程，另一个思路就是我们保留时间导数是一阶，但是强行要求Hamiltonian也是线性的，并且不要使用什么平方根的形式。也就是说我们要求：
+\begin{align}
+  H=c\sum_{i=1}^3\alpha_ip_i+\beta mc^2.
+\end{align}
+但为了能够和相对论量子力学匹配我们要求这个形式化的Hamiltonian的平方应该给出相对论的能量的平方。$ H^2 = p^2c^2 + m^2c^4 $。
+\rmk{
+  这个构造就相当于严格的定义了什么叫「开平方」！
+}
+对于这个构造我们会发现如果$ \alpha_i, \beta $是数字的话永远不能满足这个关系。因为我们计算会发现：
+\begin{align}
+  H^2 = c^2\sum_{i,j}\alpha_i\alpha_j p_ip_j + mc^3\sum_i(\alpha_i\beta+\beta\alpha_i)p_i + m^2c^4\beta^2.
+\end{align}
 

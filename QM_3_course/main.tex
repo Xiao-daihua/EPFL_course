@@ -1,7 +1,7 @@
 % main.tex - 科研项目学习笔记模板
 % !TeX root = main.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT 
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES
 
@@ -15,7 +15,14 @@
 
 
 % 页面设置
-\usepackage[a4paper, left=15mm, right=15mm, top=15mm, bottom=15mm]{geometry}
+\usepackage[
+  a4paper,
+  left=20mm,
+  right=20mm,
+  top=25mm,
+  bottom=25mm
+]{geometry}
+
 
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 \usepackage{xcolor}
@@ -84,7 +91,7 @@
 \maketitle
 
 \begin{abstract}
-  This is my notes for the QM3 course.
+  这是2025-2026学年第一学期EPFL Quantum Mechanics 3课程的学习笔记，内容涵盖WKB近似方法，量子散射理论两个比较重要的内容。散射理论部分涵盖了大量量子力学的一般讨论，对于场论学习极其重要。WKB近似则对于一维的Schrodinger以及类似的微分方程解法提供了很强的工具。
 \end{abstract}
 
 \tableofcontents
@@ -138,9 +145,14 @@
 % section Lecture 10: 额外专题 (end)
 
 \newpage 
-\section{Lecture 11:}\label{sec:Lecture 11:} % (fold)
+\section{Lecture 11: Partial Wave Expansion}\label{sec:Lecture 11:} % (fold)
 \input{lec11.tex}
 % section Lecture 11: (end)
+
+\newpage 
+\section{Lectrure 12: Dirac Equation and Pauli Equation}\label{sec:Lectrure 12: Dirac Equation and Pauli Equation} % (fold)
+\input{lec12.tex}
+% section Lectrure 12: Dirac Equation and Pauli Equation (end)
 
 \newpage 
 \section{复习：留数积分技巧}\label{sec:复习：留数积分技巧} % (fold)

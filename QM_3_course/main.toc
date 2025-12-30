@@ -48,13 +48,17 @@
 \contentsline {section}{\numberline {10}Lecture 10: S矩阵和散射振幅另一种表示}{43}{section.10}%
 \contentsline {subsection}{\numberline {10.1}Stationary Scattering State}{43}{subsection.10.1}%
 \contentsline {subsection}{\numberline {10.2}S 矩阵的T Production表示}{45}{subsection.10.2}%
-\contentsline {section}{\numberline {11}Lecture 11:}{47}{section.11}%
+\contentsline {section}{\numberline {11}Lecture 11: Partial Wave Expansion}{47}{section.11}%
 \contentsline {subsection}{\numberline {11.1}Partial Wave Expansion数学技巧}{47}{subsection.11.1}%
 \contentsline {subsubsection}{\numberline {11.1.1}基本定义}{47}{subsubsection.11.1.1}%
 \contentsline {subsubsection}{\numberline {11.1.2}自由粒子波函数的Partial Wave Expansion}{48}{subsubsection.11.1.2}%
-\contentsline {subsubsection}{\numberline {11.1.3}散射Hamiltonian的Partial Wave Expansion}{51}{subsubsection.11.1.3}%
+\contentsline {subsubsection}{\numberline {11.1.3}散射Hamiltonian的Partial Wave Expansion}{50}{subsubsection.11.1.3}%
 \contentsline {subsection}{\numberline {11.2}Stationary Scattering State的Partial Wave Expansion}{52}{subsection.11.2}%
 \contentsline {subsection}{\numberline {11.3}特殊函数性质}{54}{subsection.11.3}%
 \contentsline {subsection}{\numberline {11.4}Questions and Thoughts}{54}{subsection.11.4}%
-\contentsline {section}{\numberline {12}复习：留数积分技巧}{55}{section.12}%
-\contentsline {section}{\numberline {13}Scratch book}{56}{section.13}%
+\contentsline {section}{\numberline {12}Lectrure 12: Dirac Equation and Pauli Equation}{55}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Relativistic Schrodinger Equation}{55}{subsection.12.1}%
+\contentsline {subsubsection}{\numberline {12.1.1}Failed Attempts}{55}{subsubsection.12.1.1}%
+\contentsline {subsubsection}{\numberline {12.1.2}Dirac Equation}{56}{subsubsection.12.1.2}%
+\contentsline {section}{\numberline {13}复习：留数积分技巧}{57}{section.13}%
+\contentsline {section}{\numberline {14}Scratch book}{58}{section.14}%

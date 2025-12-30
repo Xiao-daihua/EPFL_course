@@ -34,28 +34,33 @@
 \contentsline {subsection}{\numberline {7.2}Question and thoughts}{37}{subsection.7.2}%
 \contentsline {section}{\numberline {8}Lecture 9: 区分量子态与矩阵模长}{38}{section.8}%
 \contentsline {subsection}{\numberline {8.1}区分量子态}{38}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}矩阵模长}{40}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.2}矩阵模长}{41}{subsection.8.2}%
 \contentsline {section}{\numberline {9}Lecture 10: Entropy}{44}{section.9}%
 \contentsline {subsection}{\numberline {9.1}Classical Entropy}{44}{subsection.9.1}%
 \contentsline {subsubsection}{\numberline {9.1.1}Single Random Variable Entropy}{44}{subsubsection.9.1.1}%
-\contentsline {section}{\numberline {10}Lecture 11: Resouce Theory and Entanglement Resource}{45}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Set Up for Resource Theory}{45}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Resource Theory of Entanglement}{45}{subsection.10.2}%
-\contentsline {section}{\numberline {11}Lecture 12: Entanglement Measure}{46}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Entanglement Measure}{46}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Mixed State Entanglement Measure}{46}{subsection.11.2}%
-\contentsline {section}{\numberline {12}Sup 1: QI之中常用的数学技巧}{47}{section.12}%
-\contentsline {subsection}{\numberline {12.1}基础数学技巧}{47}{subsection.12.1}%
-\contentsline {subsubsection}{\numberline {12.1.1}张量积}{47}{subsubsection.12.1.1}%
-\contentsline {subsubsection}{\numberline {12.1.2}Unitary}{47}{subsubsection.12.1.2}%
-\contentsline {subsubsection}{\numberline {12.1.3}Trace}{48}{subsubsection.12.1.3}%
-\contentsline {subsection}{\numberline {12.2}Pauli矩阵的特殊性质}{48}{subsection.12.2}%
-\contentsline {subsubsection}{\numberline {12.2.1}基本定义}{49}{subsubsection.12.2.1}%
-\contentsline {subsubsection}{\numberline {12.2.2}基本乘法性质}{49}{subsubsection.12.2.2}%
-\contentsline {subsubsection}{\numberline {12.2.3}对易反对易关系}{49}{subsubsection.12.2.3}%
-\contentsline {subsubsection}{\numberline {12.2.4}互相作用，pauli矩阵作用在pauli基上}{49}{subsubsection.12.2.4}%
-\contentsline {subsubsection}{\numberline {12.2.5}指数形式的Pauli矩阵}{49}{subsubsection.12.2.5}%
-\contentsline {subsubsection}{\numberline {12.2.6}Pauli矩阵的本征值与本征基}{49}{subsubsection.12.2.6}%
-\contentsline {paragraph}{Pauli算符期望值的取值范围}{49}{section*.2}%
-\contentsline {subsection}{\numberline {12.3}常用不等式}{50}{subsection.12.3}%
-\contentsline {section}{\numberline {13}Scratch book}{51}{section.13}%
+\contentsline {subsubsection}{\numberline {9.1.2}2 Random Variables Entropy}{46}{subsubsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.2}Quantum Entropy}{48}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Single Quantum System Entropy}{48}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}2 Quantum Systems Entropy}{49}{subsubsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.3}Fidelity}{51}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Lecture 11: Resouce Theory and Entanglement Resource}{53}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Set Up for Resource Theory}{53}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Resource Theory of Entanglement}{53}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Lecture 12: Entanglement Measure}{54}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Entanglement Measure}{54}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Mixed State Entanglement Measure}{54}{subsection.11.2}%
+\contentsline {section}{\numberline {12}Sup 1: QI之中常用的数学技巧}{55}{section.12}%
+\contentsline {subsection}{\numberline {12.1}基础数学技巧}{55}{subsection.12.1}%
+\contentsline {subsubsection}{\numberline {12.1.1}张量积}{55}{subsubsection.12.1.1}%
+\contentsline {subsubsection}{\numberline {12.1.2}Unitary}{55}{subsubsection.12.1.2}%
+\contentsline {subsubsection}{\numberline {12.1.3}Trace}{56}{subsubsection.12.1.3}%
+\contentsline {subsection}{\numberline {12.2}Pauli矩阵的特殊性质}{56}{subsection.12.2}%
+\contentsline {subsubsection}{\numberline {12.2.1}基本定义}{57}{subsubsection.12.2.1}%
+\contentsline {subsubsection}{\numberline {12.2.2}基本乘法性质}{57}{subsubsection.12.2.2}%
+\contentsline {subsubsection}{\numberline {12.2.3}对易反对易关系}{57}{subsubsection.12.2.3}%
+\contentsline {subsubsection}{\numberline {12.2.4}互相作用，pauli矩阵作用在pauli基上}{57}{subsubsection.12.2.4}%
+\contentsline {subsubsection}{\numberline {12.2.5}指数形式的Pauli矩阵}{57}{subsubsection.12.2.5}%
+\contentsline {subsubsection}{\numberline {12.2.6}Pauli矩阵的本征值与本征基}{57}{subsubsection.12.2.6}%
+\contentsline {paragraph}{Pauli算符期望值的取值范围}{57}{section*.2}%
+\contentsline {subsection}{\numberline {12.3}常用不等式}{58}{subsection.12.3}%
+\contentsline {section}{\numberline {13}Scratch book}{59}{section.13}%

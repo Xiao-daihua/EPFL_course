@@ -267,7 +267,7 @@ Proof: 算一算就知道了，下面我会算。因此我们给出定理：
 
   Stationary Scattering State的波函数可以使用Partial Wave进行展开，展开形式为：
   \begin{align}
-    \Psi_k^{scatt}(\vec{r})=\sum_{l=0}^\infty i^l\sqrt{4\pi(2l+1)}\tilde{\varphi}_{kl0}(r).
+    \Psi_k^{scatt}(\mathbf{r})=\sum_{l=0}^\infty i^l\sqrt{4\pi(2l+1)}\tilde{\varphi}_{kl0}(\mathbf{r}).
   \end{align}
 }
 
@@ -276,12 +276,12 @@ Proof: 算一算就知道了，下面我会算。因此我们给出定理：
 
 我们研究这个展开形式在无穷远处的渐近行为：
 \begin{align}
-  \Psi_k^{scatt}(\vec{r}) &= \sum_{l=0}^{\infty}i^{l}\sqrt{4\pi(2l+1)}\tilde{\boldsymbol{\varphi}}_{kl0}(r)\\
+  \Psi_k^{scatt}(\mathbf{r}) &= \sum_{l=0}^{\infty}i^{l}\sqrt{4\pi(2l+1)}\tilde{\varphi}_{kl0}(\mathbf{r})\\
                           &\operatorname*{\sim}_{r\to\infty}-\sum_{l=0}^{\infty}i^{l}\sqrt{4\pi(2l+1)}Y_{l}^{0}(\theta)\times\frac{1}{2 i k r}\left[e^{-ikr}e^{i\frac{l\pi}{2}}-e^{ikr}e^{-i\frac{l\pi}{2}}e^{2i\delta_{l}}\right].
 \end{align}
 我们进行变形：$ e^{2i\delta_l}=1+2ie^{i\delta_l}\sin\delta_l $，因此上式可以写作：
 \begin{align}
-  \Psi_k^{scatt}(\vec{r})\operatorname*{\sim}_{r\to\infty}-\sum_{l=0}^{\infty} i^{\,l}\sqrt{4\pi(2l+1)}\,Y_l^{0}(\theta)
+  \Psi_k^{scatt}(\mathbf{r})\operatorname*{\sim}_{r\to\infty}-\sum_{l=0}^{\infty} i^{\,l}\sqrt{4\pi(2l+1)}\,Y_l^{0}(\theta)
 \left[
 \frac{e^{-ikr} e^{i\pi/2} - e^{ikr} e^{-i\pi/2}}{2ikr}
 \;-\;
@@ -298,7 +298,7 @@ e^{ikr}\frac{1}{k}\,e^{-i\frac{l\pi}{2}}\,e^{i\delta_l}\sin\delta_l
 
   Stationary Scattering State的波函数在无穷远处的渐近行为为：
   \begin{align}
-\Psi_k^{scatt}(\vec{r}) \operatorname*{\sim}_{r\to\infty} e^{ikz} + f_k(\theta)\frac{e^{ikr}}{r}
+\Psi_k^{scatt}(\mathbf{r}) \operatorname*{\sim}_{r\to\infty} e^{ikz} + f_k(\theta)\frac{e^{ikr}}{r}
   \end{align}
 其中：
 \begin{align}
