@@ -474,6 +474,9 @@ INPUT sup3.tex
 INPUT ./lec9.tex
 INPUT ./lec9.tex
 INPUT lec9.tex
+INPUT ./assets/setupgew.png
+INPUT ./assets/setupgew.png
+INPUT ./assets/setupgew.png
 INPUT ./lec10.tex
 INPUT ./lec10.tex
 INPUT lec10.tex

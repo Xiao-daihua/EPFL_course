@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  27 DEC 2025 15:44
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  30 DEC 2025 17:30
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1473,38 +1473,56 @@ File: assets/inerform.png Graphic file (type bmp)
 
 [72] (./sup3.tex)
 
-[73] (./lec9.tex)
+[73] (./lec9.tex
+Missing character: There is no ️ (U+FE0F) in font STSong/OT:script=hani;language=dflt;!
+Missing character: There is no ⃣ (U+20E3) in font [lmroman10-regular]:mapping=tex-text;!
 
-[74] (./lec10.tex)
 
-[75] (./lec11.tex
+[74]
+
+[75]
 
 [76]
+File: assets/setupgew.png Graphic file (type bmp)
+<assets/setupgew.png>
+
 
 [77]
 
 [78]
 
-[79]
+[79])
 
-[80]
+[80] (./lec10.tex)
 
-[81]
+[81] (./lec11.tex
 
-[82])
+[82]
 
-[83] (./lec12.tex
+[83]
 
 [84]
 
 [85]
 
 [86]
+
+[87]
+
+[88])
+
+[89] (./lec12.tex
+
+[90]
+
+[91]
+
+[92]
 File: assets/energypoasd.png Graphic file (type bmp)
 <assets/energypoasd.png>
 
 
-[87]
+[93]
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 229.
 
@@ -1513,9 +1531,9 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 229.
 
 )
 
-[88] (./lec13.tex
+[94] (./lec13.tex
 
-[89]
+[95]
 Overfull \hbox (13.37706pt too wide) in paragraph at lines 54--55
 []\TU/lmr/m/n/10.95 2. \TU/STSong(0)/m/n/10.95 认 为 世 界 存 在 奇 点，|  真 的 是 纯 纯 真 空，|  这 样 的 天 体 也 就 是 黑 洞。|  但 是 我 们 不 可 以 再 用 \TU/lmr/m/n/10.95 Schwarzschild
  []
@@ -1527,29 +1545,29 @@ Overfull \hbox (18.60558pt too wide) in paragraph at lines 74--75
 
 
 
-[90]
+[96]
 
-[91]
+[97]
 
-[92]
+[98]
 
-[93]
+[99]
 Overfull \hbox (0.11781pt too wide) in paragraph at lines 233--234
 []\TU/STSong(0)/m/n/10.95 为 此 我 们 需 要 选 择 新 的 坐 标 系 来 描 述 这 个 区 域 的 时 空 结 构。|  首 先 我 们 引 入 一 个 \TU/lmr/m/n/10.95 tortoise coordinate\TU/STSong(0)/m/n/10.95 。| 
  []
 
 
 
-[94]
+[100]
 File: assets/inlightcone.png Graphic file (type bmp)
 <assets/inlightcone.png>
 File: assets/outgogeo.png Graphic file (type bmp)
 <assets/outgogeo.png>
 
 
-[95])
+[101])
 
-[96] (./lec14.tex
+[102] (./lec14.tex
 Overfull \hbox (28.59338pt too wide) detected at line 20
 []
  []
@@ -1558,38 +1576,38 @@ File: assets/diagkruskal.png Graphic file (type bmp)
 <assets/diagkruskal.png>
 
 
-[97]
+[103]
 File: assets/kruskalcausal.png Graphic file (type bmp)
 <assets/kruskalcausal.png>
 
 
-[98]
+[104]
 File: assets/freefallcoor.png Graphic file (type bmp)
 <assets/freefallcoor.png>
 
 
-[99]
+[105]
 
-[100]
+[106]
 
-[101]
+[107]
 File: assets/minkwskipenrose.png Graphic file (type bmp)
 <assets/minkwskipenrose.png>
 
 
-[102]
+[108]
 File: assets/penrosesch.png Graphic file (type bmp)
 <assets/penrosesch.png>
 
 
-[103]
+[109]
 File: assets/RNp.png Graphic file (type bmp)
 <assets/RNp.png>
 
 
-[104])
+[110])
 
-[105] (./main.aux)
+[111] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1602,15 +1620,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0BD5DD220813A80314752815DD2A0489;20821.
+(rerunfilecheck)             Checksum: 5FB660A4D70125D337C95F311B7E1F74;23134.
  ) 
 Here is how much of TeX's memory you used:
- 36072 strings out of 468527
- 802313 string characters out of 5447700
- 1216768 words of memory out of 5000000
- 63725 multiletter control sequences out of 15000+600000
+ 36091 strings out of 468527
+ 802712 string characters out of 5447700
+ 1217041 words of memory out of 5000000
+ 63743 multiletter control sequences out of 15000+600000
  639779 words of font info for 130 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,21n,121p,646b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (105 pages, 2682352 bytes).
+Output written on main.xdv (111 pages, 2869268 bytes).
