@@ -182,6 +182,7 @@ General的研究这个问题会过于复杂，因为相对论的能动量张量�
 \begin{align}
   h_{ij}^{TT}(x)= 4G\Lambda_{ij,kl}(\hat{\mathbf{n}})\int d^3x^{\prime} \frac{1}{|\mathbf{x}-\mathbf{y}|}T_{\mu\nu}\left(x^0-|\mathbf{x}-\mathbf{y}|,\mathbf{y} \right)
 \end{align}
+注意，这里$ \hat{\mathbf{n}} = \frac{\mathbf{x}}{|\mathbf{x}|} $是观察者位置的单位向量。因为作为观察者，我们只能观测到引力波向自己方向传播的部分！
 
 \bigskip
 \hlr{远场近似}
@@ -282,6 +283,37 @@ General的研究这个问题会过于复杂，因为相对论的能动量张量�
 \end{align}
 这两个量是monopole和dipole给出的，而根据能量守恒条件，这两个量的时间导数恒定为0。这也告诉我们了这个set up下面，任何波动解都不会包含monopole和dipole的贡献。
 
+\subsubsection{z方向观察者的Metric}
+
+\bigskip
+\hlr{z方向传播的Quadrapole}
+
+我们补充上一小节的内容。如果我们考虑一个任意的质量$ M(x) $分布变换生成的引力波。然后，我们假设观察者的位置在这个坐标系下为 $ \mathbf{x} = R \hat{z} $。于是，我们关心z方向传播的引力波的quadral pole表示。也就是我们考虑投影算符之中$ \hat{n} = (0,0,1) $的情况。我们有：
+\begin{align}
+  P_{ij} = \delta_{ij} - \hat{n}_i \hat{n}_j = \begin{pmatrix}1&0&0\\0&1&0\\0&0&0\end{pmatrix},
+\end{align}
+根据投影算符公式$ \Lambda_{ij,kl} = P_{ik}P_{jl} - \frac{1}{2}P_{ij}P_{kl} $，我们使用下面矩阵形式进行计算。对于投影算符作用在一般的矩阵$ A_{ij} $上面我们有：
+\begin{align}
+  \Lambda_{ij,kl}A_{kl}=\left[P_{ik}P_{jl}-\frac{1}{2}P_{ij}P_{kl}\right]A_{kl}=(PAP)_{ij}-\frac{1}{2}P_{ij}\mathrm{Tr}\left(PA\right).
+\end{align}
+带入最一般的$ \ddot{M}_{ij}(x) $的形式我们知道：
+\begin{align}
+  \Lambda_{ij,kl}\ddot{M}_{kl}=\begin{pmatrix}(\ddot{M}_{11}-\ddot{M}_{22})/2&\ddot{M}_{12}&0\\\ddot{M}_{21}&-(\ddot{M}_{11}-\ddot{M}_{22})/2&0\\0&0&0\end{pmatrix}_{ij}
+\end{align}
+
+
+\bigskip
+\hlr{z方向观察者观测到的metric}
+
+根据上面的计算我们可以给出z方向观察者观测到的引力波metric为：
+\begin{align}
+  h_{ij}(t,R\hat{z})=\frac{2G}{R}\frac{d^2}{dt^2}\begin{pmatrix}M_{11}(t-R)-M_{22}(t-R)&2M_{12}(t-R)&0\\2M_{21}(t-R)&-(M_{11}(t-R)-M_{22}(t-R))&0\\0&0&0\end{pmatrix}_{ij}.
+\end{align}
+这个和我们之前讨论的$ h_+, h_\times $的形式完全相符，说明我们讨论是合理的。我们分别给出这两个Polarization对应的quadrupole矩阵形式：
+\begin{align}
+  h_{+}&=\frac{G}{R}\left(\ddot{M}_{11}-\ddot{M}_{22}\right), \quad h_{\times}=\frac{2G}{R}\ddot{M}_{12}\mathrm{~,}
+\end{align}
+
 
 \bigskip
 \hlr{More on Quadrupole}
@@ -292,7 +324,7 @@ General的研究这个问题会过于复杂，因为相对论的能动量张量�
 \end{itemize}
 实际上之前的对于$ \mathbf{y} \cdot \hat{n} $的展开如果展开更高阶，也仅仅会得到更高阶的moment的贡献，而不会得到monopole和dipole的贡献。
 
-\subsubsection{Quadualpole Formula for GW Power}
+\subsubsection{Quadualpole表示引力波的Power}
 
 我们考虑引力波的辐射功率和源的关系。我们根据\cref{eq:gwpowerfluxsolidangle}我们知道$ P \sim \dot{h} \sim \dddot{Q} $。最终我们给出公式为：
 \thm{
