@@ -488,12 +488,12 @@ INPUT lec11.tex
 INPUT ./lec12.tex
 INPUT ./lec12.tex
 INPUT lec12.tex
+INPUT ./lec13.tex
+INPUT ./lec13.tex
+INPUT lec13.tex
 INPUT ./residue.tex
 INPUT ./residue.tex
 INPUT residue.tex
-INPUT ./sb.tex
-INPUT ./sb.tex
-INPUT sb.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

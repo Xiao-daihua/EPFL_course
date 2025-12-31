@@ -224,6 +224,9 @@ General的研究这个问题会过于复杂，因为相对论的能动量张量�
     \begin{align}
       \int d^3 y T^{ij} = \frac{1}{2} \frac{d^2}{dt^2} \int d^3 y T^{00} y^i y^j = \frac{1}{2} \ddot{M}^{ij}
     \end{align}
+    \rmk{
+      我们知道多级展开之后的量是一个仅仅和时间相关的，因为空间维度已经被积分掉了！
+    }
 
 
     \bigskip
@@ -310,7 +313,7 @@ General的研究这个问题会过于复杂，因为相对论的能动量张量�
   h_{ij}(t,R\hat{z})=\frac{2G}{R}\frac{d^2}{dt^2}\begin{pmatrix}M_{11}(t-R)-M_{22}(t-R)&2M_{12}(t-R)&0\\2M_{21}(t-R)&-(M_{11}(t-R)-M_{22}(t-R))&0\\0&0&0\end{pmatrix}_{ij}.
 \end{align}
 这个和我们之前讨论的$ h_+, h_\times $的形式完全相符，说明我们讨论是合理的。我们分别给出这两个Polarization对应的quadrupole矩阵形式：
-\begin{align}
+\begin{align}\label{eq:gwquadrupolepluscross}
   h_{+}&=\frac{G}{R}\left(\ddot{M}_{11}-\ddot{M}_{22}\right), \quad h_{\times}=\frac{2G}{R}\ddot{M}_{12}\mathrm{~,}
 \end{align}
 
@@ -327,14 +330,14 @@ General的研究这个问题会过于复杂，因为相对论的能动量张量�
 \subsubsection{Quadualpole表示引力波的Power}
 
 我们考虑引力波的辐射功率和源的关系。我们根据\cref{eq:gwpowerfluxsolidangle}我们知道$ P \sim \dot{h} \sim \dddot{Q} $。最终我们给出公式为：
-\thm{
+\thm{\label{thm:gwpowerquadruple}
   Quadrupole Formula for Gravitational Wave Power
 
   引力波的辐射功率和源的关系为：
   \begin{align}
-    P_{quad} = \int d \Omega \frac{G}{8 \pi} \Lambda_{ij,kl}(\hat{\mathbf{n}}) \langle \dddot{Q}^{ij}(t - R) \dddot{Q}^{kl}(t - R) \rangle
+    P_{quad} = \int d \Omega \frac{G}{8 \pi} \Lambda_{ij,kl}(\hat{\mathbf{n}}) \langle \dddot{Q}^{ij}(t - R) \dddot{Q}^{kl}(t - R) \rangle = \frac{G}{5} \langle \dddot{Q}_{ij}(t - R) \dddot{Q}^{ij}(t - R) \rangle.
   \end{align}
 }
-注意，这个公式是对于所有方向传播的引力波的传播方向的面积进行积分得到的总功率！！
+注意，这个公式是对于所有方向传播的引力波的传播方向的面积进行积分得到的总功率！！这个积分结果可以通过Quadralpole moment的三阶导数的contract得到。我们注意，这个cointract之后，如果固定观察者的位置$ R $这是一个仅仅和时间相关的量。我们对于时间平均之后得到的了一个常数功率！
 
 

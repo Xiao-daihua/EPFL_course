@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  31 DEC 2025 12:08
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  31 DEC 2025 15:16
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1495,15 +1495,26 @@ File: assets/setupgew.png Graphic file (type bmp)
 
 [80])
 
-[81] (./lec10.tex)
+[81] (./lec10.tex
+File: assets/doublestar.png Graphic file (type bmp)
+<assets/doublestar.png>
 
-[82] (./lec11.tex
+
+[82]
+File: assets/coor.png Graphic file (type bmp)
+<assets/coor.png>
+
+Overfull \hbox (13.34041pt too wide) in paragraph at lines 80--81
+\TU/STSong(0)/m/n/10.95 在 新 的 坐 标 系 下 是 $\OML/cmm/m/it/10.95 z[]$ \TU/STSong(0)/m/n/10.95 轴 方 向 即 可。|  也 就 是 说：| $\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1) = \OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 ([] \OML/cmm/m/it/10.95 ^^R [] ^^^; [] ^^R [] ^^^; [] ^^R\OT1/cmr/m/n/10.95 )$ \TU/STSong(0)/m/n/10.95 或 者 说 $\OML/cmm/m/it/10.95 R[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1) =
+ []
+
+
 
 [83]
 
-[84]
+[84])
 
-[85]
+[85] (./lec11.tex
 
 [86]
 
@@ -1511,20 +1522,26 @@ File: assets/setupgew.png Graphic file (type bmp)
 
 [88]
 
-[89])
+[89]
 
-[90] (./lec12.tex
+[90]
 
 [91]
 
-[92]
+[92])
 
-[93]
+[93] (./lec12.tex
+
+[94]
+
+[95]
+
+[96]
 File: assets/energypoasd.png Graphic file (type bmp)
 <assets/energypoasd.png>
 
 
-[94]
+[97]
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 229.
 
@@ -1533,9 +1550,9 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 229.
 
 )
 
-[95] (./lec13.tex
+[98] (./lec13.tex
 
-[96]
+[99]
 Overfull \hbox (13.37706pt too wide) in paragraph at lines 54--55
 []\TU/lmr/m/n/10.95 2. \TU/STSong(0)/m/n/10.95 认 为 世 界 存 在 奇 点，|  真 的 是 纯 纯 真 空，|  这 样 的 天 体 也 就 是 黑 洞。|  但 是 我 们 不 可 以 再 用 \TU/lmr/m/n/10.95 Schwarzschild
  []
@@ -1547,29 +1564,29 @@ Overfull \hbox (18.60558pt too wide) in paragraph at lines 74--75
 
 
 
-[97]
-
-[98]
-
-[99]
-
 [100]
+
+[101]
+
+[102]
+
+[103]
 Overfull \hbox (0.11781pt too wide) in paragraph at lines 233--234
 []\TU/STSong(0)/m/n/10.95 为 此 我 们 需 要 选 择 新 的 坐 标 系 来 描 述 这 个 区 域 的 时 空 结 构。|  首 先 我 们 引 入 一 个 \TU/lmr/m/n/10.95 tortoise coordinate\TU/STSong(0)/m/n/10.95 。| 
  []
 
 
 
-[101]
+[104]
 File: assets/inlightcone.png Graphic file (type bmp)
 <assets/inlightcone.png>
 File: assets/outgogeo.png Graphic file (type bmp)
 <assets/outgogeo.png>
 
 
-[102])
+[105])
 
-[103] (./lec14.tex
+[106] (./lec14.tex
 Overfull \hbox (28.59338pt too wide) detected at line 20
 []
  []
@@ -1578,38 +1595,38 @@ File: assets/diagkruskal.png Graphic file (type bmp)
 <assets/diagkruskal.png>
 
 
-[104]
+[107]
 File: assets/kruskalcausal.png Graphic file (type bmp)
 <assets/kruskalcausal.png>
 
 
-[105]
+[108]
 File: assets/freefallcoor.png Graphic file (type bmp)
 <assets/freefallcoor.png>
 
 
-[106]
+[109]
 
-[107]
+[110]
 
-[108]
+[111]
 File: assets/minkwskipenrose.png Graphic file (type bmp)
 <assets/minkwskipenrose.png>
 
 
-[109]
+[112]
 File: assets/penrosesch.png Graphic file (type bmp)
 <assets/penrosesch.png>
 
 
-[110]
+[113]
 File: assets/RNp.png Graphic file (type bmp)
 <assets/RNp.png>
 
 
-[111])
+[114])
 
-[112] (./main.aux)
+[115] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1622,15 +1639,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7F5AE078F5FE3A0E42DD0244410814BB;23336.
+(rerunfilecheck)             Checksum: 74DEDD2FC808E69C0A8B9290B49402D8;24319.
  ) 
 Here is how much of TeX's memory you used:
- 36093 strings out of 468527
- 802770 string characters out of 5447700
- 1217285 words of memory out of 5000000
- 63745 multiletter control sequences out of 15000+600000
+ 36122 strings out of 468527
+ 803410 string characters out of 5447700
+ 1218697 words of memory out of 5000000
+ 63772 multiletter control sequences out of 15000+600000
  639779 words of font info for 130 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,21n,121p,646b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (112 pages, 2884016 bytes).
+Output written on main.xdv (115 pages, 2964296 bytes).
