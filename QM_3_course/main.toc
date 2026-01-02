@@ -62,5 +62,8 @@
 \contentsline {subsubsection}{\numberline {12.1.2}Dirac Equation}{56}{subsubsection.12.1.2}%
 \contentsline {subsubsection}{\numberline {12.1.3}Dirac Equation的能谱}{57}{subsubsection.12.1.3}%
 \contentsline {subsection}{\numberline {12.2}Pauli Equation}{57}{subsection.12.2}%
-\contentsline {section}{\numberline {13}Lecture 13: Pauli Equation and Intro to QFT}{60}{section.13}%
-\contentsline {section}{\numberline {14}复习：留数积分技巧}{61}{section.14}%
+\contentsline {section}{\numberline {13}Lecture 13: Pauli Equation and Introduction to QFT}{60}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Pauli Equation II}{60}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Relativistic Boson \& Scalar Field}{61}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Relativistic Fermion \& Dirac Field}{61}{subsection.13.3}%
+\contentsline {section}{\numberline {14}复习：留数积分技巧}{62}{section.14}%
