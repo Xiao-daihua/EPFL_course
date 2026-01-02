@@ -517,15 +517,17 @@ Weyl Spinor的运动方程告诉我们其描述的是质量为0的spin-1/2粒子
 \begin{align}
   S_M=\int d^4x\mathcal{L}_M=\int d^4x\left(i\psi_L^\dagger(x)\bar{\sigma}\cdot\partial\psi_L(x)-\frac{m}{2}\psi_L^T\epsilon\psi_L-\frac{m^*}{2}\psi_L^\dagger\epsilon^T\psi_L^*\right)
 \end{align}
-但问题是如果我们看质量项的话会发现：
+使用变分原理我们认为的独立变量其实是$ \psi_L $以及$ \psi^* $我们可以对于这两个量分别进行变分。对于质量项两个独立变量是decoupled的，第一项是$ \psi_L $的质量项，第二项是$ \psi_L^* $的质量项。但问题是如果我们看质量项的话会发现：
 \begin{align}
-  \psi_L^T\epsilon\psi_L =  - \psi_L^T\epsilon\psi_L 
+  \psi_L^T\epsilon\psi_L = - \phi_L^T \epsilon^T \psi_L =  - \psi_L^T\epsilon\psi_L 
 \end{align}
-所以我们使用一般的数字是无法经典的写出一个Majorana Spinor的Lagrangian的！只能使用Grassmann数！
+所以我们使用一般的数字是无法经典的写出一个Majorana Spinor的Lagrangian的！只能使用Grassmann数！我们变分也需要使用Grassmann number的规则。
 
 
 
 \subsection{补充讨论: Internal Symmetry以及场论构造}
+
+\hlr{Invariant Tensor 构造}
 
 我们现在有了标量场和Dirac Field。我们现在希望考虑如果很多的标量场和Dirac Field存在于一个理论。
 \begin{align}
@@ -542,6 +544,18 @@ Weyl Spinor的运动方程告诉我们其描述的是质量为0的spin-1/2粒子
 \rmk{
   注意其实我们的场论想构造SU(2)的internal symmetry的时候使用的是两个复标量场，因此我们其实有四个实标量场的自由度！
 }
+
+\bigskip
+\hlr{常用Internal Symmetry Group}
+
+我们常用的Internal Symmetry Group有：
+\begin{itemize}
+  \item SU(N)： $  \delta_{ij} $，$ \epsilon_{i_1 i_2 \cdots i_N} $ ；SU(2)Exp map形式：$  U(\theta) = e^{i\theta^i \sigma^i/2 } $
+  \item SO(N) ：$ \delta_{ij} $，$ \epsilon_{i_1 i_2 \cdots i_N} $； SU(2) Triplet或者说SO(3)(注意，我们一般说SU(2) Triplet的时候其实是SO(3)的定义表示) Exp map 形式：$  R(\theta) = e^{i\theta^i J^i } $其中$ (J^i)^a_b = -i\epsilon^{iab} $
+  \item U(1)：$ 1 $ Exp map形式：$  e^{i\alpha} $ 
+  \item U(2)：$ \delta_{ij} $ ；Exp map形式：$  U(\theta,\phi) = e^{i\theta^\mu \sigma^\mu/2 } e^{i\phi} $这里有一个I的加入！
+  \item O(N)：$ \delta_{ij} $ 
+\end{itemize}
 
 \subsection{补充：Gamma Matrix in Weyl Representation}
 

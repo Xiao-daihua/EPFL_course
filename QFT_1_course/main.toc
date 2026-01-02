@@ -87,36 +87,36 @@
 \contentsline {subsubsection}{\numberline {12.4.2}Dirac Spinor的Lagrangian}{97}{subsubsection.12.4.2}%
 \contentsline {subsubsection}{\numberline {12.4.3}Majorana Spinor的Lagrangian}{98}{subsubsection.12.4.3}%
 \contentsline {subsection}{\numberline {12.5}补充讨论: Internal Symmetry以及场论构造}{98}{subsection.12.5}%
-\contentsline {subsection}{\numberline {12.6}补充：Gamma Matrix in Weyl Representation}{98}{subsection.12.6}%
-\contentsline {subsection}{\numberline {12.7}Questions and Thoughts}{99}{subsection.12.7}%
-\contentsline {section}{\numberline {13}Lecture 12: On Shell Mode Expansion of Dirac Spinor Field}{100}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Classical Dirac Spinor Field的On Shell Solution}{100}{subsection.13.1}%
-\contentsline {subsubsection}{\numberline {13.1.1}On shell Mode Expansion}{100}{subsubsection.13.1.1}%
-\contentsline {subsubsection}{\numberline {13.1.2}展开旋量mode $ u(p) $}{101}{subsubsection.13.1.2}%
-\contentsline {subsubsection}{\numberline {13.1.3}展开旋量mode $ v(p) $}{103}{subsubsection.13.1.3}%
-\contentsline {subsubsection}{\numberline {13.1.4}On Shell Mode Expansion总结}{103}{subsubsection.13.1.4}%
-\contentsline {subsection}{\numberline {13.2}Spinor Basis性质}{104}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Chirality, Helicity性质}{104}{subsection.13.3}%
-\contentsline {subsubsection}{\numberline {13.3.1}Chirality}{104}{subsubsection.13.3.1}%
-\contentsline {subsubsection}{\numberline {13.3.2}Helicity}{105}{subsubsection.13.3.2}%
-\contentsline {subsubsection}{\numberline {13.3.3}Massless Limit下Chirality和Helicity的关系}{106}{subsubsection.13.3.3}%
-\contentsline {section}{\numberline {14}Lecture 13: Quantization of Dirac Field}{108}{section.14}%
-\contentsline {subsection}{\numberline {14.1}Quantization的思路与准备}{108}{subsection.14.1}%
-\contentsline {subsubsection}{\numberline {14.1.1}Quantization的思路}{108}{subsubsection.14.1.1}%
-\contentsline {subsubsection}{\numberline {14.1.2}Quantization 准备工作}{108}{subsubsection.14.1.2}%
-\contentsline {subsection}{\numberline {14.2}Quantization of Dirac Field}{110}{subsection.14.2}%
-\contentsline {subsubsection}{\numberline {14.2.1}Fermionic Quantization}{110}{subsubsection.14.2.1}%
-\contentsline {subsubsection}{\numberline {14.2.2}Hamiltonian的对角化}{111}{subsubsection.14.2.2}%
-\contentsline {subsection}{\numberline {14.3}Dirac Field的Hilbert Space}{111}{subsection.14.3}%
-\contentsline {subsection}{\numberline {14.4}Heisenberg Picture构造全时空的场算符}{113}{subsection.14.4}%
-\contentsline {subsection}{\numberline {14.5}U(1)对称性与电荷守恒}{113}{subsection.14.5}%
-\contentsline {subsection}{\numberline {14.6}角动量和Boost守恒荷}{114}{subsection.14.6}%
-\contentsline {subsection}{\numberline {14.7}Questions and Thoughts}{114}{subsection.14.7}%
-\contentsline {section}{\numberline {15}Lecture 14: Representation of Poincare Algebra}{115}{section.15}%
-\contentsline {subsection}{\numberline {15.1}Poincare群在Hilbert Space上一般表示}{115}{subsection.15.1}%
-\contentsline {subsubsection}{\numberline {15.1.1}Poincare群的表示一般研究}{115}{subsubsection.15.1.1}%
-\contentsline {subsubsection}{\numberline {15.1.2}Poincare代数不可约表示Casimir算符分类}{116}{subsubsection.15.1.2}%
-\contentsline {subsection}{\numberline {15.2}固定$ m^2, w^2 $不可约表示}{118}{subsection.15.2}%
-\contentsline {subsubsection}{\numberline {15.2.1}不可约表示基本讨论}{118}{subsubsection.15.2.1}%
-\contentsline {subsubsection}{\numberline {15.2.2}Wigner Little Group方法构建不可约表示}{119}{subsubsection.15.2.2}%
-\contentsline {subsection}{\numberline {15.3}有质量粒子表示}{121}{subsection.15.3}%
+\contentsline {subsection}{\numberline {12.6}补充：Gamma Matrix in Weyl Representation}{99}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}Questions and Thoughts}{100}{subsection.12.7}%
+\contentsline {section}{\numberline {13}Lecture 12: On Shell Mode Expansion of Dirac Spinor Field}{101}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Classical Dirac Spinor Field的On Shell Solution}{101}{subsection.13.1}%
+\contentsline {subsubsection}{\numberline {13.1.1}On shell Mode Expansion}{101}{subsubsection.13.1.1}%
+\contentsline {subsubsection}{\numberline {13.1.2}展开旋量mode $ u(p) $}{102}{subsubsection.13.1.2}%
+\contentsline {subsubsection}{\numberline {13.1.3}展开旋量mode $ v(p) $}{104}{subsubsection.13.1.3}%
+\contentsline {subsubsection}{\numberline {13.1.4}On Shell Mode Expansion总结}{104}{subsubsection.13.1.4}%
+\contentsline {subsection}{\numberline {13.2}Spinor Basis性质}{105}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Chirality, Helicity性质}{105}{subsection.13.3}%
+\contentsline {subsubsection}{\numberline {13.3.1}Chirality}{105}{subsubsection.13.3.1}%
+\contentsline {subsubsection}{\numberline {13.3.2}Helicity}{106}{subsubsection.13.3.2}%
+\contentsline {subsubsection}{\numberline {13.3.3}Massless Limit下Chirality和Helicity的关系}{107}{subsubsection.13.3.3}%
+\contentsline {section}{\numberline {14}Lecture 13: Quantization of Dirac Field}{109}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Quantization的思路与准备}{109}{subsection.14.1}%
+\contentsline {subsubsection}{\numberline {14.1.1}Quantization的思路}{109}{subsubsection.14.1.1}%
+\contentsline {subsubsection}{\numberline {14.1.2}Quantization 准备工作}{109}{subsubsection.14.1.2}%
+\contentsline {subsection}{\numberline {14.2}Quantization of Dirac Field}{111}{subsection.14.2}%
+\contentsline {subsubsection}{\numberline {14.2.1}Fermionic Quantization}{111}{subsubsection.14.2.1}%
+\contentsline {subsubsection}{\numberline {14.2.2}Hamiltonian的对角化}{112}{subsubsection.14.2.2}%
+\contentsline {subsection}{\numberline {14.3}Dirac Field的Hilbert Space}{112}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}Heisenberg Picture构造全时空的场算符}{114}{subsection.14.4}%
+\contentsline {subsection}{\numberline {14.5}U(1)对称性与电荷守恒}{114}{subsection.14.5}%
+\contentsline {subsection}{\numberline {14.6}角动量和Boost守恒荷}{115}{subsection.14.6}%
+\contentsline {subsection}{\numberline {14.7}Questions and Thoughts}{115}{subsection.14.7}%
+\contentsline {section}{\numberline {15}Lecture 14: Representation of Poincare Algebra}{116}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Poincare群在Hilbert Space上一般表示}{116}{subsection.15.1}%
+\contentsline {subsubsection}{\numberline {15.1.1}Poincare群的表示一般研究}{116}{subsubsection.15.1.1}%
+\contentsline {subsubsection}{\numberline {15.1.2}Poincare代数不可约表示Casimir算符分类}{117}{subsubsection.15.1.2}%
+\contentsline {subsection}{\numberline {15.2}固定$ m^2, w^2 $不可约表示}{119}{subsection.15.2}%
+\contentsline {subsubsection}{\numberline {15.2.1}不可约表示基本讨论}{119}{subsubsection.15.2.1}%
+\contentsline {subsubsection}{\numberline {15.2.2}Wigner Little Group方法构建不可约表示}{120}{subsubsection.15.2.2}%
+\contentsline {subsection}{\numberline {15.3}有质量粒子表示}{122}{subsection.15.3}%
