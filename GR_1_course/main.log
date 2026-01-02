@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  31 DEC 2025 15:16
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  2 JAN 2026 10:31
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1512,36 +1512,57 @@ Overfull \hbox (13.34041pt too wide) in paragraph at lines 80--81
 
 [83]
 
-[84])
+[84]
 
-[85] (./lec11.tex
+[85]
 
 [86]
+File: assets/hdaisdho.png Graphic file (type bmp)
+<assets/hdaisdho.png>
+
 
 [87]
+File: assets/deahsd.png Graphic file (type bmp)
+<assets/deahsd.png>
+
 
 [88]
+File: assets/deflangle.png Graphic file (type bmp)
+<assets/deflangle.png>
+
 
 [89]
 
-[90]
+[90])
 
-[91]
+[91] (./lec11.tex
 
-[92])
+[92]
 
-[93] (./lec12.tex
+[93]
 
 [94]
 
 [95]
 
 [96]
+
+[97]
+
+[98])
+
+[99] (./lec12.tex
+
+[100]
+
+[101]
+
+[102]
 File: assets/energypoasd.png Graphic file (type bmp)
 <assets/energypoasd.png>
 
 
-[97]
+[103]
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 229.
 
@@ -1550,9 +1571,9 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 229.
 
 )
 
-[98] (./lec13.tex
+[104] (./lec13.tex
 
-[99]
+[105]
 Overfull \hbox (13.37706pt too wide) in paragraph at lines 54--55
 []\TU/lmr/m/n/10.95 2. \TU/STSong(0)/m/n/10.95 认 为 世 界 存 在 奇 点，|  真 的 是 纯 纯 真 空，|  这 样 的 天 体 也 就 是 黑 洞。|  但 是 我 们 不 可 以 再 用 \TU/lmr/m/n/10.95 Schwarzschild
  []
@@ -1564,29 +1585,29 @@ Overfull \hbox (18.60558pt too wide) in paragraph at lines 74--75
 
 
 
-[100]
+[106]
 
-[101]
+[107]
 
-[102]
+[108]
 
-[103]
+[109]
 Overfull \hbox (0.11781pt too wide) in paragraph at lines 233--234
 []\TU/STSong(0)/m/n/10.95 为 此 我 们 需 要 选 择 新 的 坐 标 系 来 描 述 这 个 区 域 的 时 空 结 构。|  首 先 我 们 引 入 一 个 \TU/lmr/m/n/10.95 tortoise coordinate\TU/STSong(0)/m/n/10.95 。| 
  []
 
 
 
-[104]
+[110]
 File: assets/inlightcone.png Graphic file (type bmp)
 <assets/inlightcone.png>
 File: assets/outgogeo.png Graphic file (type bmp)
 <assets/outgogeo.png>
 
 
-[105])
+[111])
 
-[106] (./lec14.tex
+[112] (./lec14.tex
 Overfull \hbox (28.59338pt too wide) detected at line 20
 []
  []
@@ -1595,38 +1616,38 @@ File: assets/diagkruskal.png Graphic file (type bmp)
 <assets/diagkruskal.png>
 
 
-[107]
+[113]
 File: assets/kruskalcausal.png Graphic file (type bmp)
 <assets/kruskalcausal.png>
 
 
-[108]
+[114]
 File: assets/freefallcoor.png Graphic file (type bmp)
 <assets/freefallcoor.png>
 
 
-[109]
+[115]
 
-[110]
+[116]
 
-[111]
+[117]
 File: assets/minkwskipenrose.png Graphic file (type bmp)
 <assets/minkwskipenrose.png>
 
 
-[112]
+[118]
 File: assets/penrosesch.png Graphic file (type bmp)
 <assets/penrosesch.png>
 
 
-[113]
+[119]
 File: assets/RNp.png Graphic file (type bmp)
 <assets/RNp.png>
 
 
-[114])
+[120])
 
-[115] (./main.aux)
+[121] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1639,15 +1660,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 74DEDD2FC808E69C0A8B9290B49402D8;24319.
+(rerunfilecheck)             Checksum: 094B6952A326300287ECB9454B7DFAE7;25378.
  ) 
 Here is how much of TeX's memory you used:
- 36122 strings out of 468527
- 803410 string characters out of 5447700
- 1218697 words of memory out of 5000000
- 63772 multiletter control sequences out of 15000+600000
- 639779 words of font info for 130 fonts, out of 8000000 for 9000
+ 36163 strings out of 468527
+ 804315 string characters out of 5447700
+ 1220125 words of memory out of 5000000
+ 63808 multiletter control sequences out of 15000+600000
+ 639795 words of font info for 132 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,21n,121p,646b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (115 pages, 2964296 bytes).
+Output written on main.xdv (121 pages, 3097904 bytes).

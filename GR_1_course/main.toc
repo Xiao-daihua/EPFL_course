@@ -86,40 +86,46 @@
 \contentsline {subsubsection}{\numberline {12.1.2}一般观察方向的结果}{83}{subsubsection.12.1.2}%
 \contentsline {subsubsection}{\numberline {12.1.3}Binary System能量辐射}{84}{subsubsection.12.1.3}%
 \contentsline {subsection}{\numberline {12.2}Binary System的Inspiral}{84}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Gravitational Lensing}{85}{subsection.12.3}%
-\contentsline {subsection}{\numberline {12.4}Questions and thoughts}{85}{subsection.12.4}%
-\contentsline {section}{\numberline {13}Lecture 11: Isometries and Killing Vector Fields}{86}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Diffeomorphism以及Lie Derivative}{86}{subsection.13.1}%
-\contentsline {subsubsection}{\numberline {13.1.1}Diffeomorphism以及Isometry}{86}{subsubsection.13.1.1}%
-\contentsline {subsubsection}{\numberline {13.1.2}Lie Derivative}{88}{subsubsection.13.1.2}%
-\contentsline {subsection}{\numberline {13.2}Killing Vector Field}{90}{subsection.13.2}%
-\contentsline {subsubsection}{\numberline {13.2.1}Killing Vector Field的定义}{90}{subsubsection.13.2.1}%
-\contentsline {subsubsection}{\numberline {13.2.2}Minkowski的Killing Vector Field}{91}{subsubsection.13.2.2}%
-\contentsline {subsection}{\numberline {13.3}Schwarzschild Metric}{92}{subsection.13.3}%
-\contentsline {subsubsection}{\numberline {13.3.1}Schwarzschild metric 的 ansatz}{92}{subsubsection.13.3.1}%
-\contentsline {subsection}{\numberline {13.4}Questions and Thoughts}{93}{subsection.13.4}%
-\contentsline {section}{\numberline {14}Lecture 12: Schwarzschild Metric and Geodesics}{94}{section.14}%
-\contentsline {subsection}{\numberline {14.1}Schwarzschild Metric}{94}{subsection.14.1}%
-\contentsline {subsubsection}{\numberline {14.1.1}Schwarzschild Metric Solution}{94}{subsubsection.14.1.1}%
-\contentsline {subsubsection}{\numberline {14.1.2}Schwarzschild Metric的性质}{94}{subsubsection.14.1.2}%
-\contentsline {subsection}{\numberline {14.2}Schwarzschild Metric上的Geodesics}{95}{subsection.14.2}%
-\contentsline {subsubsection}{\numberline {14.2.1}Killing Vector求解Geodesic}{95}{subsubsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.3}GR验证I: 行星近日点进动解}{98}{subsection.14.3}%
-\contentsline {section}{\numberline {15}Lecture 13: Schwarzschild Black Hole}{99}{section.15}%
-\contentsline {subsection}{\numberline {15.1}GR验证II：引力红移解}{99}{subsection.15.1}%
-\contentsline {subsection}{\numberline {15.2}Star Interior Spacetime and Collapse}{100}{subsection.15.2}%
-\contentsline {subsubsection}{\numberline {15.2.1}EFE for a Star Interior}{100}{subsubsection.15.2.1}%
-\contentsline {subsubsection}{\numberline {15.2.2}Solving EFE for Star Interior}{101}{subsubsection.15.2.2}%
-\contentsline {subsubsection}{\numberline {15.2.3}Stellar Collapse to a Black Hole}{103}{subsubsection.15.2.3}%
-\contentsline {subsection}{\numberline {15.3}Kruskal Extension I}{103}{subsection.15.3}%
-\contentsline {subsubsection}{\numberline {15.3.1}Schwarzschild Coordinate Singularity}{103}{subsubsection.15.3.1}%
-\contentsline {subsubsection}{\numberline {15.3.2}Eddington-Finkelstein Coordinates}{104}{subsubsection.15.3.2}%
-\contentsline {section}{\numberline {16}Lecture 14: Black Hole Solution and More}{107}{section.16}%
-\contentsline {subsection}{\numberline {16.1}Kruskal Coordinates与最大延拓}{107}{subsection.16.1}%
-\contentsline {subsection}{\numberline {16.2}潮汐力与Speghetification}{109}{subsection.16.2}%
-\contentsline {subsection}{\numberline {16.3}Penrose Diagram}{111}{subsection.16.3}%
-\contentsline {subsubsection}{\numberline {16.3.1}Minkowski时空的Penrose Diagram}{111}{subsubsection.16.3.1}%
-\contentsline {subsubsection}{\numberline {16.3.2}Schwarzschild-Kruskal时空的Penrose Diagram}{112}{subsubsection.16.3.2}%
-\contentsline {subsection}{\numberline {16.4}Charged and Rotating Black Holes}{113}{subsection.16.4}%
-\contentsline {subsubsection}{\numberline {16.4.1}Reissner-Nordström Black Hole}{113}{subsubsection.16.4.1}%
-\contentsline {subsubsection}{\numberline {16.4.2}Kerr Black Hole}{115}{subsubsection.16.4.2}%
+\contentsline {subsubsection}{\numberline {12.2.1}Inspiral基本set up}{85}{subsubsection.12.2.1}%
+\contentsline {subsubsection}{\numberline {12.2.2}频率的Inspiral 演化}{85}{subsubsection.12.2.2}%
+\contentsline {subsubsection}{\numberline {12.2.3}振幅的Inspiral 演化}{87}{subsubsection.12.2.3}%
+\contentsline {subsection}{\numberline {12.3}Gravitational Lensing}{88}{subsection.12.3}%
+\contentsline {subsubsection}{\numberline {12.3.1}Gravitational Lensing基本setup}{88}{subsubsection.12.3.1}%
+\contentsline {subsubsection}{\numberline {12.3.2}空间上的Lensing: 光线弯曲}{89}{subsubsection.12.3.2}%
+\contentsline {subsubsection}{\numberline {12.3.3}时间上的Lensing：时间延迟}{90}{subsubsection.12.3.3}%
+\contentsline {subsection}{\numberline {12.4}Questions and thoughts}{90}{subsection.12.4}%
+\contentsline {section}{\numberline {13}Lecture 11: Isometries and Killing Vector Fields}{92}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Diffeomorphism以及Lie Derivative}{92}{subsection.13.1}%
+\contentsline {subsubsection}{\numberline {13.1.1}Diffeomorphism以及Isometry}{92}{subsubsection.13.1.1}%
+\contentsline {subsubsection}{\numberline {13.1.2}Lie Derivative}{94}{subsubsection.13.1.2}%
+\contentsline {subsection}{\numberline {13.2}Killing Vector Field}{96}{subsection.13.2}%
+\contentsline {subsubsection}{\numberline {13.2.1}Killing Vector Field的定义}{96}{subsubsection.13.2.1}%
+\contentsline {subsubsection}{\numberline {13.2.2}Minkowski的Killing Vector Field}{97}{subsubsection.13.2.2}%
+\contentsline {subsection}{\numberline {13.3}Schwarzschild Metric}{98}{subsection.13.3}%
+\contentsline {subsubsection}{\numberline {13.3.1}Schwarzschild metric 的 ansatz}{98}{subsubsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.4}Questions and Thoughts}{99}{subsection.13.4}%
+\contentsline {section}{\numberline {14}Lecture 12: Schwarzschild Metric and Geodesics}{100}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Schwarzschild Metric}{100}{subsection.14.1}%
+\contentsline {subsubsection}{\numberline {14.1.1}Schwarzschild Metric Solution}{100}{subsubsection.14.1.1}%
+\contentsline {subsubsection}{\numberline {14.1.2}Schwarzschild Metric的性质}{100}{subsubsection.14.1.2}%
+\contentsline {subsection}{\numberline {14.2}Schwarzschild Metric上的Geodesics}{101}{subsection.14.2}%
+\contentsline {subsubsection}{\numberline {14.2.1}Killing Vector求解Geodesic}{101}{subsubsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.3}GR验证I: 行星近日点进动解}{104}{subsection.14.3}%
+\contentsline {section}{\numberline {15}Lecture 13: Schwarzschild Black Hole}{105}{section.15}%
+\contentsline {subsection}{\numberline {15.1}GR验证II：引力红移解}{105}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}Star Interior Spacetime and Collapse}{106}{subsection.15.2}%
+\contentsline {subsubsection}{\numberline {15.2.1}EFE for a Star Interior}{106}{subsubsection.15.2.1}%
+\contentsline {subsubsection}{\numberline {15.2.2}Solving EFE for Star Interior}{107}{subsubsection.15.2.2}%
+\contentsline {subsubsection}{\numberline {15.2.3}Stellar Collapse to a Black Hole}{109}{subsubsection.15.2.3}%
+\contentsline {subsection}{\numberline {15.3}Kruskal Extension I}{109}{subsection.15.3}%
+\contentsline {subsubsection}{\numberline {15.3.1}Schwarzschild Coordinate Singularity}{109}{subsubsection.15.3.1}%
+\contentsline {subsubsection}{\numberline {15.3.2}Eddington-Finkelstein Coordinates}{110}{subsubsection.15.3.2}%
+\contentsline {section}{\numberline {16}Lecture 14: Black Hole Solution and More}{113}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Kruskal Coordinates与最大延拓}{113}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}潮汐力与Speghetification}{115}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3}Penrose Diagram}{117}{subsection.16.3}%
+\contentsline {subsubsection}{\numberline {16.3.1}Minkowski时空的Penrose Diagram}{117}{subsubsection.16.3.1}%
+\contentsline {subsubsection}{\numberline {16.3.2}Schwarzschild-Kruskal时空的Penrose Diagram}{118}{subsubsection.16.3.2}%
+\contentsline {subsection}{\numberline {16.4}Charged and Rotating Black Holes}{119}{subsection.16.4}%
+\contentsline {subsubsection}{\numberline {16.4.1}Reissner-Nordström Black Hole}{119}{subsubsection.16.4.1}%
+\contentsline {subsubsection}{\numberline {16.4.2}Kerr Black Hole}{121}{subsubsection.16.4.2}%

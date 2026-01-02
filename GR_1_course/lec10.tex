@@ -118,13 +118,282 @@ h_\times(t,r) &= \displaystyle\frac{2G}{r} \left(\ddot{M}_{12}(t-r)\right) = \di
 
 \subsection{Binary System的Inspiral}
 
-下面我们讨论对于一个Binary System如果
+下面我们讨论对于一个Binary System如果一定程度考虑back reaction的话会发生什么。由于直接解Einstein Field Equation十分困难，我们选择使用一种半经典的方式进行讨论。
+
+\subsubsection{Inspiral基本set up}
+
+\bigskip
+\hlr{经典轨道与能量损失}
+
+我们考虑一个经典的双星系统研究其能量和轨道之间的关系。根据经典力学我们知道：
+\begin{align}
+  a = v^2/R = \omega_s^2 R = F= \displaystyle\frac{GM}{R^2} \quad \Rightarrow \quad \omega_s^2 = \displaystyle\frac{GM}{R^3}
+\end{align}
+而如果我们计算系统的总能量的话我们有：
+\begin{align}
+  E = K + V = \displaystyle\frac{1}{2} \mu v^2 - \displaystyle\frac{G m_1 m_2}{R} = - \displaystyle\frac{G m_1 m_2}{2R}
+\end{align}
+也就是说：
+\begin{itemize}
+  \item 系统能量的损失会导致轨道半径减小，轨道的振动频率增大，而根据引力波辐射公式，$ P_{GW} $会随着频率增大而增大。
+\end{itemize}
+
+\bigskip
+\hlr{准静态近似}
+
+我们假设我们的体系处于准静态的轨道收缩，也就是说：
+\begin{align}
+  |\dot{R}| << \omega_s R
+\end{align}
+我们寻找一个等价的角速度条件，根据$ \omega_s^3 \sim R^{-3} $我们知道：
+\begin{align}
+  R \sim \omega_s^{-2/3} \quad \Rightarrow \quad \dot{R} \sim -\displaystyle\frac{2}{3} \omega_s^{-5/3} \dot{\omega}_s << \omega_s R \sim \omega_s^{1/3} \quad \Rightarrow \quad |\dot{\omega}_s| <<  \omega_s^2
+\end{align}
+因此我们知道准静态近似条件等价于\textbf{角速度变化率远小于角速度的平方}。
+
+\bigskip
+\hlr{能量损失导致轨道收缩}
+
+下面在上面的讨论基础上我们给出最重要的假设我们认为：
+\begin{itemize}
+  \item 经典系统的能量损失完全由引力波辐射导致。
+  \begin{align}\label{eq:energylossgw}
+    \Delta E_{classic} = - P_{GW} \Delta t \quad \Rightarrow \quad \displaystyle\frac{dE}{dt} = - P_{GW}
+  \end{align}
+\end{itemize}
 
 
+\subsubsection{频率的Inspiral 演化}
+
+下面在上方假设基础上我们讨论由于系统能量损失导致的引力波以及轨道频率的变化。
+
+\bigskip
+\hlr{频率演化方程}
+
+我们将频率与能量的关系带入\cref{eq:energylossgw}中，我们有：
+\begin{align}
+  \dot{f}_{GW} = \displaystyle\frac{96}{5} \pi^{8/3} \left(\displaystyle\frac{GM_c}{c^3}\right)^{5/3} f_{GW}^{11/3}
+\end{align}
+其中$ M_c = \mu^{3/5} m^{2/5} $是chirp mass。而$ f_{GW} = \omega_s/\pi $是引力波频率。
+
+\bigskip
+\hlr{Time to coalescence表示}
+
+我们上面的方程分析会知道，引力波的频率会随着时间越来越大到无穷发散，这个时候两个天体coalescence。我们可以假设在某个时间$ t_{coal} $两个天体coalesce，那么我们可以使用\textbf{还有多久coalescence}来表示时间，我们定义$ \tau = t_{coal} - t $。我们有：
+\begin{align}
+  \int_{f_{GW}(t)}^{\infty} \displaystyle\frac{df_{GW}}{f_{GW}^{11/3}} 
+  = \displaystyle\frac{96}{5} \pi^{8/3} \left(\displaystyle\frac{GM_c}{c^3}\right)^{5/3} \int_{t}^{t_{coal}} dt
+\end{align}
+由于我们知道$ \int_t^{t_{coal}} dt = \tau $，我们可以解出：
+\thm{
+  引力波频率和距离coalescence时间的关系为：
+\begin{align}
+  f_{GW}(\tau) = \displaystyle\frac{1}{\pi} \left(\displaystyle\frac{5}{256 }\right)^{3/8} \left(\displaystyle\frac{c^3}{GM_c}\right)^{5/8} \left(\frac{1}{\tau}\right)^{3/8}
+\end{align}
+}
+对于这个公式我们可以分析:
+\begin{itemize}
+  \item 如果$ \tau \to 0 $ 频率$ f \to \infty $，频率的数值明显取决于天体还有多久就coalescence。
+  \item 对于一个给定的仪器，如果其能够敏感测量的频率处在某个范围，那么对于一个确定的天体，我们如果测量到了其引力波的信号可以推算其距离coalescence还有多久！同样的，如果是给定一个仪器测量coalescence的信号发现在一段时间coalensence了，那么我们可以反过来计算这个天体的chirp mass！
+\end{itemize}
+
+\bigskip
+\hlr{不同测量设备的频率范围以及天体分析}
+
+对于不同的测量设备我们有不同的频率范围：
+\begin{itemize}
+  \item \textbf{Earth based detectors} 其频率范围为$ 10 \mathrm{Hz} - 10^2 \mathrm{Hz} $。假设其观测到了$ f = 35Hz $的信号。
+  \begin{itemize}
+    \item 对于一个$ M_c = 28 M_s $的黑洞系统，我们信号仅仅能持续$ \sim 0.2s $。
+    \item 对于一个$ M_c = 1.2 M_s $的中子星系统，我们信号能持续$ \sim 30s $。
+  \end{itemize}
+\item \textbf{Lisa Spaced based detectors} 其频率范围为$ 10^{-3} \mathrm{Hz} - 10^{-1} \mathrm{Hz} $。假设其观测到了$ f = 10^{-2} \mathrm{Hz} $的信号。
+  \begin{itemize}
+    \item 对于一个$ M_c = 25 M_s $的天体，我们信号能持续$ \sim 10 $ year。才会coalescence。【当然后面也观测不到因为频率高】
+    \item 对于一个$ M_c = 10^6 M_s $的大质量黑洞系统，试图观测$ f \sim 10^{-3} Hz $，我们或许可以观测到coalescence事件，信号能持续$ \sim 1 $ hour。
+  \end{itemize}
+  \item \textbf{Pulsar Timing Arrays} 其频率范围能观测$ 10^{-9} \mathrm{Hz} $。因此如果观测到了coalescence事件的话，那么其chirp mass必须非常大。
+\end{itemize}
+
+\subsubsection{振幅的Inspiral 演化}
+
+下面我们考虑能量损失的情况下引力波的振幅演化。
+
+\bigskip 
+\hlr{更小轨道的运动}
+
+由于能量损失，轨道半径变小，我们需要给出这个准静态变化下$ x_0 $的表达式，进一步计算moment of inertia然后计算引力波的metric。但是我们可以进行一个简化。我们依旧假设系统在$ x-y $平面上绕着质心做圆周运动，但是$ R(t) $和$ \omega_s(t) $不再是确定的数，而是会随着时间缓慢变化，我们有：
+\begin{align}
+  x_0(t) = R(t) \cos(\phi(t)/2) \quad y_0(t) = R(t) \sin(\phi(t)/2) \quad z_0(t) = 0 \quad \phi(t) = 2 \int_{t_0}^t \omega_s(t') dt'
+\end{align}
+
+\bigskip
+\hlr{引力波振幅演化}
+
+在这个ansatz的基础上我们计算moment of inertia的各阶导数进一步计算引力波的metric。但，\textbf{由于我们考虑的是准静态近似}，我们可以忽略掉$ R(t) $和$ \phi(t) $的高阶导数。可以直接替换$ \omega_s $以及$ R $为时间的函数即可。因此我们有对于某个$ \theta $方向的观察者观测到的引力波极化分量为：
+\begin{align}
+ & h_{+}(t)
+= \frac{4}{r}
+\left(\frac{G\mathcal{M}}{c^2}\right)^{5/3}
+\left(\pi f_{\mathrm{GW}}(t_{ret})\right)^{2/3}
+\frac{1+\cos^{2}\theta}{2}
+\cos \bigl(\phi(t_{ret})\bigr),\\ 
+& h_{\times}(t)
+= \frac{4}{r}
+\left(\frac{G\mathcal{M}}{c^2}\right)^{5/3}
+\left(\pi f_{\mathrm{GW}}(t_{ret})\right)^{2/3}
+\cos\theta
+\sin\bigl(\phi(t_{ret})\bigr).
+\end{align}
+其中时间$ t_{ret} = t - r/c $是retarded time。并且$ r $是观察者距离双星系统质心的距离。以及$ f_{GW}(t) $是引力波的频率，我们知道频率随着时间变大，因此引力波的振幅也即是随着时间变大。最后我们可以计算$ \phi(t) $，我们依旧喜欢使用距离coalescence的时间$ \tau = t_{coal} - t $来表示时间，我们有：
+\begin{align}
+  \phi(\tau) = -2 \left(\displaystyle\frac{5GM_c}{c^3}\right)^{-5/8} \tau^{5/8} + \phi_0
+\end{align}
+其中$ \phi_0 $是常数相位表示coalescence时的相位。
+
+\bigskip
+\hlr{引力波信号的Chirp Signal}
+
+我们分析上面的metric随着时间的变化。可以知道随着 $ \tau \to 0 $，引力波的频率和振幅都会变大，并且频率的变化率也会变大。因此我们会观测到一个\textbf{频率和振幅都随着时间变大的信号}，这个信号被称为Chirp Signal。如下图所示：
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{assets/hdaisdho.png}
+  \caption{Chirp Signal示意图}
+  \label{fig:hdaisdho}
+\end{figure}
 
 
 
 \subsection{Gravitational Lensing}
+我们知道光在有引力场的情况下会发生弯曲。我们希望定量的研究这个现象。我们在空间和时间上进行研究，在空间上我们计算光的路径的弯曲，在时间上我们计算光到达的延迟。
+
+\subsubsection{Gravitational Lensing基本setup}
+
+为了简单的研究这个问题，我们使用\textbf{Near Newtonian Approximation}来研究引力透镜现象。下面是set up 
+
+\bigskip
+\hlr{基本set up}
+
+我们考虑near newtonian approximation下的metric:$ g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu} $，并且假设时空之中引力势能为$ \phi(x) $。满足：$  \Delta \phi(x) = 4 \pi G \rho(x)$。对于线性引力我们有metric：
+\begin{align}
+  ds^2 = -(1+2\phi) dt^2 + (1-2\phi) d\mathbf{x}^2 \quad h_{\mu\nu} = Diag(-2\phi,-2\phi,-2\phi,-2\phi)
+\end{align}
+可以计算Christoffel符号为：
+\begin{align}
+  \Gamma_{0i}^0=\Gamma_{i0}^0=\Gamma_{00}^i=\partial_i\phi,\quad\Gamma_{jk}^i=\delta_{jk}\partial_i\phi-\delta_{ik}\partial_j\phi-\delta_{ij}\partial_k\phi.
+\end{align}
+我们使用微扰来考虑光的传播路径：
+\begin{align}
+  x^\mu(\lambda) = x_0^\mu(\lambda) + x_1^\mu(\lambda)
+\end{align}
+其中$ x_0^\mu(\lambda) $是平坦时空下的光传播路径，$ x_1^\mu(\lambda) $是由于引力势能导致的微扰。示意图是：
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{assets/deahsd.png}
+  \caption{引力透镜示意图}
+  \label{fig:deahsd}
+\end{figure}
+为此我们可以引入wave vector以及一个deviation vector:
+\begin{align}
+  k^\mu = \displaystyle\frac{dx^\mu}{d\lambda},\quad l^\mu = \displaystyle\frac{dx_1^\mu}{d\lambda}
+\end{align}
+
+\bigskip
+\hlr{光的传播运动方程}
+
+这个$ x^\mu $需要满足null方程以及general的geodesic方程:
+\begin{align}
+  g_{\mu\nu}\frac{dx^\mu}{d\lambda}\frac{dx^\nu}{d\lambda}=0,\quad \frac{d^2x^\mu}{d\lambda^2}+\Gamma_{\rho\sigma}^\mu\frac{dx^\rho}{d\lambda}\frac{dx^\sigma}{d\lambda}=0
+\end{align}
+
+\subsubsection{空间上的Lensing: 光线弯曲}
+
+\bigskip
+\hlr{Null Equation}
+
+我们求解null方程。首先考虑
+
+\textbf{0阶的方程}，我们有：
+\begin{align}
+  \eta_{\mu\nu} k^\mu k^\nu = 0 \quad \Rightarrow \quad - (k^0)^2 + k^2 = 0 \quad \Rightarrow \quad k = |\mathbf{k}| = k^0
+\end{align}
+
+\textbf{对于一阶方程}，我们有：
+\begin{align}
+  2 \eta_{\mu\nu} k^\mu l^\nu + h_{\mu\nu} k^\mu k^\nu = 0 \quad \Rightarrow \quad -2 k^0 l^0 + 2 \mathbf{k} \cdot \mathbf{l} + 2 \phi (k^0)^2 - 2 \phi k^2 = 0
+\end{align}
+由于0阶方程给出的$ k^0 = k $，我们有：
+\begin{align}
+  -2 k^0 l^0 + 2 \mathbf{k} \cdot \mathbf{l} - 2 \phi k^2 = 0
+\end{align}
+注意我们的点乘都是$ \mathbf{k} = \{k^i\} $的上标形式。
+
+\bigskip
+\hlr{Geodesic Equation}
+
+对于0阶形式是trivial的也就是直线运动$ \frac{d^2 x_0^\mu}{d \lambda^2} = \frac{d k^\mu}{d \lambda} = 0 $。我们考虑一阶形式：
+\begin{align}
+   \frac{d l^0}{d\lambda}=-2k(\mathbf{k}\cdot\nabla\phi) = -2k^2\nabla_\parallel\phi
+  ,\quad\frac{d l^i}{d\lambda}=-2k^2\nabla_\perp\phi\mathrm{~.}
+\end{align}
+注意，我们使用了垂直方向的梯度定义为：
+\begin{align}
+  \nabla_\parallel\phi = (\hat{\mathbf{k}}\cdot\nabla\phi)\hat{\mathbf{k}} \quad 
+\nabla_\perp\phi\equiv\nabla\phi-\nabla_\parallel\phi=\nabla\phi-(\hat{\mathbf{k}}\cdot\nabla\phi)\hat{\mathbf{k}} 
+\end{align}
+为了求解这个geodesic equation我们使用一个integral trick：
+\begin{align}
+  l^0=\int\frac{d\ell^0}{d\lambda}d\lambda=-2k\int(\mathbf{k}\cdot\nabla\phi)d\lambda=-2k\int\left(\frac{d\mathbf{x}}{d\lambda}\cdot\nabla\phi\right)d\lambda
+\end{align}
+把对于geodesics的积分变成对于$ \phi $的路径积分。我们不妨假设积分的边界条件对于$ l^0 = 0 $的时候$ \phi = 0 $因此我们得到关系：
+\begin{align}
+  l^0 = -2k \phi
+\end{align}
+带入null equation的结果我们会发现给出：$ \mathbf{k} \cdot \mathbf{l} = 0 $。也就是说$ \mathbf{l} $是垂直于$ \mathbf{k} $的。
+
+\bigskip
+\hlr{Deflection Angle计算}
+
+如果希望描述光线的弯曲，我们可以定义一个角度就是一个geodesic前后光线反光的夹角。由于空间上$ \mathbf{l} $是垂直于$ \mathbf{k} $的，因此我们可以定义：
+\defi{
+  Deflection Angle为：
+  \begin{align}
+    \alpha = -\frac{\Delta \mathbf{l}}{ k}  \Delta \textbf{l}= -2 k^2 \int \nabla_\perp \phi d\lambda
+  \end{align}
+  我们注意\textbf{deflection angle是一个向量}，其方向是垂直于光线传播方向的。
+}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\textwidth]{assets/deflangle.png}
+  \caption{Deflection Angle示意图}
+  \label{fig:deflangle}
+\end{figure}
+
+\bigskip
+\hlr{点质量透镜的Deflection Angle}
+
+假设我们在距离光线很远的地方存在一个点质量$ M $，我们可以计算其引力势能为：$ \phi = - \frac{GM}{r} $。我们假设智利那个的impact parameter为$ b $，我们有：
+\begin{align}
+  \nabla_\perp \phi = \displaystyle\frac{GM }{(b^2 + z^2)^{3/2}} \mathbf{b}
+\end{align}
+其中$ \mathbf{b} $是transverse vector是最短方向的长度为$ b $的向量。我们带入的deflect angle的公式之中我们有：
+\begin{align}
+  \alpha = -\displaystyle\frac{4GM}{b} \hat{\mathbf{b}}
+\end{align}
+
+\subsubsection{时间上的Lensing：时间延迟}
+
+\hlr{时间延迟计算}
+
+我们可以计算时间方向的情况：
+\begin{align}
+  t = \int \frac{d x^0}{d \lambda} d \lambda
+\end{align}
+因此我们会发现相较于没有引力场的情况下多出了一个对于$ l^0 = -2k \phi $的积分：
+\begin{align}
+  \Delta t = -2 k \int \phi d \lambda = -2 k \int \phi ds
+\end{align}
+这里我使用了$ s = k \lambda $表征没有引力场的情况下光的传播路径。
 
 \subsection{Questions and thoughts}
 
