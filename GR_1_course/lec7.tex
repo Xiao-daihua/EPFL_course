@@ -89,9 +89,9 @@
       \item \textbf{Tranceless条件}：$ h^i_i = 0 $
     \end{itemize}
 \end{itemize}
-如果在一个坐标系之中我们的引力波沿着$ z $方向传播，那么我们可以写出极化张量的形式：
+如果在一个坐标系之中我们的引力波沿着$ z $方向传播，EFE告诉我们$ k_z = k = \omega $，那么我们可以写出极化张量的形式：
 \begin{align}
-  \left.h_{ij}^{\mathrm{TT}}(t,z)=\left(\begin{array}{ccc}h_+&h_\times&0\\h_\times&-h_+&0\\0&0&0\end{array}\right.\right)_{ij}e^{i(kz -\omega t)}\mathrm{~,}
+  \left.h_{ij}^{\mathrm{TT}}(t,z)=\left(\begin{array}{ccc}h_+&h_\times&0\\h_\times&-h_+&0\\0&0&0\end{array}\right.\right)_{ij}e^{i\omega (k- t)}\mathrm{~,}
 \end{align}
 其中$ h_+ $和$ h_\times $是两个独立的极化态，也就是之前讨论的两个独立自由度。
 最后添加上平直时空的项给出完整的metric perturbation：
@@ -103,6 +103,7 @@
   ds^2&=-dt^2+dz^2 \\
       &+\{1+h_+\text{exp}[i(kz- \omega )t]\}dx^2+\{1-h_+\text{exp}[i(kz - \omega t)]\}dy^2+2h_\times\text{exp}[i(kz- \omega )t]\}dxdy.
 \end{align}
+其中on shell条件$ \omega = k $成立。
 }
 
 \subsubsection{TT Gauge一些性质}\label{sec:ttgaugeprop}

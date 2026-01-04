@@ -71,7 +71,7 @@ J(\mathcal{E})=\frac{2}{3}|00\rangle\langle00|+\frac{2}{3}|11\rangle\langle11|+\
 \begin{enumerate}
   \item \textbf{计算量子态的Choi State}： 通过$ J(\mathcal{E}) = (\mathcal{E} \otimes I)(|Vec(I)\rangle\langle Vec(I)|) $计算Choi State。
   \item \textbf{Choi State的谱分解}： 计算Choi State的谱分解$ J(\mathcal{E}) = \sum_i \lambda_i |\psi_i\rangle\langle \psi_i| $。
-  \item \textbf{得到Kraus Operators}： 通过$ A_i = \sqrt{\lambda_i} \ket{\psi_i}\ket{\psi_i} $得到Kraus Operators。
+  \item \textbf{得到Kraus Operators}： 通过$ A_i = \sqrt{\lambda_i} \ket{\psi_i}\bra{\psi_i} $得到Kraus Operators。
   \item \textbf{检查完备关系}： 检查$ \sum_i A_i^\dagger A_i = I $是否成立。
 \end{enumerate}
 
@@ -130,17 +130,20 @@ Schmidt Decomposition定理告诉我们这两种purification方式之间存在�
 \hlr{例子：Positive Map but not Completely Positive Map}
   
 一个最基本的例子就是转置映射$ T(\rho)=\rho^T $。我们验证这个映射是positive map但是不是completely positive map。
-
 我们考虑转置映射 $ \otimes $ Identity 映射作用在一个bell state上面：
 \begin{align}
   (T\otimes I)(|\phi^+\rangle\langle\phi^+|)
 \end{align}
 发现会给出SWAP Operator。我们知道SWAP Operator不是正定的所以这个映射不是completely positive map。
+\rmk{
+  但是我们会发现$ T \otimes I $作用在某些态上还是正定的映射！只是说存在一些态会被映射成非正定的态。
+}
 
 \bigskip 
 \hlr{Representation Thm}
 
-\YL{[我懒得写了真的（（（]}
+\YL{[我懒得写了真的（（（]}说白了就是Kraus Representation和这些四个性质等价
+
 
 
 

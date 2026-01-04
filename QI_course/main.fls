@@ -472,9 +472,6 @@ INPUT lec12.tex
 INPUT ./sup1.tex
 INPUT ./sup1.tex
 INPUT sup1.tex
-INPUT ./sb.tex
-INPUT ./sb.tex
-INPUT sb.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

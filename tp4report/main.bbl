@@ -1,9 +1,4 @@
-\begin{thebibliography}{10}
-
-\bibitem{bachasWorldsheetExtensionOddZ2012}
-Costas Bachas, Ilka Brunner, and Daniel Roggenkamp.
-\newblock A worldsheet extension of {{O}}(d,d;{{Z}}).
-\newblock {\em Journal of High Energy Physics}, 2012(10):39, October 2012.
+\begin{thebibliography}{1}
 
 \bibitem{cardyBoundaryConditionsFusion1989}
 John~L. Cardy.
@@ -25,10 +20,6 @@ Hiromi Ebisu and Masataka Watanabe.
 \newblock Fermionization of conformal boundary states.
 \newblock {\em Physical Review B}, 104(19):195124, November 2021.
 
-\bibitem{ginspargAppliedConformalField1988a}
-Paul Ginsparg.
-\newblock Applied {{Conformal Field Theory}}, November 1988.
-
 \bibitem{horiNotesBosonizationBoundary2009}
 Kentaro Hori.
 \newblock Notes on {{Bosonization}} with {{Boundary}}.
@@ -46,17 +37,5 @@ Christian Northe.
 \bibitem{recknagelBoundaryConformalField}
 Andreas Recknagel and Volker Schomerus.
 \newblock Boundary {{Conformal Field Theory}} and the {{Worldsheet Approach}} to {{D-Branes}}.
-
-\bibitem{Xiao-daihua_Phys_Learning_CFT_Minimal_CFT_2025}
-Xiao-daihua.
-\newblock {Phys\_Learning / CFT / Minimal\_CFT} [source code].
-\newblock \url{https://github.com/Xiao-daihua/Phys_Learning/tree/main/CFT/Minimal_CFT}, 2025.
-\newblock Accessed: 2025-12-10.
-
-\bibitem{Xiao-daihua_Phys_Learning_CFT_Primary_BCFT_2025}
-Xiao-daihua.
-\newblock {Phys\_Learning / CFT / Primary\_BCFT} [source code].
-\newblock \url{https://github.com/Xiao-daihua/Phys_Learning/tree/main/CFT/Primary_BCFT}, 2025.
-\newblock Accessed: 2025-12-10.
 
 \end{thebibliography}

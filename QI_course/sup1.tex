@@ -4,6 +4,14 @@
 \subsubsection{张量积}
 
 \bigskip
+\hlr{张量积和转置}
+
+我们认为张量积的两个空间就是纯纯放在一起的自然：
+\begin{align}
+  (A\otimes B)^T=A^T\otimes B^T
+\end{align}
+
+\bigskip
 \hlr{张量积和矩阵加法}
 
 张量积和矩阵加法可以互换，满足关系：
@@ -41,13 +49,8 @@
     A' = U A U^\dagger,
 \end{equation}
 则 $A'$ 与 $A$ 具有完全相同的本征值（包括重数）。即
-\begin{equation}
-    \mathrm{Spec}(A') = \mathrm{Spec}(A).
-\end{equation}
+   $ \mathrm{Spec}(A') = \mathrm{Spec}(A).$
 换言之，unitary 变换仅仅对应于基底变换，不改变物理可观测量的谱。
-
-\bigskip
-
 \begin{proof}[证明要点]
 设 $A|\psi\rangle = \lambda|\psi\rangle$，则
 \begin{equation}
@@ -58,9 +61,6 @@
 \end{equation}
 说明 $U|\psi\rangle$ 是 $A'$ 对应本征值 $\lambda$ 的本征态，从而本征值保持不变。
 \end{proof}
-
-\bigskip
-
 因此，unitary 变换可视为``旋转基底''，保留体系的谱结构：
 \begin{equation}
     \mathrm{Tr}(A') = \mathrm{Tr}(A),\qquad
@@ -79,6 +79,15 @@
 
 
 \subsubsection{Trace}
+\hlr{张量积系统的Trace}
+
+对于一个量子态$ \rho_{AB} = \rho_A \otimes \rho_B $，我们有：
+\begin{align}
+  \mathrm{Tr}_A(\rho_{AB}) = \mathrm{Tr}_A(\rho_A \otimes \rho_B) = (\mathrm{Tr}_A \rho_A) \rho_B = \rho_B
+\end{align}
+
+
+\bigskip
 \hlr{Trace的一个基本trick}
 
 对于一个量子态$ \rho $写作：
@@ -113,9 +122,21 @@
 \end{align}
 
 \bigskip
-\hlr{单bit measure的TR}
+\hlr{单bit measure的Tr}
 
 对于两个单比特态$ \rho_1,\rho_2 $，我们有：
+
+\bigskip
+\hlr{Super Operator 和 Trace}
+
+对于一个Super Operator $ \mathcal{E} $，我们会发现：
+\begin{align}
+  \mathrm{Tr}[\mathcal{E}(\rho)O]=\mathrm{Tr}[\rho\mathcal{E}^\dagger(O)]
+\end{align}
+对于superoperator的dagger，我们称之为adjoint。首先对于superoperator可以写作：$ \mathcal{E}(X)=\sum_kA_kXB_k^\dagger $，那么他的adjoint定义为：
+\begin{align}
+  \mathcal{E}^\dagger(X)=\sum_kA_k^\dagger XB_k
+\end{align}
 
 
 \subsection{Pauli矩阵的特殊性质}

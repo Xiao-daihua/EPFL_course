@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  29 DEC 2025 12:25
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  4 JAN 2026 15:00
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1268,7 +1268,7 @@ Package hyperref Info: bookmark level for unknown definition defaults to 0 on in
 [6] (./lec3.tex
 
 [7]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 66.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 65.
 
 
 [8]
@@ -1391,11 +1391,16 @@ File: assets/venndiag.png Graphic file (type bmp)
 
 [51])
 
-[52] (./lec11.tex)
+[52] (./lec11.tex
 
-[53] (./lec12.tex)
+[53]
 
-[54] (./sup1.tex
+[54]
+Underfull \hbox (badness 3668) in paragraph at lines 118--118
+[]\TU/STSong(0)/m/it/10.95 对 于 一 个 定 义 在 $\OML/cmm/m/it/10.95 AB$ \TU/STSong(0)/m/it/10.95 系 统 上 的 \TU/lmr/m/it/10.95 pure state $\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 i[]$\TU/STSong(0)/m/it/10.95 ，|  我 们 总 可 以 找 到 两 个 正 交 归 一 基
+ []
+
+
 
 [55]
 
@@ -1403,9 +1408,40 @@ File: assets/venndiag.png Graphic file (type bmp)
 
 [57])
 
-[58] (./sb.tex)
+[58] (./lec12.tex
+Overfull \hbox (12.61145pt too wide) in paragraph at lines 7--8
+[]\TU/lmr/bx/n/10.95 LOCC Monotone\TU/STSong(0)/m/n/10.95 ：|  对 于 \TU/lmr/m/n/10.95 LOCC \TU/STSong(0)/m/n/10.95 来 说 纠 缠 是 不 会 增 加 的，|  也 就 是 说 $\OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 i[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.95 (^^C[](\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 i[]\OT1/cmr/m/n/10.95 ))$\TU/STSong(0)/m/n/10.95 。| 
+ []
 
-[59] (./main.aux)
+
+Overfull \hbox (8.72044pt too wide) in paragraph at lines 8--9
+[]\TU/lmr/bx/n/10.95 Extensivity\TU/lmr/m/n/10.95 : \TU/STSong(0)/m/n/10.95 也 就 是 如 果 一 个 纠 缠 态 \TU/lmr/m/n/10.95 copy \TU/STSong(0)/m/n/10.95 了 很 多 倍 那 么 纠 缠 必 然 是 线 性 增 加 变 强 的：| $\OML/cmm/m/it/10.95 E [] \OT1/cmr/m/n/10.95 =
+ []
+
+
+
+[59]
+
+[60]
+Overfull \hbox (7.3184pt too wide) in paragraph at lines 98--99
+[]\TU/STSong(0)/m/n/10.95 对 于 所 有 的 量 子 态 构 成 了 一 个 \TU/lmr/m/n/10.95 Hermite \TU/STSong(0)/m/n/10.95 矩 阵 的 线 性 空 间，|  并 且 存 在 一 个 内 积 结 构 $\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 A\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 B\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = [](\OML/cmm/m/it/10.95 A[]B\OT1/cmr/m/n/10.95 )$\TU/STSong(0)/m/n/10.95 。|
+ []
+
+
+
+[61]
+
+[62])
+
+[63] (./sup1.tex
+
+[64]
+
+[65]
+
+[66])
+
+[67] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1418,15 +1454,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1ED75E7BB8BEFB1875D644F54500B5F8;11459.
+(rerunfilecheck)             Checksum: F99AE213A8DA3B27CE3AA0F92AAC2DBF;12827.
  ) 
 Here is how much of TeX's memory you used:
- 35254 strings out of 468527
- 784042 string characters out of 5447700
+ 35276 strings out of 468527
+ 785137 string characters out of 5447700
  1202567 words of memory out of 5000000
- 62938 multiletter control sequences out of 15000+600000
- 639747 words of font info for 126 fonts, out of 8000000 for 9000
+ 62956 multiletter control sequences out of 15000+600000
+ 639779 words of font info for 130 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,22n,121p,584b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (59 pages, 1527844 bytes).
+Output written on main.xdv (67 pages, 1992304 bytes).

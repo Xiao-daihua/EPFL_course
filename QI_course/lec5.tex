@@ -159,6 +159,7 @@
 \thm{
   Choi State和Kraus Operators的关系
 
+  对于一组Kraus Operators $ \{A_i\} $给出的quantum channel，对应的Choi State可以写作：
 \begin{align}
   J(\mathcal{E}) = \sum_i |Vec(A_i)\rangle\langle Vec(A_i)|.
 \end{align}
@@ -176,7 +177,16 @@
   =&|Vec(A_0)\rangle\langle Vec(A_0)| + |Vec(A_1)\rangle\langle Vec(A_1)|.
 \end{align}
 
+\bigskip
+\hlr{Choi State给出Quantum Channel}
 
+Generally，其实我们可以通过Choi State来唯一地确定一个Quantum Channel。我们给出下面的定理：
+\thm{
+  对于给定的Choi State $ J(\mathcal{E}) $，我们可以通过下面的公式唯一地确定一个Quantum Channel：
+  \begin{align}
+    \mathcal{E}(\rho)=\mathrm{Tr}_B\left(\left(I\otimes\rho^T\right)J(\mathcal{E})\right).
+  \end{align}
+}
 
 
 \subsection{Questions and Thoughts}
