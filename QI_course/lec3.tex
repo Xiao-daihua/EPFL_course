@@ -10,6 +10,7 @@ pauli矩阵分解可以通过矩阵的norm来描述，我们用Tr来定义矩阵
 \begin{align}
   \rho = \displaystyle\frac{1}{2} (Tr(\rho)I + \sum_{i=1}^3 \mathrm{Tr}(\rho \sigma_i)\sigma_i)
 \end{align}
+也就是说我们之前讨论的$ r_i = \mathrm{Tr}(\rho \sigma_i) $。
 
 \bigskip
 \hlr{partial Tr的一些comment}
@@ -21,10 +22,27 @@ Patial Trace的操作其实是让对于A系统的求和概率dept
 \bigskip
 \hlr{量子计算基础}
 
-对于量子计算来说，我们需要manipulate qubit system。我们可以通过量子门来进行manipulate。
+对于量子计算来说，我们需要manipulate qubit system。我们可以通过量子门来进行manipulate。\textbf{量子门是一堆Unitary Operator}我们可以通过一系列的量子门来进行量子计算。
 
-\textbf{量子门是一堆Unitary Operator}我们可以通过一系列的量子门来进行量子计算。
+\bigskip
+\hlr{Unitary Operator的矩阵表示}
 
+对于一个Unitary的算符我们可以在使用矩阵进行表示。对于computation basis我们为每一个基赋予一个向量，比如对于一个single qubit的系统来说：
+\begin{align}
+  \ket{0} = (1,0) ,\quad \ket{1} = (0,1)
+\end{align}
+而我们定义一个Unitary算符的矩阵表示为：$ U_{ij} = \bra{i} U \ket{j} $。于是我们可以知道basis在矩阵表示下满足变换关系：
+\begin{align}
+  U\ket{j} = U_{ij} \ket{i}
+\end{align}
+对于一般的向量我们可以使用这一组basis进行展开，写作$ \ket{\psi} = v_i \ket{i} $使用向量表述为$ (v_1, ... , v_n)^T $。那么Unitary演化完全可以写作分量的演化也就是：
+\begin{align}
+  v'_i = U_{ij} v_j
+\end{align}
+我们注意基的关系是求和在第一个指标的，而向量的关系是求和在第二个指标的。我们可以进行简单的计算证明：
+\begin{align}
+  U \ket{\psi} = U v_j \ket{j} = v_j U_{ij} \ket{i} = v'_i \ket{i}
+\end{align}
 
 \bigskip
 \hlr{单比特门}
@@ -45,13 +63,14 @@ Hadamard Gate的作用是把$ |0\rangle $变成$ |+\rangle $，把$ |1\rangle $�
 
 单比特态的演化我们可以把一个Unitary Operator写作这样的形式：
 \begin{align}
-  U = exp(-i \theta s \dot \sigma )
+  U = exp(-i \theta \cdot \vec{\sigma} )
 \end{align}
 也就是我们把指数上面的Hermite矩阵进行展开！我们研究这个矩阵对于Bloch球向量的作用：
 \begin{align}
-  U \rho U^{\dagger} = \frac{1}{2}(I + \vec{r}' \cdot \vec{\sigma}),  
+  U \rho U^{\dagger} = \frac{1}{2}(I + \vec{r'} \cdot \vec{\sigma}),  
 \end{align}
-\textbf{其中$ \vec{r}' = R \vec{r} $，$ R $是一个绕着$ s $轴旋转$ 2\theta $的旋转矩阵。}
+\textbf{其中$ \vec{r'} = R \vec{r} $，$ R $是一个绕着$ \theta $的方向旋转$ 2\theta $的旋转矩阵。}
+我们知道单比特的Unitary Operator也就是全部量子门都可以写作这个形式，因而全部single qubit量子门都可以理解为Bloch球上的旋转！此外我们知道由于这个旋转不改变$ |r| $因此，量子门Unitary演化是不会改变纯度的，并且
 
 \bigskip
 \hlr{多比特门}
@@ -63,6 +82,8 @@ Hadamard Gate的作用是把$ |0\rangle $变成$ |+\rangle $，把$ |1\rangle $�
 他的作用是第一个bit决定我们是不是反转第二个bit。
 
 \thm{所有Unitary Operator都可以通过CNOT和单比特门进行构造！！}
+
+
 
 
 \subsection{Purification相关}
@@ -88,17 +109,53 @@ purification并不是唯一，但是存在一个general的构造方法：
 \rmk{
   注意purification前后存在一个$ \sqrt{p_i} $的区别，记得开根号！！
 }
-这个方法下我们的B系统的维度至少和A系统的rank一样大（也就是A系统有非0本征值的维度！）并且这是进行purification的最小维度！！不会比这个小，否则就会丢失信息。
+这个方法下我们的B系统的维度至少和A系统的rank一样大（也就是A系统有非0本征值的维度！）并且这是进行purification的最小维度！！
+\begin{align}
+  \mathrm{dim}(\mathcal{H}_B) \geq \mathrm{rank}(\rho_A)
+\end{align}
+不会比这个小，否则就会丢失信息。
+
+\bigskip
+\hlr{Pure State decompose and Purification}
+
+其实我们purification并不一定需要谱分解，对于一般的量子态我们可以decompose成为一堆pure state的组合【注意，不一定是谱分解只是刚好写作一些pure state的下面这样的组合】：
+\begin{align}
+  \rho_A = \sum_i p_i |\psi_i\rangle\langle\psi_i|
+\end{align}
+这里我们对于$ \ket{\psi_i} $没有任何要求，只要是个纯态即可。那么我们都可以找到下面的purification：
+\begin{align}
+  |\psi_{AB}\rangle = \sum_i \sqrt{p_i} |\psi_i\rangle |i_B\rangle
+\end{align}
+只不过是可能会需要引入更大的B系统。
 
 \bigskip
 \hlr{Purification After Evolve}
 
-我们考虑对于B系统进行一个unitary演化，我们会发现演化后的purifictaion仍然是一个purification！！
-
-
+我们考虑对于仅仅对于用于purify $ A $系统的辅助系统 $ B $系统进行一个unitary演化，我们会发现演化后的purifictaion仍然是一个purification！\thm{
+  Evolution on the Purification System
+\begin{align}
+  \rho_A = \mathrm{Tr}_B((I_A \otimes U_B) |\psi_{AB}\rangle\langle\psi_{AB}| (I_A \otimes U_B^\dagger))
+\end{align}
+也就是说对于一个量子态$ \rho $的purification $ \ket{\psi_{AB}} $，我们可以通过在B系统上进行任意unitary演化来得到另外一个purification。
+}
+证明则需要用partial trace的定义，然后使用分量展开。
 
 \bigskip
-\hlr{Proper and Improper Mixture}
+\hlr{Schmidt Decomposition}
+
+其实对于任意bipartite的pure state我们可以写作一种diagonalized的形式。我们称之为Schmidt Decomposition：
+\thm{
+  Schmidt Decomposition
+
+  对于任意的一个bipartite pure state $ |\psi_{AB}\rangle \in \mathcal{H}_A \otimes \mathcal{H}_B $，我们可以找到A系统和B系统的两个正交归一化基底$ \{|i_A\rangle\}, \{|i_B\rangle\} $使得：  
+  \begin{align}
+    |\psi_{AB}\rangle = \sum_i \sqrt{p_i} |i_A\rangle |i_B\rangle
+  \end{align}
+  其中$ p_i \geq 0 $并且$ \sum_i p_i = 1 $。
+}
+注意我们要求的是分解系数的平方和为1，不是系数和！
+
+\subsection{Proper and Improper Mixture}
 
 对于同一个density matrix表达的state我们很可能有不同的实现或者理解方式，比如对于一个maximally mixed state $ \rho = \frac{1}{2}I $，我们可以有两种理解：
 \begin{itemize}
@@ -122,10 +179,10 @@ purification并不是唯一，但是存在一个general的构造方法：
 \begin{itemize}
   \item 每一个问出的问题可以通过一组向量进行表达：$ \{ \vec{m_k}\} $每一个向量$ \vec{m}_k $代表一种可能测量结果。这个向量需要满足两个条件：
     \begin{itemize}
-      \item $ m_k $的所有分量都是非负的【半正定矩阵】
-      \item $ \sum_k m_k = 1 $，也就是所有可能结果
+      \item $ \vec{m}_k $的所有分量都是非负的
+      \item $ \sum_k \vec{m}_k = (1,1,...,1) $，也就是所有可能结果的向量和是一个全1向量
     \end{itemize}
-  \item 测量得到k结果的概率是$ p_k = m_k \cdot p  $，其中$ p $是用来描述经典状态的向量
+  \item 测量得到k结果的概率是$ p_k = m_k \cdot p  $，其中$ p $是用来描述经典状态的向量其分量表示了每一种状态出现的概率。
 \end{itemize}
 
 \bigskip
@@ -147,25 +204,26 @@ POVM Measurement 就是对于上面的情况的推广，下面给出详细的定
         \end{align}
   \end{enumerate}
 }
+注意，POVM对于每一个矩阵本身并不要求矩阵是Hermite或者对于Trace有要求，仅仅要求每一个矩阵都是半正定矩阵！
 
 \bigskip
 \hlr{Projective Measurement as a special POVM}
 
-我们定义projective measurement是一个特殊的POVM测量。需要满足其中矩阵$ M_k $是正交归一化的投影矩阵：$ M_i M_j = \delta_{ij}M_i $
-对于一个d维度的系统，我们需要有d个这样的投影矩阵。
+我们定义projective measurement是一个特殊的POVM测量。需要满足其中矩阵$ M_k $是正交归一化的投影矩阵：$ M_i M_j = \delta_{ij}M_i $。 对于一个d维度的系统，我们需要有d个这样的投影矩阵。并且我们知道\textbf{投影矩阵必然是Hermite的！}
 
 对于测量结果，我们之前讨论的exprectation value可以这样的到。我们为每一个测量结果k赋予一个数值$ \lambda_k $作为一个「具体测量出来的数」，下面给出exprectation value的计算：
 \begin{align}
   \sum \lambda_k p_k = \sum_k \lambda_k \mathrm{Tr}(\rho M_k) = \mathrm{Tr}(\rho \sum_k \lambda_k M_k)
 \end{align}
 我们定义$ \sum \lambda_k M_k $也就是一个Hermite矩阵，我们把他叫做observable。这就和量子力学里面讨论对应上了。
-
-此外可以研究测量后系统的状态，根据量子力学我们会发现projective measurement后系统的状态变成：
+此外可以研究测量后系统的状态，根据量子力学的公理体系，我们会发现projective measurement后系统的状态变成：
 \begin{align}
   \rho' = \frac{M_k \rho M_k}{\mathrm{Tr}(\rho M_k)}
 \end{align}
 这是在测量到k结果之后系统的状态。【其中我们使用了一个归一化捏！保证我们的$ \rho' $密度矩阵是$ Tr = 1 $的】
-
+\rmk{
+  注意！这个式子仅仅对于projective measurement成立，对于更一般的POVM测量后的演化后面会进行讨论。
+}
 
 \bigskip
 \hlr{State Discrimination Problem}
@@ -188,16 +246,15 @@ POVM Measurement 就是对于上面的情况的推广，下面给出详细的定
 一个值得讨论的问题是：我们怎么选择$ a,b $来最大化我们正确识别的概率呢？
 \bigskip
 
-首先我们需要计算正确识别的概率，在上面的构造之中我们知道给出正确结论的概率可以如下进行计算：
-\defi{正确概率
+首先我们需要计算成功识别出来是某一个态的概率是多少。我们可以使用下面的定义：
+\defi{成功识别概率
 
-由于两个态都是随机1/2概率出现的，我们定义正确识别概率为：
+由于两个态都是随机1/2概率出现的，我们设计了一个判断方式保证，Measure出来1结果为识别出了$ \psi_2 $态，定义Measure出来2结果为识别出了$ \psi_1 $态。那么成功识别概率为：
 \begin{align}
   \begin{gathered}P_{\mathrm{correct}}=\frac{1}{2}P(\mathrm{correct}|\psi_1)+\frac{1}{2}P(\mathrm{correct}|\psi_2)\\=\frac{1}{2}\langle\psi_1|M_2|\psi_1\rangle+\frac{1}{2}\langle\psi_2|M_1|\psi_2\rangle\end{gathered}
 \end{align}
 }
-然后我们进行一个假设：【假设$ a = b $】$ M_1, M_2 $这两个POVM有一样的系数。于是我们计算$ M_3 $的本征值，根据半正定的条件我们可以得到最终的结果。
-
+然后我们进行一个假设：\textbf{假设$ a = b $}也就是说$ M_1, M_2 $这两个POVM有一样的系数。于是我们计算$ M_3 $的本征值，根据半正定的条件我们可以得到两个POVM系数一样的最大化正确测量的解：
 \thm{一般两个量子态的State Discrimination Problem的最优解
 
 对于一般的两个量子态$ |\psi\rangle, |\phi\rangle $，我们可以通过下面的POVM测量来最大化正确识别概率：
@@ -223,9 +280,15 @@ POVM Measurement 就是对于上面的情况的推广，下面给出详细的定
 \bigskip
 \hlr{Convex Mixture of Projective Measurement}
 
-我们发现如果把一些projective measurement进行convex mixture，我们会得到一个POVM测量！！那么这个POVM的意义是什么呢？
-
-其实是说我们有一定概率进行某一个projective measurement，同时也有一定概率进行另一个projective measurement！
+我们发现如果把一些projective measurement进行convex mixture，我们会得到一个POVM测量！！那么这个POVM的意义是什么呢？比如我们有两个projective measurement：
+\begin{align}
+  M_A = \{ |0\rangle\langle0|, |1\rangle\langle1| \}, \quad M_B = \{ |+\rangle\langle+|, |-\rangle\langle-| \}
+\end{align}
+我们可以构造一个POVM测量：
+\begin{align}
+  M = p M_A + (1-p) M_B = \{ p|0\rangle\langle0|, p|1\rangle\langle1|, (1-p)|+\rangle\langle+|, (1-p)|-\rangle\langle-| \}
+\end{align}
+这个convex mixture的POVM的定义是说我们有一定概率进行某一个projective measurement，同时也有一定概率进行另一个projective measurement！
 
 
 
@@ -245,16 +308,6 @@ POVM Measurement 就是对于上面的情况的推广，下面给出详细的定
 
 但是一般的POVM是允许我们讨论一个混态是某个混态的概率的。这个样子，我们量子体系可以问的问题就更多了！！能测量的问题就更多了！
 \qed 
-
-\imp{Pauli矩阵的海量结论}{
-  由于Pauli矩阵在QI之中应用太频繁了，我下面列出海量重要的结论，方便查阅！！
-  \begin{align}
-    \sigma_0=I=\begin{pmatrix}1&0\\0&1\end{pmatrix},\quad\sigma_x=\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad\sigma_y=\begin{pmatrix}0&-i\\i&0\end{pmatrix},\quad\sigma_z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}
-  \end{align}
-  \begin{enumerate}
-    \item 
-  \end{enumerate}
-}
 
 \bigskip
 \question{State Discrimination Problem的最优解是怎么样的？}
