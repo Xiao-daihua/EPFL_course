@@ -52,19 +52,24 @@
     }
   \item \textbf{Convex combination of unitary channels}
 
-      也就是按照一定概率进行一组unitary channel的选择：$ \mathcal{E}(\rho) = \sum p_i U_i \rho U_i^\dagger $。存在一定的概率进行每一个Unitary Channel的作用。
+    也就是按照一定概率进行一组unitary channel的选择：$ \mathcal{E}(\rho) = \sum p_i U_i \rho U_i^\dagger $。存在一定的概率进行每一个Unitary Channel的作用。我们注意这个时候Kraus Operator可以写作$ A_i = \sqrt{p_i} U_i $。「有一个根号捏」
     \item \textbf{Complete Depolarizing Channel}
 
       这个channel的作用是消灭一个态并直接变成另外的一个态：$ \mathcal{E}(\rho) = \sigma $ 我们可以按照如下方法 构造Kraus Operator：
     \begin{align}
-      A_{ij} = \sqrt{\lambda_j} |j\rangle \langle i|
+      A_{ij} = \sqrt{\lambda_i} |i\rangle \langle j|
     \end{align}
-    其中$ \sigma = \sum_j \lambda_j |j\rangle \langle j| $是$ \sigma $的谱分解。我们可以验证这个channel的Kraus Operator满足$ \sum_{ij} A_{ij}^\dagger A_{ij} = I $，并且$ \mathcal{E}(\rho) = \sigma $。
+    其中$ \sigma = \sum_i \lambda_i |i\rangle \langle i| $是$ \sigma $的谱分解。我们可以验证这个channel的Kraus Operator满足$ \sum_{ij} A_{ij}^\dagger A_{ij} = I $，并且$ \mathcal{E}(\rho) = \sigma $。
   \item \textbf{Partial Trace}
 
       这个显然也是一个channel，这个channel的$ A_k $ Operator比较古怪因为它是一个从大空间到小空间的operator。我们写作这个样子$ A_k = I_A \otimes \bra{k}_B $
+    \item \textbf{State Preparation} 
 
-
+      这个channel不存在任何输入，就是强行生成一个态。对于state $ \rho = \sum_i \lambda_i \ketbra{i}{i} $，我们可以定义Kraus Operator：
+      \begin{align}
+        A_k=\sqrt{\lambda_k}|\lambda_k\rangle.
+      \end{align}
+      可以证明其满足Kraus Operator的定义，并生成了$ \mathcal{E}(1) = \rho $
 \end{itemize}
 
 
@@ -74,34 +79,41 @@
 
 下面我们讨论一个特殊的channel，存在一个特殊的测量记录和更新的功能：
 \begin{align}
-  \mathcal{E}(\rho) = \sum_k \ket{k}\bra{k} \otimes B_k \rho B_k^\dagger
+  \mathcal{E}(\rho) = \sum_k \ketbra{k}{k} \otimes B_k \rho B_k^\dagger
 \end{align}
-其中$ B_k $本身就是一组第二个子系统上的Kraus Operator。
-
-对于这个channel我们把测量的结果「每一种结果的概率」记录在第一个子系统，并让第二个系统「变成测量后坍缩的状态」。
+对于这个Channel来说，我们的Kraus Operator是：
 \begin{align}
-  Tr_s(\mathcal{E}(\rho)) &= \sum_k \ket{k}\bra{k} Tr(B_k \rho B_k^\dagger) = \sum_k p_k \ket{k}\bra{k}\\ 
+  A_k=|k\rangle\otimes B_k
+\end{align}
+对于这个态我们发现可以有下面的Interpretation，我们发现$ M_i = B_i^\dagger B_i $是一个合法的POVM测量。那么这个channel的作用可以理解为：
+\begin{itemize}
+  \item 对于B系统进行一个POVM测量，然后把测量结果的概率记录在A系统上面
+\end{itemize}
+我们会发现单独看Channel之后的A和B系统为：
+\begin{align}
+  Tr_s(\mathcal{E}(\rho)) &= \sum_k \ketbra{k}{k} Tr(B_k \rho B_k^\dagger) = \sum_k p_k \ketbra{k}{k}\\ 
   Tr_a(\mathcal{E}(\rho)) &= \sum_k B_k \rho B_k^\dagger
 \end{align}
-
+会明显发现A系统记录这不同测量结果的概率分布，而B系统则是POVM测量之后的更新结果。这也引出了我们对于怎么定义一般POVM之后的更新规则的问题。
 
 \subsection{POVM as a Quantum Channel}
 
 \bigskip
 \hlr{POVM测量以及坍缩}
 
-并且我们会发现，这个channel其实给出了一组POVM测量：
+我们会发现一个POVM其实可以给出一组特殊的Kraus Operators $ \{ B_k \} $满足：
 \begin{align}
   M_k = B_k^\dagger B_k
 \end{align}
-这样子定义的$ M_k $矩阵是一个良定的POVM测量！那么我们可以理解a系统其实就是一个POVM测量之后的坍缩结果。
+\rmk{由于POVM的半正定性，我们知道其必然是Hermite的因此可以写作这样！}
+那么我们可以理解A系统其实就是一个POVM测量之后的坍缩结果。
 \thm{POVM测量后坍缩结果
 
 进行一个POVM测量之后，测量结果坍缩到某一个态是：
 \begin{align}
   \rho \rightarrow \rho_k = \frac{B_k \rho B_k^\dagger}{\tr(B_k \rho B_k^\dagger)} 
 \end{align}
-其中$ B_k = \sqrt{M_k} $。「注意，这是一个记号，我们写出来意思其实是：$ M_k = B_k^{\dagger} B_k $」分母是一个归一化条件。因为所有的density matrix是需要保证trace为1的。
+其中$ M_k = B_k^{\dagger} B_k $。分母是一个归一化条件。因为所有的density matrix是需要保证trace为1的。
 }
 
 \bigskip
@@ -125,14 +137,23 @@
 \begin{align}
   \Pi_k=|k\rangle\langle k|\otimes I
 \end{align}
-在这样的构造下面，我们可以证明，这个projective measurement等价于POVM测量。我们的操作是，先把所有的系统A的态映射到整个更大的系统上面：
+在这样的构造下面，我们可以证明，这个projective measurement等价于POVM测量，可以直接带入上面公式给出：
+\begin{align}
+  \begin{aligned}V^{\dagger}\Pi_{i}V&=\sum_{j,k}\left(\langle k|\otimes B_k^\dagger\right)(|i\rangle\langle i|\otimes I)(|j\rangle\otimes B_j)\\&=\sum_{j,k}\langle k|i\rangle\langle i|j\rangle B_k^\dagger B_j\\&=B_i^\dagger B_i\\&=M_i.\end{aligned}
+\end{align}
+
+\bigskip
+\hlr{Isometry to Larger System}
+
+此外我们还可以通过这个Isometry把系统A的态映射到更大的系统上面。然后我们发现映射后的态对于这个Projective Measurement的不同结果的概率，等于POVM在原先的态上面的测量结果的概率。我们首先进行映射：
 \begin{align}
   \rho_A \rightarrow V \rho_A V^\dagger = \sum_{k,k'} |k\rangle\langle k'| \otimes B_k \rho_A B_{k'}^\dagger 
 \end{align}
-然后我们对其进行projective measurement，可以证明最后的结果就是POVM测量的结果。
+然后我们对其进行projective measurement，可以证明对于任意的结果i，我们有：
 \begin{align}
   Tr(\Pi_i V \rho_A V^\dagger) = Tr(M_i \rho_A)
 \end{align}
+也就是说概率一样的！
 
 \rmk{
   注意，如果我们希望在一个更大的系统上用Projective Measurement实现这个POVM的话我们需要引入一个辅助系统B，并且使用两个操作：

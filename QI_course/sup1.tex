@@ -228,10 +228,37 @@ Z:\quad Z\ket{0}=+1\ket{0},\qquad Z\ket{1}=-1\ket{1}.
 \boxed{-1 \leq \langle P\rangle_\rho \leq 1}.
 \]
 
+\subsection{Bell State}
+
+我们常用的一组state就是bell state，我们定义；
+\begin{align}
+  \left|\Phi^{+}\right\rangle=\frac{1}{\sqrt{2}}(|00\rangle+|11\rangle),\\
+\left|\Phi^{-}\right\rangle=\frac{1}{\sqrt{2}}(|00\rangle-|11\rangle),\\
+\left|\Psi^{+}\right\rangle=\frac{1}{\sqrt{2}}(|01\rangle+|10\rangle),\\
+\left|\Psi^{-}\right\rangle=\frac{1}{\sqrt{2}}(|01\rangle-|10\rangle)
+\end{align}
+这组state有很多特殊的性质。
+\begin{itemize}
+  \item 四个Bell State 互相正交，并且构成了2-bit 系统的一个完备基础。
+  \item Bell State 是最大纠缠态，代表着两个bit能够有的最大的纠缠
+  \item Bell State 其实都是正比于Pauli Matrix 的 Vectorization 形式：
+    \begin{align}
+      |\Phi^+\rangle = \frac{1}{\sqrt{2}} |Vec(I)\rangle,\quad& |\Phi^-\rangle = \frac{1}{\sqrt{2}} |Vec(Z)\rangle, \\
+      |\Psi^+\rangle = \frac{1}{\sqrt{2}} |Vec(X)\rangle,\quad& |\Psi^-\rangle = \frac{i}{\sqrt{2}} |Vec(Y)\rangle.
+    \end{align}
+\end{itemize}
+
+对于2Qubit的系统我们还有一组基也就是computational basis，写作：
+\begin{align}
+  \{|00\rangle, |01\rangle, |10\rangle, |11\rangle\}.
+\end{align}
+这组基和Bell State基是等价的，我们可以通过下面的变换进行互相转换。
+
 \subsection{常用不等式}
 
 \bigskip
 \hlr{平方和和和的平方}
+
 对于任意实数$ a_i $，我们有下面不等式：
 \begin{align}
   M\sum_{i=1}^Ma_i^2\geq\left(\sum_{i=1}^Ma_i\right)^2
