@@ -37,42 +37,47 @@
 \contentsline {subsection}{\numberline {7.2}Question and thoughts}{39}{subsection.7.2}%
 \contentsline {section}{\numberline {8}Lecture 9: Distinguishing Quantum State and Matrix Norm}{40}{section.8}%
 \contentsline {subsection}{\numberline {8.1}区分量子态}{40}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}矩阵模长}{42}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Lecture 10-11: Entropy and Fidelity}{46}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Classical Entropy}{46}{subsection.9.1}%
-\contentsline {subsubsection}{\numberline {9.1.1}Single Random Variable Entropy}{46}{subsubsection.9.1.1}%
-\contentsline {subsubsection}{\numberline {9.1.2}2 Random Variables Entropy}{47}{subsubsection.9.1.2}%
-\contentsline {subsection}{\numberline {9.2}Quantum Entropy}{50}{subsection.9.2}%
-\contentsline {subsubsection}{\numberline {9.2.1}Single Quantum System Entropy}{50}{subsubsection.9.2.1}%
-\contentsline {subsubsection}{\numberline {9.2.2}2 Quantum Systems Entropy}{51}{subsubsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.3}Fidelity}{52}{subsection.9.3}%
-\contentsline {section}{\numberline {10}Lecture 12: Resouce Theory and Entanglement Resource}{54}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Set Up for Resource Theory}{54}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Resource Theory of Entanglement}{54}{subsection.10.2}%
-\contentsline {subsubsection}{\numberline {10.2.1}Free Operations and Free States}{54}{subsubsection.10.2.1}%
-\contentsline {subsubsection}{\numberline {10.2.2}Bell State LOCC interconversion}{55}{subsubsection.10.2.2}%
-\contentsline {subsubsection}{\numberline {10.2.3}Pure State Conversion and Majorization Theorem}{56}{subsubsection.10.2.3}%
-\contentsline {subsubsection}{\numberline {10.2.4}Pure State Asymptotic Conversion}{57}{subsubsection.10.2.4}%
-\contentsline {section}{\numberline {11}Lecture 13: Entanglement Measure}{59}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Pure State Entanglement Measure}{59}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Mixed State Entanglement Measure}{59}{subsection.11.2}%
-\contentsline {subsubsection}{\numberline {11.2.1}Entanglement Witness}{59}{subsubsection.11.2.1}%
-\contentsline {paragraph}{纠缠态给出witness}{61}{section*.2}%
-\contentsline {paragraph}{witness给出纠缠态}{61}{section*.3}%
-\contentsline {subsubsection}{\numberline {11.2.2}Positive but Not Completely Positive Map}{61}{subsubsection.11.2.2}%
-\contentsline {section}{\numberline {12}Sup 1: Mathematical Skills in QI}{63}{section.12}%
-\contentsline {subsection}{\numberline {12.1}基础数学技巧}{63}{subsection.12.1}%
-\contentsline {subsubsection}{\numberline {12.1.1}张量积}{63}{subsubsection.12.1.1}%
-\contentsline {subsubsection}{\numberline {12.1.2}Unitary}{63}{subsubsection.12.1.2}%
-\contentsline {subsubsection}{\numberline {12.1.3}Trace}{64}{subsubsection.12.1.3}%
-\contentsline {subsubsection}{\numberline {12.1.4}求和}{64}{subsubsection.12.1.4}%
-\contentsline {subsection}{\numberline {12.2}Pauli矩阵的特殊性质}{65}{subsection.12.2}%
-\contentsline {subsubsection}{\numberline {12.2.1}基本定义}{65}{subsubsection.12.2.1}%
-\contentsline {subsubsection}{\numberline {12.2.2}基本乘法性质}{65}{subsubsection.12.2.2}%
-\contentsline {subsubsection}{\numberline {12.2.3}对易反对易关系}{65}{subsubsection.12.2.3}%
-\contentsline {subsubsection}{\numberline {12.2.4}互相作用，pauli矩阵作用在pauli基上}{65}{subsubsection.12.2.4}%
-\contentsline {subsubsection}{\numberline {12.2.5}指数形式的Pauli矩阵}{65}{subsubsection.12.2.5}%
-\contentsline {subsubsection}{\numberline {12.2.6}Pauli矩阵的本征值与本征基}{65}{subsubsection.12.2.6}%
-\contentsline {paragraph}{Pauli算符期望值的取值范围}{65}{section*.4}%
-\contentsline {subsection}{\numberline {12.3}Bell State}{66}{subsection.12.3}%
-\contentsline {subsection}{\numberline {12.4}常用不等式}{66}{subsection.12.4}%
+\contentsline {subsubsection}{\numberline {8.1.1}区分量子态最大概率}{40}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}单比特态区分}{40}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.3}1 norm与高维度量子态区分}{42}{subsubsection.8.1.3}%
+\contentsline {subsection}{\numberline {8.2}矩阵Norm}{43}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}矩阵Norm一般定义}{43}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Schatten p-Norm与Infinity Norm}{44}{subsubsection.8.2.2}%
+\contentsline {section}{\numberline {9}Lecture 10-11: Entropy and Fidelity}{47}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Classical Entropy}{47}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Single Random Variable Entropy}{47}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}2 Random Variables Entropy}{48}{subsubsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.2}Quantum Entropy}{51}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Single Quantum System Entropy}{51}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}2 Quantum Systems Entropy}{52}{subsubsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.3}Fidelity}{53}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Lecture 12: Resouce Theory and Entanglement Resource}{55}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Set Up for Resource Theory}{55}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Resource Theory of Entanglement}{55}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}Free Operations and Free States}{55}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}Bell State LOCC interconversion}{56}{subsubsection.10.2.2}%
+\contentsline {subsubsection}{\numberline {10.2.3}Pure State Conversion and Majorization Theorem}{57}{subsubsection.10.2.3}%
+\contentsline {subsubsection}{\numberline {10.2.4}Pure State Asymptotic Conversion}{58}{subsubsection.10.2.4}%
+\contentsline {section}{\numberline {11}Lecture 13: Entanglement Measure}{60}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Pure State Entanglement Measure}{60}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Mixed State Entanglement Measure}{60}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}Entanglement Witness}{60}{subsubsection.11.2.1}%
+\contentsline {paragraph}{纠缠态给出witness}{62}{section*.2}%
+\contentsline {paragraph}{witness给出纠缠态}{62}{section*.3}%
+\contentsline {subsubsection}{\numberline {11.2.2}Positive but Not Completely Positive Map}{62}{subsubsection.11.2.2}%
+\contentsline {section}{\numberline {12}Sup 1: Mathematical Skills in QI}{64}{section.12}%
+\contentsline {subsection}{\numberline {12.1}基础数学技巧}{64}{subsection.12.1}%
+\contentsline {subsubsection}{\numberline {12.1.1}张量积}{64}{subsubsection.12.1.1}%
+\contentsline {subsubsection}{\numberline {12.1.2}Unitary}{64}{subsubsection.12.1.2}%
+\contentsline {subsubsection}{\numberline {12.1.3}Trace}{65}{subsubsection.12.1.3}%
+\contentsline {subsubsection}{\numberline {12.1.4}求和}{65}{subsubsection.12.1.4}%
+\contentsline {subsection}{\numberline {12.2}Pauli矩阵的特殊性质}{66}{subsection.12.2}%
+\contentsline {subsubsection}{\numberline {12.2.1}基本定义}{66}{subsubsection.12.2.1}%
+\contentsline {subsubsection}{\numberline {12.2.2}基本乘法性质}{66}{subsubsection.12.2.2}%
+\contentsline {subsubsection}{\numberline {12.2.3}对易反对易关系}{66}{subsubsection.12.2.3}%
+\contentsline {subsubsection}{\numberline {12.2.4}互相作用，pauli矩阵作用在pauli基上}{66}{subsubsection.12.2.4}%
+\contentsline {subsubsection}{\numberline {12.2.5}指数形式的Pauli矩阵}{66}{subsubsection.12.2.5}%
+\contentsline {subsubsection}{\numberline {12.2.6}Pauli矩阵的本征值与本征基}{66}{subsubsection.12.2.6}%
+\contentsline {paragraph}{Pauli算符期望值的取值范围}{66}{section*.4}%
+\contentsline {subsection}{\numberline {12.3}Bell State}{67}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}常用不等式}{67}{subsection.12.4}%

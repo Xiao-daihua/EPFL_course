@@ -1,4 +1,6 @@
 \subsection{区分量子态}
+
+\subsubsection{区分量子态最大概率}
 \hlr{量子态区分概率最大化}
 
 给定两个量子态$ \rho_0 $以及$ \rho_1 $我们希望通过POVM对其进行区分。假设我们使用的POVM是有两个元素$ \{
@@ -36,11 +38,11 @@ Proof: 我们计算成功概率：
   \end{align}
   其中$ M_0 $是任意的正半定矩阵且$ M_0\leq I $。
 }
-
+\subsubsection{单比特态区分}
 \bigskip
 \hlr{例：纯态区分}
 
-我们考虑区分两个纯态$ |\psi_0\rangle $以及$ |\psi_1\rangle $。我们不妨构建一个POVM保证$ M_0
+我们考虑区分两个纯态$ |0\rangle $以及$ |1\rangle $。我们不妨构建一个POVM保证$ M_0
 = \ketbra{0}{0} $ 以及$ M_1 = \ketbra{1}{1} $，其中$ |0\rangle $以及$
 |1\rangle $是两个态的正交归一化基底。我们计算成功概率：
 \begin{align}
@@ -70,10 +72,21 @@ Proof: 我们计算成功概率：
   \vec{x}\!\cdot\!\vec{\sigma}\right) $以及$ M_1 = I - M_0 $。那么其需要满足下面的约束条件：
   \begin{align}
     \left\|\vec{x}\right\|\leq1 \quad
-    a\in\left[0,1/\left(1+\left\|\boldsymbol{\vec{x}}\right\|^2\right)\right]
+    a\in\left[0,1/\left(1+\left\|\vec{x}\right\|^2\right)\right]
   \end{align}
 }
-Proof: 我们干的事情就是计算两个的本征值，保证本征值非复即可。
+Proof: 我们干的事情就是计算两个的本征值，保证本征值非负即可。
+\rmk{
+  对于Pauli Basis下面的矩阵的本征值计算我们一般使用公式：
+  \begin{align}
+    \lambda_\pm =
+    \frac{\mathrm{Tr}(A)}{2}\pm\sqrt{\frac{\mathrm{Tr}(A)^2}{4}-\det(A)}
+  \end{align}
+  并且Pauli矩阵都是$ \tr = 0 $以及$ \det = -1 $的矩阵。并且我们注意行列式不是线性的：
+  \begin{align}
+    \det(a \sigma) = a^2 \det(\sigma).
+  \end{align}
+}
 
 \bigskip
 在这个基础上我们计算这两个混态的区分概率：
@@ -119,7 +132,8 @@ Proof: 我们干的事情就是计算两个的本征值，保证本征值非复�
 }
 Proof:在上面约束条件下面进行放缩就好了！！这里我们最后一步放缩的时候会使用：
 \begin{align}
-  p=\frac{1}{2}+\frac{1}{2}\cdot\frac{1}{1+\left\|\boldsymbol{\vec{x}}\right\|^{2}}\|\boldsymbol{\vec{x}}\|\|\boldsymbol{\vec{r}}_{0}-\boldsymbol{\vec{r}}_{1}\|\cos(\boldsymbol{\vec{x}};\boldsymbol{\vec{r}}_{0}-\boldsymbol{\vec{r}}_{1}).
+  p=\frac{1}{2}+\frac{1}{2}\cdot\frac{1}{1+\left\|\vec{x}\right\|^{2}}\|\vec{x}\|\|\vec{r}_{0}-\vec{r}_{1}\|\cos(\vec{x}\cdot
+  \vec{r}_{0}-\vec{r}_{1}).
 \end{align}
 然后我们对此考虑到函数：
 \begin{align}
@@ -127,6 +141,7 @@ Proof:在上面约束条件下面进行放缩就好了！！这里我们最后�
 \end{align}
 在$ t=1 $处取得最大值$ 1/2 $。然后我们带回去就得到了最终结果！！
 
+\subsubsection{1 norm与高维度量子态区分}
 \bigskip
 \hlr{数学工具：1-Norm}
 
@@ -142,7 +157,7 @@ Proof:在上面约束条件下面进行放缩就好了！！这里我们最后�
   其中$ \lambda_i(X^\dagger X) $是矩阵$ X^\dagger X $的本征值。
 }
 显然对于Unitary的矩阵$ U $我们有$ \left\|U\right\|_1=\mathrm{Tr}(I)=d $，其中$ d
-$是矩阵的维度。对于Hermitean矩阵$ H $我们有$
+$是矩阵的维度。对于Hermitian矩阵$ H $我们有$
 \left\|H\right\|_1=\sum_i|\lambda_i(H)| $，其中$ \lambda_i(H) $是矩阵$ H $的本征值。
 
 \bigskip
@@ -163,12 +178,35 @@ $是矩阵的维度。对于Hermitean矩阵$ H $我们有$
 }
 Proof：其中我们显然使用了一个恒成立的数学关系：
 \begin{align}
-  \frac{1}{2}\|\rho_0-\rho_1\|_1=\max_{0\leq M\leq
+  \|\rho_0-\rho_1\|_1=2\max_{0\leq M\leq
   I}\operatorname{Tr}(M(\rho_0-\rho_1)).
 \end{align}
-证明的核心是构造一个只有$ \rho_0 - \rho_1 $本征值为正的本征子空间的投影算符作为POVM的一个元素。
+其实对于任何Hermite Traceless Matrix $ H $，我们都有：
+\begin{align}
+  \|H\|_1=2\max_{0\leq M\leq I}\mathrm{Tr}(MH).
+\end{align}
+我们下面进行证明，由于我们不保证$ H $是正定矩阵，所以我们可以进行谱分解：
+\begin{align}
+  H=\sum_{i}\lambda_i |i\rangle\langle i|=\sum_{\lambda_i\geq0}\lambda_i
+  |i\rangle\langle i|+\sum_{\lambda_j<0}\lambda_j |j\rangle\langle j|=H_+-H_-.
+\end{align}
+其中$ H_+ $以及$ H_- $都是正定的矩阵：
+\begin{itemize}
+  \item Traceless条件： 保证$ \tr H_+ = \tr H_- $
+  \item Hermite条件保证Matrix Norm为：
+    \begin{align}
+      \|H\|_1=\mathrm{Tr}(H_+)+\mathrm{Tr}(H_-)=2\mathrm{Tr}(H_+).
+    \end{align}
+\end{itemize}
+我们知道如果我们希望$ \tr (M H) $最大化，根据POVM的条件($ 0\leq M\leq I $)，我们有：
+\begin{align}
+  \mathrm{Tr}(MH)\leq\mathrm{Tr}(H_+) = \displaystyle\frac{1}{2} \|H\|_1.
+\end{align}
+\qed
 
-\subsection{矩阵模长}
+\subsection{矩阵Norm}
+
+\subsubsection{矩阵Norm一般定义}
 
 \bigskip
 \hlr{一般定义}
@@ -177,7 +215,8 @@ Proof：其中我们显然使用了一个恒成立的数学关系：
 \defi{
   一般矩阵Norm
 
-  对于一个矩阵如果我们希望赋予一个Norm的概念$ \|.\|:K^{m\times n}\mapsto\mathbb{R} $，那么需要满足一些必要的性质：
+  对于一个矩阵如果我们希望赋予一个Norm的概念$ \|.\|:K^{m\times n}\mapsto\mathbb{R}
+  $，那么需要满足一些必要的性质：
   \begin{itemize}
     \item 非负性：$ \|A\|\geq0 $
     \item 零点对应：$ \|A\|=0\Leftrightarrow A=0 $
@@ -190,7 +229,11 @@ Proof：其中我们显然使用了一个恒成立的数学关系：
   Normal Matrix
 
   对于一个矩阵$ A\in K^{n\times n} $，如果其满足$ AA^\dagger=A^\dagger A
-  $，那么我们称其为Normal Matrix。
+  $，那么我们称其为Normal Matrix。对于Normal Matrix我们存在分解：
+  \begin{align}
+    A=U\Lambda U^\dagger,
+  \end{align}
+  其中$ \Lambda $是一个对角矩阵，$ U $是一个Unitary矩阵。
 }
 显然Hermitean矩阵、Unitary矩阵都是Normal Matrix。我们考虑之前对于这两种normal矩阵的1-Norm的讨论可以有下面的定理：
 \thm{
@@ -213,6 +256,7 @@ Matrix的情况，因为演化算子是Unitary的量子态和测量算子是Herm
   \end{itemize}
   请区分模长求和与直接求和！！
 }
+\subsubsection{Schatten p-Norm与Infinity Norm}
 
 \bigskip
 \hlr{Schatten p-Norm}
@@ -287,8 +331,8 @@ Proof: 这是因为矩阵的奇异值和$ A^\dagger A $的本征值有关系：
 }
 我们可以使用量子计算机来计算两个量子态区别的Schatten 2-Norm，因为数学上我们有：
 \begin{align}
-  \begin{aligned}\left\|\rho_0-\rho_1\right\|_2&=\sqrt{\mathrm{Tr}((\rho_0-\rho_1)(\rho_0-\rho_1))}\\&=\sqrt{\mathrm{Tr}(\rho_0^2)+\mathrm{Tr}(\rho_1^2)-2\mathrm{~Tr}(\rho_0\rho_1)}.
-  \end{aligned}
+  \left\|\rho_0-\rho_1\right\|_2&=\sqrt{\mathrm{Tr}((\rho_0-\rho_1)(\rho_0-\rho_1))}\\
+  &=\sqrt{\mathrm{Tr}(\rho_0^2)+\mathrm{Tr}(\rho_1^2)-2\mathrm{~Tr}(\rho_0\rho_1)}.
 \end{align}
 其中的信息可以通过SWAP测试来获得。
 \begin{align}
@@ -310,5 +354,5 @@ Proof: 这是因为矩阵的奇异值和$ A^\dagger A $的本征值有关系：
 }
 也就是说这个给出了矩阵的最大本征值模长。一个很现实的意义就是他给出了一个算子的最大期望值：
 \begin{align}
-  \left|\mathrm{Tr}(M\rho)\right|\leq\left|\lambda_{max}\right|=\left\|M\right\|_\infty.
+  \left|\mathrm{Tr}(M\rho)\right|\leq\left|\lambda_{max}(M)\right|=\left\|M\right\|_\infty.
 \end{align}
