@@ -88,9 +88,6 @@
 \textbf{方法1: Gram-Schmidt Process}
 
 
-
-
-
 \textbf{方法2: Quantum Computation Method}
 
 
@@ -98,7 +95,7 @@
 
 
 
-\subsection{Choi Representation}
+\subsection{Choi Representation I}
 
 
 \hlr{Vectorization数学技巧}
@@ -164,11 +161,10 @@
 \thm{
   Choi State和Kraus Operators的关系
 
-  对于一组Kraus Operators $ \{A_i\} $给出的quantum channel，对应的Choi State可以写作：
+  对于某个Quantum Channel一组Kraus Operators $ \{A_i\} $，Quantum Channel对应的Choi State可以写作：
 \begin{align}
   J(\mathcal{E}) = \sum_i |Vec(A_i)\rangle\langle Vec(A_i)|.
 \end{align}
-
 }
 Proof：我们可以直接使用Vectorization的性质以及Kraus Operator的定义，会发现：
 \begin{align}
@@ -187,19 +183,23 @@ Proof：我们可以直接使用Vectorization的性质以及Kraus Operator的定
 \end{align}
 
 其实这个命题的反命题也是成立的，也就是说给定Choi State我们可以通过对角化得到Kraus Operators。
-\thm{
+\thm{\label{thm:choi-to-kraus}
   Choi State的对角化得到Kraus Operators
 
-  对于一个Choi State $ J(\mathcal{E}) $，我们可以通过对其进行对角化得到一组本征值和本征向量：
+  对于一个Quantum Channel对应的Choi State $ J(\mathcal{E}) $，我们可以通过对其进行对角化得到一组本征值和本征向量：
   \begin{align}
     J(\mathcal{E})=\sum_i\lambda_i|v_i\rangle\langle v_i|. 
   \end{align}
-  然后我们把本征向量重新写成$ |Vec(A_i)\rangle $的形式，然后使用vectorization的反操作就可以得到Kraus Operator：
+  然后我们把本征向量重新写成$ |Vec(A_i)\rangle $的形式，然后使用vectorization的反操作就可以得到一组算符：
   \begin{align}
     \ket{Vec(A_i)} = \sqrt{\lambda_i} |v_i\rangle \quad \rightarrow \quad A_i.
   \end{align}
+  这一组算符必然是这个Quantum Channel一组合法的Kraus Operators。
 }
-这个证明需要使用下面Choi State和Quantum Channel的关系。
+证明：应该可以使用Choi State的定义进行计算给出。
+\YL{[我懒了呜呜呜呜但是还是挺重要的捏]}
+
+
 \rmk{
   这个定理里面需要对于Choi State进行对角化，这是可以操作的，因为一个合理的Quantum Channel需要是Complete Positive的，所以Choi State必然是一个半正定矩阵(自然的也是Hermite的)，因此我们可以对角化一组正实数的本征值和一组正交归一化的本征向量。
 }

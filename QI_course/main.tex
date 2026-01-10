@@ -1,16 +1,15 @@
 % !TeX root = main.tex
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT
 \documentclass[10pt]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES
 
 % 中文支持（XeLaTeX 编译）
 \usepackage[UTF8]{ctex}
-\usepackage{xeCJKfntef} 
+\usepackage{xeCJKfntef}
 
 % \setCJKmainfont{HanziPen SC}
 % \setmainfont{HanziPen SC}
-
 
 % 页面设置
 % \usepackage[a4paper, left=15mm, right=15mm, top=15mm, bottom=15mm]{geometry}
@@ -22,17 +21,15 @@
   bottom=25mm
 ]{geometry}
 
-
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 \usepackage{xcolor}
-
 
 % 数学环境及符号
 \usepackage{amsmath, amssymb, amsfonts, amsthm,amsopn}
 \usepackage{tensor}              % 张量指标管理
 \usepackage{mathtools}           % amsmath增强
 % \usepackage{physics}             % 物理公式快捷命令
-             % Dirac符号
+% Dirac符号
 \usepackage{bbold}               % 数学黑体
 \usepackage{dsfont}              % 另一种数字体
 \usepackage[mathscr]{eucal}     % 花体字母
@@ -85,14 +82,16 @@
 
 \begin{document}
 
-\title{\boldmath Quantum Information Theory 1 \\ \large EPFL 2025-2026 学年第一学期课程笔记}
+\title{\boldmath Quantum Information Theory 1 \\ \large EPFL
+2025-2026 学年第一学期课程笔记}
 
 \author{X. D. H.}
 
 \maketitle
 
 \begin{abstract}
-  这是EPFL 2025秋季学期的QI的课程笔记。主要涵盖QI的基础知识，POVM Measurement, Quantum Channel, Shot Noise, Entropy, Entanglement Resource Theory等内容。
+  这是EPFL 2025秋季学期的QI的课程笔记。主要涵盖QI的基础知识，POVM Measurement, Quantum
+  Channel, Shot Noise, Entropy, Entanglement Resource Theory等内容。
 \end{abstract}
 
 \tableofcontents
@@ -102,28 +101,31 @@
 % section Lecture 2 (end)
 
 \newpage
-\section{Lecture 3: Purification and POVM measurement }\label{sec:Lecture 3} % (fold)
-\input{lec3.tex} 
+\section{Lecture 3: Purification and POVM Measurement
+}\label{sec:Lecture 3} % (fold)
+\input{lec3.tex}
 % section Lecture 3 (end)
 
 \newpage
-\section{Lecture 4: Kraus Representation of Quantum Channel}\label{sec:Lecture 4} % (fold)
+\section{Lecture 4: Quantum Channels and Kraus
+Representation}\label{sec:Lecture 4} % (fold)
 \input{lec4.tex}
 % section Lecture 4 (end)
 
-\newpage 
-\section{Lecture 5: Stinespring representation and Choi representation}\label{sec:Lecture 5} % (fold)
+\newpage
+\section{Lecture 5: Stinespring Representation and Choi
+Representation}\label{sec:Lecture 5} % (fold)
 \input{lec5.tex}
 % section Lecture 5 (end)
 
-\newpage 
-\section{Lecture 6: Choi representation and Complete Positivity}\label{sec:Lecture 5} % (fold)
+\newpage
+\section{Lecture 6: Choi Representation and Complete
+Positivity}\label{sec:Lecture 5} % (fold)
 \input{lec6.tex}
 % section Lecture 5 (end)
 
-
-\newpage 
-\section{Lecture 7: Vectorization的数学技巧}\label{sec:Lecture 5} % (fold)
+\newpage
+\section{Lecture 7: Vectorization}\label{sec:Lecture 5} % (fold)
 \input{lec7.tex}
 % section Lecture 5 (end)
 
@@ -132,30 +134,35 @@
 \input{lec8.tex}
 % section Lecture 8: Shot Noice (end)
 
-\newpage 
-\section{Lecture 9: 区分量子态与矩阵模长}\label{sec:Lecture 9:} % (fold)
+\newpage
+\section{Lecture 9: Distinguishing Quantum State and Matrix
+Norm}\label{sec:Lecture 9:} % (fold)
 \input{lec9.tex}
 % section Lecture 9: (end)
 
-\newpage 
-\section{Lecture 10-11: Entropy and Fidelity}\label{sec:Lecture 10: Entropy} % (fold)
+\newpage
+\section{Lecture 10-11: Entropy and Fidelity}\label{sec:Lecture 10:
+Entropy} % (fold)
 \input{lec10.tex}
 % section Lecture 10: Entropy (end)
 
 \newpage
-\section{Lecture 12: Resouce Theory and Entanglement Resource}\label{sec:Lecture 11: Resouce Theory and Entanglement Resource} % (fold)
+\section{Lecture 12: Resouce Theory and Entanglement
+Resource}\label{sec:Lecture 11: Resouce Theory and Entanglement
+Resource} % (fold)
 \input{lec11.tex}
 % section Lecture 11: Resouce Theory and Entanglement Resource (end)
 
-\newpage 
-\section{Lecture 13: Entanglement Measure}\label{sec:Lecture 12: Entanglement Measure} % (fold)
+\newpage
+\section{Lecture 13: Entanglement Measure}\label{sec:Lecture 12:
+Entanglement Measure} % (fold)
 \input{lec12.tex}
 % section Lecture 12: Entanglement Measure (end)
 
-\newpage 
-\section{Sup 1: QI之中常用的数学技巧}\label{sec:Sup 1: QI之中常用的数学技巧} % (fold)
+\newpage
+\section{Sup 1: Mathematical Skills in QI}\label{sec:Sup 1:
+QI之中常用的数学技巧} % (fold)
 \input{sup1.tex}
 % section Sup 1: QI之中常用的数学技巧 (end)
-
 
 \end{document}

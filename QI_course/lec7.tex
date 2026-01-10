@@ -66,7 +66,7 @@ U&=U_nU_{n-1}\cdots U_1.\\
 \end{align}
 我们考虑复合的Channel我们发现Vectorization我们有：
 \begin{align}
-  |\mathrm{vec}(\mathcal{E}(\rho))\rangle=\left[\sum_k\left(K_k^{(2)}\otimes\left(K_k^{(2)}\right)^*\right)\right]\left[\sum_j\left(K_j^{(1)}\otimes\left(K_j^{(1)}\right)^*\right)\right]|\mathrm{vec}(\rho)\rangle.
+  |\mathrm{vec}(\mathcal{E}(\rho))\rangle=\left[\sum_k\left(K_k^{(2)}\otimes\left(K_k^{(2)}\right)^*\right)\right] \left[\sum_j\left(K_j^{(1)}\otimes\left(K_j^{(1)}\right)^*\right)\right]|\mathrm{vec}(\rho)\rangle.
 \end{align}
 
 \subsection{Average Over Unitary}
@@ -75,22 +75,26 @@ U&=U_nU_{n-1}\cdots U_1.\\
 
 我们考虑一个客观测量的期望值，但是我们考虑如果量子态进行了一些随机的Unitary变换之后的期望值。也就是说我们考虑下面这个量子态：
 \begin{align}
-  E_{\boldsymbol{\theta}}\operatorname{Tr}{\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]},
+  \rho' = \mathbb{E}_{\theta} U_{\theta}\,\rho\,U_{\theta}^{\dagger}  
+\end{align}
+其中$ \mathbb{E}_\theta $是对于$ \theta $的某种概率分布的平均。我们计算这个量子态对于一个observable的期望值：
+\begin{align}
+  \langle O \rangle = \mathrm{Tr}{\left[\rho' O\right]} = \mathbb{E}_{\theta}\mathrm{Tr}{\left[U_{\theta}\rho U_{\theta}^{\dagger}O\right]}.
 \end{align}
 我们发现使用Vectorization的语言我们有：
 \begin{align}
-  \mathrm{Tr}{\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]}=\langle\mathrm{vec}(O)|\left(U_{\boldsymbol{\theta}}\otimes U_{\boldsymbol{\theta}}^{*}\right)|\mathrm{vec}(\rho)\rangle\mathrm{~.}
+  \mathrm{Tr}{\left[U_{\theta}\rho U_{\theta}^{\dagger}O\right]}=\langle\mathrm{vec}(O)|\left(U_{\theta}\otimes U_{\theta}^{*}\right)|\mathrm{vec}(\rho)\rangle\mathrm{~.}
 \end{align}
 \defi{
   Average Over Unitary
 
   对于进行随机Unitary演化之后的期望值，满足关系：
   \begin{align}
-    E_{\boldsymbol{\theta}}\operatorname{Tr}\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]=\left\langle\operatorname{vec}(O)\right|\left(E_{\boldsymbol{\theta}}{\left[U_{\boldsymbol{\theta}}\otimes U_{\boldsymbol{\theta}}^{*}\right]}\right)\left|\operatorname{vec}(\rho)\right\rangle. 
+    E_{\theta}\operatorname{Tr}\left[U_{\theta}\rho U_{\theta}^{\dagger}O\right]=\left\langle\operatorname{vec}(O)\right|\left(E_{\theta}{\left[U_{\theta}\otimes U_{\theta}^{*}\right]}\right)\left|\operatorname{vec}(\rho)\right\rangle. 
   \end{align}
   其中我们定义\textbf{Moment Operator}为：
   \begin{align}
-    M\equiv E_{\boldsymbol{\theta}}{\left[U_{\boldsymbol{\theta}}\otimes U_{\theta}^{*}\right]},
+    M\equiv E_{\theta}{\left[U_{\theta}\otimes U_{\theta}^{*}\right]},
   \end{align}
 }
 
@@ -103,9 +107,8 @@ U&=U_nU_{n-1}\cdots U_1.\\
 \end{align}
 我们计算这个算符的$ U_\theta \otimes U_\theta^* $然后写成矩阵形式！并且对于$ \theta $进行均匀分布的average，我们得到：
 \begin{align}
-  \begin{aligned}M&=\frac{1}{2\pi}\int_{0}^{2\pi}\mathrm{diag}{\left(1,e^{-i\theta},e^{i\theta},1\right)}d\theta.\\
-&\frac{1}{2\pi}\int_{0}^{2\pi}e^{\pm i\theta}d\theta=0,\\
-&M=\mathrm{diag}{\left(1,0,0,1\right)}.\end{aligned}
+  M&=\frac{1}{2\pi}\int_{0}^{2\pi}\mathrm{diag}{\left(1,e^{-i\theta},e^{i\theta},1\right)}d\theta.\\
+&\frac{1}{2\pi}\int_{0}^{2\pi}e^{\pm i\theta}d\theta=0,\quad \Rightarrow \quad M=\mathrm{diag}{\left(1,0,0,1\right)}.
 \end{align}
 中间两个0是因为我们平均的时候average掉了所有的震动。所以写作bra和ket的形式有：
 \begin{align}
@@ -113,29 +116,49 @@ U&=U_nU_{n-1}\cdots U_1.\\
 \end{align}
 我们再把这个Moment Operator写作Kraus Operator作用在vectorization之后的density matrix上面：
 \begin{align}
-  |\mathrm{vec}(\mathcal{E}(\rho))\rangle&=M|\mathrm{vec}(\rho)\rangle\\
-&=\left(\ket{0}\bra{0}\otimes\ket{0}\bra{0}+ \ket{1}\bra{1}\otimes\ket{1}\bra{1}\right)|\mathrm{vec}(\rho)\rangle\\
+  |\mathrm{vec}(\mathcal{E}(\rho))\rangle&=M|\mathrm{vec}(\rho)\rangle=\left(\ket{0}\bra{0}\otimes\ket{0}\bra{0}+ \ket{1}\bra{1}\otimes\ket{1}\bra{1}\right)|\mathrm{vec}(\rho)\rangle
 \end{align}
 我们从中读出两个Kraus Operator于是发现这个随机channel就是complete dephasing channel！
+\rmk{
+  我个人表示这种张量积的计算建议使用$ U = U_{ij} \ketbra{i}{j} $的形式计算避免矩阵形式的ambiguity。
+}
 
 \bigskip
 \hlr{高阶的Moment Operator}
 
-我们考虑客观测量的的「更高阶」平均值，类比$ <x^2> $我们有：
+我们考虑客观测量的的「更高阶」平均值，类比$ \langle x^2\rangle $我们仅仅考虑random Unitary的平均，不考虑量子的平均我们有：
 \begin{align}
-  E_{\boldsymbol{\theta}}\left(\mathrm{Tr}{\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]}^{k}\right).
+  E_{\theta}\left(\mathrm{Tr}{\left[U_{\theta}\rho U_{\theta}^{\dagger}O\right]}\right)^k
 \end{align}
 \textbf{注意！我们是先取Tr再取k次方！}我们知道Tr的k次方可以写作下面的形式：
 \begin{align}
-  \mathrm{Tr}[X]^2=\mathrm{Tr}[X\otimes X]
+  (\mathrm{Tr}[X])^2=\mathrm{Tr}[X\otimes X]
 \end{align}
 因此我们有
 \begin{align}
-  E_{\boldsymbol{\theta}}\left(\mathrm{Tr}{\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]}^{k}\right)=E_{\boldsymbol{\theta}}\left(\mathrm{Tr}{\left[(U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O)^{\otimes k}\right]}\right)=E_{\boldsymbol{\theta}}\left(\mathrm{Tr}{\left[(U_{\boldsymbol{\theta}}^{\otimes k}\rho^{\otimes k}(U_{\boldsymbol{\theta}}^{\dagger})^{\otimes k})O^{\otimes k}\right]}\right).
+  E_{\theta}\left(\mathrm{Tr}{\left[U_{\theta}\rho U_{\theta}^{\dagger}O\right]}^{k}\right)=E_{\theta}\left(\mathrm{Tr}{\left[(U_{\theta}\rho U_{\theta}^{\dagger}O)^{\otimes k}\right]}\right)=E_{\theta}\left(\mathrm{Tr}{\left[(U_{\theta}^{\otimes k}\rho^{\otimes k}(U_{\theta}^{\dagger})^{\otimes k})O^{\otimes k}\right]}\right).
 \end{align}
 第三步之中我们意识到，矩阵的乘法和张量积的顺序是可以交换的，因为两个操作互不干扰！所以我们使用Vectorization的语言就可以有：
 \begin{align}
-  E_{\boldsymbol{\theta}}\left(\mathrm{Tr}{\left[U_{\boldsymbol{\theta}}\rho U_{\boldsymbol{\theta}}^{\dagger}O\right]}^{k}\right) = E_{\boldsymbol{\theta}}\left(\langle\mathrm{vec}(O^{\otimes k})|U_{\boldsymbol{\theta}}^{\otimes k}\otimes U_{\boldsymbol{\theta}}^{*\otimes k}|\mathrm{vec}(\rho^{\otimes k})\rangle\right)=\langle\mathrm{vec}(O^{\otimes k})|M_k|\mathrm{vec}(\rho^{\otimes k})\rangle
+  \mathbb{E}_{\theta}\!\left[
+\left(\operatorname{Tr}\!\left[ U_{\theta}\,\rho\,U_{\theta}^{\dagger}\,O \right]\right)^{k}
+\right]
+=
+\mathbb{E}_{\theta}\!\left(
+\left\langle \operatorname{vec}\!\left(O^{\otimes k}\right)
+\middle|
+U_{\theta}^{\otimes k}\otimes U_{\theta}^{*\otimes k}
+\middle|
+\operatorname{vec}\!\left(\rho^{\otimes k}\right)
+\right\rangle
+\right)
+=
+\left\langle \operatorname{vec}\!\left(O^{\otimes k}\right)
+\middle|
+M_k
+\middle|
+\operatorname{vec}\!\left(\rho^{\otimes k}\right)
+\right\rangle .
 \end{align}
   其中我们定义高阶的Moment Operator为：
   \defi{
@@ -143,11 +166,11 @@ U&=U_nU_{n-1}\cdots U_1.\\
 
     我们定义高阶的Moment Operator为：
     \begin{align}
-      M_k=E_{\boldsymbol{\theta}}\left[U_{\boldsymbol{\theta}}^{\otimes k}\otimes U_{\boldsymbol{\theta}}^{*\otimes k}\right].
+      M_k=E_{\theta}\left[U_{\theta}^{\otimes k}\otimes U_{\theta}^{*\otimes k}\right].
     \end{align}
   }
 \rmk{
-  注意！张量积是不能定义顺序的！所以我们高阶moment operator一定不可以写作$ \left(E_{\boldsymbol{\theta}}\left[U_{\boldsymbol{\theta}}\otimes U_{\boldsymbol{\theta}}^{*}\right]\right)^{\otimes k} $这种形式！这是完全错误的。
+  注意！张量积是不能定义顺序的！所以我们高阶moment operator一定不可以写作$ \left(E_{\theta}\left[U_{\theta}\otimes U_{\theta}^{*}\right]\right)^{\otimes k} $这种形式！这是完全错误的。
 }
 
 \bigskip
@@ -198,7 +221,7 @@ U&=U_nU_{n-1}\cdots U_1.\\
 \end{align}
 为此我们可以定义一个Operator进行描述这个general的操作：
 \begin{align}
-  M=\sum_{i,j,k,l}c_{kl}^{ij}\left|k\left.l\right\rangle\left\langle i\left.j\right|\right..\right. \quad \left|\mathrm{vec}(E(\rho))\right\rangle=M\left|\mathrm{vec}(\rho)\right\rangle,
+  M=\sum_{i,j,k,l}c_{kl}^{ij}\left|k\left.l\right\rangle\left\langle i\left.j\right|\right..\right. \quad \left|\mathrm{vec}(\mathcal{E}(\rho))\right\rangle=M\left|\mathrm{vec}(\rho)\right\rangle,
 \end{align}
 
 
@@ -212,7 +235,7 @@ U&=U_nU_{n-1}\cdots U_1.\\
 \end{align}
 然后进行vectorization我们有：
 \begin{align}
-  M=\sum_{i,j}\left|j\left.i\right\rangle\left\langle i\right.j\right|=\begin{pmatrix}1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1\end{pmatrix}=\mathrm{SWAP}
+  M=\sum_{i,j}\ketbra{ji}{ij}=\begin{pmatrix}1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1\end{pmatrix}=\mathrm{SWAP}
 \end{align}
 
 \subsection{Pauli Transfer Matrix}
@@ -229,7 +252,7 @@ U&=U_nU_{n-1}\cdots U_1.\\
 \end{align}
 下面我们就可以把quantum operation写作一个矩阵作用在这些ket上面，这个矩阵我们定义为\textbf{Pauli Transfer Matrix}，我们有：
 \begin{align}
-  M=\sum_{ij}C_j^i|j\rangle\langle i|\mathrm{~,}
+  M \ket{i} = \sum_j C^i_j \ket{i} \quad \Rightarrow \quad  M=\sum_{ij}C_j^i|j\rangle\langle i|\mathrm{~,}
 \end{align}
 
 \bigskip
@@ -260,7 +283,7 @@ U&=U_nU_{n-1}\cdots U_1.\\
 \begin{align}
   M=H\otimes H^*=\frac{1}{2}\begin{pmatrix}1&1&1&1\\1&-1&1&-1\\1&1&-1&-1\\1&-1&-1&1\end{pmatrix}.
 \end{align}
-我们发现只要对其做一个相似变换，换一组基就可以得到PTM表示。并且换的基正好就是Pauli矩阵Vectorization之后的基，也就是Bell Basis。
+我们发现只要对其做一个相似变换，换一组基就可以得到PTM表示。并且换的基正好就是Pauli矩阵Vectorization之后的基，也就是Bell Basis。当然这个关系只有在1 qubit的情况下才成立，毕竟多qubit是不能定义Pauli Transfer Matrix的。
 
 
 

@@ -1,5 +1,6 @@
-\subsection{Choi Representation继续}
+\subsection{Choi Representation II}
 
+\subsubsection{从Choi State得到Kraus Operators}\label{sec:from-choi-to-kraus}
 
 我们之前研究知道通过Vectorization我们可以将一组Kraus Operators映射为一个Choi State。下面我们希望反过来通过Choi State来得到Channel的Kraus Operators。
 
@@ -16,8 +17,7 @@
 \end{align}
 于是我们给出结果是：
 \begin{align}
-  J(\mathcal{E}) = \frac{1}{3}\left(\sum_iI\otimes|i\rangle\langle i|+\sum_{i,j}\lvert j\rangle\langle i|\otimes|i\rangle\langle j|\right)\\
-=\frac{1}{3}\left(\sum_iI\otimes|i\rangle\langle i|+\sum_{i,j}\lvert j\rangle\langle i|\otimes|i\rangle\langle j|\right)
+  J(\mathcal{E}) = \frac{1}{3}\left(\sum_iI\otimes|i\rangle\langle i|+\sum_{i, j}\lvert j\rangle\langle i|\otimes|i\rangle\langle j|\right)
 \end{align}
 我们会发现这个Choi State的第二个部分是一个SWAP Operator。我们下面定义：
 \begin{itemize}
@@ -25,10 +25,15 @@
     \begin{align}
       SWAP=\sum_{i,j}|i\rangle\langle j|\otimes|j\rangle\langle i| = \sum_{ij} \ketbra{ij}{ji}
     \end{align}
-    \item 对于2 qubit system，SWAP Operator的本征态，并且本征值为$ (1,1,1,-1) $。我们可以decompose成为下面的形式：
+  \item \textbf{对于2 qubit system}，SWAP Operator的本征态，并且本征值为$ (1,1,1,-1) $。我们可以decompose成为下面的形式：
       \begin{align}
         SWAP = | \phi^+ \rangle \langle \phi^+ | + | \phi^- \rangle \langle \phi^- | + | \psi^+ \rangle \langle \psi^+ | - | \psi^- \rangle \langle \psi^- |
       \end{align}
+      \textbf{对于更多bit的系统}，我们有：
+      \begin{align}
+        SWAP = \sum_i \ketbra{ii}{ii} + \sum_{i \neq j} \displaystyle\frac{1}{2} (\ket{ij} + \ket{ji})(\langle ij| + \langle ji|) - \sum_{i \neq j} \displaystyle\frac{1}{2} (\ket{ij} - \ket{ji})(\langle ij| - \langle ji|)
+      \end{align}
+      其本征值为所有$ \ket{ii} $和$ \displaystyle\frac{1}{\sqrt{2}}(\ket{ij}+\ket{ji}) $对应本征值1，$ \displaystyle\frac{1}{\sqrt{2}}(\ket{ij}-\ket{ji}) $对应本征值-1。
     \item SWAP Operator相当于对于一个2qubit系统进行「转置」也就是：
 \begin{align}
   SWAP|ij\rangle=|ji\rangle
@@ -36,17 +41,14 @@
 \end{itemize}
 根据这个信息我们发现Choi State可以写作：
 \begin{align}
-  J(\mathcal{E})=&\frac{1}{3}\left(I\otimes I + SWAP\right)\\ 
-   = &\frac{2}{3}(|\phi^+\rangle\langle\phi^+|+ |\phi^-\rangle\langle\phi^-| + |\psi^+\rangle\langle\psi^+|)
+  J(\mathcal{E})=\frac{1}{3}\left(I\otimes I + SWAP\right) = \frac{2}{3}(|\phi^+\rangle\langle\phi^+|+ |\phi^-\rangle\langle\phi^-| + |\psi^+\rangle\langle\psi^+|)
 \end{align}
 \rmk{
   这里已经可以看出Choi State是一个半正定矩阵，但是$ \tr $并不是1，所以并不是一个量子态。
 }
 于是很显然我们发现这个Choi State可以写作三个vectorization的矩阵的形式：
 \begin{align}
-  \begin{aligned}A_0&=\frac{|0\rangle\langle0|+|1\rangle\langle1|}{\sqrt{3}}=\frac{1}{\sqrt{3}}I,\\
-    A_1&=\frac{|0\rangle\langle0|-|1\rangle\langle1|}{\sqrt{3}}=\frac{1}{\sqrt{3}}Z,\\
-  A_2&=\frac{|0\rangle\langle1|+|1\rangle\langle0|}{\sqrt{3}}=\frac{1}{\sqrt{3}}X.\end{aligned}
+    A_0=\frac{1}{\sqrt{3}}I,\quad  A_1=\frac{1}{\sqrt{3}}Z,\quad  A_2=\frac{1}{\sqrt{3}}X.
 \end{align}
 并且我们可以验证这些Kraus Operators满足完备关系：
 \begin{align}
@@ -85,27 +87,31 @@ J(\mathcal{E})=\frac{2}{3}|00\rangle\langle00|+\frac{2}{3}|11\rangle\langle11|+\
   \item \textbf{检查完备关系}： 检查$ \sum_i A_i^\dagger A_i = I $是否成立。「检查确实代表了Quantum Channel」
 \end{enumerate}
 
+\subsubsection{Kraus Operators的Unitary Mixing Freedom}
+
 \bigskip
 \hlr{Unitary Mixing Freedom}
 
 上面已经发现Kraus Operators的表示并不是唯一的。给定一组Kraus Operator我们可以通过一些恒等式给出另外一组Kraus Operator。但有的时候这也不一定能够给出合法的Kraus Operators表示。我们下面给出一个更加一般的结论：
 \thm{Unitary Mixing
 
-对于任意的一个量子态(显然Choi State是一个量子态)的两种不同的谱分解：
+对于任意的一个半正定的矩阵$ \rho $的两种不同的谱分解：
 \begin{align}
-  \rho=&\sum_k\lambda_k|\lambda_k\rangle\langle\lambda_k|.\\ 
-  \rho=&\sum_ip_i|\varphi_i\rangle\langle\varphi_i|.
+  \rho=\sum_k\lambda_k|\lambda_k\rangle\langle\lambda_k|, \quad  \rho=\sum_ip_i|\varphi_i\rangle\langle\varphi_i|.
 \end{align}
 那么这两组本征态之间存在一个unitary变换$ U $使得：
 \begin{align}
   \sqrt{p}_i|\varphi_i\rangle=\sum_kU_{ik}\sqrt{\lambda_k}|\lambda_k\rangle.
 \end{align}
 }
+\rmk{
+  这里强调是半正定而非量子态是因为Choi State并不是一个trace为1的量子态。
+}
 下面我们证明这个结论。首先根据两种谱分解我们给出两种将$ \rho $ purification的方式：
 \begin{align}
   |\psi\rangle=\sum_k\sqrt{\lambda_k}|\lambda_k\rangle\otimes|k\rangle,\quad|\varphi\rangle=\sum_i\sqrt{p_i}|\varphi_i\rangle\otimes|i\rangle.
 \end{align}
-Schmidt Decomposition定理告诉我们这两种purification方式之间存在一个unitary变换$ U $使得：
+Purification uniqueness定理\cref{thm:purification-uniqueness}告诉我们这两种purification方式之间存在一个unitary变换$ U $使得：
 \begin{align}
   |\varphi\rangle=(I\otimes U)|\psi\rangle.
 \end{align}
@@ -114,6 +120,8 @@ Schmidt Decomposition定理告诉我们这两种purification方式之间存在�
   \begin{aligned}\sqrt{p_i}|\varphi_i\rangle&\large=(I\otimes\langle i|)(I\otimes U)|\psi\rangle\\&=\sum_k\sqrt{\lambda_k}(I\otimes\langle i|U)(|\lambda_k\rangle\otimes|k\rangle)\\&=\sum_k\sqrt{\lambda_k}|\lambda_k\rangle\cdot(\langle i|U|k\rangle)\\&=\sum_k\sqrt{\lambda_k}U_{ik}|\lambda_k\rangle.\end{aligned}
 \end{align}
 \qed 
+
+
 然后我们会发现上面的general量子态的定理如果使用在Choi State上面就得到了我们下面的结论：
 \thm{
   Unitary Mixing Freedom for Kraus Operators
@@ -123,7 +131,10 @@ Schmidt Decomposition定理告诉我们这两种purification方式之间存在�
     B_j = \sum_i U_{ji} A_i.
   \end{align}
 }
-其中就是使用了Vectorization线性的性质，可以把外面的unitary拉进去！
+其中就是使用了Vectorization线性的性质，可以把外面的unitary拉进去！数学上：
+\begin{align}
+  |Vec(B_j)\rangle = \sum_i U_{ji} |Vec(A_i)\rangle = \sum_i \ket{Vec(U_{ji} A_i)}.
+\end{align}
 
 
 \subsection{Representation of Quantum Channel}
@@ -132,7 +143,7 @@ Schmidt Decomposition定理告诉我们这两种purification方式之间存在�
 
 我们最后回来讨论一下什么样子的映射才是一个Quantum Channel。这里特别强调一下completely positive的概念。
 \begin{itemize}
-  \item \textbf{Positive Map}： 一个映射$ \mathcal{E} $是positive map如果对于任意的正定矩阵$ \rho\geq0 $都有$ (I \otimes \mathcal{E})(\rho)\geq0 $。
+  \item \textbf{Complete Positive Map}： 一个映射$ \mathcal{E} $是positive map如果对于任意的半正定矩阵$ \rho\geq0 $都有$ (I \otimes \mathcal{E})(\rho)\geq0 $。
 \end{itemize}
 
 
@@ -142,25 +153,100 @@ Schmidt Decomposition定理告诉我们这两种purification方式之间存在�
 一个最基本的例子就是转置映射$ T(\rho)=\rho^T $。我们验证这个映射是positive map但是不是completely positive map。
 我们考虑转置映射 $ \otimes $ Identity 映射作用在一个bell state上面：
 \begin{align}
-  (T\otimes I)(|\phi^+\rangle\langle\phi^+|)
+  (T\otimes I)(|\phi^+\rangle\langle\phi^+|) = \displaystyle\frac{1}{2} SWAP
 \end{align}
 发现会给出SWAP Operator。我们知道SWAP Operator不是正定的所以这个映射不是completely positive map。
 \rmk{
-  但是我们会发现$ T \otimes I $作用在某些态上还是正定的映射！只是说存在一些态会被映射成非正定的态。
+  但是我们会发现$ T \otimes I $作用在某些态上还是正定的映射！只是说存在一些态会被映射成非正定的态。但是这样已经说明了这个map不是completely positive map，也就是说转置是是一个positive map但是不是completely positive map，因而不是一个合法的Quantum Channel。
 }
 
 \bigskip 
 \hlr{Representation Thm}
 
-\YL{[我懒得写了真的（（（]}说白了就是Kraus Representation和这些四个性质等价
+\thm{\label{thm:kraus-representation}
+  Representation Theorem for Quantum Channel
+
+  一个映射$ \mathcal{E} $满足：
+\begin{itemize}
+  \item 线性(Linear)
+  \item 完全正定(Completely Positive) $  (I \otimes \mathcal{E})(\rho) \geq0 $对于任意$ \rho\geq0 $
+  \item 保迹(Trace Preserving) $ \tr(I \otimes \mathcal{E} \rho) = 1 $对于量子态$ \rho $
+\end{itemize}
+  当且仅当其存在一组Kraus Operators $ \{A_i\} $满足完备关系$ \sum_i A_i^\dagger A_i = I $使得：
+  \begin{align}
+    \mathcal{E}(\rho) = \sum_i A_i \rho A_i^\dagger 
+  \end{align}
+}
+\textbf{$ \Leftarrow $证明：} 如果一个映射存在Kraus Operators表示，那么我们已经知道这个映射是completely positive map, Linear并且trace preserving。 
+
+\begin{itemize}
+  \item 线性是显然的
+    \item Trace Preserving:
+      \begin{align}
+        \tr(\mathcal{E}(\rho)) = \tr\left(\sum_i A_i \rho A_i^\dagger\right) = \tr\left(\rho \sum_i A_i^\dagger A_i\right) = \tr(\rho I) = \tr(\rho).
+      \end{align}
+    \item Completely Positive: 我们考虑任意量子态$ \ket{\psi} $可以知道：
+      \begin{align}\label{eq:completely-positive-proof}
+        \bra{\psi}(I \otimes \mathcal{E})(\rho)|\psi\rangle = \sum_i \bra{\psi}(I \otimes A_i) \rho (I \otimes A_i^\dagger)|\psi\rangle  
+      \end{align}
+      由于$ \rho $是半正定矩阵，我们可以进行对角化：$ \rho = \sum_i \lambda_i \ketbra{i}{i} $。那么上面的式子可以写作：
+      \begin{align}
+        \bra{\psi}(I \otimes \mathcal{E})(\rho)|\psi\rangle = \sum_i \lambda_i \sum_j |\bra{\psi}(I \otimes A_j)|i\rangle|^2 \geq0.
+      \end{align}
+      因此我们证明了completely positive。
+\end{itemize}
+
+\textbf{$ \Rightarrow $证明：}可以直接使用Choi Representation来证明。根据定理\cref{thm:choi-to-kraus}我们知道必然可以通过Choi State得到Kraus Operators。
+当然我们也还有一个更直接的证明方法：
+
+对于任意的Quantum Channel $ \mathcal{E}$，根据Choi Representation的方法必然可以给出一个Choi State $ J(\mathcal{E}) $。根据完全正定的定义我们知道$ J(\mathcal{E}) \geq0 $。因此我们可以对Choi State进行谱分解：
+\begin{align}
+  J(\mathcal{E}) = \sum_i \lambda_i \ketbra{\lambda_i}{\lambda_i}.
+\end{align}
+为此我们可以定义一组Operators：
+\begin{align}
+  A_i \ket{\psi} = \sqrt{\lambda_i} \langle \psi^* |\otimes I | \lambda_i \rangle.
+\end{align}
+我们注意$ \ket{\lambda_i} $是两个系统的更大的Hilbert Space上的态，而$ \bra{\psi^*} $是作用在辅助系统上面的一个和$ \ket{\psi} $完全一样的态。我们会发现对于任何的一个纯态$ \ket{\psi} $我们有：
+\begin{align}
+  \sum_k A_k \ketbra{\psi}{\psi} A_k^\dagger = \mathcal{E}(\ketbra{\psi}{\psi}).
+\end{align}
+由于我们假设了映射是线性的，所以我们可以推广到任意的mixed state $ \rho = \sum_i p_i \ketbra{\psi_i}{\psi_i} $上面：
+\begin{align}
+  \sum_k A_k \rho A_k^\dagger &= \sum_k A_k \left(\sum_i p_i \ketbra{\psi_i}{\psi_i}\right) A_k^\dagger = \sum_i p_i \left(\sum_k A_k \ketbra{\psi_i}{\psi_i} A_k^\dagger\right) \\&= \sum_i p_i \mathcal{E}(\ketbra{\psi_i}{\psi_i}) = \mathcal{E}\left(\sum_i p_i \ketbra{\psi_i}{\psi_i}\right) = \mathcal{E}(\rho).
+\end{align}
+进一步的我们考虑Trace Preserving的条件：
+\begin{align}
+  \tr(\mathcal{E}(\rho)) &= \tr\left(\sum_k A_k \rho A_k^\dagger\right) = \tr\left(\rho \sum_k A_k^\dagger A_k\right) = \tr(\rho).
+\end{align}
+由于这个等式对于任意的$ \rho $成立，我们知道必然有$ \sum_k A_k^\dagger A_k = I $。因此我们证明了这个映射存在Kraus Operators表示，也就是$ \{A_k\} $是一组合法的Kraus Operators。
+
+\qed 
 
 
+\bigskip
+\hlr{Positivity and Choi Representation}
 
+我们最后讨论一下Choi Representation和Complete Positivity的关系。我们已经知道对于一般的Channel来说Choi State是一个半正定矩阵。我们希望反向也是对的，也就是说如果Choi State是一个半正定矩阵，那么这个映射就是completely positive map。事实上这是正确的：
+\thm{
+  Choi Representation and Complete Positivity
 
-\subsection{Questions and Thoughts}
+  一个映射$ \mathcal{E} $是一个Linear,completely positive map当且仅当其满足:
+  \begin{align}
+    J(\mathcal{E})=\mathcal{E}\otimes I(|vec(I)\rangle\langle vec(I)|) \geq0.
+  \end{align}
+}
+\rmk{注意，我们这里已经不要求$ \mathcal{E} $是quantum channel了，所以不好称呼这个state Choi State。}
 
+\textbf{$ \Rightarrow $证明：} complete positive map的定义已经告诉我们Choi State是一个半正定矩阵。 
 
-
-
-
+\textbf{$ \Leftarrow $证明：} 仔细研究\cref{thm:kraus-representation}的$ \Rightarrow $证明我们会发现。只要一个映射的$ J(\mathcal{E}) $是半正定矩阵我们永远可以找到一组$ \{A_i\} $保证对于任何量子态$ \ket{\psi} $都有：
+\begin{align}
+  \mathcal{E}(\rho) = \sum_i A_i \rho A_i^\dagger.
+\end{align}
+那么考虑对于一个半正定矩阵$ \rho\geq0 $我们有：
+\begin{align}
+  \mathcal{E} \otimes I(\rho) = \sum_i (A_i \otimes I) \rho (A_i^\dagger \otimes I) \geq0.
+\end{align}
+最后的半正定的证明方法和\cref{eq:completely-positive-proof}的证明是一样的。
 

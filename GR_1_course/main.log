@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  2 JAN 2026 21:08
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  8 JAN 2026 17:38
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -9,8 +9,8 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-05-26>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count271
 \c@section=\count272
@@ -1163,23 +1163,23 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
 * v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=483.69687pt
+* \textwidth=455.24411pt
 * \textheight=702.78308pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
 * \topmargin=-38.1381pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=59.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1262,44 +1262,39 @@ LaTeX Font Info:    Trying to load font information for U+bbold on input line 23
 
 [6]
 
-[7]
-
 LaTeX Font Warning: Font shape `TU/STSong(0)/b/it' undefined
 (Font)              using `TU/STSong(0)/b/n' instead on input line 149.
 
 
-Overfull \hbox (10.77214pt too wide) in paragraph at lines 162--163
-[]\TU/STSong(0)/m/n/10.95 研 究  |“另 一 个 参 考 系 下 某 一 个 观 察 者 的 结 果”|  的 意 义 在 于：|  我 们 定 义 测 量 的 物 理 量 并 不 一 定 是 张 量， 「对
- []
 
+[7])
 
-
-[8])
-
-[9] (./lec2.tex
+[8] (./lec2.tex
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 17.
 
 
+[9]
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 66.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 66.
+
+
+
 [10]
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 66.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 66.
-
-
 
 [11]
 
 [12]
 
-[13]
+[13])
 
-[14]
+[14] (./lec3.tex
 
-[15])
+[15]
 
-[16] (./lec3.tex
+[16]
 
 [17]
 
@@ -1307,47 +1302,44 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 66.
 
 [19]
 
+LaTeX Font Warning: Command \large invalid in math mode on input line 293.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 293.
+
+
+
 [20]
+
+Package amsmath Warning: Bracket group [[\nabla _\lambda ,\nabla _\rho ] at formula start!
+(amsmath)                It could be a misspelled positional argument.
+(amsmath)                If it belongs to the formula add a \relax in
+(amsmath)                front to hide it on input line 376.
+
+
+Package amsmath Warning: Bracket group [[\nabla _\lambda ,\nabla _\rho ] at formula start!
+(amsmath)                It could be a misspelled positional argument.
+(amsmath)                If it belongs to the formula add a \relax in
+(amsmath)                front to hide it on input line 376.
+
+
 
 [21]
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 293.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 293.
-
-
-
 [22]
+Overfull \hbox (23.2867pt too wide) in paragraph at lines 485--486
+[]\TU/lmr/bx/n/10 Norm Preserve along curve:  |\TU/STSong(0)/m/n/10 【如 果 研 究 的 \TU/lmr/m/n/10 curve \TU/STSong(0)/m/n/10 是 一 个 \TU/lmr/m/n/10 geodesic\TU/STSong(0)/m/n/10 】|  那 么 根 据 定 义 模 长：| $\OMS/cmsy/m/n/10 r[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]T[]T[]\OT1/cmr/m/n/10 ) =
+ []
+
+
 
 [23]
 
-Package amsmath Warning: Bracket group [[\nabla _\lambda ,\nabla _\rho ] at formula start!
-(amsmath)                It could be a misspelled positional argument.
-(amsmath)                If it belongs to the formula add a \relax in
-(amsmath)                front to hide it on input line 376.
-
-
-Package amsmath Warning: Bracket group [[\nabla _\lambda ,\nabla _\rho ] at formula start!
-(amsmath)                It could be a misspelled positional argument.
-(amsmath)                If it belongs to the formula add a \relax in
-(amsmath)                front to hide it on input line 376.
-
-
-
 [24]
 
-[25]
+[25])
 
-[26]
-
-[27]
-
-[28]
-
-[29])
-
-[30] (./lec4.tex
+[26] (./lec4.tex
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 13.
 
 
@@ -1364,45 +1356,53 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 43.
 
 
 
-[31]
+[27]
 
-[32]
+[28]
 
-[33]
+[29]
 
-[34]
-
-[35]
+[30]
 Package hyperref Info: bookmark level for unknown axiom defaults to 0 on input line 240.
 
 
-[36]
-Overfull \hbox (39.18068pt too wide) in paragraph at lines 268--269
-[]\TU/STSong(0)/m/n/10.95 对 于 \TU/lmr/m/n/10.95 SR \TU/STSong(0)/m/n/10.95 我 们 考 虑 的 是 \TU/lmr/m/n/10.95 Minkowski manifold $\OT1/cmr/m/n/10.95 (\U/bbold/m/n/10.95 R[]\OML/cmm/m/it/10.95 ; ^^Q\OT1/cmr/m/n/10.95 )$\TU/STSong(0)/m/n/10.95 ，|  并 且 我 们 使 用 \TU/lmr/m/n/10.95 Minkowski \TU/STSong(0)/m/n/10.95 度 规 $\OML/cmm/m/it/10.95 ^^Q[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 Diag\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1)$\TU/STSong(0)/m/n/10.95 。|
+[31]
+Overfull \hbox (22.83583pt too wide) in paragraph at lines 268--269
+[]\TU/STSong(0)/m/n/10 对 于 \TU/lmr/m/n/10 SR \TU/STSong(0)/m/n/10 我 们 考 虑 的 是 \TU/lmr/m/n/10 Minkowski manifold $\OT1/cmr/m/n/10 (\U/bbold/m/n/10 R[]\OML/cmm/m/it/10 ; ^^Q\OT1/cmr/m/n/10 )$\TU/STSong(0)/m/n/10 ，|  并 且 我 们 使 用 \TU/lmr/m/n/10 Minkowski \TU/STSong(0)/m/n/10 度 规 $\OML/cmm/m/it/10 ^^Q[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Diag\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1)$\TU/STSong(0)/m/n/10 。|
  []
 
+
+
+[32]
+
+[33])
+
+[34] (./sup1.tex)
+
+[35] (./lec5.tex
+
+[36]
+
+LaTeX Warning: Command \ij invalid in math mode on input line 67.
+
+Missing character: There is no ĳ ("133) in font cmmi7!
 
 
 [37]
 
 [38]
 
-[39])
+[39]
 
-[40] (./sup1.tex)
+[40]
 
-[41] (./lec5.tex
+[41]
 
 [42]
 
-LaTeX Warning: Command \ij invalid in math mode on input line 67.
+[43])
 
-Missing character: There is no ĳ ("133) in font cmmi8!
-
-
-[43]
-
-[44]
+[44] (./lec6.tex
 
 [45]
 
@@ -1410,72 +1410,90 @@ Missing character: There is no ĳ ("133) in font cmmi8!
 
 [47]
 
+LaTeX Font Warning: Command \large invalid in math mode on input line 236.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 236.
+
+
+
 [48]
 
 [49]
 
-[50])
+[50]
 
-[51] (./lec6.tex
+[51])
 
-[52]
+[52] (./lec7.tex
 
 [53]
 
 [54]
 
-[55]
+[55])
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 236.
+[56] (./lec8.tex
+Overfull \hbox (0.48592pt too wide) in paragraph at lines 40--42
+[]\TU/STSong(0)/m/n/10 我 们 考 虑 测 量 \TU/lmr/m/n/10 set up\TU/STSong(0)/m/n/10 ，|  假 设 一 组 粒 子 在 这 个 参 考 系 下 初 始 是 精 致 的，|  然 后 思 考 引 力 波 通 过 后 其 \TU/lmr/m/n/10 geodesic
+ []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 236.
-
-
-
-[56]
 
 [57]
 
 [58]
 
-[59])
+[59]
 
-[60] (./lec7.tex
+[60]
+File: assets/gravave.png Graphic file (type bmp)
+<assets/gravave.png>
+File: assets/inerform.png Graphic file (type bmp)
+<assets/inerform.png>
+
 
 [61]
+Overfull \hbox (3.71294pt too wide) in paragraph at lines 288--289
+[]\TU/STSong(0)/m/n/10 我 们 知 道 $\OML/cmm/m/it/10 L[]; L[]$ \TU/STSong(0)/m/n/10 的 长 度 是 固 定 的，|  但 是 我 们 考 虑 光 在 这 个 时 空 下 的 传 播 时 间。|  由 于 光 沿 着 \TU/lmr/m/n/10 null geodesic
+ []
+
+
 
 [62]
 
 [63])
 
-[64] (./lec8.tex
+[64] (./sup3.tex)
 
-[65]
+[65] (./lec9.tex
+Missing character: There is no ️ (U+FE0F) in font STSong/OT:script=hani;language=dflt;!
+Missing character: There is no ⃣ (U+20E3) in font [lmroman10-regular]:mapping=tex-text;!
+
 
 [66]
 
 [67]
+File: assets/setupgew.png Graphic file (type bmp)
+<assets/setupgew.png>
+
 
 [68]
-File: assets/gravave.png Graphic file (type bmp)
-<assets/gravave.png>
-
 
 [69]
-File: assets/inerform.png Graphic file (type bmp)
-<assets/inerform.png>
-
 
 [70]
 
 [71])
 
-[72] (./sup3.tex)
+[72] (./lec10.tex
+File: assets/doublestar.png Graphic file (type bmp)
+<assets/doublestar.png>
 
-[73] (./lec9.tex
-Missing character: There is no ️ (U+FE0F) in font STSong/OT:script=hani;language=dflt;!
-Missing character: There is no ⃣ (U+20E3) in font [lmroman10-regular]:mapping=tex-text;!
+
+[73]
+File: assets/coor.png Graphic file (type bmp)
+<assets/coor.png>
 
 
 [74]
@@ -1483,32 +1501,26 @@ Missing character: There is no ⃣ (U+20E3) in font [lmroman10-regular]:mapping=
 [75]
 
 [76]
-File: assets/setupgew.png Graphic file (type bmp)
-<assets/setupgew.png>
-
 
 [77]
+File: assets/hdaisdho.png Graphic file (type bmp)
+<assets/hdaisdho.png>
+File: assets/deahsd.png Graphic file (type bmp)
+<assets/deahsd.png>
+
 
 [78]
+File: assets/deflangle.png Graphic file (type bmp)
+<assets/deflangle.png>
 
-[79]
 
-[80])
+[79])
 
-[81] (./lec10.tex
-File: assets/doublestar.png Graphic file (type bmp)
-<assets/doublestar.png>
+[80] (./lec11.tex
 
+[81]
 
 [82]
-File: assets/coor.png Graphic file (type bmp)
-<assets/coor.png>
-
-Overfull \hbox (13.34041pt too wide) in paragraph at lines 80--81
-\TU/STSong(0)/m/n/10.95 在 新 的 坐 标 系 下 是 $\OML/cmm/m/it/10.95 z[]$ \TU/STSong(0)/m/n/10.95 轴 方 向 即 可。|  也 就 是 说：| $\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1) = \OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 ([] \OML/cmm/m/it/10.95 ^^R [] ^^^; [] ^^R [] ^^^; [] ^^R\OT1/cmr/m/n/10.95 )$ \TU/STSong(0)/m/n/10.95 或 者 说 $\OML/cmm/m/it/10.95 R[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1) =
- []
-
-
 
 [83]
 
@@ -1517,52 +1529,21 @@ Overfull \hbox (13.34041pt too wide) in paragraph at lines 80--81
 [85]
 
 [86]
-File: assets/hdaisdho.png Graphic file (type bmp)
-<assets/hdaisdho.png>
 
+[87])
 
-[87]
-File: assets/deahsd.png Graphic file (type bmp)
-<assets/deahsd.png>
-
-
-[88]
-File: assets/deflangle.png Graphic file (type bmp)
-<assets/deflangle.png>
-
+[88] (./lec12.tex
 
 [89]
 
-[90])
-
-[91] (./lec11.tex
-
-[92]
-
-[93]
-
-[94]
-
-[95]
-
-[96]
-
-[97]
-
-[98])
-
-[99] (./lec12.tex
-
-[100]
-
-[101]
-
-[102]
+[90]
 File: assets/energypoasd.png Graphic file (type bmp)
 <assets/energypoasd.png>
 
 
-[103]
+[91]
+
+[92]
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 229.
 
@@ -1571,44 +1552,33 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 229.
 
 )
 
-[104] (./lec13.tex
+[93] (./lec13.tex
 
-[105]
-Overfull \hbox (13.37706pt too wide) in paragraph at lines 54--55
-[]\TU/lmr/m/n/10.95 2. \TU/STSong(0)/m/n/10.95 认 为 世 界 存 在 奇 点，|  真 的 是 纯 纯 真 空，|  这 样 的 天 体 也 就 是 黑 洞。|  但 是 我 们 不 可 以 再 用 \TU/lmr/m/n/10.95 Schwarzschild
- []
-
-
-Overfull \hbox (18.60558pt too wide) in paragraph at lines 74--75
-[]\TU/STSong(0)/m/n/10.95 并 且 作 为 一 个 物 理 上 存 在 的 流 体，|  我 们 需 要 满 足 归 一 化 条 件 $\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1 = \OML/cmm/m/it/10.95 u[]u[]$ \TU/STSong(0)/m/n/10.95 也 就 是 说 $\OML/cmm/m/it/10.95 u[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 e[];  u[] \OT1/cmr/m/n/10.95 =
+[94]
+Overfull \hbox (5.13863pt too wide) in paragraph at lines 74--75
+[]\TU/STSong(0)/m/n/10 并 且 作 为 一 个 物 理 上 存 在 的 流 体，|  我 们 需 要 满 足 归 一 化 条 件 $\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 u[]u[]$ \TU/STSong(0)/m/n/10 也 就 是 说 $\OML/cmm/m/it/10 u[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 e[];  u[] \OT1/cmr/m/n/10 =
  []
 
 
 
-[106]
+[95]
 
-[107]
+[96]
 
-[108]
+[97]
 
-[109]
-Overfull \hbox (0.11781pt too wide) in paragraph at lines 233--234
-[]\TU/STSong(0)/m/n/10.95 为 此 我 们 需 要 选 择 新 的 坐 标 系 来 描 述 这 个 区 域 的 时 空 结 构。|  首 先 我 们 引 入 一 个 \TU/lmr/m/n/10.95 tortoise coordinate\TU/STSong(0)/m/n/10.95 。| 
- []
-
-
-
-[110]
+[98]
 File: assets/inlightcone.png Graphic file (type bmp)
 <assets/inlightcone.png>
+
+
+[99]
 File: assets/outgogeo.png Graphic file (type bmp)
 <assets/outgogeo.png>
+)
 
-
-[111])
-
-[112] (./lec14.tex
-Overfull \hbox (28.59338pt too wide) detected at line 20
+[100] (./lec14.tex
+Overfull \hbox (19.24811pt too wide) detected at line 20
 []
  []
 
@@ -1616,38 +1586,43 @@ File: assets/diagkruskal.png Graphic file (type bmp)
 <assets/diagkruskal.png>
 
 
-[113]
+[101]
 File: assets/kruskalcausal.png Graphic file (type bmp)
 <assets/kruskalcausal.png>
 
 
-[114]
+[102]
 File: assets/freefallcoor.png Graphic file (type bmp)
 <assets/freefallcoor.png>
 
 
-[115]
+[103]
+Overfull \hbox (10.60565pt too wide) in paragraph at lines 152--153
+[]\TU/STSong(0)/m/n/10 径 向 潮 汐 力：|  对 于 下 落 方 向 长 为 $\OML/cmm/m/it/10 h$ \TU/STSong(0)/m/n/10 的 地 方 相 对 于 参 考 点  |「假 设 是 物 体 中 心」|  的 加 速 度 为 $\OML/cmm/m/it/10 a \OT1/cmr/m/n/10 = (2\OML/cmm/m/it/10 GM\OT1/cmr/m/n/10 /\OML/cmm/m/it/10 r[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 h$\TU/STSong(0)/m/n/10 ，|
+ []
 
-[116]
 
-[117]
+
+[104]
 File: assets/minkwskipenrose.png Graphic file (type bmp)
 <assets/minkwskipenrose.png>
 
 
-[118]
+[105]
 File: assets/penrosesch.png Graphic file (type bmp)
 <assets/penrosesch.png>
 
 
-[119]
+[106]
 File: assets/RNp.png Graphic file (type bmp)
 <assets/RNp.png>
 
 
-[120])
+[107]
 
-[121] (./main.aux)
+[108])
+
+[109] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1663,12 +1638,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 094B6952A326300287ECB9454B7DFAE7;25378.
  ) 
 Here is how much of TeX's memory you used:
- 36163 strings out of 468527
- 804315 string characters out of 5447700
- 1220125 words of memory out of 5000000
- 63808 multiletter control sequences out of 15000+600000
- 639795 words of font info for 132 fonts, out of 8000000 for 9000
+ 36181 strings out of 468527
+ 802548 string characters out of 5447700
+ 1220066 words of memory out of 5000000
+ 63817 multiletter control sequences out of 15000+600000
+ 640281 words of font info for 137 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,21n,121p,646b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (121 pages, 3098360 bytes).
+Output written on main.xdv (109 pages, 3014968 bytes).

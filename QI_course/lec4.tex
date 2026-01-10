@@ -1,4 +1,4 @@
-\subsection{Kraus Representation of Quantum Channels}
+\subsection{Quantum Channels}
 
 \hlr{Quantum Channels}
 
@@ -13,7 +13,11 @@
     \end{align}
     也就是对于任意的辅助系统A，$ \mathcal{I}_A \otimes \mathcal{E}_S $作用在系统S上，结果依然是一个正定矩阵。这是一个特别重要的性质！！
 \end{enumerate}
+\rmk{
+半正定相对于不存在非负本征值还有一个等价的描述是：对于任意的态$ |\psi\rangle $，我们有$ \langle \psi | \rho | \psi \rangle \geq 0 $。
+}
 
+\subsection{Kraus Representation}
 
 \bigskip
 \hlr{Kraus Representation Theorem}
@@ -71,6 +75,7 @@
       \end{align}
       可以证明其满足Kraus Operator的定义，并生成了$ \mathcal{E}(1) = \rho $
 \end{itemize}
+\rmk{对于量子态的制备，其实更一般的我们可以使用complete depolarizing channel进行定义，毕竟他完全抹除了输入态的信息，然后生成一个固定的态。}
 
 
 
@@ -175,10 +180,5 @@
   \rho \rightarrow \rho_i = \frac{\sum_\alpha K_{i\alpha} \rho K_{i\alpha}^\dagger}{\tr(\sum_\alpha K_{i\alpha} \rho K_{i\alpha}^\dagger)}
 \end{align}
 
-
-
-
-\subsection{Questions and thoughts}
-没有什么问题耶！好耶！！
 
 

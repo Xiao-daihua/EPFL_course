@@ -1,7 +1,5 @@
 \subsection{Shot Noise 讨论}
-测量一个量子系统对于某个客观测量$ M $的期望值的时候我们从不可以只测一次，需要进行多次测量然后取平均得到。我们称这个结果是estimator，也就是一个期望值的估量，同时也是一个随机变量。
-
-我们下面希望研究这个随机变量在什么程度上可以近似真实的期望值，同时也希望定量的描述其误差。
+测量一个量子系统对于某个可观测量$ M $的期望值的时候我们从不可以只测一次，需要进行多次测量然后取平均得到。我们称多次测量平均的结果是Estimator，也就是一个期望值的估量，同时也是一个随机变量。我们下面希望研究这个随机变量在什么程度上可以近似真实的期望值，同时也希望定量的描述其误差。
 
 \subsubsection{Estimator的基本概念}
 
@@ -11,11 +9,12 @@
 \defi{
   Estimator 
 
-  对于一个系通$ \rho $，我们希望测量某个观测量$ M $的期望值$ \langle M \rangle = \mathrm{Tr}(\rho M) $。我们在$ M = \sum_n^d \lambda_n \ketbra{n}{n} $。我们制备$ N $份这样的系统并进行独立测量。对于第$ s $次测量给出的结果为$ \lambda_{ms} $，那么我们定义Estimator为：
+  对于一个系统$ \rho $，我们希望测量某个观测量$ M $的期望值$ \langle M \rangle = \mathrm{Tr}(\rho M) $。我们在$ M = \sum_n^d \lambda_n \ketbra{n}{n} $这组基构成的POVM下进行测量。我们制备$ N $份同样的系统$ \rho $每一份进行一次测量，对于第$ s $次测量给出的结果为$ \lambda_{ms} $。我们定义Estimator为：
   \begin{align}
     M_N = \frac{1}{N}\sum_{s=1}^N \lambda_{m(s)}\mathrm{~.}
   \end{align}
 }
+对于这个随机变量我们可以定义一个期望值和方差来描述其性质。期望值为对于所有可能的$ \{\lambda_{m{s}}\} $构型，以一定概率进行加权的平均值。方差则是每一种构型的平方的期望值减去期望值的平方。
 
 \bigskip
 \hlr{Estimator概率论计算}
@@ -27,10 +26,7 @@
   对于上面的定义，我们有：
   \begin{align}
     \mathbb{E}(M_N) = \langle M \rangle = \mathrm{Tr}(\rho M)\mathrm{~,}
-  \end{align}
-  并且
-  \begin{align}
-    \mathrm{Var}(M_N) = \frac{\mathrm{Var}_\rho(M)}{N} 
+    \quad \mathrm{Var}(M_N) = \frac{\mathrm{Var}_\rho(M)}{N} 
   \end{align}
   其中：
   \begin{align}
@@ -47,7 +43,7 @@
   \end{align}
 }
 \rmk{
-  直观上，后两个条件是有点矛盾的。但是中间的条件说的是独立随机变量可以直接求和；后面一个条件说的是如果是两个不独立的随机变量相加，但是正好两个一模一样，那么方差就会变成$ 4\mathrm{Var}(X) $。所以并不矛盾。
+  注意区分第二个和第三个等式：第二个等式说的是独立随机变量可以直接求和；第三个等式说的是如果是两个随机变量正好两个一模一样，那么方差就会变成$ 4\mathrm{Var}(X) $。所以并不矛盾。
 }
 因此对于Estimator的情况我们就有：
 \begin{align}
@@ -62,7 +58,7 @@
 \end{align}
 带入最初的公式也就得到了estimator的方差和期望值！！
 \rmk{
-  对于测量一个系统，我们设计一个Estimator，我们需要保证其是unbiased的（也就是期望值等于真实值）。同时我们希望其方差尽可能小，这样才能保证测量结果的可靠性。因此我们需要验证期望值以及尽量减小方差。
+  对于测量一个系统，我们设计一个Estimator，我们需要保证其是unbiased的（也就是期望值等于$ \tr (\rho M) $）。同时我们希望其方差尽可能小，这样才能保证测量结果的可靠性。因此我们需要验证期望值以及尽量减小方差。
 }
 
 \subsubsection{测量方法的影响}
@@ -207,3 +203,4 @@
 }
 不可以。因为Unitary演化保持态的纯度不变。也就是说如果$ \rho^2=\rho $，那么$ U\rho U^\dagger U\rho U^\dagger=U\rho U^\dagger $也是成立的。
 \qed
+

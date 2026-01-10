@@ -4,74 +4,75 @@
 \contentsline {subsubsection}{\numberline {1.1.2}Pure State and Mixed State}{5}{subsubsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.2}Multiple Qubit System}{6}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Questions and thoughts}{7}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Lecture 3: Purification and POVM measurement }{8}{section.2}%
+\contentsline {section}{\numberline {2}Lecture 3: Purification and POVM Measurement }{8}{section.2}%
 \contentsline {subsection}{\numberline {2.1}基础量子计算}{8}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Purification相关}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Purification}{9}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Proper and Improper Mixture}{11}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}POVM Measurement}{11}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Questions and thoughts}{13}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Lecture 4: Kraus Representation of Quantum Channel}{14}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Kraus Representation of Quantum Channels}{14}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}POVM as a Quantum Channel}{16}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Questions and thoughts}{17}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Lecture 5: Stinespring representation and Choi representation}{18}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Steinspring Representation}{18}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Choi Representation}{19}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Questions and Thoughts}{22}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Lecture 6: Choi representation and Complete Positivity}{23}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Choi Representation继续}{23}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Representation of Quantum Channel}{25}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Questions and Thoughts}{26}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Lecture 7: Vectorization的数学技巧}{27}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Vectorization和Quantum Channel结合}{27}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Average Over Unitary}{28}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}General map Vectorization}{30}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Pauli Transfer Matrix}{30}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Questions and Thoughts}{32}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Lecture 8: Shot Noise}{33}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Shot Noise 讨论}{33}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Estimator的基本概念}{33}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}测量方法的影响}{34}{subsubsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.3}概率上界与收敛}{35}{subsubsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.2}Question and thoughts}{36}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Lecture 9: 区分量子态与矩阵模长}{37}{section.8}%
-\contentsline {subsection}{\numberline {8.1}区分量子态}{37}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}矩阵模长}{39}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Lecture 10-11: Entropy and Fidelity}{43}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Classical Entropy}{43}{subsection.9.1}%
-\contentsline {subsubsection}{\numberline {9.1.1}Single Random Variable Entropy}{43}{subsubsection.9.1.1}%
-\contentsline {subsubsection}{\numberline {9.1.2}2 Random Variables Entropy}{44}{subsubsection.9.1.2}%
-\contentsline {subsection}{\numberline {9.2}Quantum Entropy}{47}{subsection.9.2}%
-\contentsline {subsubsection}{\numberline {9.2.1}Single Quantum System Entropy}{47}{subsubsection.9.2.1}%
-\contentsline {subsubsection}{\numberline {9.2.2}2 Quantum Systems Entropy}{48}{subsubsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.3}Fidelity}{49}{subsection.9.3}%
-\contentsline {section}{\numberline {10}Lecture 12: Resouce Theory and Entanglement Resource}{51}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Set Up for Resource Theory}{51}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Resource Theory of Entanglement}{51}{subsection.10.2}%
-\contentsline {subsubsection}{\numberline {10.2.1}Free Operations and Free States}{51}{subsubsection.10.2.1}%
-\contentsline {subsubsection}{\numberline {10.2.2}Bell State LOCC interconversion}{52}{subsubsection.10.2.2}%
-\contentsline {subsubsection}{\numberline {10.2.3}Pure State Conversion and Majorization Theorem}{53}{subsubsection.10.2.3}%
-\contentsline {subsubsection}{\numberline {10.2.4}Pure State Asymptotic Conversion}{54}{subsubsection.10.2.4}%
-\contentsline {section}{\numberline {11}Lecture 13: Entanglement Measure}{56}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Pure State Entanglement Measure}{56}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Mixed State Entanglement Measure}{56}{subsection.11.2}%
-\contentsline {subsubsection}{\numberline {11.2.1}Entanglement Witness}{56}{subsubsection.11.2.1}%
-\contentsline {paragraph}{纠缠态给出witness}{58}{section*.2}%
-\contentsline {paragraph}{witness给出纠缠态}{58}{section*.3}%
-\contentsline {subsubsection}{\numberline {11.2.2}Positive but Not Completely Positive Map}{58}{subsubsection.11.2.2}%
-\contentsline {section}{\numberline {12}Sup 1: QI之中常用的数学技巧}{60}{section.12}%
-\contentsline {subsection}{\numberline {12.1}基础数学技巧}{60}{subsection.12.1}%
-\contentsline {subsubsection}{\numberline {12.1.1}张量积}{60}{subsubsection.12.1.1}%
-\contentsline {subsubsection}{\numberline {12.1.2}Unitary}{60}{subsubsection.12.1.2}%
-\contentsline {subsubsection}{\numberline {12.1.3}Trace}{61}{subsubsection.12.1.3}%
-\contentsline {subsubsection}{\numberline {12.1.4}求和}{61}{subsubsection.12.1.4}%
-\contentsline {subsection}{\numberline {12.2}Pauli矩阵的特殊性质}{62}{subsection.12.2}%
-\contentsline {subsubsection}{\numberline {12.2.1}基本定义}{62}{subsubsection.12.2.1}%
-\contentsline {subsubsection}{\numberline {12.2.2}基本乘法性质}{62}{subsubsection.12.2.2}%
-\contentsline {subsubsection}{\numberline {12.2.3}对易反对易关系}{62}{subsubsection.12.2.3}%
-\contentsline {subsubsection}{\numberline {12.2.4}互相作用，pauli矩阵作用在pauli基上}{62}{subsubsection.12.2.4}%
-\contentsline {subsubsection}{\numberline {12.2.5}指数形式的Pauli矩阵}{62}{subsubsection.12.2.5}%
-\contentsline {subsubsection}{\numberline {12.2.6}Pauli矩阵的本征值与本征基}{62}{subsubsection.12.2.6}%
-\contentsline {paragraph}{Pauli算符期望值的取值范围}{62}{section*.4}%
-\contentsline {subsection}{\numberline {12.3}Bell State}{63}{subsection.12.3}%
-\contentsline {subsection}{\numberline {12.4}常用不等式}{63}{subsection.12.4}%
+\contentsline {subsection}{\numberline {2.5}Questions and thoughts}{14}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Lecture 4: Quantum Channels and Kraus Representation}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Quantum Channels}{15}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Kraus Representation}{15}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}POVM as a Quantum Channel}{17}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Lecture 5: Stinespring Representation and Choi Representation}{19}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Steinspring Representation}{19}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Choi Representation I}{20}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Questions and Thoughts}{23}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Lecture 6: Choi Representation and Complete Positivity}{24}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Choi Representation II}{24}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}从Choi State得到Kraus Operators}{24}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Kraus Operators的Unitary Mixing Freedom}{25}{subsubsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.2}Representation of Quantum Channel}{26}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Lecture 7: Vectorization}{30}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Vectorization和Quantum Channel结合}{30}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Average Over Unitary}{31}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}General map Vectorization}{33}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Pauli Transfer Matrix}{34}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Questions and Thoughts}{35}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Lecture 8: Shot Noise}{36}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Shot Noise 讨论}{36}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Estimator的基本概念}{36}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}测量方法的影响}{37}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}概率上界与收敛}{38}{subsubsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.2}Question and thoughts}{39}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Lecture 9: Distinguishing Quantum State and Matrix Norm}{40}{section.8}%
+\contentsline {subsection}{\numberline {8.1}区分量子态}{40}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}矩阵模长}{42}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Lecture 10-11: Entropy and Fidelity}{46}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Classical Entropy}{46}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Single Random Variable Entropy}{46}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}2 Random Variables Entropy}{47}{subsubsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.2}Quantum Entropy}{50}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Single Quantum System Entropy}{50}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}2 Quantum Systems Entropy}{51}{subsubsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.3}Fidelity}{52}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Lecture 12: Resouce Theory and Entanglement Resource}{54}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Set Up for Resource Theory}{54}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Resource Theory of Entanglement}{54}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}Free Operations and Free States}{54}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}Bell State LOCC interconversion}{55}{subsubsection.10.2.2}%
+\contentsline {subsubsection}{\numberline {10.2.3}Pure State Conversion and Majorization Theorem}{56}{subsubsection.10.2.3}%
+\contentsline {subsubsection}{\numberline {10.2.4}Pure State Asymptotic Conversion}{57}{subsubsection.10.2.4}%
+\contentsline {section}{\numberline {11}Lecture 13: Entanglement Measure}{59}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Pure State Entanglement Measure}{59}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Mixed State Entanglement Measure}{59}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}Entanglement Witness}{59}{subsubsection.11.2.1}%
+\contentsline {paragraph}{纠缠态给出witness}{61}{section*.2}%
+\contentsline {paragraph}{witness给出纠缠态}{61}{section*.3}%
+\contentsline {subsubsection}{\numberline {11.2.2}Positive but Not Completely Positive Map}{61}{subsubsection.11.2.2}%
+\contentsline {section}{\numberline {12}Sup 1: Mathematical Skills in QI}{63}{section.12}%
+\contentsline {subsection}{\numberline {12.1}基础数学技巧}{63}{subsection.12.1}%
+\contentsline {subsubsection}{\numberline {12.1.1}张量积}{63}{subsubsection.12.1.1}%
+\contentsline {subsubsection}{\numberline {12.1.2}Unitary}{63}{subsubsection.12.1.2}%
+\contentsline {subsubsection}{\numberline {12.1.3}Trace}{64}{subsubsection.12.1.3}%
+\contentsline {subsubsection}{\numberline {12.1.4}求和}{64}{subsubsection.12.1.4}%
+\contentsline {subsection}{\numberline {12.2}Pauli矩阵的特殊性质}{65}{subsection.12.2}%
+\contentsline {subsubsection}{\numberline {12.2.1}基本定义}{65}{subsubsection.12.2.1}%
+\contentsline {subsubsection}{\numberline {12.2.2}基本乘法性质}{65}{subsubsection.12.2.2}%
+\contentsline {subsubsection}{\numberline {12.2.3}对易反对易关系}{65}{subsubsection.12.2.3}%
+\contentsline {subsubsection}{\numberline {12.2.4}互相作用，pauli矩阵作用在pauli基上}{65}{subsubsection.12.2.4}%
+\contentsline {subsubsection}{\numberline {12.2.5}指数形式的Pauli矩阵}{65}{subsubsection.12.2.5}%
+\contentsline {subsubsection}{\numberline {12.2.6}Pauli矩阵的本征值与本征基}{65}{subsubsection.12.2.6}%
+\contentsline {paragraph}{Pauli算符期望值的取值范围}{65}{section*.4}%
+\contentsline {subsection}{\numberline {12.3}Bell State}{66}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}常用不等式}{66}{subsection.12.4}%

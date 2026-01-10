@@ -86,9 +86,9 @@ Hadamard Gate的作用是把$ |0\rangle $变成$ |+\rangle $，把$ |1\rangle $�
 
 
 
-\subsection{Purification相关}
+\subsection{Purification}
 
-\hlr{Purification基本操作}
+\hlr{Purification基本定义}
 
 对于一个mix state我们可以通过引入辅助系统来把这个mix state变成pure state。这个过程我们称为purification。\thm{任何一个Generic Mix State $ \rho_a $都存在一个state $ \ket{\psi_{AB}} $使得：
 \begin{align}
@@ -116,7 +116,7 @@ purification并不是唯一，但是存在一个general的构造方法：
 不会比这个小，否则就会丢失信息。
 
 \bigskip
-\hlr{Pure State decompose and Purification}
+\hlr{Pure State Decomposition for Purification}
 
 其实我们purification并不一定需要谱分解，对于一般的量子态我们可以decompose成为一堆pure state的组合【注意，不一定是谱分解只是刚好写作一些pure state的下面这样的组合】：
 \begin{align}
@@ -127,18 +127,6 @@ purification并不是唯一，但是存在一个general的构造方法：
   |\psi_{AB}\rangle = \sum_i \sqrt{p_i} |\psi_i\rangle |i_B\rangle
 \end{align}
 只不过是可能会需要引入更大的B系统。
-
-\bigskip
-\hlr{Purification After Evolve}
-
-我们考虑对于仅仅对于用于purify $ A $系统的辅助系统 $ B $系统进行一个unitary演化，我们会发现演化后的purifictaion仍然是一个purification！\thm{
-  Evolution on the Purification System
-\begin{align}
-  \rho_A = \mathrm{Tr}_B((I_A \otimes U_B) |\psi_{AB}\rangle\langle\psi_{AB}| (I_A \otimes U_B^\dagger))
-\end{align}
-也就是说对于一个量子态$ \rho $的purification $ \ket{\psi_{AB}} $，我们可以通过在B系统上进行任意unitary演化来得到另外一个purification。
-}
-证明则需要用partial trace的定义，然后使用分量展开。
 
 \bigskip
 \hlr{Schmidt Decomposition}
@@ -154,6 +142,34 @@ purification并不是唯一，但是存在一个general的构造方法：
   其中$ p_i \geq 0 $并且$ \sum_i p_i = 1 $。
 }
 注意我们要求的是分解系数的平方和为1，不是系数和！
+
+\bigskip
+\hlr{Purification After Evolve}
+
+我们考虑对于仅仅对于用于purify $ A $系统的辅助系统 $ B $系统进行一个unitary演化，我们会发现演化后的purifictaion仍然是一个purification！\thm{
+  Evolution on the Purification System
+\begin{align}
+  \rho_A = \mathrm{Tr}_B((I_A \otimes U_B) |\psi_{AB}\rangle\langle\psi_{AB}| (I_A \otimes U_B^\dagger))
+\end{align}
+也就是说对于一个量子态$ \rho $的purification $ \ket{\psi_{AB}} $，我们可以通过在B系统上进行任意unitary演化来得到另外一个purification。
+}
+证明则需要用partial trace的定义，然后使用分量展开。
+
+更强大的是这个定理存在一个更强的逆定理：
+\thm{\label{thm:purification-uniqueness}
+  Purification Uniqueness Theorem 
+
+  对于一个量子态$ \rho_A $的两个在\textbf{相同维度的辅助系统}上的purification $ |\psi_{AB}\rangle, |\phi_{AB'}\rangle $，那么存在一个unitary演化$ U_{BB'} $使得：
+  \begin{align}
+    |\phi_{AB'}\rangle = (I_A \otimes U_{BB'}) |\psi_{AB}\rangle
+  \end{align}
+}
+证明需要用到Schmidt Decomposition。我们对于两个purification都进行Schmidt Decomposition，由于他们是同一个mixed state的purification，因此他们必然可以写作:
+\begin{align}
+  |\psi\rangle=\sum_i\sqrt{\lambda_i}\left|i\right\rangle_A\otimes|i\rangle_B\quad |\psi\rangle=\sum_i\sqrt{\lambda_i}\left|i\right\rangle_A\otimes|i^{\prime}\rangle_B
+\end{align}
+的形式。由于$ \ket{i} $和$ \ket{i'} $都是B系统的正交归一化基底，因此必然存在一个unitary变换$ U_{BB'} $使得$ |i'\rangle = U_{BB'} |i\rangle $。带入上面的式子就可以证明定理。
+
 
 \subsection{Proper and Improper Mixture}
 
