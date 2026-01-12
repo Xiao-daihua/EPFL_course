@@ -4,9 +4,11 @@
 
 对于一个纯态$ |\psi\rangle_{AB} $我们希望寻找一个量能够很好的描述「纠缠的程度」。因此我们demand这个量满足下面的性质：
 \begin{itemize}
-  \item \textbf{LOCC Monotone}：对于LOCC来说纠缠是不会增加的，也就是说$  E(|\psi\rangle_{AB}) \geq E(\Lambda_{\mathrm{LOCC}}(|\psi\rangle_{AB})) $。
-  \item \textbf{Extensivity}:也就是如果一个纠缠态copy了很多倍那么纠缠必然是线性增加变强的：$ E\left(|\varphi\rangle^{\otimes k}\right)=kE(|\varphi\rangle).$
-  \item \textbf{Normalization}：对于Bell State我们希望其的纠缠度量是1：$ E(|\psi^+\rangle)=1. $
+  \item \textbf{LOCC Monotone}：对于LOCC来说纠缠是不会增加的，也就是说$
+    E(|\psi\rangle_{AB}) \geq E(\Lambda_{\mathrm{LOCC}}(|\psi\rangle_{AB})) $。
+  \item \textbf{Extensivity}:也就是如果一个纠缠态copy了很多倍那么纠缠必然是线性增加变强的：$
+    E\left(|\varphi\rangle^{\otimes k}\right)=kE(|\varphi\rangle).$
+  \item \textbf{Normalization}：对于Bell State我们希望其的纠缠度量是1：$ E(|\phi^+\rangle)=1. $
 \end{itemize}
 
 \bigskip
@@ -14,32 +16,37 @@
 
 我们发现之前定义的 Von Neumann Entropy 符合上面的所有性质，因此我们定义纯态纠缠度量为：
 \defi{
-  Entanglement Entropy 
+  Entanglement Entropy
 
   对于一个bipartite纯态$ |\psi\rangle_{AB} $，我们定义其纠缠熵为：
   \begin{align}
     E(|\psi\rangle_{AB}) = S(\rho_A) = S(\rho_B),
   \end{align}
 }
-下面我们验证这个定义是合理的！并且这个定义是唯一满足上面条件的。根据第一个条件我们知道，如果两个态可以通过LOCC互相转换，那么他们的纠缠度量是一样的。因此根据上一小节Asymptotic Conversion的结论我们知道：
+下面我们验证这个定义是合理的！并且这个定义是唯一满足上面条件的。根据第一个条件我们知道，如果两个态可以通过LOCC互相转换，那么他们的纠缠度量是一样的。因此根据上一小节Asymptotic
+Conversion的结论我们知道：
 \begin{align}
-  E{\left(\left|\varphi\right\rangle^{\otimes N}\right)}=E{\left(\left|\varphi^{+}\right\rangle^{\otimes NS\left(\varphi_{A}\right)}\right)}.
+  E{\left(\left|\varphi\right\rangle^{\otimes
+  N}\right)}=E{\left(\left|\phi^{+}\right\rangle^{\otimes
+  NS\left(\varphi_{A}\right)}\right)}.
 \end{align}
 然后根据第二个和第三个条件我们有：
 \begin{align}
-  N\cdot E(|\varphi\rangle)=N\cdot S(\varphi_A)\cdot E(|\varphi^+\rangle) \quad \Rightarrow \quad E(|\varphi\rangle)=S(\varphi_A).
+  N\cdot E(|\varphi\rangle)=N\cdot S(\varphi_A)\cdot
+  E(|\varphi^+\rangle) \quad \Rightarrow \quad E(|\phi\rangle)=S(\varphi_A).
 \end{align}
 
 \subsection{Mixed State Entanglement Measure}
 
 \hlr{Von Neumann Entropy不适用}
 
-对于混态来说Von Neumann Entropy并不能很好地描述纠缠的程度。比如对于Maximally Mixed State $ \rho = I/4  = I_A/2 \otimes I_B/2 $，我们发现$ S(\rho_A) = 1 $但是这个态是一个完全没有纠缠的态！！因此我们需要寻找另外的纠缠度量。
-
+对于混态来说Von Neumann Entropy并不能很好地描述纠缠的程度。比如对于Maximally Mixed State $
+\rho = I/4  = I_A/2 \otimes I_B/2 $，我们发现$ S(\rho_A) = 1
+$但是这个态是一个完全没有纠缠的态！！因此我们需要寻找另外的纠缠度量。
 
 \subsubsection{Entanglement Witness}
 
-对于混态来说，我们很难得到一个完美的度量工具。但是我们可以通过一些判断得知一个态是不是纠缠态。也就是使用 Entanglement Witness 。 
+对于混态来说，我们很难得到一个完美的度量工具。但是我们可以通过一些判断得知一个态是不是纠缠态。也就是使用 Entanglement Witness 。
 
 \bigskip
 \hlr{Hahn-Banach corollary}
@@ -48,90 +55,109 @@
 \thm{
   Hahn-Banach corollary
 
-  如果$ C $是一个线性空间convex set，那么对于任意不在$ C $中的点$ x \notin C $，我们都存在一个hyperplane把$ x $和$ C $分开。
+  如果$ C $是一个线性空间convex set，那么对于任意不在$ C $中的点$ x \notin C
+  $，我们都存在一个hyperplane把$ x $和$ C $分开。
 }
-注意，对于一个线性空间来说，hyperplane可以通过平面上的一个点以及一个法向量唯一确定，比如我们定义$ \mathbf{a} $为平面上的点，$ \mathbf{n} $为法向量，那么平面上所有的点$ \mathbf{x} $都满足：
+注意，对于一个线性空间来说，hyperplane可以通过平面上的一个点以及一个法向量唯一确定，比如我们定义$ \mathbf{a}
+$为平面上的点，$ \mathbf{n} $为法向量，那么平面上所有的点$ \mathbf{x} $都满足：
 \begin{align}
   P = \{\mathbf{x} | (\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} = 0 \}.
 \end{align}
 平面会把空间分成两个部分，我们可以通过上面的点乘操作来判断一个点在平面的哪一侧：
 \begin{align}
-  \begin{cases} 
-    (\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} > 0, & \text{点在平面的一侧} \\ 
-    (\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} < 0, & \text{点在平面的另一侧} 
+  \begin{cases}
+    (\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} > 0, & \text{点在平面的一侧} \\
+    (\mathbf{x} - \mathbf{a}) \cdot \mathbf{n} < 0, & \text{点在平面的另一侧}
   \end{cases}
 \end{align}
 
 \bigskip
 \hlr{Entanglement Witness}
 
-下面我们考虑对于量子态的情况，我们发现量子态的集合其实构成了一个可以定义内积结构的线性空间，并且从之前的讨论我们知道内积结构可以定义为：$  \langle A | B \rangle = \mathrm{Tr}(A^\dagger B) $。因此我们可以使用Hahn-Banach corollary来定义纠缠见证子。
+下面我们考虑对于量子态的情况，我们发现量子态的集合其实构成了一个可以定义内积结构的线性空间，并且从之前的讨论我们知道内积结构可以定义为：$
+\langle A | B \rangle = \mathrm{Tr}(A^\dagger B)
+$。因此我们可以使用Hahn-Banach corollary来定义纠缠见证子。
 
 \thm{
   Entanglement Witness Criterion
 
   我们首先构建一切Separable State的集合为：
   \begin{align}
-    D_{sep}=\left\{\rho_{AB}\mid\rho_{AB}=\sum_{k}p_{k}\sigma_{A,k}\otimes\tau_{B,k}\mathrm{~and~}p_{k}\text{ is a probability distribution}\right\}
+    D_{sep}=\left\{\rho_{AB}\mid\rho_{AB}=\sum_{k}p_{k}\sigma_{A,k}\otimes\tau_{B,k}\mathrm{~and~}p_{k}\text{
+    is a probability distribution}\right\}
   \end{align}
   对于一个态$ \sigma $其是否纠缠当且仅当存在一个Hermite矩阵$ W $使得：
   \begin{align}
-    \mathrm{Tr}(W \sigma) < 0, \quad \mathrm{Tr}(W \rho) > 0, \quad \forall \rho \in D_{sep}.
+    \mathrm{Tr}(W \sigma) < 0, \quad \mathrm{Tr}(W \rho) > 0, \quad
+    \forall \rho \in D_{sep}.
   \end{align}
- }
- generally我们定义一个entanglement witness $ W $满足：
+}
+generally我们定义一个entanglement witness $ W $满足：
 \defi{
-    Entanglement Witness
-  
-    一个Hermite矩阵$ W $如果满足：
-    \begin{align}
-      \mathrm{Tr}(W \rho_{sep}) \geq 0, \quad \forall \rho_{sep} \in D_{sep},
-    \end{align}
+  Entanglement Witness
+
+  一个Hermite矩阵$ W $如果满足：
+  \begin{align}
+    \mathrm{Tr}(W \rho_{sep}) \geq 0, \quad \forall \rho_{sep} \in D_{sep},
+  \end{align}
 }
 \rmk{
-  注意，如果我们找到了一个Entanglement Witness $ W $使得$ \mathrm{Tr}(W \sigma) < 0 $，那么我们就可以断定$ \sigma $是一个纠缠态！！但如果$ \mathrm{Tr}(W \sigma) \geq 0 $，那么我们不能断定$ \sigma $是一个非纠缠态，而是我们啥也不到。
+  注意，如果我们找到了一个Entanglement Witness $ W $使得$ \mathrm{Tr}(W \sigma) < 0
+  $，那么我们就可以断定$ \sigma $是一个纠缠态！！但如果$ \mathrm{Tr}(W \sigma) \geq 0
+  $，那么我们不能断定$ \sigma $是一个非纠缠态，而是我们啥也不到。
 }
 
 \bigskip
 \hlr{Entanglement Witness Criterion的证明}
 
-对于所有的量子态构成了一个Hermite矩阵的线性空间，并且存在一个内积结构$ \langle A | B \rangle = \mathrm{Tr}(A^\dagger B) $。因此我们可以使用Hahn-Banach corollary来证明上面的定理。
+对于所有的量子态构成了一个Hermite矩阵的线性空间，并且存在一个内积结构$ \langle A | B \rangle =
+\mathrm{Tr}(A^\dagger B) $。因此我们可以使用Hahn-Banach corollary来证明上面的定理。
 
-我们首先证明对于所有的Sparable State构成了一个convex set。对于任意两个Separable State $ \rho_1, \rho_2 \in D_{sep} $，我们有：
+我们首先证明对于所有的Sparable State构成了一个convex set。对于任意两个Separable State $
+\rho_1, \rho_2 \in D_{sep} $，我们有：
 \begin{align}
   p \rho_1 + (1-p) \rho_2  \in D_{sep}, \quad \forall p \in [0,1].
 \end{align}
 满足convex set的定义。
 
 \paragraph{纠缠态给出witness}
-然后根据Hahn-Banach corollary我们知道对于任意不在$ D_{sep} $中的态$ \sigma \notin D_{sep} $，我们都存在一个hyperplane把$ \sigma $和$ D_{sep} $分开。我们假设这个Hyperplane可以通过一个Hyperlane上面的点$ A $以及法向量$ V $来确定的，也就是说存在这两个state $ A,V $满足：
+然后根据Hahn-Banach corollary我们知道对于任意不在$ D_{sep} $中的态$ \sigma \notin
+D_{sep} $，我们都存在一个hyperplane把$ \sigma $和$ D_{sep}
+$分开。我们假设这个Hyperplane可以通过一个Hyperlane上面的点$ A $以及法向量$ V
+$来确定的，也就是说存在这两个state $ A,V $满足：
 \begin{align}
-  \langle\sigma-A,V\rangle<0,\quad\langle\rho_{AB}-A,V\rangle>0,\quad\forall\rho_{AB}\in D_{sep}.
+  \langle\sigma-A,V\rangle<0,\quad\langle\rho_{AB}-A,V\rangle>0,\quad\forall\rho_{AB}\in
+  D_{sep}.
 \end{align}
 于是我们知道对于任何量子态$ \rho $存在：
 \begin{align}
-  \langle \sigma-A ,V \rangle = \mathrm{Tr}((\sigma - A) V) = \mathrm{Tr}(\sigma V) - \mathrm{Tr}(A V).
+  \langle \sigma-A ,V \rangle = \mathrm{Tr}((\sigma - A) V) =
+  \mathrm{Tr}(\sigma V) - \mathrm{Tr}(A V).
 \end{align}
 于是我们不妨定义$ W = V - \mathrm{Tr}(A^\dagger V) I $，那么我们有：
 \begin{align}
-  \mathrm{Tr}(\sigma W)<0,\quad\mathrm{Tr}(\rho_{AB}W)>0,\mathrm{~}\forall\rho_{AB}\in D_{sep}.
+  \mathrm{Tr}(\sigma
+  W)<0,\quad\mathrm{Tr}(\rho_{AB}W)>0,\mathrm{~}\forall\rho_{AB}\in D_{sep}.
 \end{align}
 也就说明了纠缠态一定存在一个witness。
 
 \paragraph{witness给出纠缠态}
-反向的，如果存在一个witness $ W $使得$ \mathrm{Tr}(W \sigma) < 0 $，那么我们假设$ \sigma \in D_{sep} $，那么根据witness的定义我们有$ \mathrm{Tr}(W \sigma) \geq 0 $，这就产生了矛盾，因此$ \sigma \notin D_{sep} $，也就是$ \sigma $是一个纠缠态。
-
+反向的，如果存在一个witness $ W $使得$ \mathrm{Tr}(W \sigma) < 0 $，那么我们假设$ \sigma
+\in D_{sep} $，那么根据witness的定义我们有$ \mathrm{Tr}(W \sigma) \geq 0
+$，这就产生了矛盾，因此$ \sigma \notin D_{sep} $，也就是$ \sigma $是一个纠缠态。
 
 \subsubsection{Positive but Not Completely Positive Map}
 
 \bigskip
 \hlr{Choi Iso of Entanglement Witness}
 
-上面的讨论之中我们已经知道可以通过一个称为Witness的量子态来判断一个态是不是纠缠的。但是，我们之前对于Choi State的讨论之中，我们知道对于一个量子态，我们可以类似Choi State的方式定义一个Witness 对应的Super Operator。
+上面的讨论之中我们已经知道可以通过一个称为Witness的量子态来判断一个态是不是纠缠的。但是，我们之前对于Choi
+State的讨论之中，我们知道对于一个量子态，我们可以类似Choi State的方式定义一个Witness 对应的Super Operator。
 我们可以证明：
 
 \thm{
-  如果一个算符$ W $是一个Entanglement Witness，那么对应的Super Operator $ \Phi $满足$ W = \mathcal{J}(\Phi) $是一个Positive Map。
+  如果一个算符$ W $是一个Entanglement Witness，那么对应的Super Operator $ \Phi $满足$
+  W = \mathcal{J}(\Phi) $是一个Positive Map。
   其中$ \mathcal{J} $是一个super operator到Choi State的映射。
 }
 于是我们可以通过这个定理构造一个等价于Entanglement Witness的判断量子态是不是纠缠态的方法。
@@ -143,29 +169,34 @@
 \thm{
   Positive but Not Completely Positive Map Criterion
 
-  一个态$ \rho_{AB} $是纠缠态当且仅当存在一个Positive but Not Completely Positive Map $ \Phi $使得：
+  一个态$ \rho_{AB} $是纠缠态当且仅当存在一个Positive but Not Completely Positive
+  Map $ \Phi $使得：
   \begin{align}
     (\Phi \otimes I)(\rho_{AB}) \ngeq 0.
   \end{align}
   也就是说作用之后的态存在负的本征值。
 }
-这个Operator如果是Completely Positive Map的话，根据定义必然是没有负本征值的，因此这个superoperator必然不是一个quantum channel。
-
+这个Operator如果是Completely Positive
+Map的话，根据定义必然是没有负本征值的，因此这个superoperator必然不是一个quantum channel。
 
 \bigskip
 \hlr{Partial Transpose as a P but not CP Map}
 
-我们之前的讨论知道，转置操作就是一个Positive but Not Completely Positive Map。因此如果存在一些态对于转置操作之后存在负的本征值那么这个态必然是纠缠态。但如果都是正的本征值我们不能断定这个态是非纠缠态，因为也许存在其他的P but not CP Map可以把这个态变成有负本征值的态。 我们首先定义一个操作：
+我们之前的讨论知道，转置操作就是一个Positive but Not Completely Positive
+Map。因此如果存在一些态对于转置操作之后存在负的本征值那么这个态必然是纠缠态。但如果都是正的本征值我们不能断定这个态是非纠缠态，因为也许存在其他的P
+but not CP Map可以把这个态变成有负本征值的态。 我们首先定义一个操作：
 \defi{
   Partial Transpose
 
-  对于一个bipartite态$ \rho_{AB} $，我们定义其在B系统上的部分转置为：$ \rho_{AB}^{T_B} = (I \otimes T)(\rho_{AB}) $，其中$ T $是转置操作。
+  对于一个bipartite态$ \rho_{AB} $，我们定义其在B系统上的部分转置为：$ \rho_{AB}^{T_B} = (I
+  \otimes T)(\rho_{AB}) $，其中$ T $是转置操作。
 }
 使用这个superoperator作为判断依据的方法被称之为：
 \thm{
-  Peres-Horodeeki criterion 
+  Peres-Horodeeki criterion
 
-  对于一个量子态$ \rho_{AB} $如果其部分转置$ \rho_{AB}^{T_B} $存在负的本征值，那么$ \rho_{AB} $是一个纠缠态。同时如果这个量子态\textbf{是2 qubit的态}那么：
+  对于一个量子态$ \rho_{AB} $如果其部分转置$ \rho_{AB}^{T_B} $存在负的本征值，那么$ \rho_{AB}
+  $是一个纠缠态。同时如果这个量子态\textbf{是2 qubit的态}那么：
   \begin{itemize}
     \item 如果$ \rho_{AB}^{T_B} $存在负的本征值等价于$ \rho_{AB} $是纠缠态；
   \end{itemize}
@@ -176,8 +207,6 @@
 \end{align}
 相当于两个valid state的张量积，不可能出现负的本征值。因此只要出现负本征值说明这个态不是separable state，也就是纠缠态。
 
-
-
 \bigskip
 \hlr{Negativity}
 
@@ -187,11 +216,14 @@
 
   对于一个量子态$ \rho_{AB} $，我们定义其Negativity为：
   \begin{align}
-   N(\rho_{AB}) =\frac{1}{2}\sum_{k:\lambda_k<0}\lvert\lambda_k\rvert=-\frac{1}{2}\sum_{k:\lambda_k<0}\lambda_k.
+    N(\rho_{AB})
+    =\frac{1}{2}\sum_{k:\lambda_k<0}\lvert\lambda_k\rvert=-\frac{1}{2}\sum_{k:\lambda_k<0}\lambda_k.
   \end{align}
+  其中$ \lambda_k $为$ \rho_{AB}^{T_B} $的负本征值！
 }
 我们可以发现：
 \begin{itemize}
-  \item 如果$ N(\rho_{AB}) > 0 $，那么$ \rho_{AB} $是一个纠缠态；对于separable state来说$ N(\rho_{AB}) = 0 $；
-    \item Negativity是一个LOCC Monotone；
+  \item 如果$ N(\rho_{AB}) > 0 $，那么$ \rho_{AB} $是一个纠缠态；对于separable
+    state来说$ N(\rho_{AB}) = 0 $；
+  \item Negativity是一个LOCC Monotone；
 \end{itemize}

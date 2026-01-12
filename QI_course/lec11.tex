@@ -7,7 +7,9 @@ Theory正是给出了这样的一个框架。而被描述的这些「特质」�
 
 对于一个能够描述资源的Resource Theory，我们需要给出以下几个要素：
 \begin{itemize}
-  \item \textbf{Free Operations}：一系列操作，保证这些操作并不会产生新的资源。
+  \item \textbf{Free
+    Operations}：一系列操作，保证这些操作并不会产生新的资源。并且注意\textbf{Trace
+    Operation}必然是Free Operation的一部分，因为丢弃一个子系统不可能产生资源。
   \item \textbf{Free States and Resource States}：free states是只能通过free
     operations产生的状态，表征没有资源的状态；resource states是不能通过free operations产生的状态，表征有资源的状态。
 \end{itemize}
@@ -23,7 +25,6 @@ operation $ \mathcal{F} $和一个resource state $ \sigma $使得对于任意的
   \otimes \sigma)\right],
 \end{align}
 那么我们称$ \mathcal{E} $可以被$ \sigma $和free operation $ \mathcal{F} $模拟。
-
 这也告诉我们，我们可以通过resource state来实现一个non-free的operation。
 
 \bigskip
@@ -50,6 +51,9 @@ operation $ \mathcal{F} $和一个resource state $ \sigma $使得对于任意的
 }
 对于第一个要求显然有Identity Operator是一个free operation使得$ \rho \to \rho
 $成立。第二个要求在合理定义等价类的情况下也成立。第三个要求就是上面的传递性。
+
+我们可以证明所有free state都是可以互相转换的。因为Trace是free operation，我们永远可以通过free
+operation trace掉一个state然后再通过free operation准备另一个free state来实现两个free state之间的转换。
 
 \bigskip
 \hlr{Monotone}
