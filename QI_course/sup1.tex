@@ -27,7 +27,6 @@
   (A\otimes B)(C\otimes D)=(AC)\otimes(BD)
 \end{align}
 
-
 \bigskip
 \hlr{张量积和Vectorization}
 
@@ -46,26 +45,26 @@
 
 对于任意算符 $A$，作酉共轭变换
 \begin{equation}
-    A' = U A U^\dagger,
+  A' = U A U^\dagger,
 \end{equation}
 则 $A'$ 与 $A$ 具有完全相同的本征值（包括重数）。即
-   $ \mathrm{Spec}(A') = \mathrm{Spec}(A).$
+$ \mathrm{Spec}(A') = \mathrm{Spec}(A).$
 换言之，unitary 变换仅仅对应于基底变换，不改变物理可观测量的谱。
 \begin{proof}[证明要点]
-设 $A|\psi\rangle = \lambda|\psi\rangle$，则
-\begin{equation}
+  设 $A|\psi\rangle = \lambda|\psi\rangle$，则
+  \begin{equation}
     A'(U|\psi\rangle)
     = UAU^\dagger U|\psi\rangle
     = UA|\psi\rangle
     = \lambda (U|\psi\rangle),
-\end{equation}
-说明 $U|\psi\rangle$ 是 $A'$ 对应本征值 $\lambda$ 的本征态，从而本征值保持不变。
+  \end{equation}
+  说明 $U|\psi\rangle$ 是 $A'$ 对应本征值 $\lambda$ 的本征态，从而本征值保持不变。
 \end{proof}
 因此，unitary 变换可视为``旋转基底''，保留体系的谱结构：
 \begin{equation}
-    \mathrm{Tr}(A') = \mathrm{Tr}(A),\qquad
-    \det(A') = \det(A),\qquad
-    \|A'\|_1 = \|A\|_1.
+  \mathrm{Tr}(A') = \mathrm{Tr}(A),\qquad
+  \det(A') = \det(A),\qquad
+  \|A'\|_1 = \|A\|_1.
 \end{equation}
 
 \bigskip
@@ -76,16 +75,24 @@
   \sigma_i(UA V^\dagger)=\sigma_i(A)
 \end{align}
 
-
-
 \subsubsection{Trace}
+
+\hlr{Trace的换顺}
+
+在tr之中我们可以进行随意的\textbf{循环换顺}，也就是说：
+\begin{align}
+  \mathrm{Tr}(ABC)=\mathrm{Tr}(BCA)=\mathrm{Tr}(CAB)
+\end{align}
+但是不是随意交换顺序啊！！！
+
+\bigskip
 \hlr{张量积系统的Trace}
 
 对于一个量子态$ \rho_{AB} = \rho_A \otimes \rho_B $，我们有：
 \begin{align}
-  \mathrm{Tr}_A(\rho_{AB}) = \mathrm{Tr}_A(\rho_A \otimes \rho_B) = (\mathrm{Tr}_A \rho_A) \rho_B = \rho_B
+  \mathrm{Tr}_A(\rho_{AB}) = \mathrm{Tr}_A(\rho_A \otimes \rho_B) =
+  (\mathrm{Tr}_A \rho_A) \rho_B = \rho_B
 \end{align}
-
 
 \bigskip
 \hlr{Trace的一个基本trick}
@@ -96,29 +103,33 @@
 \end{align}
 我们求Tr等价于形式化的把ket放在bra的右边：
 \begin{align}
-  \mathrm{Tr}(\rho)=\sum_{a,b}f(a,b)\operatorname{Tr}(|a\rangle\langle b|)=\sum_{a,b}f(a,b)\left\langle b|a\right\rangle
+  \mathrm{Tr}(\rho)=\sum_{a,b}f(a,b)\operatorname{Tr}(|a\rangle\langle
+  b|)=\sum_{a,b}f(a,b)\left\langle b|a\right\rangle
 \end{align}
 
 \bigskip
 \hlr{Trace和Unitary演化}
 
-如果我们有A,B两个系统，然后在其上有一个$ \rho_{AB} $。如果在B系统上面进行Unitary演化以及A系统上面进行任意演化，我们发现这两个过程是可以互换的。所以特殊的对于Partial Trace：
+如果我们有A,B两个系统，然后在其上有一个$ \rho_{AB}
+$。如果在B系统上面进行Unitary演化以及A系统上面进行任意演化，我们发现这两个过程是可以互换的。所以特殊的对于Partial Trace：
 \begin{align}
-  Tr_A ((I_A \otimes U_B) \rho_{AB} (I_A \otimes U_B^\dagger)) = U_B Tr_A(\rho_{AB}) U_B^\dagger
+  Tr_A ((I_A \otimes U_B) \rho_{AB} (I_A \otimes U_B^\dagger)) = U_B
+  Tr_A(\rho_{AB}) U_B^\dagger
 \end{align}
 
 \bigskip
 \hlr{SWAP operator 和 Trace}
-
-
 
 \bigskip
 \hlr{Trace of times}
 
 两个密度矩阵的乘积的Trace满足不等式：
 \begin{align}
- & |\mathrm{Tr}(\rho\sigma)|\leq\sqrt{\mathrm{Tr}(\rho^2)\operatorname{Tr}(\sigma^2)} \\ 
- &\mathrm{Tr}(\rho^2)\leq1,\quad\mathrm{Tr}(\sigma^2)\leq1 \Rightarrow \mathrm{Tr}(\rho\sigma)\leq1
+  &
+  |\mathrm{Tr}(\rho\sigma)|\leq\sqrt{\mathrm{Tr}(\rho^2)\operatorname{Tr}(\sigma^2)}
+  \\
+  &\mathrm{Tr}(\rho^2)\leq1,\quad\mathrm{Tr}(\sigma^2)\leq1
+  \Rightarrow \mathrm{Tr}(\rho\sigma)\leq1
 \end{align}
 
 \bigskip
@@ -133,11 +144,11 @@
 \begin{align}
   \mathrm{Tr}[\mathcal{E}(\rho)O]=\mathrm{Tr}[\rho\mathcal{E}^\dagger(O)]
 \end{align}
-对于superoperator的dagger，我们称之为adjoint。首先对于superoperator可以写作：$ \mathcal{E}(X)=\sum_kA_kXB_k^\dagger $，那么他的adjoint定义为：
+对于superoperator的dagger，我们称之为adjoint。首先对于superoperator可以写作：$
+\mathcal{E}(X)=\sum_kA_kXB_k^\dagger $，那么他的adjoint定义为：
 \begin{align}
   \mathcal{E}^\dagger(X)=\sum_kA_k^\dagger XB_k
 \end{align}
-
 
 \subsubsection{求和}
 
@@ -148,9 +159,9 @@
 \end{align}
 但是如果对于插入了系数：
 \begin{align}
-  \sum_{ij} \delta_{ij} A_{ij} = \sum_i A_{ii} = \mathrm{Tr}(A) \quad \sum_{ij} \delta_{ij} \delta{ij} a_i = \sum_i a_i
+  \sum_{ij} \delta_{ij} A_{ij} = \sum_i A_{ii} = \mathrm{Tr}(A) \quad
+  \sum_{ij} \delta_{ij} \delta{ij} a_i = \sum_i a_i
 \end{align}
-
 
 \subsection{Pauli矩阵的特殊性质}
 
@@ -158,74 +169,75 @@
 
 \subsubsection{基本定义}
 
-
-
 \subsubsection{基本乘法性质}
-
-
-
 
 \subsubsection{对易反对易关系}
 
-
-
 \subsubsection{互相作用，pauli矩阵作用在pauli基上}
 
-
 \subsubsection{指数形式的Pauli矩阵}
-
 
 \subsubsection{Pauli矩阵的本征值与本征基}
 
 单比特的Pauli矩阵定义为
 \[
-I=\begin{pmatrix}1&0\\0&1\end{pmatrix},\quad
-X=\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad
-Y=\begin{pmatrix}0&-i\\ i&0\end{pmatrix},\quad
-Z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+  I=
+  \begin{pmatrix}1&0\\0&1
+  \end{pmatrix},\quad
+  X=
+  \begin{pmatrix}0&1\\1&0
+  \end{pmatrix},\quad
+  Y=
+  \begin{pmatrix}0&-i\\ i&0
+  \end{pmatrix},\quad
+  Z=
+  \begin{pmatrix}1&0\\0&-1
+  \end{pmatrix}.
 \]
 
 其中 $I$ 是单位算符，而 $X,Y,Z$ 均为厄米且酉的算符，满足 $P^2=I$。因此，对于任意 Pauli 矩阵 $P\in\{X,Y,Z\}$ 有
 \[
-P^2=I \quad \Rightarrow \quad \lambda^2=1,
+  P^2=I \quad \Rightarrow \quad \lambda^2=1,
 \]
 即其本征值为
 \[
-\boxed{\lambda=\pm 1}.
+  \boxed{\lambda=\pm 1}.
 \]
 
 更具体地，本征值与本征态如下：
 \[
-X:\quad X\ket{\pm}=\pm\ket{\pm},\qquad
-\ket{\pm}=\frac{1}{\sqrt{2}}(\ket{0}\pm\ket{1}),
+  X:\quad X\ket{\pm}=\pm\ket{\pm},\qquad
+  \ket{\pm}=\frac{1}{\sqrt{2}}(\ket{0}\pm\ket{1}),
 \]
 \[
-Y:\quad Y\ket{\pm i}=\pm\ket{\pm i},\qquad
-\ket{\pm i}=\frac{1}{\sqrt{2}}(\ket{0}\pm i\ket{1}),
+  Y:\quad Y\ket{\pm i}=\pm\ket{\pm i},\qquad
+  \ket{\pm i}=\frac{1}{\sqrt{2}}(\ket{0}\pm i\ket{1}),
 \]
 \[
-Z:\quad Z\ket{0}=+1\ket{0},\qquad Z\ket{1}=-1\ket{1}.
+  Z:\quad Z\ket{0}=+1\ket{0},\qquad Z\ket{1}=-1\ket{1}.
 \]
 
 \paragraph{Pauli算符期望值的取值范围}
 
 对任意量子态 $\rho$，Pauli算符 $P$ 的期望值定义为
 \[
-\langle P\rangle_\rho = \operatorname{Tr}(\rho P).
+  \langle P\rangle_\rho = \operatorname{Tr}(\rho P).
 \]
 
 由于 Pauli 矩阵的本征值仅为 $\pm 1$，其测量结果可以看作一个取值为 $\pm 1$ 的随机变量，因此期望值必定满足
 \[
--1 \leq \langle P\rangle_\rho \leq 1.
+  -1 \leq \langle P\rangle_\rho \leq 1.
 \]
 
-更严格地，利用谱分解 $P=\sum_i \lambda_i\ket{i}\bra{i}$，并注意 $\rho$ 为正定且 $\operatorname{Tr}\rho=1$，可得
+更严格地，利用谱分解 $P=\sum_i \lambda_i\ket{i}\bra{i}$，并注意 $\rho$ 为正定且
+$\operatorname{Tr}\rho=1$，可得
 \[
-\langle P\rangle_\rho = \sum_i \lambda_i p_i,\qquad p_i\ge 0,\quad \sum_i p_i=1,
+  \langle P\rangle_\rho = \sum_i \lambda_i p_i,\qquad p_i\ge 0,\quad
+  \sum_i p_i=1,
 \]
 即为 $\pm 1$ 的加权平均，从而有
 \[
-\boxed{-1 \leq \langle P\rangle_\rho \leq 1}.
+  \boxed{-1 \leq \langle P\rangle_\rho \leq 1}.
 \]
 
 \subsection{Bell State}
@@ -233,9 +245,9 @@ Z:\quad Z\ket{0}=+1\ket{0},\qquad Z\ket{1}=-1\ket{1}.
 我们常用的一组state就是bell state，我们定义；
 \begin{align}
   \left|\Phi^{+}\right\rangle=\frac{1}{\sqrt{2}}(|00\rangle+|11\rangle),\\
-\left|\Phi^{-}\right\rangle=\frac{1}{\sqrt{2}}(|00\rangle-|11\rangle),\\
-\left|\Psi^{+}\right\rangle=\frac{1}{\sqrt{2}}(|01\rangle+|10\rangle),\\
-\left|\Psi^{-}\right\rangle=\frac{1}{\sqrt{2}}(|01\rangle-|10\rangle)
+  \left|\Phi^{-}\right\rangle=\frac{1}{\sqrt{2}}(|00\rangle-|11\rangle),\\
+  \left|\Psi^{+}\right\rangle=\frac{1}{\sqrt{2}}(|01\rangle+|10\rangle),\\
+  \left|\Psi^{-}\right\rangle=\frac{1}{\sqrt{2}}(|01\rangle-|10\rangle)
 \end{align}
 这组state有很多特殊的性质。
 \begin{itemize}
@@ -243,8 +255,10 @@ Z:\quad Z\ket{0}=+1\ket{0},\qquad Z\ket{1}=-1\ket{1}.
   \item Bell State 是最大纠缠态，代表着两个bit能够有的最大的纠缠
   \item Bell State 其实都是正比于Pauli Matrix 的 Vectorization 形式：
     \begin{align}
-      |\Phi^+\rangle = \frac{1}{\sqrt{2}} |Vec(I)\rangle,\quad& |\Phi^-\rangle = \frac{1}{\sqrt{2}} |Vec(Z)\rangle, \\
-      |\Psi^+\rangle = \frac{1}{\sqrt{2}} |Vec(X)\rangle,\quad& |\Psi^-\rangle = \frac{i}{\sqrt{2}} |Vec(Y)\rangle.
+      |\Phi^+\rangle = \frac{1}{\sqrt{2}} |Vec(I)\rangle,\quad&
+      |\Phi^-\rangle = \frac{1}{\sqrt{2}} |Vec(Z)\rangle, \\
+      |\Psi^+\rangle = \frac{1}{\sqrt{2}} |Vec(X)\rangle,\quad&
+      |\Psi^-\rangle = \frac{i}{\sqrt{2}} |Vec(Y)\rangle.
     \end{align}
 \end{itemize}
 
@@ -263,4 +277,3 @@ Z:\quad Z\ket{0}=+1\ket{0},\qquad Z\ket{1}=-1\ket{1}.
 \begin{align}
   M\sum_{i=1}^Ma_i^2\geq\left(\sum_{i=1}^Ma_i\right)^2
 \end{align}
-

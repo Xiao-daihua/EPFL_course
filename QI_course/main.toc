@@ -50,34 +50,37 @@
 \contentsline {subsection}{\numberline {9.2}Quantum Entropy}{51}{subsection.9.2}%
 \contentsline {subsubsection}{\numberline {9.2.1}Single Quantum System Entropy}{51}{subsubsection.9.2.1}%
 \contentsline {subsubsection}{\numberline {9.2.2}2 Quantum Systems Entropy}{52}{subsubsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.3}Entanglement, Mixedness and Entropy}{53}{subsubsection.9.2.3}%
 \contentsline {subsection}{\numberline {9.3}Fidelity}{53}{subsection.9.3}%
-\contentsline {section}{\numberline {10}Lecture 12: Resouce Theory and Entanglement Resource}{55}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Set Up for Resource Theory}{55}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Resource Theory of Entanglement}{55}{subsection.10.2}%
-\contentsline {subsubsection}{\numberline {10.2.1}Free Operations and Free States}{55}{subsubsection.10.2.1}%
-\contentsline {subsubsection}{\numberline {10.2.2}Bell State LOCC interconversion}{56}{subsubsection.10.2.2}%
-\contentsline {subsubsection}{\numberline {10.2.3}Pure State Conversion and Majorization Theorem}{57}{subsubsection.10.2.3}%
-\contentsline {subsubsection}{\numberline {10.2.4}Pure State Asymptotic Conversion}{58}{subsubsection.10.2.4}%
-\contentsline {section}{\numberline {11}Lecture 13: Entanglement Measure}{60}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Pure State Entanglement Measure}{60}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Mixed State Entanglement Measure}{60}{subsection.11.2}%
-\contentsline {subsubsection}{\numberline {11.2.1}Entanglement Witness}{60}{subsubsection.11.2.1}%
-\contentsline {paragraph}{纠缠态给出witness}{62}{section*.2}%
-\contentsline {paragraph}{witness给出纠缠态}{62}{section*.3}%
-\contentsline {subsubsection}{\numberline {11.2.2}Positive but Not Completely Positive Map}{62}{subsubsection.11.2.2}%
-\contentsline {section}{\numberline {12}Sup 1: Mathematical Skills in QI}{64}{section.12}%
-\contentsline {subsection}{\numberline {12.1}基础数学技巧}{64}{subsection.12.1}%
-\contentsline {subsubsection}{\numberline {12.1.1}张量积}{64}{subsubsection.12.1.1}%
-\contentsline {subsubsection}{\numberline {12.1.2}Unitary}{64}{subsubsection.12.1.2}%
-\contentsline {subsubsection}{\numberline {12.1.3}Trace}{65}{subsubsection.12.1.3}%
-\contentsline {subsubsection}{\numberline {12.1.4}求和}{65}{subsubsection.12.1.4}%
-\contentsline {subsection}{\numberline {12.2}Pauli矩阵的特殊性质}{66}{subsection.12.2}%
-\contentsline {subsubsection}{\numberline {12.2.1}基本定义}{66}{subsubsection.12.2.1}%
-\contentsline {subsubsection}{\numberline {12.2.2}基本乘法性质}{66}{subsubsection.12.2.2}%
-\contentsline {subsubsection}{\numberline {12.2.3}对易反对易关系}{66}{subsubsection.12.2.3}%
-\contentsline {subsubsection}{\numberline {12.2.4}互相作用，pauli矩阵作用在pauli基上}{66}{subsubsection.12.2.4}%
-\contentsline {subsubsection}{\numberline {12.2.5}指数形式的Pauli矩阵}{66}{subsubsection.12.2.5}%
-\contentsline {subsubsection}{\numberline {12.2.6}Pauli矩阵的本征值与本征基}{66}{subsubsection.12.2.6}%
-\contentsline {paragraph}{Pauli算符期望值的取值范围}{66}{section*.4}%
-\contentsline {subsection}{\numberline {12.3}Bell State}{67}{subsection.12.3}%
-\contentsline {subsection}{\numberline {12.4}常用不等式}{67}{subsection.12.4}%
+\contentsline {subsubsection}{\numberline {9.3.1}Classical Fidelity}{53}{subsubsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.2}Quantum Fidelity}{54}{subsubsection.9.3.2}%
+\contentsline {section}{\numberline {10}Lecture 12: Resouce Theory and Entanglement Resource}{56}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Set Up for Resource Theory}{56}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Resource Theory of Entanglement}{57}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}Free Operations and Free States}{57}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}Bell State LOCC interconversion}{57}{subsubsection.10.2.2}%
+\contentsline {subsubsection}{\numberline {10.2.3}Pure State Conversion and Majorization Theorem}{58}{subsubsection.10.2.3}%
+\contentsline {subsubsection}{\numberline {10.2.4}Pure State Asymptotic Conversion}{59}{subsubsection.10.2.4}%
+\contentsline {section}{\numberline {11}Lecture 13: Entanglement Measure}{61}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Pure State Entanglement Measure}{61}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Mixed State Entanglement Measure}{61}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}Entanglement Witness}{61}{subsubsection.11.2.1}%
+\contentsline {paragraph}{纠缠态给出witness}{63}{section*.2}%
+\contentsline {paragraph}{witness给出纠缠态}{63}{section*.3}%
+\contentsline {subsubsection}{\numberline {11.2.2}Positive but Not Completely Positive Map}{63}{subsubsection.11.2.2}%
+\contentsline {section}{\numberline {12}Sup 1: Mathematical Skills in QI}{65}{section.12}%
+\contentsline {subsection}{\numberline {12.1}基础数学技巧}{65}{subsection.12.1}%
+\contentsline {subsubsection}{\numberline {12.1.1}张量积}{65}{subsubsection.12.1.1}%
+\contentsline {subsubsection}{\numberline {12.1.2}Unitary}{65}{subsubsection.12.1.2}%
+\contentsline {subsubsection}{\numberline {12.1.3}Trace}{66}{subsubsection.12.1.3}%
+\contentsline {subsubsection}{\numberline {12.1.4}求和}{67}{subsubsection.12.1.4}%
+\contentsline {subsection}{\numberline {12.2}Pauli矩阵的特殊性质}{67}{subsection.12.2}%
+\contentsline {subsubsection}{\numberline {12.2.1}基本定义}{67}{subsubsection.12.2.1}%
+\contentsline {subsubsection}{\numberline {12.2.2}基本乘法性质}{67}{subsubsection.12.2.2}%
+\contentsline {subsubsection}{\numberline {12.2.3}对易反对易关系}{67}{subsubsection.12.2.3}%
+\contentsline {subsubsection}{\numberline {12.2.4}互相作用，pauli矩阵作用在pauli基上}{67}{subsubsection.12.2.4}%
+\contentsline {subsubsection}{\numberline {12.2.5}指数形式的Pauli矩阵}{67}{subsubsection.12.2.5}%
+\contentsline {subsubsection}{\numberline {12.2.6}Pauli矩阵的本征值与本征基}{67}{subsubsection.12.2.6}%
+\contentsline {paragraph}{Pauli算符期望值的取值范围}{67}{section*.4}%
+\contentsline {subsection}{\numberline {12.3}Bell State}{68}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}常用不等式}{68}{subsection.12.4}%

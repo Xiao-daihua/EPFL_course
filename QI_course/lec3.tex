@@ -189,6 +189,19 @@ Decomposition，由于他们是同一个mixed state的purification，因此他�
 的形式。由于$ \ket{i} $和$ \ket{i'} $都是B系统的正交归一化基底，因此必然存在一个unitary变换$
 U_{BB'} $使得$ |i'\rangle = U_{BB'} |i\rangle $。带入上面的式子就可以证明定理。
 
+\bigskip
+\hlr{Schmidt Decomposition of Purification}
+
+实际上任意的纯化都存在一个Schmidt分解，我们有定理:
+\thm{
+  对于量子态$ \rho = \sum_i \lambda_i \ketbra{i}{i} $其purification $
+  |\psi_{AB}\rangle $我们总能找到A系统和B系统的正交归一化基底$ \{|i_A\rangle\},
+  \{|i_B\rangle\} $使得：
+  \begin{align}
+    |\psi_{AB}\rangle = \sum_i \sqrt{\lambda_i} |i_A\rangle |i_B\rangle
+  \end{align}
+}
+
 \subsection{Proper and Improper Mixture}
 
 对于同一个density matrix表达的state我们很可能有不同的实现或者理解方式，比如对于一个maximally mixed
