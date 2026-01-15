@@ -198,7 +198,12 @@ Proof：其中我们显然使用了一个恒成立的数学关系：
       \|H\|_1=\mathrm{Tr}(H_+)+\mathrm{Tr}(H_-)=2\mathrm{Tr}(H_+).
     \end{align}
 \end{itemize}
-我们知道如果我们希望$ \tr (M H) $最大化，根据POVM的条件($ 0\leq M\leq I $)，我们有：
+我们知道如果我们希望$ \tr (M H) $最大化，根据POVM的条件($ 0\leq M\leq I $)，我们知道，最大化的$ M
+$应该是$ H_+ $对应的本征子空间的投影算子。也就是说：
+\begin{align}
+  M=\sum_{\lambda_i\geq0}|i\rangle\langle i|.
+\end{align}
+因此我们有：
 \begin{align}
   \mathrm{Tr}(MH)\leq\mathrm{Tr}(H_+) = \displaystyle\frac{1}{2} \|H\|_1.
 \end{align}

@@ -19,7 +19,8 @@
   \item Positive Semi-definite 也就是$ \text{Eigen} \rho \geq 0 $
 \end{itemize}
 \rmk{
-  我们注意：其实Semi-deifinite这个性质已经包含了Hermite，对于Hilbert Space上面的矩阵，如果一个矩阵是Semi-definite那么他必然是Hermite的。但是反过来Hermite矩阵仅仅要求实数本征值并不要求是非负实数，所以不一定是Semi-definite。
+  我们注意：其实Semi-deifinite这个性质已经包含了Hermite，对于Hilbert
+  Space上面的矩阵，如果一个矩阵是Semi-definite那么他必然是Hermite的。但是反过来Hermite矩阵仅仅要求实数本征值并不要求是非负实数，所以不一定是Semi-definite。
 
   之后很多时候(POVM,...)我们会直接要求一个Operator是Positive Semi-definite的，要记住其必然是Hermite的！
 }
@@ -27,11 +28,19 @@
 \bigskip
 \hlr{参数空间：Density Matrix的Pauli基展开}
 
-对于所有的$ 2 \times 2 $ Hermite矩阵我们都可以使用Pauli矩阵进行展开，对于density matrix我们发现有三个实数自由度写在pauli基下面就是：
+对于所有的$ 2 \times 2 $ Hermite矩阵我们都可以使用Pauli矩阵进行展开，对于density
+matrix我们发现有三个实数自由度写在pauli基下面就是：
 \begin{align}
-  \rho = \frac{1}{2}(I + r_x \sigma_x + r_y \sigma_y + r_z \sigma_z) = \frac{1}{2}(I + \vec{r} \cdot \vec{\sigma})
+  \rho = \frac{1}{2}(I + r_x \sigma_x + r_y \sigma_y + r_z \sigma_z)
+  = \frac{1}{2}(I + \vec{r} \cdot \vec{\sigma})
 \end{align}
-可以确定我们只需要三个实参数就可以描述。我们经常使用$ \ket{0} $和$ \ket{1} $作为basis，他们对应的vector是$ (0,0,1) $和$ (0,0,-1) $。另外我们也可以使用$ |+\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle) $和$ |-\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle) $作为basis，他们对应的vector是$ (1,0,0) $和$ (-1,0,0) $。同理对于y基我们又有$ \ket{y} $和$ \ket{-y} $对应$ (0,1,0) $和$ (0,-1,0) $。$ \ket{y} = \frac{1}{\sqrt{2}}(\ket{0} + i \ket{1}) $，$ \ket{-y} = \frac{1}{\sqrt{2}}(\ket{0} - i \ket{1}) $。
+可以确定我们只需要三个实参数就可以描述。我们经常使用$ \ket{0} $和$ \ket{1}
+$作为basis，他们对应的vector是$ (0,0,1) $和$ (0,0,-1) $。另外我们也可以使用$ |+\rangle =
+\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle) $和$ |-\rangle =
+\frac{1}{\sqrt{2}}(|0\rangle - |1\rangle) $作为basis，他们对应的vector是$
+(1,0,0) $和$ (-1,0,0) $。同理对于y基我们又有$ \ket{y} $和$ \ket{-y} $对应$ (0,1,0)
+$和$ (0,-1,0) $。$ \ket{y} = \frac{1}{\sqrt{2}}(\ket{0} + i \ket{1})
+$，$ \ket{-y} = \frac{1}{\sqrt{2}}(\ket{0} - i \ket{1}) $。
 
 在这个表示之中我们可以计算density matrix的特征值仅仅和$ |\vec{r}| $有关：
 \begin{align}
@@ -43,26 +52,29 @@
 \end{align}
 本征向量可以写作：
 \begin{align}
-  |\lambda_1\rangle &= \cos\frac{\theta}{2}|0\rangle + e^{i\phi}\sin\frac{\theta}{2}|1\rangle, \\
-  |\lambda_2\rangle &= \sin\frac{\theta}{2}|0\rangle - e^{i\phi}\cos\frac{\theta}{2}|1\rangle.
+  |\lambda_1\rangle &= \cos\frac{\theta}{2}|0\rangle +
+  e^{i\phi}\sin\frac{\theta}{2}|1\rangle, \\
+  |\lambda_2\rangle &= \sin\frac{\theta}{2}|0\rangle -
+  e^{i\phi}\cos\frac{\theta}{2}|1\rangle.
 \end{align}
-
-
 
 \bigskip
 \hlr{Bloch Sphere以及量子态}
 
 对于这三个实数自由度的选取我们存在限制条件的根据【density matrix的所有特征值都大于0】我们发现：
 \begin{align}
-  \lambda_1 = \frac{1 + |\vec{r}|}{2} \geq 0, \quad \lambda_2 = \frac{1 - |\vec{r}|}{2} \geq 0 \quad \Rightarrow \quad |\vec{r}| \leq 1
+  \lambda_1 = \frac{1 + |\vec{r}|}{2} \geq 0, \quad \lambda_2 =
+  \frac{1 - |\vec{r}|}{2} \geq 0 \quad \Rightarrow \quad |\vec{r}| \leq 1
 \end{align}
 所以我们如果在$ \mathbb{R}^3 $之中画出来，所有可能的量子态就在一个半径为1的球之内，这个球我们称为Bloch Sphere。
-对于经典的2 bit system其实参数空间就是一个线段，但是量子的参数空间是一个球！！所以量子系统的参数空间更大！并且其实经典的参数空间也就是bloch球的y轴这个直径。
+对于经典的2 bit
+system其实参数空间就是一个线段，但是量子的参数空间是一个球！！所以量子系统的参数空间更大！并且其实经典的参数空间也就是bloch球的y轴这个直径。
 
 \bigskip
 \hlr{Rotation on Bloch Sphere}
 
-对于Single Qubit态Block Sphere球面上面的态的演化可以理解为态在球面上面的旋转。我们可以使用一个Unitary Operator来描述这个旋转
+对于Single Qubit态Block Sphere球面上面的态的演化可以理解为态在球面上面的旋转。我们可以使用一个Unitary
+Operator来描述这个旋转
 \thm{
   对于绕着$ \hat{n} $旋转$ \theta $的Unitary Operator我们有：
   \begin{align}
@@ -78,21 +90,24 @@
 我们定义pure state和mix state 如下。
 \defi{Pure State and Mixed State
 
-  如果一个态永远不能写作$ \rho = p \sigma_a +(1-p) \sigma_b $的形式，那么我们称这个态为pure state。否则称为mixed state。
+  如果一个态永远不能写作$ \rho = p \sigma_a +(1-p) \sigma_b $的形式，那么我们称这个态为pure
+  state。否则称为mixed state。
 }
 如果使用bloch球的表示，pure state就是球面上的点，mixed state就是球面之内的点。我们可以定义一个态的purity：
 \begin{align}
   P(\rho) = \mathrm{Tr}(\rho^2) = \frac{1}{2}(1 + |\vec{r}|^2)
 \end{align}
-Generally我们判断一个state是不是pure state固然可以使用看看purity是不是1，但是更直接的方法是看他是不是$ \rho^2 = \rho $。此外对于mixed state我们可以定义其rank为最小的decomposition中不同pure state的个数。
-
+Generally我们判断一个state是不是pure state固然可以使用看看purity是不是1，但是更直接的方法是看他是不是$
+\rho^2 = \rho $。此外对于mixed state我们可以定义其rank为最小的decomposition中不同pure state的个数。
 
 \bigskip
 \hlr{Convex Combination of Block Sphere Vectors}
 
-Mixed state可以理解为其他state的convex combination，而使用block sphere的语言其实就是block sphere之中的向量的convex combination。也就是说:
+Mixed state可以理解为其他state的convex combination，而使用block
+sphere的语言其实就是block sphere之中的向量的convex combination。也就是说:
 \begin{align}
-  \rho = p \sigma_a + (1-p) \sigma_b \quad \Rightarrow \quad \vec{r} = p \vec{s}_a + (1-p) \vec{s}_b
+  \rho = p \sigma_a + (1-p) \sigma_b \quad \Rightarrow \quad \vec{r}
+  = p \vec{s}_a + (1-p) \vec{s}_b
 \end{align}
 值得注意的是，这个是density matrix的convex combination，而不是state vector的convex combination！！
 
@@ -107,33 +122,36 @@ Mixed state可以理解为其他state的convex combination，而使用block sphe
 \thm{
   对于一个state是pure state当且仅当一组基满足：
   \begin{align}
-    \rho = |\psi\rangle\langle\psi| 
+    \rho = |\psi\rangle\langle\psi|
   \end{align}
 }
-我们发现这个结果是显然的，因为我们对于这个态可以进行谱分解。如果存在两个非0本征值则可以写做$ \rho = p_1 |\psi_1\rangle\langle\psi_1| + p_2 |\psi_2\rangle\langle\psi_2| $，这与pure state的定义矛盾。
+我们发现这个结果是显然的，因为我们对于这个态可以进行谱分解。如果存在两个非0本征值则可以写做$ \rho = p_1
+|\psi_1\rangle\langle\psi_1| + p_2 |\psi_2\rangle\langle\psi_2|
+$，这与pure state的定义矛盾。
 同时我们也会知道一个mixed state可以看作是一个ensemble of pure states的概率混合。
-
 
 \bigskip
 \hlr{Pure State的Block球}
 
-对于一个pure state我们有$ |\vec{r}| = 1 $，因此对角化之后的本征值是$ \lambda_1 = 1, \lambda_2 = 0 $。因此pure state可以写作：
+对于一个pure state我们有$ |\vec{r}| = 1 $，因此对角化之后的本征值是$ \lambda_1 = 1,
+\lambda_2 = 0 $。因此pure state可以写作：
 \begin{align}
-  \rho = |\psi\rangle\langle\psi| \quad \text{其中} \quad |\psi\rangle = \cos\frac{\theta}{2}|0\rangle + e^{i\phi}\sin\frac{\theta}{2}|1\rangle
+  \rho = |\psi\rangle\langle\psi| \quad \text{其中} \quad |\psi\rangle
+  = \cos\frac{\theta}{2}|0\rangle + e^{i\phi}\sin\frac{\theta}{2}|1\rangle
 \end{align}
 其中$ \theta, \phi $是球坐标系的两个角度。
 
 \bigskip
 \hlr{Ensemble Ambiguity paradox}
 
-这并不是一个悖论而是量子信息上一个很神奇的点，也就是$ \rho = I/2 $这个Maximally Mixed State。这个态可以有无数种ensemble realization。比如：
+这并不是一个悖论而是量子信息上一个很神奇的点，也就是$ \rho = I/2 $这个Maximally Mixed
+State。这个态可以有无数种ensemble realization。比如：
 \begin{align}
-  \rho = \frac{1}{2}|0\rangle\langle0| + \frac{1}{2}|1\rangle\langle1| = \frac{1}{2}|+\rangle\langle+| + \frac{1}{2}|-\rangle\langle-|
+  \rho = \frac{1}{2}|0\rangle\langle0| +
+  \frac{1}{2}|1\rangle\langle1| = \frac{1}{2}|+\rangle\langle+| +
+  \frac{1}{2}|-\rangle\langle-|
 \end{align}
 这说明我们不能通过实验测量区分这个态是怎么进行制备的，不论是经典的制备还是量子的制备。
-
-
-
 
 \subsection{Multiple Qubit System}
 
@@ -149,10 +167,12 @@ Mixed state可以理解为其他state的convex combination，而使用block sphe
 \bigskip
 \hlr{纠缠态}
 
-我们进行构造的时候我们会发现有一些态并不能够写作上面的子系统张量积的形式「至少对于某两个特定子系统来说」我们认为这个子系统存在entanglement并且这个态是entangled state。
+我们进行构造的时候我们会发现有一些态并不能够写作上面的子系统张量积的形式「至少对于某两个特定子系统来说」我们认为这个子系统存在entanglement并且这个态是entangled
+state。
 \defi{Entangled State
 
-  如果一个态如果\textbf{对于任意基，任意decomposition}都不能写作$ \rho_{AB} = \sum_i p_i \rho_A^i \otimes \rho_B^i $其中$ \sum_i p_i = 1 $的形式，那么我们称这个态为entangled state。
+  如果一个态如果\textbf{对于任意基，任意decomposition}都不能写作$ \rho_{AB} = \sum_i p_i
+  \rho_A^i \otimes \rho_B^i $其中$ \sum_i p_i = 1 $的形式，那么我们称这个态为entangled state。
 }
 注意一切bipartite state都可以写作:
 \begin{align}
@@ -163,7 +183,8 @@ Mixed state可以理解为其他state的convex combination，而使用block sphe
 \bigskip
 \hlr{Partial Trace of System}
 
-如果考虑一个多系统体系，但是我们仅仅关心一个子系统的行为我们可以focus on 子系统，我们希望induce出来一个从多系统体系的量子态子系统的量子态保证能够完全描述这个多系统的一部分的特质，为此我们定义：
+如果考虑一个多系统体系，但是我们仅仅关心一个子系统的行为我们可以focus on
+子系统，我们希望induce出来一个从多系统体系的量子态子系统的量子态保证能够完全描述这个多系统的一部分的特质，为此我们定义：
 \defi{
   Partial Trace
 
@@ -173,18 +194,48 @@ Mixed state可以理解为其他state的convex combination，而使用block sphe
   \end{align}
   其中$ \{|i_B\rangle\} $是一组B系统的正交归一基底。得到的结果是子系统$ A $的reduced density matrix。
 }
-我们可以证明，仅仅对子系统测量，则reduced density matrix能够完全的反应测量结果。数学上表述就是，对于$ \tilde{M}_A = M_A \otimes I $
+我们可以证明，仅仅对子系统测量，则reduced density matrix能够完全的反应测量结果。数学上表述就是，对于$
+\tilde{M}_A = M_A \otimes I $
 \begin{align}
   \mathrm{Tr}(\rho_{AB} \tilde{M}_A) = \mathrm{Tr}(\rho_A M_A)
 \end{align}
 我个人理解这就是一个方便的工具。让我们等效的只看一个子系统在纠缠下的行为。
 
+\subsection{Pure State, Entanglement and Mixed Redused State}
+如果我们希望研究纠缠态，并focus on pure state那么我们有一系列等价的结论。
+\thm{
+  对于一个pure的separable state必然可以写作：
+  \begin{align}
+    |\psi_{AB}\rangle = |\psi_A\rangle \otimes |\psi_B\rangle
+  \end{align}
+}
+这是因为根据separable state的定义我们有：
+\begin{align}
+  \ketbra{\psi_{AB}}{\psi_{AB}} = \sum_i p_i \rho_A^i \otimes \rho_B^i
+\end{align}
+但是由于左边是一个pure state的density matrix，因此右边只能有一个非0的项，否则就不是pure state了。因此就有上面的结果。
+
+\thm{
+  对于一个pure的bipartite state $ |\psi_{AB}\rangle $，下面三个条件等价：
+  \begin{itemize}
+    \item $ |\psi_{AB}\rangle $是separable的
+    \item $ \rho_A =
+      \mathrm{Tr}_B(|\psi_{AB}\rangle\langle\psi_{AB}|) $是pure state
+    \item $ \rho_B =
+      \mathrm{Tr}_A(|\psi_{AB}\rangle\langle\psi_{AB}|) $是pure state
+  \end{itemize}
+}
+也就是说子系统是pure
+state当且仅当整体态是separable的。证明方法是我们知道separable的形式必然导致子系统是pure
+state。而如果子系统是pure的话我们可以把整体态进行Schmidt decomposition，必然可以写作$
+|\psi_{AB}\rangle = |\psi_A\rangle \otimes
+|\psi_B\rangle $的形式，也就是说整体态是separable的。
 
 \subsection{Questions and thoughts}
 
-\question{对于一个$ \rho $表示的system，到底有多少参数是basis invariant的，还有哪些参数其实是因为basis transformation引入的？到底什么是basis？？}
+\question{对于一个$ \rho $表示的system，到底有多少参数是basis
+invariant的，还有哪些参数其实是因为basis transformation引入的？到底什么是basis？？}
 
-注意，这些东西都是抽象的。其中的coordinate并不是我们日常的。很可能是很抽象的事件。但是同时，我们也可以考虑进行Similar Transformation。那么得到的就是另一个新的体系，可以理解为过了一个量子门（（！！  
-\qed 
-
-
+注意，这些东西都是抽象的。其中的coordinate并不是我们日常的。很可能是很抽象的事件。但是同时，我们也可以考虑进行Similar
+Transformation。那么得到的就是另一个新的体系，可以理解为过了一个量子门（（！！
+\qed
