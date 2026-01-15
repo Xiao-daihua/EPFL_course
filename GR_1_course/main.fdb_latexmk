@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1767890314.90164 "main.xdv" "main.pdf" "main" 1767890324.65473 0
-  "main.xdv" 1767890314.49716 3014968 a9156ca76e4b83f6e3e7db5cdf9113e9 "xelatex"
+["xdvipdfmx"] 1768475470.01607 "main.xdv" "main.pdf" "main" 1768475477.50343 0
+  "main.xdv" 1768475469.81316 3014976 56897fb4ce6cf85d7e8fd2e5e069c350 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1767890301.3672 "main.tex" "main.xdv" "main" 1767890324.64698 0
-  "/System/Library/Fonts/Menlo.ttc" 1755369869 2156036 ec05dfca6821d85440da0899493002c3 ""
+["xelatex"] 1768475457.9544 "main.tex" "main.xdv" "main" 1768475477.49717 0
+  "/System/Library/Fonts/Menlo.ttc" 1763799477 2156036 ec05dfca6821d85440da0899493002c3 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -270,10 +270,10 @@
   "lec8.tex" 1767384538.62855 18924 8569acb917b37e6cc024db4f0f6ad987 ""
   "lec9.tex" 1767184048.40711 20158 284f56206d9f133c26a4ab4589b899b8 ""
   "macros.sty" 1758202052.5335 6941 ea118bee1331516e9b18bf145534dd45 ""
-  "main.aux" 1767890314.44467 40327 0140393da7edff8685cc855bce224f4e "xelatex"
-  "main.out" 1767890314.48284 25378 094b6952a326300287ecb9454b7dfae7 "xelatex"
+  "main.aux" 1768475469.754 40327 0140393da7edff8685cc855bce224f4e "xelatex"
+  "main.out" 1768475469.79325 25378 094b6952a326300287ecb9454b7dfae7 "xelatex"
   "main.tex" 1767890283.2921 5352 7ab68fd581b2cb07bc8bb9d03b4d4cd4 ""
-  "main.toc" 1767890314.49672 13040 23df0b2198157121bea24f975013557a "xelatex"
+  "main.toc" 1768475469.81292 13040 23df0b2198157121bea24f975013557a "xelatex"
   "sup1.tex" 1761126827.25586 651 dde35102b63da0e6a62bdaf3eb4fa86f ""
   "sup3.tex" 1764076072.02076 24 b9d8cd61cbf0b3f7a4074671b2fe0a55 ""
   (generated)
