@@ -466,6 +466,8 @@ INPUT lec7.tex
 INPUT ./lec8.tex
 INPUT ./lec8.tex
 INPUT lec8.tex
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/bbold/bbold8.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/bbold/bbold6.tfm
 INPUT ./assets/gravave.png
 INPUT ./assets/gravave.png
 INPUT ./assets/gravave.png

@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1768475470.01607 "main.xdv" "main.pdf" "main" 1768475477.50343 0
-  "main.xdv" 1768475469.81316 3014976 56897fb4ce6cf85d7e8fd2e5e069c350 "xelatex"
+["xdvipdfmx"] 1768558229.52355 "main.xdv" "main.pdf" "main" 1768558236.29322 0
+  "main.xdv" 1768558229.33953 3021780 a0a23bbdb8a99b9b67c22d3b5786a976 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1768475457.9544 "main.tex" "main.xdv" "main" 1768475477.49717 0
+["xelatex"] 1768558217.13448 "main.tex" "main.xdv" "main" 1768558236.28659 0
   "/System/Library/Fonts/Menlo.ttc" 1763799477 2156036 ec05dfca6821d85440da0899493002c3 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -23,7 +23,9 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/bbold/bbold10.tfm" 1266369035 788 aa2bfd021367054a224c4cf5a9967398 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/bbold/bbold5.tfm" 1266369035 764 6e384685b780f01b6a1744eb2db32b69 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/bbold/bbold6.tfm" 1266369035 764 bc340104b2499eb440977e2d302aad8b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/bbold/bbold7.tfm" 1266369035 788 cfc6f7349e03ca366560917be88c2027 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/bbold/bbold8.tfm" 1266369035 768 b3927d32cc38bf306f676b7e9ddf7414 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm" 1136768653 1116 4e6ba9d7914baa6482fd69f67d126380 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1136768653 1332 f817c21a1ba54560425663374f1b651a ""
@@ -265,15 +267,15 @@
   "lec3.tex" 1766841650.2825 33058 bb8ea10e326dd682cad47e99f47235d9 ""
   "lec4.tex" 1761153452.18146 22760 8f5789fd9e89987ca683a3abfb24d6ba ""
   "lec5.tex" 1762521073.00092 22966 1d3eae64a34790b567c7380df62651d8 ""
-  "lec6.tex" 1764073338.45058 19403 22c682a156a886452d0cd93ec5d49dd8 ""
-  "lec7.tex" 1767383675.74078 7268 33eb4d2e5ecbc3be7415ca11b9892c55 ""
-  "lec8.tex" 1767384538.62855 18924 8569acb917b37e6cc024db4f0f6ad987 ""
-  "lec9.tex" 1767184048.40711 20158 284f56206d9f133c26a4ab4589b899b8 ""
+  "lec6.tex" 1768485787.51047 19604 56a94fe9390419f5d29e9071b09a640f ""
+  "lec7.tex" 1768558032.76155 8070 675e1bca682f6499e26b052a1bdc0f5a ""
+  "lec8.tex" 1768517340.95814 19387 0504f0e70f72862ffab3d1f47ec1b5cd ""
+  "lec9.tex" 1768558217.08157 20079 eb02c963fa8b432cfd558d2f0f201736 ""
   "macros.sty" 1758202052.5335 6941 ea118bee1331516e9b18bf145534dd45 ""
-  "main.aux" 1768475469.754 40327 0140393da7edff8685cc855bce224f4e "xelatex"
-  "main.out" 1768475469.79325 25378 094b6952a326300287ecb9454b7dfae7 "xelatex"
+  "main.aux" 1768558229.27437 40462 75cb37d4c72ec35161a0c1e0de9ec658 "xelatex"
+  "main.out" 1768558229.3173 25378 094b6952a326300287ecb9454b7dfae7 "xelatex"
   "main.tex" 1767890283.2921 5352 7ab68fd581b2cb07bc8bb9d03b4d4cd4 ""
-  "main.toc" 1768475469.81292 13040 23df0b2198157121bea24f975013557a "xelatex"
+  "main.toc" 1768558229.33855 13040 c3a95926c05120836bbb40f956cf89a4 "xelatex"
   "sup1.tex" 1761126827.25586 651 dde35102b63da0e6a62bdaf3eb4fa86f ""
   "sup3.tex" 1764076072.02076 24 b9d8cd61cbf0b3f7a4074671b2fe0a55 ""
   (generated)

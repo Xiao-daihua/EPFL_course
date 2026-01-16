@@ -67,7 +67,7 @@
 \contentsline {subsection}{\numberline {9.2}引力波的探测}{61}{subsection.9.2}%
 \contentsline {subsubsection}{\numberline {9.2.1}Interferometer的工作原理}{61}{subsubsection.9.2.1}%
 \contentsline {subsubsection}{\numberline {9.2.2}引力波对Interferometer的影响}{62}{subsubsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.3}Questions and thoughts}{63}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.3}Questions and thoughts}{64}{subsection.9.3}%
 \contentsline {section}{\numberline {10}SUP 3: Fermi Normal Coordinate}{65}{section.10}%
 \contentsline {section}{\numberline {11}Lecture 9: Energy of GW and Emission of GW}{66}{section.11}%
 \contentsline {subsection}{\numberline {11.1}E-M Tensor of Gravitational Wave}{66}{subsection.11.1}%
