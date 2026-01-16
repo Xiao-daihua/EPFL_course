@@ -123,7 +123,7 @@ time的，这里并不是)。并且注意，对于线性引力，我们空间方
 
   引力波通过法向量为$ n_i $单位面积的功率为：
   \begin{align}
-    \frac{dE}{dtdA} = \frac{n_i}{32\pi G}\langle \partial_t
+    \frac{dE}{dtdA} = - \frac{n_i}{32\pi G}\langle \partial_t
     h_{ij}^{TT} \partial_i h_{ij}^{TT}  \rangle.
   \end{align}
 }
@@ -148,7 +148,7 @@ k^\mu k_\mu = 0 $，我们有：
     h_{ij}^{TT} \partial_t h^{TT ij} \rangle
   \end{align}
 }
-如果我们假设引力波沿着z方向传播，我们有：
+带入TT Gauge之中引力波的一般形式，我们有：
 \begin{align}
   \frac{dE}{dtdA} = \frac{1}{16\pi G} \langle \dot{h}_+^2 +
   \dot{h}_\times^2 \rangle
@@ -213,12 +213,16 @@ Gauge进行研究问题。为了从Hilbert Gauge变换到TT
 Gauge我们需要利用一个投影算符\cref{sec:ttgaugeprop}。我们给出TT Gauge下面引力波的解为：
 \begin{align}
   h_{ij}^{TT}(x)= 4G\Lambda_{ij,kl}(\hat{\mathbf{n}})\int
-  d^3x^{\prime}
-  \frac{1}{|\mathbf{x}-\mathbf{y}|}T_{\mu\nu}\left(x^0-|\mathbf{x}-\mathbf{y}|,\mathbf{y}
+  d^3 y
+  \frac{1}{|\mathbf{x}-\mathbf{y}|}T_{kl}\left(x^0-|\mathbf{x}-\mathbf{y}|,\mathbf{y}
   \right)
 \end{align}
 注意，这里$ \hat{\mathbf{n}} = \frac{\mathbf{x}}{|\mathbf{x}|}
 $是观察者位置的单位向量。因为作为观察者，我们只能观测到引力波向自己方向传播的部分！
+\rmk{
+  我们这里直接对于$ \gamma_{ij} $进行project而不是$ h_{ij} $是因为，他们相差的是$
+  \eta_{\mu\nu} h $这部分在projector作用之后是0的！
+}
 
 \bigskip
 \hlr{远场近似}
@@ -361,7 +365,7 @@ $，我们使用下面矩阵形式进行计算。对于投影算符作用在一�
 \begin{align}
   \Lambda_{ij,kl}A_{kl}=\left[P_{ik}P_{jl}-\frac{1}{2}P_{ij}P_{kl}\right]A_{kl}=(PAP)_{ij}-\frac{1}{2}P_{ij}\mathrm{Tr}\left(PA\right).
 \end{align}
-带入最一般的$ \ddot{M}_{ij}(x) $的形式我们知道：
+带入最一般的$ \ddot{M}_{ij}(t) $的形式我们知道：
 \begin{align}
   \Lambda_{ij,kl}\ddot{M}_{kl}=
   \begin{pmatrix}(\ddot{M}_{11}-\ddot{M}_{22})/2&\ddot{M}_{12}&0\\\ddot{M}_{21}&-(\ddot{M}_{11}-\ddot{M}_{22})/2&0\\0&0&0
@@ -373,7 +377,7 @@ $，我们使用下面矩阵形式进行计算。对于投影算符作用在一�
 
 根据上面的计算我们可以给出z方向观察者观测到的引力波metric为：
 \begin{align}
-  h_{ij}(t,R\hat{z})=\frac{2G}{R}\frac{d^2}{dt^2}
+  h_{ij}(t,R\hat{z})=\frac{G}{R}\frac{d^2}{dt^2}
   \begin{pmatrix}M_{11}(t-R)-M_{22}(t-R)&2M_{12}(t-R)&0\\2M_{21}(t-R)&-(M_{11}(t-R)-M_{22}(t-R))&0\\0&0&0
   \end{pmatrix}_{ij}.
 \end{align}

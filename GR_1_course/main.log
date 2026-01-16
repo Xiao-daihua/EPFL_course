@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  16 JAN 2026 11:10
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  16 JAN 2026 22:44
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1510,15 +1510,15 @@ File: assets/deahsd.png Graphic file (type bmp)
 
 
 [78]
+
+[79]
 File: assets/deflangle.png Graphic file (type bmp)
 <assets/deflangle.png>
 
 
-[79])
+[80])
 
-[80] (./lec11.tex
-
-[81]
+[81] (./lec11.tex
 
 [82]
 
@@ -1530,20 +1530,22 @@ File: assets/deflangle.png Graphic file (type bmp)
 
 [86]
 
-[87])
+[87]
 
-[88] (./lec12.tex
+[88])
 
-[89]
+[89] (./lec12.tex
 
 [90]
+
+[91]
 File: assets/energypoasd.png Graphic file (type bmp)
 <assets/energypoasd.png>
 
 
-[91]
-
 [92]
+
+[93]
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 229.
 
@@ -1552,32 +1554,32 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 229.
 
 )
 
-[93] (./lec13.tex
+[94] (./lec13.tex
 
-[94]
+[95]
 Overfull \hbox (5.13863pt too wide) in paragraph at lines 74--75
 []\TU/STSong(0)/m/n/10 并 且 作 为 一 个 物 理 上 存 在 的 流 体，|  我 们 需 要 满 足 归 一 化 条 件 $\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 u[]u[]$ \TU/STSong(0)/m/n/10 也 就 是 说 $\OML/cmm/m/it/10 u[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 e[];  u[] \OT1/cmr/m/n/10 =
  []
 
 
 
-[95]
-
 [96]
 
 [97]
 
 [98]
+
+[99]
 File: assets/inlightcone.png Graphic file (type bmp)
 <assets/inlightcone.png>
 
 
-[99]
+[100]
 File: assets/outgogeo.png Graphic file (type bmp)
 <assets/outgogeo.png>
 )
 
-[100] (./lec14.tex
+[101] (./lec14.tex
 Overfull \hbox (19.24811pt too wide) detected at line 20
 []
  []
@@ -1586,43 +1588,43 @@ File: assets/diagkruskal.png Graphic file (type bmp)
 <assets/diagkruskal.png>
 
 
-[101]
+[102]
 File: assets/kruskalcausal.png Graphic file (type bmp)
 <assets/kruskalcausal.png>
 
 
-[102]
+[103]
 File: assets/freefallcoor.png Graphic file (type bmp)
 <assets/freefallcoor.png>
 
 
-[103]
+[104]
 Overfull \hbox (10.60565pt too wide) in paragraph at lines 152--153
 []\TU/STSong(0)/m/n/10 径 向 潮 汐 力：|  对 于 下 落 方 向 长 为 $\OML/cmm/m/it/10 h$ \TU/STSong(0)/m/n/10 的 地 方 相 对 于 参 考 点  |「假 设 是 物 体 中 心」|  的 加 速 度 为 $\OML/cmm/m/it/10 a \OT1/cmr/m/n/10 = (2\OML/cmm/m/it/10 GM\OT1/cmr/m/n/10 /\OML/cmm/m/it/10 r[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 h$\TU/STSong(0)/m/n/10 ，|
  []
 
 
 
-[104]
+[105]
 File: assets/minkwskipenrose.png Graphic file (type bmp)
 <assets/minkwskipenrose.png>
 
 
-[105]
+[106]
 File: assets/penrosesch.png Graphic file (type bmp)
 <assets/penrosesch.png>
 
 
-[106]
+[107]
 File: assets/RNp.png Graphic file (type bmp)
 <assets/RNp.png>
 
 
-[107]
+[108]
 
-[108])
+[109])
 
-[109] (./main.aux)
+[110] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1638,12 +1640,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 094B6952A326300287ECB9454B7DFAE7;25378.
  ) 
 Here is how much of TeX's memory you used:
- 36246 strings out of 468527
- 806006 string characters out of 5447700
- 1220132 words of memory out of 5000000
+ 36244 strings out of 468527
+ 805949 string characters out of 5447700
+ 1220235 words of memory out of 5000000
  63877 multiletter control sequences out of 15000+600000
- 640672 words of font info for 142 fonts, out of 8000000 for 9000
+ 640656 words of font info for 140 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,21n,121p,646b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (109 pages, 3021780 bytes).
+Output written on main.xdv (110 pages, 3027748 bytes).
