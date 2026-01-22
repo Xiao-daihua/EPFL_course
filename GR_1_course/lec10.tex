@@ -51,7 +51,7 @@ $平面上绕着质心做圆周运动，并且角速度为$ \omega_s $。我们�
   t + \pi/2) \quad x_{03}(t) = 0
 \end{align}
 我们带入moment of inertia的关系可以得到:
-\begin{align}
+\begin{align}\label{eq:binarymomentofinertia}
   &\dot{M}_{11}=\frac{\mu R^{2}}{2}2w_{s}\sin(2w_{s}t)\quad
   \ddot{M}_{11}=\mu R^{2}2w_{s}^{2}\cos(2w_{s}t)\quad
   \dddot{M}_{11}=-\mu R^{2}4w_{s}^{3}\sin(2w_{s}t)\\
@@ -148,9 +148,15 @@ $方向的结果\cref{eq:binarygwpluscross}可以发现多了一个角度相关�
 \subsubsection{Binary System能量辐射}
 
 我们下面计算这个系统的引力波的对于所有角度的能量辐射。根据辐射公式\cref{thm:gwpowerquadruple}我们知道计算Quadrupole
-Moment的三阶导数的平方的平均值即可。我们有：
+Moment的三阶导数的平方的平均值即可。使用公式：\cref{eq:binarymomentofinertia}我们可以计算出Quadral
+Pole Moment的三阶导数的平均值。然后给出：
 \begin{align}
   P_{GW} = \displaystyle\frac{32}{5} G \mu^2 R^4 \omega_s^6
+\end{align}
+最后在平均的时候我们使用了：
+\begin{align}
+  \langle \sin^2(2\omega_s t) \rangle = \langle \cos^2(2\omega_s t)
+  \rangle = \displaystyle\frac{1}{2}
 \end{align}
 
 \subsection{Binary System的Inspiral}

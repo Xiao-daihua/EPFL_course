@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {8.1}量子散射问题的set up}{30}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Differential Cross Section and Scattering Amplitude}{31}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Optical Theorem}{32}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}数学技巧}{33}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.4}数学技巧}{34}{subsection.8.4}%
 \contentsline {subsubsection}{\numberline {8.4.1}Delta函数使用}{34}{subsubsection.8.4.1}%
 \contentsline {subsubsection}{\numberline {8.4.2}Green 函数使用}{34}{subsubsection.8.4.2}%
 \contentsline {subsection}{\numberline {8.5}Questions and thoughts}{34}{subsection.8.5}%
@@ -47,7 +47,7 @@
 \contentsline {subsection}{\numberline {9.3}Born近似}{38}{subsection.9.3}%
 \contentsline {section}{\numberline {10}Lecture 10: S矩阵和散射振幅另一种表示}{40}{section.10}%
 \contentsline {subsection}{\numberline {10.1}Stationary Scattering State}{40}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}S 矩阵的T Production表示}{41}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.2}S 矩阵的T Production表示}{42}{subsection.10.2}%
 \contentsline {section}{\numberline {11}Lecture 11: Partial Wave Expansion}{43}{section.11}%
 \contentsline {subsection}{\numberline {11.1}Partial Wave Expansion数学技巧}{43}{subsection.11.1}%
 \contentsline {subsubsection}{\numberline {11.1.1}基本定义}{43}{subsubsection.11.1.1}%

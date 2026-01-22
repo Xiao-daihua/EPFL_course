@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  16 JAN 2026 22:44
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  17 JAN 2026 18:40
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1505,11 +1505,12 @@ File: assets/coor.png Graphic file (type bmp)
 [77]
 File: assets/hdaisdho.png Graphic file (type bmp)
 <assets/hdaisdho.png>
-File: assets/deahsd.png Graphic file (type bmp)
-<assets/deahsd.png>
 
 
 [78]
+File: assets/deahsd.png Graphic file (type bmp)
+<assets/deahsd.png>
+
 
 [79]
 File: assets/deflangle.png Graphic file (type bmp)
@@ -1547,17 +1548,17 @@ File: assets/energypoasd.png Graphic file (type bmp)
 
 [93]
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 229.
+LaTeX Font Warning: Command \large invalid in math mode on input line 270.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 229.
+LaTeX Font Warning: Command \large invalid in math mode on input line 270.
 
 )
 
 [94] (./lec13.tex
 
 [95]
-Overfull \hbox (5.13863pt too wide) in paragraph at lines 74--75
+Overfull \hbox (5.13863pt too wide) in paragraph at lines 83--85
 []\TU/STSong(0)/m/n/10 并 且 作 为 一 个 物 理 上 存 在 的 流 体，|  我 们 需 要 满 足 归 一 化 条 件 $\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 u[]u[]$ \TU/STSong(0)/m/n/10 也 就 是 说 $\OML/cmm/m/it/10 u[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 e[];  u[] \OT1/cmr/m/n/10 =
  []
 
@@ -1580,7 +1581,7 @@ File: assets/outgogeo.png Graphic file (type bmp)
 )
 
 [101] (./lec14.tex
-Overfull \hbox (19.24811pt too wide) detected at line 20
+Overfull \hbox (19.24811pt too wide) detected at line 29
 []
  []
 
@@ -1599,7 +1600,7 @@ File: assets/freefallcoor.png Graphic file (type bmp)
 
 
 [104]
-Overfull \hbox (10.60565pt too wide) in paragraph at lines 152--153
+Overfull \hbox (10.60565pt too wide) in paragraph at lines 174--175
 []\TU/STSong(0)/m/n/10 径 向 潮 汐 力：|  对 于 下 落 方 向 长 为 $\OML/cmm/m/it/10 h$ \TU/STSong(0)/m/n/10 的 地 方 相 对 于 参 考 点  |「假 设 是 物 体 中 心」|  的 加 速 度 为 $\OML/cmm/m/it/10 a \OT1/cmr/m/n/10 = (2\OML/cmm/m/it/10 GM\OT1/cmr/m/n/10 /\OML/cmm/m/it/10 r[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 h$\TU/STSong(0)/m/n/10 ，|
  []
 
@@ -1640,12 +1641,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 094B6952A326300287ECB9454B7DFAE7;25378.
  ) 
 Here is how much of TeX's memory you used:
- 36244 strings out of 468527
- 805949 string characters out of 5447700
- 1220235 words of memory out of 5000000
- 63877 multiletter control sequences out of 15000+600000
+ 36246 strings out of 468527
+ 806006 string characters out of 5447700
+ 1220317 words of memory out of 5000000
+ 63879 multiletter control sequences out of 15000+600000
  640656 words of font info for 140 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,21n,121p,646b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (110 pages, 3027748 bytes).
+Output written on main.xdv (110 pages, 3036564 bytes).

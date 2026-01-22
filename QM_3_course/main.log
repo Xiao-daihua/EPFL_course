@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  8 JAN 2026 17:41
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  22 JAN 2026 12:25
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1308,7 +1308,7 @@ File: assets/doublewell.png Graphic file (type bmp)
 [18] (./lec6.tex
 
 [19]
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 111.
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 114.
 
 
 [20]
@@ -1316,7 +1316,7 @@ Package hyperref Info: bookmark level for unknown definition defaults to 0 on in
 [21]
 
 [22]
-Overfull \hbox (6.6948pt too wide) in paragraph at lines 267--268
+Overfull \hbox (6.6948pt too wide) in paragraph at lines 280--281
 []\TU/STSong(0)/b/n/10 自 由 粒 子 演 化\TU/STSong(0)/m/n/10 ：|  有 的 时 候 在 考 虑 无 穷 的 时 候 我 们 认 为 粒 子 很 像 自 由 粒 子 所 以 我 们 使 用 自 由 粒 子 \TU/lmr/m/n/10 Hamil-
  []
 
@@ -1351,11 +1351,11 @@ File: assets/Hilbertspace.png Graphic file (type bmp)
 [28])
 
 [29] (./lec8.tex
+
+[30]
 File: assets/scattering.png Graphic file (type bmp)
 <assets/scattering.png>
 
-
-[30]
 
 [31]
 
@@ -1423,12 +1423,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D157F687524323A0994712D9162B68ED;12218.
  ) 
 Here is how much of TeX's memory you used:
- 35915 strings out of 468527
- 790264 string characters out of 5447700
+ 35924 strings out of 468527
+ 790827 string characters out of 5447700
  1210741 words of memory out of 5000000
- 63570 multiletter control sequences out of 15000+600000
+ 63579 multiletter control sequences out of 15000+600000
  640249 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,19n,121p,629b,636s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,19n,121p,584b,636s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (55 pages, 1212196 bytes).
+Output written on main.xdv (55 pages, 1227116 bytes).
