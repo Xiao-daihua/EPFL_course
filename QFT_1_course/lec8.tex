@@ -11,34 +11,34 @@
 \end{align}
 \begin{enumerate}
   \item \textbf{低速展开：}
-我们对于$ \dot{q} $进行展开得到：
-\begin{align}
-  \mathcal{L}=F_0(q)+F_1(q)\dot{q}+F_2(q)\dot{q}^2+F_3(q)\dot{q}^3+\ldots 
-\end{align}
-可以证明$ F_1(q) $项是一个total derivative所以不会影响运动方程，所以我们忽略它。
+    我们对于$ \dot{q} $进行展开得到：
+    \begin{align}
+      \mathcal{L}=F_0(q)+F_1(q)\dot{q}+F_2(q)\dot{q}^2+F_3(q)\dot{q}^3+\ldots
+    \end{align}
+    可以证明$ F_1(q) $项是一个total derivative所以不会影响运动方程，所以我们忽略它。
 
-\item \textbf{低能近似：}
-  我们考虑$ F_0(q) = -V(q) $的情况下在一个$ V(q_0) $最低点附近进行展开
-  \begin{align}
-    V(q) = V(q_0) + \frac{1}{2}V''(q_0)(q-q_0)^2 + \ldots
-  \end{align}
+  \item \textbf{低能近似：}
+    我们考虑$ F_0(q) = -V(q) $的情况下在一个$ V(q_0) $最低点附近进行展开
+    \begin{align}
+      V(q) = V(q_0) + \frac{1}{2}V''(q_0)(q-q_0)^2 + \ldots
+    \end{align}
 \end{enumerate}
 在上面两个近似的基础上，忽略高阶项得到Lagrangian是下面的形式：
-  \begin{align}
-    \large L=-\frac{1}{2}m\omega^2\delta^2+\frac{m}{2}\dot{\delta}^2
-  \end{align}
+\begin{align}
+  \large L=-\frac{1}{2}m\omega^2\delta^2+\frac{m}{2}\dot{\delta}^2
+\end{align}
 也就是一个谐振子运动。
 
 \bigskip
 \hlr{从谐振子到自由标量场}
 
 我们如果考虑一个\textbf{低速，低能}的标量协变场理论。那么我们就会得到下面的Klein-Gordon Lagrangian：
-\defi{Klein-Gordon Field 
+\defi{Klein-Gordon Field
 
-Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
-\begin{align}
-  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{m^2}{2}\phi^2.
-\end{align}
+  Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
+  \begin{align}
+    \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{m^2}{2}\phi^2.
+  \end{align}
 }
 我们会立刻发现其两个性质：
 \begin{itemize}
@@ -47,7 +47,7 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
       (\partial_\mu\partial^\mu + m^2)\phi = 0.
     \end{align}
   \item \textbf{量纲分析：}根据Action是一个Dimension
-     less的东西分析其每一个部分的量纲得到：
+    less的东西分析其每一个部分的量纲得到：
     \begin{align}
       \left[d^4x\right]=E^{-4},\quad[\mathcal{L}]=E^4,\quad[\phi]=E,\quad\left[m^2\right]=E^2.
     \end{align}
@@ -73,8 +73,10 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
 \end{align}
 我们计算其对应的守恒荷：
 \begin{align}
-  H&=\int d^3\mathbf{x}T^0{}_0=\int d^3\mathbf{x}\left(\frac{1}{2}\pi^2+\frac{1}{2}(\nabla\phi)^2+\frac{1}{2}m^2\phi^2\right),\\
-  P_i&=\int d^3\mathbf{x}T^0{}_i=\int d^3\mathbf{x}\dot{\phi}\partial_i\phi=\int d^3\mathbf{x}\pi\partial_i\phi.
+  H&=\int d^3\mathbf{x}T^0{}_0=\int
+  d^3\mathbf{x}\left(\frac{1}{2}\pi^2+\frac{1}{2}(\nabla\phi)^2+\frac{1}{2}m^2\phi^2\right),\\
+  P_i&=\int d^3\mathbf{x}T^0{}_i=\int
+  d^3\mathbf{x}\dot{\phi}\partial_i\phi=\int d^3\mathbf{x}\pi\partial_i\phi.
 \end{align}
 我们发现能动量张量的第一个守恒荷正好对应了Hamiltonian自己。所以我们知道：
 \begin{itemize}
@@ -91,7 +93,7 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
 
   我们将经典场$ \phi(x) $以及其共轭动量$ \pi(x) $提升为算符，保证这些算符的对易关系满足如下的条件：
   \begin{itemize}
-    \item \textbf{Hermite Operators} 时空作为基的场算符以及共轭动量算符都是厄米算符：
+    \item \textbf{Hermite Operators}由于标量场是实数场，因而场算符以及共轭动量算符是Hermite的：
       \begin{align}
         \phi(x)^\dagger=\phi(x),\quad\pi(x)^\dagger=\pi(x).
       \end{align}
@@ -102,14 +104,18 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
   \end{itemize}
   上面信息完全给出了一个经典理论对应的量子理论
 }
+
 \rmk{
-  我们正则量子化只需要定义canonical commutation relations就可以了。因为我们知道所有客观测量都是相空间的函数，所以canonical commutation relations已经足够定义一切物理量的对易关系了！
+  我们正则量子化只需要定义canonical commutation
+  relations就可以了。因为我们知道所有客观测量都是相空间的函数，所以canonical commutation
+  relations已经足够定义一切物理量的对易关系了！
 }
 
 所以我们量子化后会给出：
 \begin{align}
-  i\bigl[\hat{\pi}(\mathbf{x},t),\,\hat{\phi}(\mathbf{y},t)\bigr] &= \delta^{3}(\mathbf{x}-\mathbf{y}), \\[4pt]
-  \bigl[\hat{\pi}(\mathbf{x},t),\,\hat{\pi}(\mathbf{y},t)\bigr] 
+  i\bigl[\hat{\pi}(\mathbf{x},t),\,\hat{\phi}(\mathbf{y},t)\bigr] &=
+  \delta^{3}(\mathbf{x}-\mathbf{y}), \\[4pt]
+  \bigl[\hat{\pi}(\mathbf{x},t),\,\hat{\pi}(\mathbf{y},t)\bigr]
   &= \bigl[\hat{\phi}(\mathbf{x},t),\,\hat{\phi}(\mathbf{y},t)\bigr] = 0.
 \end{align}
 再根据具体理论研究的可观测量，Hamiltonian等等对于相空间的依赖给出其他对应的量子算符对应的代数关系。这就是量子化的过程！！
@@ -137,11 +143,13 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
     \end{itemize}
     那么这个结论可以通过量子化的手段推广到量子力学之中。我们就会发现：
     \begin{itemize}
-      \item 守恒荷量子化的结果变成了Hilbert Space上的算符(Heisenberg Picture)和态(Schrodinger Picture)的变换生成元。
+      \item 守恒荷量子化的结果变成了Hilbert Space上的算符(Heisenberg
+        Picture)和态(Schrodinger Picture)的变换生成元。
     \end{itemize}
     从Heisenberg Picture我们可以直接看出：
     \begin{align}
-      \delta_\omega \hat{\mathcal{O}} = \frac{i}{\hbar} [\hat{Q}_\omega, \hat{\mathcal{O}}],
+      \delta_\omega \hat{\mathcal{O}} = \frac{i}{\hbar}
+      [\hat{Q}_\omega, \hat{\mathcal{O}}],
     \end{align}
     其中$\hat{\mathcal{O}}$是任意的可观测量算符，$\hat{Q}_\omega$是对应对称性变换的守恒荷算符。这正是量子力学中生成元的定义形式：守恒荷通过对易子产生算符的无穷小变换。
 
@@ -151,31 +159,30 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
       \delta_\omega |\psi\rangle = -\frac{i}{\hbar}\omega \hat{Q}|\psi\rangle.
     \end{align}
     因此我们看到，无论在经典力学还是量子力学中，\emph{对称性变换的生成元与守恒荷是同一个对象}。它在经典极限下通过Poisson括号生成变换，而在量子理论中通过对易子生成变换。这也解释了为什么Noether守恒量的代数结构与其所对应的对称性李代数完全一致。
-      
+
     \YL{[ Weinberg之中使用了另一个思路来讨论这个问题，是基于更纯粹的代数的。回头可以参考捏？]}
 \end{itemize}
 
-
-
 \subsubsection{自由标量场Spectrum 分析}
-
 
 \bigskip
 \hlr{Hamiltonian Operator对称分析}
 
 我们希望研究这个量子化Hamiltonian给出的能级信息：
 \begin{align}
-\hat{H} = \int d^3\mathbf{x}\, 
-\hat{\mathcal{H}}(\mathbf{x})
-= \int d^3\mathbf{x} \left[
-\frac{1}{2} \hat{\pi}^2(\mathbf{x})
-+ \frac{1}{2} \left(\nabla \hat{\phi}(\mathbf{x})\right)^2
-+ \frac{1}{2} m^2 \hat{\phi}^2(\mathbf{x})
-\right].
+  \hat{H} = \int d^3\mathbf{x}\,
+  \hat{\mathcal{H}}(\mathbf{x})
+  = \int d^3\mathbf{x} \left[
+    \frac{1}{2} \hat{\pi}^2(\mathbf{x})
+    + \frac{1}{2} \left(\nabla \hat{\phi}(\mathbf{x})\right)^2
+    + \frac{1}{2} m^2 \hat{\phi}^2(\mathbf{x})
+  \right].
 \end{align}
-但是我们意识到存在：$ \nabla \hat{\phi} $把原本没有关系的不同流形位置上的场进行了一个耦合。我们希望通过对称性分析进行对角化。进行一个对称性分析：
+但是我们意识到存在：$ \nabla \hat{\phi}
+$把原本没有关系的不同流形位置上的场进行了一个耦合。我们希望通过对称性分析进行对角化。进行一个对称性分析：
 
-我们已经知道存在空间平移对称性。因此，我们可以使用动量本征态来对角化Hamiltonian。这个操作可以使用fourier transform的trick进行实现。
+我们已经知道存在空间平移对称性。因此，我们可以使用动量本征态来对角化Hamiltonian。这个操作可以使用fourier
+transform的trick进行实现。
 
 \bigskip
 \hlr{Fourier Transform Trick}
@@ -192,35 +199,43 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
 \begin{itemize}
   \item \textbf{Fourier Basis:} 我们定义一些函数进行Fourier Transformation：
     \begin{align}
-      \psi_{\mathbf{n}}(\mathbf{x})=\frac{1}{\sqrt{V}}e^{i\mathbf{k_{n}}\cdot\mathbf{x}}, \quad \mathbf{k_n}=\frac{2\pi}{L}\mathbf{n},\quad \mathbf{n}\in\mathbb{Z}^3. \quad V = L^3.
+      \psi_{\mathbf{n}}(\mathbf{x})=\frac{1}{\sqrt{V}}e^{i\mathbf{k_{n}}\cdot\mathbf{x}},
+      \quad \mathbf{k_n}=\frac{2\pi}{L}\mathbf{n},\quad
+      \mathbf{n}\in\mathbb{Z}^3. \quad V = L^3.
     \end{align}
-我们知道这个函数构成了平移算符在$ T^3 $上的本征函数系，可以发现：
-\begin{align}
-  \psi_{\mathbf{n}}(\mathbf{x}+\mathbf{a})=e^{i\mathbf{k_{n}}\cdot\mathbf{a}}\psi_{\mathbf{n}}(\mathbf{x})\mathrm{~.}
-\end{align}
-并且满足完备归一关系：
-\begin{align}
-  \begin{aligned}(\psi_{\mathbf{n}},\psi_{\mathbf{m}})&\equiv\int\psi_{\mathbf{n}}(\mathbf{x})^{*}\psi_{\mathbf{m}}(\mathbf{x})d^{3}\mathbf{x}=\frac{1}{V}\int e^{i(\mathbf{k_{m}}-\mathbf{k_{n}})\cdot\mathbf{x}}d^{3}\mathbf{x}=\delta_{\mathbf{n},\mathbf{m}},\\&\sum_{\mathbf{n}}\psi_{\mathbf{n}}(\mathbf{x})^{*}\psi_{\mathbf{n}}(\mathbf{y})=\delta^{3}(\mathbf{x}-\mathbf{y}).\end{aligned}
-\end{align}
+    我们知道这个函数构成了平移算符在$ T^3 $上的本征函数系，可以发现：
+    \begin{align}
+      \psi_{\mathbf{n}}(\mathbf{x}+\mathbf{a})=e^{i\mathbf{k_{n}}\cdot\mathbf{a}}\psi_{\mathbf{n}}(\mathbf{x})\mathrm{~.}
+    \end{align}
+    并且满足完备归一关系：
+    \begin{align}
+      \begin{aligned}(\psi_{\mathbf{n}},\psi_{\mathbf{m}})&\equiv\int\psi_{\mathbf{n}}(\mathbf{x})^{*}\psi_{\mathbf{m}}(\mathbf{x})d^{3}\mathbf{x}=\frac{1}{V}\int
+        e^{i(\mathbf{k_{m}}-\mathbf{k_{n}})\cdot\mathbf{x}}d^{3}\mathbf{x}=\delta_{\mathbf{n},\mathbf{m}},\\&\sum_{\mathbf{n}}\psi_{\mathbf{n}}(\mathbf{x})^{*}\psi_{\mathbf{n}}(\mathbf{y})=\delta^{3}(\mathbf{x}-\mathbf{y}).
+      \end{aligned}
+    \end{align}
 \end{itemize}
 \rmk{
-  关于离散和连续的delta函数。对于离散和连续的forier展开我们可以得到两种delta函数的定义，对于离散情况下我们是使用Kronecker delta function：
+  关于离散和连续的delta函数。对于离散和连续的forier展开我们可以得到两种delta函数的定义，对于离散情况下我们是使用Kronecker
+  delta function：
   \begin{align}
-    \delta_{m,n} = \displaystyle\frac{1}{V}\int d^3\mathbf{x} e^{i(\mathbf{k_n}-\mathbf{k_m})\cdot\mathbf{x}}.
+    \delta_{m,n} = \displaystyle\frac{1}{V}\int d^3\mathbf{x}
+    e^{i(\mathbf{k_n}-\mathbf{k_m})\cdot\mathbf{x}}.
   \end{align}
   而对于连续情况我们使用Dirac delta function：
   \begin{align}
-    \delta^3(\mathbf{x}-\mathbf{y}) = \int \frac{d^3\mathbf{k}}{(2\pi)^3} e^{i\mathbf{k}\cdot(\mathbf{x}-\mathbf{y})}.
+    \delta^3(\mathbf{x}-\mathbf{y}) = \int
+    \frac{d^3\mathbf{k}}{(2\pi)^3} e^{i\mathbf{k}\cdot(\mathbf{x}-\mathbf{y})}.
   \end{align}
 }
 
 我们使用Fourier Basis进行展开。我们定义Fourier Mode的Operator
 \defi{Mode Operators
 
-  我们对于场算符进行线性组合，给出Mode Operators的定义：【这里我们图方便省略了算符，但记住$ \phi_n,\phi $都是算符，$ \psi(x) $只是个函数】
-\begin{align}
-  \phi_{\mathbf{n}}(t)=\int\psi_{\mathbf{n}}^*(\mathbf{x})\phi(\mathbf{x},t)d^3\mathbf{x},\quad\pi_{\mathbf{n}}(t)=\int\psi_{\mathbf{n}}^*(\mathbf{x})\phi(\mathbf{x},t)d^3\mathbf{x},
-\end{align}
+  我们对于场算符进行线性组合，给出Mode Operators的定义：【这里我们图方便省略了算符，但记住$ \phi_n,\phi
+  $都是算符，$ \psi(x) $只是个函数】
+  \begin{align}
+    \phi_{\mathbf{n}}(t)=\int\psi_{\mathbf{n}}^*(\mathbf{x})\phi(\mathbf{x},t)d^3\mathbf{x},\quad\pi_{\mathbf{n}}(t)=\int\psi_{\mathbf{n}}^*(\mathbf{x})\pi(\mathbf{x},t)d^3\mathbf{x},
+  \end{align}
 }
 那么根据正交完备关系，我们可以使用这些Operator完全的重构场算符，以及这个理论的一切算符。我们研究这些算符的性质。
 
@@ -229,18 +244,20 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
 
 \begin{itemize}
   \item \textbf{重构场算符}：
-  \begin{align}
-    \phi(\mathbf{x},t)=\sum_\mathbf{n}\psi_\mathbf{n}(\mathbf{x})\phi_\mathbf{n}(t),\quad\pi(\mathbf{x},t)=\sum_\mathbf{n}\psi_\mathbf{n}(\mathbf{x})\pi_\mathbf{n}(t).
-  \end{align}
-\item \textbf{Hermite Conjugate}: 显然这个线性组合后的算符不一定是Hermite的。我们分析会发现：
-  \begin{align}
-    \phi_\mathbf{n}^\dagger(t)=\phi_{-\mathbf{n}}(t),\quad\pi_\mathbf{n}^\dagger(t)=\pi_{-\mathbf{n}}(t).
-  \end{align}
-\item \textbf{对易关系}：我们根据定义得到：
-  \begin{align}
-   & [\phi_{\mathbf{n}}(t),\phi_{\mathbf{m}}(t)]=[\pi_{\mathbf{n}}(t),\pi_{\mathbf{m}}(t)]=0,\\ 
-   & [\phi_{\mathbf{n}}(t),\pi_{\mathbf{m}}^{\dagger}(t)]=i\delta_{\mathbf{n},\mathbf{m}}
-  \end{align}
+    \begin{align}
+      \phi(\mathbf{x},t)=\sum_\mathbf{n}\psi_\mathbf{n}(\mathbf{x})\phi_\mathbf{n}(t),\quad\pi(\mathbf{x},t)=\sum_\mathbf{n}\psi_\mathbf{n}(\mathbf{x})\pi_\mathbf{n}(t).
+    \end{align}
+  \item \textbf{Hermite Conjugate}: 显然这个线性组合后的算符不一定是Hermite的。我们分析会发现：
+    \begin{align}
+      \phi_\mathbf{n}^\dagger(t)=\phi_{-\mathbf{n}}(t),\quad\pi_\mathbf{n}^\dagger(t)=\pi_{-\mathbf{n}}(t).
+    \end{align}
+  \item \textbf{对易关系}：我们根据定义得到：
+    \begin{align}
+      &
+      [\phi_{\mathbf{n}}(t),\phi_{\mathbf{m}}(t)]=[\pi_{\mathbf{n}}(t),\pi_{\mathbf{m}}(t)]=0,\\
+      &
+      [\phi_{\mathbf{n}}(t),\pi_{\mathbf{m}}^{\dagger}(t)]=i\delta_{\mathbf{n},\mathbf{m}}
+    \end{align}
 \end{itemize}
 
 \bigskip
@@ -248,7 +265,8 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
 
 我们使用Mode Operators作为动力学的自由度重构Hamiltonian。我们发现Hamiltonian可以写作：
 \begin{align}
-  H=\int\mathcal{H}d^3\mathbf{x}&=\frac{1}{2}\int d^3\mathbf{x}\left[\pi^2+(\nabla^i\phi)^2+m^2\phi^2\right]\\
+  H=\int\mathcal{H}d^3\mathbf{x}&=\frac{1}{2}\int
+  d^3\mathbf{x}\left[\pi^2+(\nabla^i\phi)^2+m^2\phi^2\right]\\
   &=\frac{1}{2}\sum_{\mathbf{n}}\left[\pi_{\mathbf{n}}\pi_{\mathbf{n}}^{\dagger}+\left(m^2+\mathbf{k}_{\mathbf{n}}^2\right)\phi_{\mathbf{n}}\phi_{\mathbf{n}}^{\dagger}\right],\quad\mathbf{k_n\equiv\frac{2\pi}{L}n}.
 \end{align}
 
@@ -259,34 +277,44 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
 
 如果我们希望考虑整个空间而不是$ T^3 $流形上面的结论。所以我们选择$ L \to \infty $的极限并分析其中的变化，我们发现：
 \begin{itemize}
-  \item \textbf{$ k_n $的变换：}离散的情况下我们有$ k_n = \displaystyle\frac{2\pi n}{L} $在连续极限下$ n \to \infty, L\to \infty $所以我们有理由认为存在连续变量：
+  \item \textbf{$ k_n $的变换：}离散的情况下我们有$ k_n = \displaystyle\frac{2\pi
+    n}{L} $在连续极限下$ n \to \infty, L\to \infty $所以我们有理由认为存在连续变量：
     \begin{align}
-      \mathbf{k}_n \to  \lim_{L\to\infty}\frac{2\pi}{L}\mathbf{n}(\mathbf{k},L)=\mathbf{k}.
+      \mathbf{k}_n \to
+      \lim_{L\to\infty}\frac{2\pi}{L}\mathbf{n}(\mathbf{k},L)=\mathbf{k}.
     \end{align}
   \item \textbf{求和到积分：} 对于$ n $的求和可以自然的写作对于$ k $的积分：
     \begin{align}
-      \sum_{\mathbf{n}}(\ldots)\to\int d^{3}\mathbf{n}\left(\ldots\right)=\left(\frac{L}{2\pi}\right)^{3}\int d^{3}\mathbf{k}\left(\ldots\right).
+      \sum_{\mathbf{n}}(\ldots)\to\int
+      d^{3}\mathbf{n}\left(\ldots\right)=\left(\frac{L}{2\pi}\right)^{3}\int
+      d^{3}\mathbf{k}\left(\ldots\right).
     \end{align}
-  \item \textbf{Field Mode Operator rescale:}根据mode operator的定义在$ L \to \infty $的时候$ \psi_n \to 0 $所以我们需要对mode operator进行rescale：
+  \item \textbf{Field Mode Operator rescale:}根据mode operator的定义在$ L
+    \to \infty $的时候$ \psi_n \to 0 $所以我们需要对mode operator进行rescale：
     \begin{align}
-      \phi_k = \lim_{L \to \infty} \sqrt{V}\phi_n 
+      \phi_k = \lim_{L \to \infty} \sqrt{V}\phi_n
     \end{align}
     因此存在【正好是傅立叶变换的关系】：
     \begin{align}
-      \phi_{\mathbf{k}}(t)\equiv\int d^3\mathbf{x}e^{-i\mathbf{k}\cdot\mathbf{x}}\phi(\mathbf{x},t).\quad \phi(\mathbf{x},t)=\int\frac{d^3\mathbf{k}}{(2\pi)^3}e^{i\mathbf{k}\cdot\mathbf{x}}\phi_\mathbf{k}(t).
+      \phi_{\mathbf{k}}(t)\equiv\int
+      d^3\mathbf{x}e^{-i\mathbf{k}\cdot\mathbf{x}}\phi(\mathbf{x},t).\quad
+      \phi(\mathbf{x},t)=\int\frac{d^3\mathbf{k}}{(2\pi)^3}e^{i\mathbf{k}\cdot\mathbf{x}}\phi_\mathbf{k}(t).
     \end{align}
     其中逆变换的求解我们使用了delta函数的一个性质：
     \begin{align}
-      \int d^3\mathbf{x}e^{i(\mathbf{k-p})\cdot\mathbf{x}}=(2\pi)^3\delta^3(\mathbf{k-p}),
+      \int
+      d^3\mathbf{x}e^{i(\mathbf{k-p})\cdot\mathbf{x}}=(2\pi)^3\delta^3(\mathbf{k-p}),
     \end{align}
   \item \textbf{Momentum Mode Operato rescale:} 类比动力学场，我们把动量场的mode operator也定义为：
     \begin{align}
-      \int d^3\mathbf{x}\left.e^{-i\mathbf{p}\cdot\mathbf{x}}\pi(\mathbf{x},t)=\tilde{\pi}_\mathbf{p}(t)\right.
+      \int
+      d^3\mathbf{x}\left.e^{-i\mathbf{p}\cdot\mathbf{x}}\pi(\mathbf{x},t)=\tilde{\pi}_\mathbf{p}(t)\right.
     \end{align}
     逆变换也是同理。
-  \item \textbf{Delta函数：}在离散的情况下是使用Kronecker delta function，在连续极限下我们使用Dirac delta function，这两个函数是这样的极限关系：
+  \item \textbf{Delta函数：}在离散的情况下是使用Kronecker delta
+    function，在连续极限下我们使用Dirac delta function，这两个函数是这样的极限关系：
     \begin{align}
-      V\delta_{\mathbf{n},\mathbf{m}}=\int_{V}d^{3}\mathbf{x}e^{i(\mathbf{k_{n}-k_{m}})\cdot\mathbf{x}}\to(2\pi)^{3}\delta^{3}(\mathbf{k_{n}-k_{m}}), 
+      V\delta_{\mathbf{n},\mathbf{m}}=\int_{V}d^{3}\mathbf{x}e^{i(\mathbf{k_{n}-k_{m}})\cdot\mathbf{x}}\to(2\pi)^{3}\delta^{3}(\mathbf{k_{n}-k_{m}}),
     \end{align}
     所以我们形式化的有：
     \begin{align}
@@ -300,7 +328,11 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
 
 同样的我们分析mode operator的对易关系是：
 \begin{align}
-  \begin{bmatrix}\tilde{\phi}_{\mathbf{k}}(t),\tilde{\phi}_{\mathbf{p}}(t)\end{bmatrix}=[\tilde{\pi}_{\mathbf{k}}(t),\tilde{\pi}_{\mathbf{p}}(t)]=0\quad\begin{bmatrix}\tilde{\phi}_{\mathbf{k}}(t),\tilde{\pi}_{\mathbf{p}}(t)\end{bmatrix}=i\int d^3\mathbf{x}e^{i(\mathbf{k+p})x}=i(2\pi)^3\delta^3(\mathbf{p+k})
+  \begin{bmatrix}\tilde{\phi}_{\mathbf{k}}(t),\tilde{\phi}_{\mathbf{p}}(t)
+  \end{bmatrix}=[\tilde{\pi}_{\mathbf{k}}(t),\tilde{\pi}_{\mathbf{p}}(t)]=0\quad
+  \begin{bmatrix}\tilde{\phi}_{\mathbf{k}}(t),\tilde{\pi}_{\mathbf{p}}(t)
+  \end{bmatrix}=i\int
+  d^3\mathbf{x}e^{i(\mathbf{k+p})x}=i(2\pi)^3\delta^3(\mathbf{p+k})
 \end{align}
 
 \bigskip
@@ -312,7 +344,8 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
 \end{align}
 我们发现这个Hamiltonian正好是无穷多个独立谐振子的总和！所以类比量子力学我们使用产生湮灭算符进行表示：
 \begin{align}
-  a_{\mathbf{k}}=\frac{1}{\sqrt{2\omega_{\mathbf{k}}}}\left(\omega_{\mathbf{k}}\tilde{\phi}_{\mathbf{k}}+i\tilde{\pi}_{\mathbf{k}}\right),\quad a_{\mathbf{k}}^{\dagger}=\frac{1}{\sqrt{2\omega_{\mathbf{k}}}}\left(\omega_{\mathbf{k}}\tilde{\phi}_{-\mathbf{k}}-i\tilde{\pi}_{-\mathbf{k}}\right),
+  a_{\mathbf{k}}=\frac{1}{\sqrt{2\omega_{\mathbf{k}}}}\left(\omega_{\mathbf{k}}\tilde{\phi}_{\mathbf{k}}+i\tilde{\pi}_{\mathbf{k}}\right),\quad
+  a_{\mathbf{k}}^{\dagger}=\frac{1}{\sqrt{2\omega_{\mathbf{k}}}}\left(\omega_{\mathbf{k}}\tilde{\phi}_{-\mathbf{k}}-i\tilde{\pi}_{-\mathbf{k}}\right),
 \end{align}
 我们计算其对易关系满足：
 \begin{align}
@@ -320,7 +353,8 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
 \end{align}
 我们发现Hamiltonian可以写作：
 \begin{align}
-  H=\int\frac{d^3\mathbf{k}}{(2\pi)^3}\omega_\mathbf{k}\left[a_\mathbf{k}^\dagger a_\mathbf{k}+\frac{1}{2}(2\pi)^3\delta(0)\right].
+  H=\int\frac{d^3\mathbf{k}}{(2\pi)^3}\omega_\mathbf{k}\left[a_\mathbf{k}^\dagger
+  a_\mathbf{k}+\frac{1}{2}(2\pi)^3\delta(0)\right].
 \end{align}
 
 \bigskip
@@ -328,11 +362,12 @@ Klein-Gordon Field是一种标量协变场的理论，其Lagrangian为：
 
 我们会发现存在$ \delta(0) $根据之前的讨论我们interpret为无穷大体积的发散，所以我们计算零点能量是：
 \begin{align}
-  E_0=V\int\frac{d^3\mathbf{k}}{(2\pi)^3}\frac{\omega_\mathbf{k}}{2}, \quad \rho_0\equiv\int\frac{d^3\mathbf{k}}{(2\pi)^3}\frac{\omega_\mathbf{k}}{2},
+  E_0=V\int\frac{d^3\mathbf{k}}{(2\pi)^3}\frac{\omega_\mathbf{k}}{2},
+  \quad
+  \rho_0\equiv\int\frac{d^3\mathbf{k}}{(2\pi)^3}\frac{\omega_\mathbf{k}}{2},
 \end{align}
 $ \rho_0 $我们interpret为单位体积的零点能量密度。我们发现这个积分在$ k \to \infty $的时候发散了！
 \rmk{注意！这个发散不仅仅是体积趋于无穷导致的，更核心是我们选择了无限密度的自由度！}
-
 
 \subsection{Questions and thoughts}
 
@@ -345,7 +380,3 @@ $ \rho_0 $我们interpret为单位体积的零点能量密度。我们发现这�
 \question{为什么Poisson Bracket给出的守恒量的对易关系和对称性生成元给出的对易关系是完全一样的？这意味着什么？}
 见上一章的\cref{sec:Noetherinham}之中的讨论！
 \qed
-
-
-
-

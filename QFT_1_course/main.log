@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  8 JAN 2026 17:39
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  28 JAN 2026 11:10
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1417,11 +1417,11 @@ Overfull \hbox (0.92479pt too wide) in paragraph at lines 35--42
 
 
 [55]
-Package hyperref Info: bookmark level for unknown axiom defaults to 0 on input line 104.
+Package hyperref Info: bookmark level for unknown axiom defaults to 0 on input line 106.
 
 
 LaTeX Font Warning: Font shape `TU/STSong(0)/b/it' undefined
-(Font)              using `TU/STSong(0)/b/n' instead on input line 104.
+(Font)              using `TU/STSong(0)/b/n' instead on input line 106.
 
 
 
@@ -1455,10 +1455,10 @@ LaTeX Font Warning: Font shape `TU/STSong(0)/b/it' undefined
 
 [70] (./lec10.tex
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 28.
+LaTeX Font Warning: Command \large invalid in math mode on input line 39.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 28.
+LaTeX Font Warning: Command \large invalid in math mode on input line 39.
 
 
 
@@ -1472,10 +1472,10 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 28.
 
 [75]
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 316.
+LaTeX Font Warning: Command \large invalid in math mode on input line 375.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 316.
+LaTeX Font Warning: Command \large invalid in math mode on input line 375.
 
 
 
@@ -1514,11 +1514,11 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 316.
 [92]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 62.
+(hyperref)                removing `math shift' on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 62.
+(hyperref)                removing `math shift' on input line 83.
 
 
 
@@ -1527,11 +1527,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [94]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 134.
+(hyperref)                removing `math shift' on input line 200.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 134.
+(hyperref)                removing `math shift' on input line 200.
 
 
 
@@ -1609,4 +1609,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  117i,18n,121p,584b,726s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (113 pages, 2632516 bytes).
+Output written on main.xdv (113 pages, 2633700 bytes).

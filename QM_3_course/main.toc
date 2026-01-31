@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {2.1}Coherent State与经典谐振子对应}{6}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Questions and thoughts}{7}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Lecture 3：WKB近似基础}{9}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Take home messages}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}半经典波函数以及近似条件}{9}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Questions and thoughts}{10}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Lecture 4：WKB近似以及matching}{11}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Take home messages}{11}{subsection.4.1}%
