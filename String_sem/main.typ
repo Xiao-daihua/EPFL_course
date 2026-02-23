@@ -4,7 +4,7 @@
 #show: notetemp.with(
   title: [String Theory Seminar],
   author: [Yu Liu],
-  abstract: [This is the lecture note of the String Theory Seminar in EPFL 2026 spring semester. The main reference will be Polchinski's String Theory.],
+  abstract: [This is the lecture note of the String Theory Seminar in EPFL 2026 spring semester. The main reference will be Polchinski's String Theory. Metric convention $(-,+,+,+)$],
 )
 
 #pagebreak()
