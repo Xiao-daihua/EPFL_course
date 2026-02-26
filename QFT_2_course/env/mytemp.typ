@@ -9,7 +9,7 @@
 ) = {
   set page(
     paper: "a4",
-    margin: (x: 20mm, y: 25mm),
+    margin: (x: 25mm, y: 25mm),
     numbering: "1",
   )
   set par(
