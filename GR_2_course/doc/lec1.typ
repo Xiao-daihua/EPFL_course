@@ -1,6 +1,6 @@
 #import "../env/lib.typ": *
 
-= Lecture 1: FRW Metric Spactime
+= Lecture 1: FRW Metric 
 For a cosmological model, we need to make some assumptions about the
 universe. The most common assumption is the cosmological principle:
 #theorem[Cosmological Principle][

@@ -186,7 +186,7 @@ Thus the Friedmann Equation with $k = 0, Lambda = 0$ can be written
 as:
 $
     H^2 = (8 pi G)/3 sum_i rho_i
-$
+$<eq:friedmannmatter>
 Further more we can define a parameter called *Critical Density* as:
 #definition[Critical Density][
     The *Critical Density* is defined as:
@@ -204,7 +204,7 @@ With all these preparation, we can rewrite the Friedmann Equation
 already used) as:
 $
     H^2 = H_0^2 (Omega_Lambda + Omega_k (a_0 / a)^2 + Omega_m (a_0 / a)^3 + Omega_gamma (a_0 / a)^4)
-$
+$<eq:friedmannrewrite>
 The first two term is the contribution from the cosmological constant
 and the spatial curvature, and the last two term is the contribution
 from the matter and the radiation, with certain $omega_i$ determine
@@ -222,7 +222,7 @@ $
 $
 
 
-== Lengths in Cosmology
+== Distances in Cosmology
 
 To investigate the cosmology, we need to define the lengths.
 
@@ -246,7 +246,7 @@ $
         r & quad k = 0,
         op("arcsinh")(r) & quad k = -1
     )
-$
+$<eq:nullgeodesiclength>
 
 Then we can consider a process of two light signal emit at $t = t_1$
 and $t = t_1 + delta t_1$ and the light is observed at $t = t_0$ and
@@ -254,7 +254,7 @@ $t = t_0 + delta t_0$. Since the two light signal travel along the
 same null geodesics, we can get:
 $
     (delta t_0) / a(t_0) = (delta t_1) / a(t_1)
-$
+$<redshiftinfitime>
 The frequency of the light is inversely proportional to the time
 interval $omega prop 1/t$, thus we can get:
 $
@@ -276,7 +276,7 @@ The redshift can be described by the following quantity:
     is the time of getting the light and
     $t_1$
     is the time of emitting the light.
-]
+]<redshiftdef>
 Usually, we know the $lambda_1$ of many processes, and we measure
 $lambda_0$ from experiments. Thus, we can use $z$ as a measure of the
 distance.
@@ -304,6 +304,19 @@ $
 This is the *Hubble Law*, which fits well with the observation of the
 universe, which is one of the evidences for the expanding universe.
 
+#remark([
+    We here have three notion of "length":
+
+    - r, the spacial coordinate variable, which is NOT the coordinate
+        distance.
+
+    - l(r), the coordinate distance, which is the distance in the
+        spacial metric.
+
+    - l_p, the physical distance, which is the distance in the full
+        metric.
+])
+
 
 === Luminosity Distance
 
@@ -328,4 +341,70 @@ we can define a quantity called *Luminosity Distance* as:
 Then we can calculate the luminosity distance and its relation with
 other quantities for a comoving telescope and star in the FRW metric
 set up.
+
+In the FRW metric set up, the actual $P$ can be calculated as:
+$
+    P = L (S/(S_("tot") ) ) ((planck.reduce omega_0)/(planck.reduce omega_1) ) ((delta t_1) / (delta t_0) )
+$
+Lets explain each term, we set convension of $t_1$ the time of
+emitting the light and $t_0$ the time of getting the light:
+
+- $L$ is the Energy emitted per unit time when the energy is emitted.
+
+- $S$ is the area of the telescope. $S_("tot")$ is the total area of
+    light front, due to the expansion of the universe it takes form
+    of:
+$
+    S_("tot") = 4 pi a(t_0)^2 r^2(t_1,t_0)
+$
+where $r(t_1,t_0)$ is the difference in coordinate $r$ between the
+star and the telescope (which is NOT the coordinate distance), which
+follow the null geodesic equation as:
+$
+    d t = - a(t) (d r) / sqrt(1-k r^2) arrow.r.double integral_(t_1)^t_0 (d t) / a(t) = integral_0^r (d r) / sqrt(1-k r^2)
+$<eq:nullgeodesic>
+where $r$ then is implicitly a function of $t_1$ and $t_0$.
+
+#remark([
+    Why do this $S_("tot")$ is the total area of the light front?
+
+    We can see this from the FRW metric @comovingFRW, for a fixed time
+    $t_0$, and a fixed $r$, the area of the sphere is given by:
+    $
+        d s^2 = a^2 (t_0) r^2 d Omega_2^2
+    $
+    we integrate over the angular coodiantes we can get the area of
+    the sphere as:
+    $
+        S = 4 pi a^2 (t_0) r^2
+    $
+])
+
+- $omega_0 / omega_1$ is the ratio of the frequency of the light when
+    getting and emitting, which is given by the redshift as:
+$ (omega_0) / (omega_1) = a(t_0) / a(t_1) $
+
+- $(delta t_1) / (delta t_0)$ is the time given by the difference of
+    infinitesimal time changes. This is also given by the redshift,
+    see @redshiftinfitime:
+$
+    (delta t_1) / (delta t_0) = a(t_1) / a(t_0)
+$
+
+If we put all these together, we can get:
+$
+    P = L (S/(S_("tot") ) ) ((planck.reduce omega_0)/(planck.reduce omega_1) ) ((delta t_1) / (delta t_0) ) = L (S/(4 pi a(t_0)^2 r^2)) (a(t_0) / a(t_1)) (a(t_1) / a(t_0)) = L S / (4 pi a(t_0)^2 r^2)
+$
+This gives us the luminosity distance as:
+#corollary[Luminoity Distance in FRW Metric][
+    The luminosity distance in the FRW metric is given by:
+$
+    d = a(t_0)^2/ a(t_1) r(t_1,t_0) = (1 + z) a(t_0) r(t_1,t_0)
+$
+where $z$ is the redshift, see @redshiftdef.
+]<cor:luminositydistance>
+
+
+
+
 

@@ -124,7 +124,7 @@ And usually the coefficient $omega$ is given by:
 
 - Pressureless Dust: $omega = 0$
 
-- Relativistic Fluid (Radiation): $omega = 1/3$
+- Relativistic Fluid (Radiation): $omega = 1/3$<sec:differentparticles>
 
 - Cosmological Constant: $omega = -1$
 
