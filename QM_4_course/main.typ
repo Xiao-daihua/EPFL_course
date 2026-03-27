@@ -2,13 +2,16 @@
 #import "env/lib.typ": *
 
 #show: notetemp.with(
-  title: [Template of Typst Note],
+  title: [QM4 Lecture Notes],
   author: [Yu Liu],
-  abstract: [This is a template of Typst note],
+  abstract: [This is my lecture note on QM4 in EPFL for 2026 spring semester.],
 )
-Main Text 
 
-#include "doc/sec1.typ"
+#pagebreak()
+#include "doc/lec5.typ"
+
+#pagebreak()
+#include "doc/lec6.typ"
 
 #pagebreak()
 #bibliography("references.bib")

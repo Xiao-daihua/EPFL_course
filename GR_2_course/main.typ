@@ -24,5 +24,8 @@
 #include "doc/lec5.typ"
 
 #pagebreak()
+#include "doc/lec6.typ"
+
+#pagebreak()
 #bibliography("references.bib")
 

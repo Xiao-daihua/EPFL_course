@@ -1,6 +1,6 @@
 #import "../env/lib.typ": *
 
-= Lecture 3: Cosmological Horizons, dS Spacetime and Lengths
+= Lecture 3: Cosmological Horizons, dS Spacetime and Distance
 
 == Cosmological Horizons
 
