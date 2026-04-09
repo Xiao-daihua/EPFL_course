@@ -5,7 +5,7 @@
 The Universe is not always in thermal equilibrium, now we have to
 consider the non-equilibrium processes in the universe.
 
-== Boltzmann Equation
+== Free Particle Boltzmann Equation
 
 === A Convention Shift
 For a non-equilibrium system, we need to consider the Boltzmann
@@ -13,7 +13,7 @@ equation, which describes the evolution of the distribution function
 of particles in phase space. Here we use a different convention (as in
 the lecture note), we have:
 $
-    n_i (p,t) = (2 pi)^3 f_i (p,t) = g_i n_(i "old")(p,t)
+    n_(i "old") (p,t) =(2 pi)^3/ g_i f_i (p,t) quad arrow.r quad n_i (p,t) = (2 pi)^3 f_i (p,t)
 $
 Then the number density is:
 $
@@ -47,7 +47,7 @@ $
 $
 #remark([This can also be view given by the Noether's theorem of
     spacial translation symmetry.])
-We then can see that the comoving momentum is conserved, which means
+Wethen can see that the comoving momentum is conserved, which means
 that the physical momentum is redshifted by the expansion of the
 universe:
 $
@@ -66,6 +66,101 @@ physical momentum $p a(t) / a_0$. Thus we have:
 $
     n_i (p,t) = n_i (p a(t) / a_0, t_0) equiv n_(0 i) (p a(t) / a_0)
 $
+Why we care about this form of distribution depends on some "initial
+distribution"? it is because particles in the universe, they first
+interact with each other when temperature is high and they are likely
+to stay in a thermal equilibrium distribution. However, when
+temperature lowers down, the interaction is not likely to happen, thus
+the particle will behave like a free particle and evolve.
+
+This procesure ensures us the knowledge of the distribution at the
+initial time $t_0$ (as a thermal equilibrium distribution) and we can
+use the above formula to see how the distribution evolves with time.
+
+See the diagram for illustration:
+
+#figure(
+    image("../assets/freezeout.png", width: 80%),
+    caption: [
+        The process of freeze-out.
+    ],
+) <fig-freezeout>
+
+=== Effective Temperature
+<sec:effectivetemperature>
+
+Now consider the process described in above remark. Initially the
+particle is in thermal equilibrium, thus we have a thermal
+distribution at the initial time $t_0$:
+$
+    n_(i 0)(p) = g_i 1/(exp((E(p) - mu_i) / T_0) plus.minus 1)
+$
+Then the interaction turns off and the particle evolves as a free
+particle, thus we have:
+$
+    n_i (p,t) = n_(i 0)(p a(t) / a_0) = g_i 1/(exp((E(p a(t) / a_0) - mu_i) / T_0) plus.minus 1)
+$
+In some cases, we can define an *effective temperature* and make all
+the time dependence of this distribution into the effective
+temperature. Thus we can use this effective temperature and a
+equilibrium distribution to describe the distribution of the particle
+at any time.
+
+#remark([
+    The effective temperature is not really a temperature for the
+    particle is free and not in thermal equilibrium and we don't have
+    a notion of temperature.
+
+    Yet it is a measurable quantity, for we can measure the energy
+    distribution of the particle and fit it with a thermal
+    distribution, then we can get the effective temperature from
+    experiment.
+])
+
+- *Massless Particle*
+
+For massless particle, the energy is given by $E(p) = p$, if we
+negelect the chemical potential, we have:
+$
+    n_i (p,t) = g_i 1/(exp((p a(t)) /( a_0 T_0)) plus.minus 1)
+$
+Then we define the effective temperature as:
+#definition[Effective Temperature for Massless Particle][
+    The effective temperature for a massless particle is given by:
+    $
+        T_"eff" (t) = T_0 a_0 / a(t)
+    $
+]
+Then the distribution of the particle can be written as:
+$
+    n_i (p,t) = g_i 1/(exp(p / T_"eff"(t)) plus.minus 1)
+$
+
+In fact in cosmology, we often use the mixed use the effective
+temperature of relativistic particle and the assumed equilibrium
+temperature of radiation dominant universe. A justification may be
+that they both evolve as:
+$
+    T_"eff" (t) = T_0 a_0 / a(t) quad "and" quad T(t) = T_0 a_0 / a(t)
+$
+It is invalid rigorously I know, yet it amazingly works for many
+cases. For example, before we calculate the temperature of the
+universe as a theraml equilibrium relativistic system and the
+temperature turns out to be quite as the same of CMB which is the
+effective temperature of the photons in the universe.
+
+However, sometimes it can't give a correct result and we need some
+further justifications. Eg. the difference between the effective
+temperature of neutrinos and the CMB temperature. This happens due to
+some extra processes happening in the universe that makes the
+evolution of temperature not that simple.
+
+- *Massive Particle*
+
+See section 2.5 of the book @gorbunovIntroductionTheoryEarly2017 for
+more details.
+
+
 
 
 === Free Particle Boltzmann Equation
@@ -100,15 +195,19 @@ causes the redshift of the physical momentum.
 We then can integrate the Boltzmann equation over the momentum space,
 we can get the equation for the number density:
 $
-    dot(N_i (t)) + 3 H(t) N_i (t) = 0
+    dot(N)_i (t) + 3 H(t) N_i (t) = 0
 $
 #remark([
     Remember the convention is changed and we integrate with
-    $(d^3p)/(2 pi)^3$ measure.
-
-    We'd mainly prefer using number density instead of distribution
-    function as the variable.
+    $(d^3p) slash (2 pi)^3$ measure. We'd mainly prefer using number
+    density instead of distribution function as the variable.
 ])
+
+
+
+
+== Interacting Particle Boltzmann Equation
+
 
 === Interacting Particle Boltzmann Equation
 
@@ -146,11 +245,17 @@ around the equilibrium distribution $n_(i)^("eq")(p)$.
 We consider at $H = 0$ we have the equilibrium distribution
 $n_(i)^("eq") (p)$, we can prove that:
 $
-    I_("col") (n_(i)^("eq")(p)) = 0 quad arrow.l.r.double quad d/(d t) n_(i)^("eq")(p) = 0
+    I_("col") (n_(i)^("eq")(p)) = 0 quad "and" quad d/(d t) n_(i)^("eq")(p) = 0
 $
 where $n_i^("eq")$ is exactly the Bose-Einstein distribution or the
-Fermi-Dirac distribution. Then we can expand the distribution around
-the equilibrium distribution, in this limit:
+Fermi-Dirac distribution.
+
+- This means that in an interaction dominat system, all particle tends
+    to have the equilibrium distribution, which is given by the
+    Bose-Einstein distribution or the Fermi-Dirac distribution.
+
+Then we can expand the actural distribution around the equilibrium
+distribution, in this limit:
 $
     I_("col") (n_i) = I_("col") (n_(i)^("eq") + delta n_i) = I_("col") (n_(i)^("eq")) + ((delta I_("col")) / (delta n_i)) delta n_i + ... = - Gamma times (n_i - n_(i)^("eq"))
 $
@@ -170,7 +275,7 @@ for the number density:
 Now we talk more about $Gamma$. It has a physical meaning as the *rate
 of reaction*:
 $
-    Gamma = 1/tau = angle.l lambda/v angle.r^(-1)
+    Gamma = 1/tau = angle.l lambda slash v angle.r^(-1)
 $
 where $tau$ is the *mean free time* of the collition and $lambda$ is
 the *mean free path* of the collition and $v$ is the *relative
@@ -180,9 +285,14 @@ $
     lambda = 1/(sigma N)
 $
 where $sigma$ is the cross section of the collition and $N$ is the
-number density of the particle. Thus we can see that $Gamma$ is not
-time independent, it depends on the number density of the particle and
-the velocity of particle, which can change with time.
+number density of the particle. A commonly used formula for $Gamma$ is
+given by:
+$
+    Gamma = angle.l N v sigma angle.r
+$
+Thus we can see that $Gamma$ is not time independent, it depends on
+the number density of the particle and the velocity of particle, which
+can change with time.
 
 == Freeze-in and Freeze-out
 

@@ -16,6 +16,9 @@
 #pagebreak()
 #include "doc/lec3.typ"
 
+#pagebreak()
+#include "doc/lec6.typ"
+
 
 #pagebreak()
 #bibliography("references.bib")

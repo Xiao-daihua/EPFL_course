@@ -33,29 +33,35 @@
   set math.equation(numbering: "(1.1)")
   show: thmbox-init()
 
-  align(center)[
-    #text(
-      size: 18pt,
-    )[#title]
-    #v(0.2em)
-
-    #text(size: 12pt)[
-      #author \
-      #date
-    ]
-  ]
-  v(1em)
-
-  if abstract != none {
     align(center)[
-      #strong[Abstract]
-      #text(size: 11pt)[\ #abstract]
-    ]
-  }
-  v(1.5em)
+        #v(2em)
+        #text(
+            size: 18pt,
+        )[#title]
+        #v(0.5em)
 
-  outline()
-  v(1.5em)
+        #text(size: 13pt)[
+            #author \
+      \
+            #date
+        ]
+    ]
+    v(1em)
+
+    if abstract != none {
+        align(center)[
+            #strong[Abstract]
+        ]
+        v(-1em)
+        align(left)[
+            #text(size: 11pt)[\ #abstract]
+        ]
+    }
+    v(1.7em)
+
+    outline()
+    v(1.5em)
+
 
   doc
 }

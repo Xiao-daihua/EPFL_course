@@ -162,7 +162,7 @@ We can see that the blue line is a spacial slicing that make the
 spacial metric flat, yet the price to pay is that it only cover a
 patch of the global dS spacetime.
 
-== Hubble Parameter
+== Hubble Parameter and General Evolution of the Universe
 
 We recap on the three equations we commonly use for solving EFE:
 $
@@ -187,7 +187,7 @@ as:
 $
     H^2 = (8 pi G)/3 sum_i rho_i
 $<eq:friedmannmatter>
-Further more we can define a parameter called *Critical Density* as:
+Further more we can define a parameter called *Critical Density* if we use the energy density of *today* as a reference:
 #definition[Critical Density][
     The *Critical Density* is defined as:
     $
@@ -220,7 +220,13 @@ zero total energy moving in a potential:
 $
     U(a) = - H_0^2 (Omega_Lambda a^2 + Omega_k a_0^2 + Omega_m a_0^3 / a + Omega_gamma a_0^4 / a^2), quad dot(a)^2 + U(a) = 0
 $
+Why do we prefer this form of the EoM of the metric? 
 
+This is because prameters here are mostly observables that we can measure from looking into the ski. 
+
+- $H_0 $ can be measured through measuring how stars go away from us. And therefore we can measure the critical density $rho_c$.
+
+- $Omega_i $ can be measured by doing sky search, and seeing the energy density of different matter content in the universe.
 
 == Distances in Cosmology
 
@@ -403,6 +409,92 @@ $
 $
 where $z$ is the redshift, see @redshiftdef.
 ]<cor:luminositydistance>
+
+== Distances in Cosmology II
+
+=== Luminosity Distance and Redshift
+
+We want a formula for the luminosity distance $d_L$ as a function of
+redshift $z$. Thus, if we both measure $d_L$ and $z$ then we can find
+measure parameter $a(t)$.
+
+We start from the expression @cor:luminositydistance, we can see that
+$r(t_0,t_1)$ can be calculated using the null geodesic
+@eq:nullgeodesic, using the result of @eq:nullgeodesiclength gives:
+$
+    r(t_0,t_1) = cases(
+        integral_(t_1)^(t_0) ((d t) / a(t)) quad & k = 0,
+        sin(integral_(t_1)^(t_0) ((d t) / a(t))) quad & k = 1,
+        op("sinh")(integral_(t_1)^(t_0) ((d t) / a(t)))quad & k = -1,
+    )
+$
+Then we want to calculate the integral:
+$
+    integral_(t_1)^(t_0) ((d t) / a(t))
+$
+For a general universe, the Friedmann equation and Energy conservation
+equation gives @eq:friedmannrewrite. We copy it here:
+$
+    H^2 = H_0^2 (Omega_Lambda + Omega_k (a_0 / a)^2 + Omega_m (a_0 / a)^3 + Omega_gamma (a_0 / a)^4)
+$
+#remark([
+    Note that in this equation we set a time $t_0$ to define $H_0$
+    ,$a_0$ and $Omega_i$ these constants. Here in the context of
+    distance, we take $t_0$ to be the time when the light is emitted
+    (note this conficted with the previous convention where we take
+    $t_0$ to be the time when the light is observed, and $t_1$ to be
+    the time when the light is emitted).
+])
+We make a change of variable $x = a / a_0$, then we have:
+$
+    dot(x) = H_0 A(x) x, quad A(x)^2 = ( Omega_Lambda + Omega_k x^(-2) + Omega_m x^(-3) + Omega_gamma x^(-4) )
+$
+With these preparation we can calculate the integral:
+$
+    integral_(t_1)^(t_0) ((d t) / a(t)) = 1/(a_0 H_0) integral_(x_1)^(x_0) ((d x) / ( A(x) x^2)) quad x_0 = 1, x_1 = a(t_1) / a_0 = 1 / (1 + z)
+$
+Then the final formula for the luminosity distance is given by:
+#corollary[Luminosity Distance ito Redshift][
+    The luminosity distance can be calculated as a function of
+    redshift as:
+    $
+        d(z) = a_0 (1+z) 1/sqrt(-k) op("sinh") ( sqrt(-k)/(a_0 H_0) integral_(1/(1+z))^1 ((d x) / ( A(x) x^2)) )
+    $
+    This is combining the three cases of $k$ into one formula, for
+    $k = 0$ we take the limit $k arrow.r 0$ and use the fact that
+    $lim_(x arrow.r 0) (sinh(x) / x) = 1$.
+]
+
+
+=== Parallax
+
+Consider we have a source very far from the sun and we want to measure
+the distance between another star, which is much closer to the sun
+(though still very far from us). We can measure the angle between the
+source and the star at two different time (for example, at two
+different position of the earth in its orbit around the sun). This is
+called parallax.
+
+See the diagram for illustration:
+
+#figure(
+    image("../assets/parallax.png", width: 80%),
+    caption: [Parallax measurement. ],
+) <fig-parallax>
+
+The parallax is defined as:
+#definition[Parallax][
+    The parallax is defined as the angle between the source and the
+    star at two different time.
+    $
+        alpha_2 - alpha_1
+    $
+]
+A distance can be calculated from the parallax as:
+$
+    d = (2 r) / (alpha_2 - alpha_1)
+$
+where $r$ is the distance between the sun and the earth.
 
 
 

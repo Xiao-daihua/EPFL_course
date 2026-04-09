@@ -2,10 +2,10 @@
 #import "env/lib.typ": *
 
 #show: notetemp.with(
-    title: [GR 2 Lecture Note],
+    title: [Relativity and Cosmology II Lecture Note],
     author: [Note taken by: Yu Liu],
     abstract: [This is the lecture note of the GR 2 course in EPFL 2026 spring
-        semester. Mainly covering the topics in cosmology],
+        semester.],
 )
 
 #pagebreak()
@@ -25,6 +25,10 @@
 
 #pagebreak()
 #include "doc/lec6.typ"
+
+#pagebreak() 
+#include "doc/lec7.typ"
+
 
 #pagebreak()
 #bibliography("references.bib")
