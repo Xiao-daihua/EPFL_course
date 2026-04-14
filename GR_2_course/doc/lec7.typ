@@ -129,7 +129,7 @@ $
     neutron decay at the beginning of BBN.
 ])
 
-== Nuclear Reaction
+== Nuclear Reaction I: Start of Nuclear Reaction
 
 After we have neutrons and protons fixed, they can combine into light
 nuclei.
@@ -238,6 +238,8 @@ proton ratio at the time of deuterium survival is around $1slash 7$
 instead of $1 slash 5$.
 
 
+== Nuclear Reaction II: Abundance of Nuclei
+
 === Helium-4 Abundance (Rough Estimation)
 
 After deuterium is produced, the reaction can go on and on. As we
@@ -262,7 +264,7 @@ nucleus.
 Then if we assume all neutrons are used to produce helium-4, then we
 have:
 $
-    x_("He") = (4 N_("He")) / N_b = (4 N_n) / N_b
+    x_("He") = (4 N_("He")) / N_b = (4 N_n slash 2) / N_b
 $
 we already know that $N_n / N_p tilde 1 slash 7$ at the time of
 deuterium survival, and also by definition $N_p + N_n = N_b$, thus we
@@ -277,7 +279,7 @@ around 75%.
 === Saha Equation for Nuclear Reaction
 
 We want to make a more precise calculation of the abundance for all
-nuclei . To do this, we still make assumptions of equilibirum for all
+nuclei. To do this, we still make assumptions of equilibirum for all
 reactions. And view the reaction as a whole, we can write the reaction
 as:
 $
@@ -306,4 +308,79 @@ and we know that the number density of baryons is given by:
 $
     N_b = eta N_gamma = eta ( 2 zeta(3) / pi^2 ) T^3
 $
+we now do an apporximation that the number density of protons are
+quite the number density of baryons, $x_p tilde 1$ then we can have a
+relation between number density of He and the number density of
+neutrons, if we inverse the identity we have:
+$
+    x_n = x_"He"^(1 slash 2) eta^(3 slash 2) (T/ m_p )^( - 9 slash 4 ) e^( - I_( "He" ) slash ( 2 T ) )
+$
+Then we make a second approximation that the number density of He is
+quite the number density of baryons, $x_"He" tilde 1$, then we can
+have the number density of neutrons.
 
+Now we have the ingrediant of $N_B, x_n, x_p$ we can calculate the
+abundance of any particles at certain temperature, the final relation
+is
+
+#theorem[Abundance of Nucleus][
+    The abundance of a nucleus is given by:
+    $
+        x_A &tilde [eta (T/m_p)^(3 slash 2) ]^(3 slash 2 Z - 1 slash 2 A - 1 ) exp ( I_A slash T - ( (Z - A)/ 2 ) I_( "He" ) slash T ) \
+        &tilde exp (I_A/(A-Z) slash T - I_( "He" )/2 slash T )
+    $
+    This relation is mainly based on that He dominant.
+]
+
+Here we can see that the abundance is highly depend of the binding
+energy per neutron:
+$
+    I_A / (A - Z)
+$
+This also justifies why He dominant for it has the largest binding
+energy per neutron.
+
+
+=== Abundance of Deuterium
+
+Using this formula, we can calculate the abundance of deuterium,
+helium-3, lithium-7, etc. at the temperature of $T_"NS"$ which gives
+us:
+$
+    x_D tilde 10^(-120)
+$
+however, in reality the abundance of deuterium is around $10^(-5)$.
+This is because the assumption of equilibrium doesn't hold for
+deuterium, they freeze out before they are all used to produce
+helium-4.
+
+Consider the reactions:
+$
+    p + n <-> D + gamma \
+    D + D <-> attach("H", tl: 3) + p, quad D + D <-> attach("He", tl: 3) + n \
+$
+we now write out the Boltzmann equation for deuterium:
+$
+    (d N_D) / (d t) + 3 H N_D = - angle.l sigma v N_D angle.r N_D
+$
+we now calculate the abundance of deuterium at the time of freeze out,
+if we take $N_p tilde N_b$ then we have:
+$
+    N_p tilde eta N_gamma tilde eta T^3 \
+    H tilde T^2 / M_0 tilde Gamma = sigma v N_D
+$
+Thus we have:
+$
+    N_D/ N_p tilde 1/(sigma v M_0 eta T)
+$
+we can plug in some numbers:
+$
+    T tilde T_"NS" quad sigma v tilde 10^(-17) "cm"^3/s quad M_0 tilde 10^(18) "GeV" quad eta tilde 10^(-9)
+$
+Finally we can get the abundance of deuterium at the time of freeze
+out:
+$
+    x_D tilde 10^(-5)
+$
+Notice that this number is quite sensitive to the value of $eta$, thus
+we can use the abundance of deuterium to constrain the value of $eta$.
