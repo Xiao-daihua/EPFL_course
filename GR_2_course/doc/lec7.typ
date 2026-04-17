@@ -5,16 +5,12 @@ This is the process before the freeze out discussed in the previous
 lectures. During BBN the protons and neutrons combines into light
 nuclei, such as deuterium, helium-3, helium-4 and lithium-7.
 
-As a result of BBN, we have the two unexplained facts we used in
+As a result of BBN, we have the unexplained facts we used in
 recombination calculation of number density of hydrogen in
 recombination:
 
 - The abundance of protons are of order of 75% and the abundance of
     helium-4 is of order of 25% and others are negligible.
-
-- The baryon to photon ratio $eta$
-
-- ...
 
 Now lets have a look at what happened during BBN.
 

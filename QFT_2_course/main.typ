@@ -17,7 +17,19 @@
 #include "doc/lec3.typ"
 
 #pagebreak()
+#include "doc/lec4.typ"
+
+#pagebreak()
+#include "doc/lec5.typ"
+
+#pagebreak()
 #include "doc/lec6.typ"
+
+#pagebreak()
+#include "doc/lec7.typ"
+
+#pagebreak()
+#include "doc/lec8.typ"
 
 
 #pagebreak()

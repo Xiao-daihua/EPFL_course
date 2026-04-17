@@ -75,9 +75,13 @@ operators shall be defined. We define the following Hamiltonian:
     operator.
 ]
 We then impose the canonical commutation relation between operators:
-$
-    [hat(x)_i, hat(p)_j] = i planck.reduce delta_(i j), quad [hat(x)_i, hat(x)_j] = 0, quad [hat(p)_i, hat(p)_j] = 0
-$
+
+#definition[Canonical Commutation Relation][
+    We impose the following canonical commutation relation:
+    $
+        [hat(x)_i, hat(p)_j] = i planck.reduce delta_(i j), quad [hat(x)_i, hat(x)_j] = 0, quad [hat(p)_i, hat(p)_j] = 0
+    $
+]
 note that with this commutation relation, it is $p$ that is the
 canonical momentum operator and $p = -i planck.reduce nabla$ in the
 position basis. We can also define a Mechanical Momentum operator:
@@ -144,7 +148,7 @@ transformation. We know that the action transforms as
 @eq:action_gauge_transform, so the propagator transforms as:
 $
     G_chi (x_f, t_f; x_i, t_i) = e^((i e)/ planck.reduce (chi(x_f, t_f) - chi(x_i, t_i)) ) G(x_f, t_f; x_i, t_i)
-$
+$<eq:propagator_gauge_transform>
 This is also consistent with the fact that the wave function can be
 written in terms of the propagator:
 $
@@ -173,16 +177,43 @@ Note that consider the expectation value of an operator, if we have:
 $
     hat(O)^((U))_chi (t) = hat(O) (t)
 $
-Then the observable is gauge invariant. We take all these observables
-to be the physical observables of the theory. In this way, we can have
-a gauge invariant quantum theory.
+Then we view the observable as gauge invariant. We take all these
+observables to be the physical observables of the theory. In this way,
+we can have a gauge invariant quantum theory.
 
 There are some examples of this transformation:
 $
     & hat(x)_chi = hat(x) = hat(x)^((U))_chi, \
-    & hat(p)_chi = hat(p), quad hat(p)^((U))_chi = hat(p) + e nabla chi(hat(x), t), \
-    & hat(pi)_chi = hat(pi) - e nabla chi(hat(x), t), quad hat(pi)^((U))_chi = hat(pi)
+    & hat(p)_chi = hat(p), quad quad quad &hat(p)^((U))_chi = hat(p) + e nabla chi(hat(x), t), \
+    & hat(pi)_chi = hat(pi) - e nabla chi(hat(x), t), quad quad quad &hat(pi)^((U))_chi = hat(pi)
 $
 Thus we can also see here that the mechanical momentum is physical
 observable while the canonical momentum is not, though the canonical
-momentum form is gauge independent. 
+momentum form is gauge independent.
+
+=== Probability Density and Current
+
+In basic QM, we have the probability density and current defined as:
+$
+    rho(x, t) = |psi(x, t)|^2, quad J(x, t) = (1/(2 m)) (psi^* (-i planck.reduce nabla) psi + c.c.)
+$
+They satisfy the conservation law:
+$
+    partial_t rho + nabla dot J = 0
+$
+However, in the presence of EM field the probability current in this
+form will be not gauge invariant. We can define a gauge invariant
+probability current.
+#definition[Gauge Invariant Probability Current][
+    We can define the following gauge invariant probability current:
+    $
+        J(x, t) = (1/(2 m)) (psi^* (-i planck.reduce nabla - e A(x, t)) psi + c.c.)
+    $
+]
+Then with the probability density defined as
+$rho(x, t) = |psi(x, t)|^2$, we can also show that the conservation
+law is still satisfied:
+$
+    partial_t rho + nabla dot J = 0
+$
+
