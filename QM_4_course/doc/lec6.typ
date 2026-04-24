@@ -174,7 +174,7 @@ which is exactly the generator of magnetic translation
 @def:generator_magnetic_translation. Thus, everything is very
 consistent.
 
-== Landau Levels
+== Landau Levels (Symmetry Gauge)
 
 === Symmetry Gauge
 
@@ -226,6 +226,8 @@ For a general inifinite plane, the level are highy degenerate due to
 the fact that the wave function have infinite freedom in the $X_2$
 direction.
 
+
+== Landau Levels (Landau Gauge)
 
 === Landau Levels in Landau Gauge
 

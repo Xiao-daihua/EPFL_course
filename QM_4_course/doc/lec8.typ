@@ -24,12 +24,10 @@ assume that the vector potential *is not globally defined*.
     think like this. Don't even try to understand this, it only makes
     things more confusing.])
 
-Here I take the argument in the note of David Tong. 
+Here I take the argument in the note of David Tong.
 
 
-== Berry Phase
-
-
+== Berry Phase 
 
 === Global Phase Transformation Invariant
 
@@ -42,8 +40,16 @@ $
 $
 we can always perform a global phase transformation:
 $
-    |psi_(i,Lambda) angle.r = exp(i Lambda_i) |psi_i angle.r, quad Lambda in R
+    |psi_(i,Lambda) angle.r = exp(i Lambda_i)|psi_i angle.r, quad Lambda in R
 $
 and the states are unchanged. Thus the phase of a quantum state is not
 well defined. Then we have a look if the phase difference
+
+
+== AB Effect as Berry Phase
+
+
+=== Set Up 
+Consider the set up of a particle in EM field but confined in a box with center position $R $. The Hamiltonian is given by:
+
 
