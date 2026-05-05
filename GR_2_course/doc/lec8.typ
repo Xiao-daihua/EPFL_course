@@ -94,8 +94,9 @@ suppressed, however, at high temperture, the sphaleron process can be
 very efficient.
 
 Naively, we see a process of violating baryon number. However, if we
-look deeper, if we generate a baryon asymetry throught whatever
-process, the sphaleron process will wash out the baryon asymmetry.
+look deeper, it has the opposite effect we want, if we generate a
+baryon asymetry throught whatever process, the sphaleron process will
+wash out the baryon asymmetry.
 
 - However, in SM $B-L$ is an exact symmetry, thus if some process
     generates a non-zero $B-L$ asymmetry, then the sphaleron process
@@ -133,5 +134,4 @@ However, if so, then
 === Residue of Antibaryons
 
 
-== Dark Matter I: Evidence
 

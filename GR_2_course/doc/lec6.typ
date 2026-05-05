@@ -170,7 +170,7 @@ and the temperature of CMB today, which gives us the redshift of the
 recombination. remember @eq:scalingtemperature, we have:
 $
     z_("rec") tilde a_0 / a_("dec") = T_("dec") / T_("CMB") tilde 1100
-$
+$<eq:recombinationredshift>
 which is quite at the same order as the redshift of matter-radiation
 equality, which is given by $z_("eq") tilde 3000$. This means that the
 recombination happens quite close to the matter-radiation equality.
@@ -269,7 +269,7 @@ heat the photon up. Here is a time line of the process:
     image("../assets/freezeouts.png", width: 60%),
     caption: [Timeline of the neutrino freeze out and recombination
         process.],
-) <fig-freezeouts>
+  ) <fig-freezeouts>
 
 We can calculate the ratio using the conservation of entropy. We think
 that the universe is a closed system, there's nothing "outside" the

@@ -71,6 +71,8 @@ the light can never catch up with the expansion of the universe.
 
 === Cosmological Constant Case with Flat Spatial Curvature
 
+<sec:cosmologicalconstant>
+
 We now focus on a special case of $k = 0, Lambda = 0$ universe with
 the matter content of $omega = -1$ which is the cosmological constant
 case. Or equivalently $Lambda eq.not 0, rho = 0$. Note that it is not
@@ -164,6 +166,8 @@ patch of the global dS spacetime.
 
 == Hubble Parameter and General Evolution of the Universe
 
+<sec:generalmatterEOM>
+
 We recap on the three equations we commonly use for solving EFE:
 $
     &( dot(a) / a)^2 + k / a^2 = (8 pi G)/3 rho + Lambda / 3, quad "Friedmann Euqation" \
@@ -187,7 +191,8 @@ as:
 $
     H^2 = (8 pi G)/3 sum_i rho_i
 $<eq:friedmannmatter>
-Further more we can define a parameter called *Critical Density* if we use the energy density of *today* as a reference:
+Further more we can define a parameter called *Critical Density* if we
+use the energy density of *today* as a reference:
 #definition[Critical Density][
     The *Critical Density* is defined as:
     $
@@ -214,19 +219,22 @@ If we rewrite LHS back with $dot(a) / a$ and we group terms we can
 get:
 $
     dot(a)^2 = H_0^2 (Omega_Lambda a^2 + Omega_k a_0^2 + Omega_m a_0^3 / a + Omega_gamma a_0^4 / a^2)
-$
+$<eq:generalEoM>
 Which can be interpreted as the equation of motion of a particle with
 zero total energy moving in a potential:
 $
     U(a) = - H_0^2 (Omega_Lambda a^2 + Omega_k a_0^2 + Omega_m a_0^3 / a + Omega_gamma a_0^4 / a^2), quad dot(a)^2 + U(a) = 0
 $
-Why do we prefer this form of the EoM of the metric? 
+Why do we prefer this form of the EoM of the metric?
 
-This is because prameters here are mostly observables that we can measure from looking into the ski. 
+This is because prameters here are mostly observables that we can
+measure from looking into the ski.
 
-- $H_0 $ can be measured through measuring how stars go away from us. And therefore we can measure the critical density $rho_c$.
+- $H_0$ can be measured through measuring how stars go away from us.
+    And therefore we can measure the critical density $rho_c$.
 
-- $Omega_i $ can be measured by doing sky search, and seeing the energy density of different matter content in the universe.
+- $Omega_i$ can be measured by doing sky search, and seeing the energy
+    density of different matter content in the universe.
 
 == Distances in Cosmology
 
@@ -313,16 +321,15 @@ universe, which is one of the evidences for the expanding universe.
 #remark([
     We here have three notion of "length":
 
-    - r, the spacial coordinate variable, which is NOT the coordinate
-        distance.
+    - $r$, the spacial coordinate variable, which is NOT the
+        coordinate distance.
 
-    - l(r), the coordinate distance, which is the distance in the
+    - $l(r)$, the coordinate distance, which is the distance in the
         spacial metric.
 
-    - l_p, the physical distance, which is the distance in the full
+    - $l_p$, the physical distance, which is the distance in the full
         metric.
 ])
-
 
 === Luminosity Distance
 
@@ -401,13 +408,13 @@ If we put all these together, we can get:
 $
     P = L (S/(S_("tot") ) ) ((planck.reduce omega_0)/(planck.reduce omega_1) ) ((delta t_1) / (delta t_0) ) = L (S/(4 pi a(t_0)^2 r^2)) (a(t_0) / a(t_1)) (a(t_1) / a(t_0)) = L S / (4 pi a(t_0)^2 r^2)
 $
-This gives us the luminosity distance as:
-#corollary[Luminoity Distance in FRW Metric][
+This gives us the luminosity distance as: #corollary[Luminoity
+    Distance in FRW Metric][
     The luminosity distance in the FRW metric is given by:
-$
-    d = a(t_0)^2/ a(t_1) r(t_1,t_0) = (1 + z) a(t_0) r(t_1,t_0)
-$
-where $z$ is the redshift, see @redshiftdef.
+    $
+        d = a(t_0)^2/ a(t_1) r(t_1,t_0) = (1 + z) a(t_0) r(t_1,t_0)
+    $
+    where $z$ is the redshift, see @redshiftdef.
 ]<cor:luminositydistance>
 
 == Distances in Cosmology II

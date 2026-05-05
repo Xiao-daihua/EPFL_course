@@ -32,6 +32,12 @@
 #pagebreak()
 #include "doc/lec8.typ"
 
+#pagebreak()
+#include "doc/lec9.typ"
+
+#pagebreak()
+#include "doc/lec10.typ"
+
 
 #pagebreak()
 #bibliography("references.bib")
