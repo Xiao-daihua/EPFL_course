@@ -1,10 +1,10 @@
 #import "../env/lib.typ": *
 
-= Inhomogeneous Universe
+= Cosmological Perturbation Theory I
 
 The universe is not actually homogeneous, yet have some
 inhomogeneities. We now investigate this. We try to do this in the
-linearized theory, which assume:
+linearised theory, which assume:
 $
     (delta rho )/rho << 1
 $
@@ -14,7 +14,7 @@ is of:
 $
     (delta rho )/rho ~ 10^(-5)
 $
-which is small enough for us to do the linearized theory.
+which is small enough for us to do the linearised theory.
 
 
 == Jeans Instability and Newtonian Cosmology
@@ -44,7 +44,7 @@ One can derive the Euler equation directly from Newton's Law, the LHS
 is the acceleration of a fluid element, and the RHS is the force, both
 pressure and the gravity force.
 
-=== Background Purturbation
+=== Background Perturbation
 
 Now we want to take an ansatz of linear perturbation on a homogeneous
 background, we write:
@@ -72,7 +72,7 @@ $
     delta p = v_s^2 delta rho, quad v_s^2 = (diff p)/(diff rho) |_(rho_0)
 $
 where $v_s$ is the speed of sound in the fluid. Now we take a time
-derivative of the second equation and a gradiant of the third
+derivative of the second equation and a gradient of the third
 equation, we combine them together and we have:
 $
     (diff^2 delta rho )/(diff t^2) - v_s^2 Delta delta rho = 4 pi G rho_0 delta rho
@@ -104,17 +104,17 @@ $
 Now we turn into a more realistic calculation using the general
 relativity. Here is a big picture of how we do the calculation:
 
-- We used the Linearized gravity, but not on the Minkowski background,
-    but on the FRW background. And work mostly in forier space.
+- We used the Linearised gravity, but not on the Minkowski background,
+    but on the FRW background. And work mostly in Fourier space.
 
 - Distinguish modes inside and outside the cosmological horizon.
 
-- Remember that the only purturbation matters when it doesn't decay
+- Remember that the only perturbation matters when it doesn't decay
     with time.
 
 Here is a general picture of the inhomogeneities in the universe:
 
-- Before recombination, the purturbations are mostly occilations and
+- Before recombination, the perturbations are mostly oscillations and
     can be seen in the CMB picture.
 
 - After recombination, the purturbations are mostly growing modes and
@@ -140,18 +140,18 @@ The EoM is given by with $Lambda = 0$and $k = 0$:
 
 - *Friedmann Equation*:
 $
-    a^prime^2/a^4 = (8 pi G)/3 rho
-$
+    a^(prime 2)/a^4 = (8 pi G)/3 rho
+$<eq:klambda0friedmann>
 
 - *Spatial Component of EFE*:
 $
     2 a^(prime prime)/a^3 - a^prime^2/a^4 = - 8 pi G p
-$
+$<eq:klambda0spatialefe>
 
 - *Energy Conservation*:
 $
     rho^prime + 3 (a^prime)/a (rho + p) = 0
-$
+$<eq:klambda0energyconservation>
 Here we review the solutions with different EOS.
 
 - For Radiation Dominant Universe:
@@ -172,14 +172,14 @@ discussion of these calculations.
 
 === Conformal Time of Epochs
 
-We want to calculate the the conformal time at different epochs, we
-mainly care about recombination, matter-radiation equality and the
-present time. Remember the EoM of general matter is given by
+We want to calculate the conformal time at different epochs, we mainly
+care about recombination, matter-radiation equality and the present
+time. Remember the EoM of general matter is given by
 @eq:friedmannrewrite:
 $
     H = H_0 sqrt(Omega_("rad") (a_0/a)^4 + Omega_M (a_0/a)^4 + Omega_Lambda)
 $
-or if we used the redshift $z$ as prefered time variable, we have:
+or if we used the redshift $z$ as preferred time variable, we have:
 $
     z = (a_0)/(a) - 1, quad a = (a_0)/(1 + z)
 $
@@ -212,7 +212,7 @@ epochs.
 
 === Convention for the Metric
 
-Now let's try to consider the purturbation of the metric on a FRS
+Now let's try to consider the perturbation of the metric on a FRS
 background. We now take a $(-,+,+,+)$ convention for the metric
 signature. Then define:
 $
@@ -224,7 +224,7 @@ $
 $
 #remark([by convention, we have the minus sign in front of
     $h_(mu nu)$])
-Then we take care of raising and lowering indices of the linearized
+Then we take care of raising and lowering indices of the linearised
 metric:
 - For $h_(mu nu)$ we raise and lower with $eta_(mu nu)$, which is the
     Minkowski metric:
@@ -312,12 +312,8 @@ $
     delta rho' + 3 ( a' ) / ( a ) ( delta rho + delta p ) + ( rho + p ) ( diff_( i ) v_( i ) - ( 1 ) / ( 2 ) h' ) & = 0 \ diff_( i ) delta p + ( rho + p ) ( 4 ( a' ) / ( a ) v_( i ) + ( 1 ) / ( 2 ) diff_( i ) h_( 00 ) ) + [ v_( i ) ( rho + p ) ]' & = 0,
 $
 where $h = h_(i i)$ is the trace of the spatial part of the metric
-purturbation.
+perturbation.
 
-#YL([I haven't checked this equation personally])
+#YL([I haven't checked this equation personally, yet following we will
+    have simpler ones, this is just for completeness.])
 
-=== Forier Space and Helicity
-
-Before going to the EFE, we want to first take advantage of the
-spacial translation symmetry and go to the forier space. And we can
-also decompose the perturbation
