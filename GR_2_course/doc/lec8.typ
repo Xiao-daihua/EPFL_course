@@ -127,11 +127,64 @@ models of baryogenesis
 
 This mechanism is based on a "wrong" assumption that the electroweak
 phase transition is a first order phase transition, which is not the
-case in reality.
+case in reality. This subsection will just be a sketch and details
+will be missing.
 
-However, if so, then
+If we assume the electroweak phase transition is a first order phase
+transition. Then as the phase transition happens, there will be two
+local minima of the free energy coexisting, and there will be bubbles
+of the true vacuum.
+#note([
+    Just imagine as the boiling water, there are bubbles of steam
+    coexisting with the liquid water, and the steam is the true vacuum
+    and the liquid water is the false vacuum, yet a local minima.
+])
+
+Now sphaleron processes at the bubble wall will violate the baryon
+number, and create more baryons in the bubbles. And as we all end up
+in the true vacuum, the sphaleron process will stop as the temperature
+drops, thus the baryon asymmetry generated in the bubbles will be
+preserved.
 
 === Residue of Antibaryons
 
+We now try to calculate how much of the anti-baryons can survive after
+all the annihilation process. See page 316 of
+@gorbunovIntroductionTheoryEarly2017 for details.
 
+Before calculating the freeze out temperature, we compare $Gamma$ with
+$H$. Now we use a different but equivalent way of doing this. Remember
+the Boltzmann equation:
+$
+   ( d N _ ( X ) ) / ( d t ) + 3 H N _ ( X ) = - angle.l sigma_( "ann") dot.c v angle.r dot.c ( N _ ( X ) ^ ( 2 ) - N _ ( X ) ^ ( e q ) zwj ^ ( 2 ) ).
+$
+We ask when the annihilation process freezes out, we see that:
 
+- The expansion of universe make the equilibrium number density
+    $N^( e q )$ decrease.
+
+- To maintain the equilibrium, the annihilation process need to be
+    efficient enough to follow this decrease, and the characteristic
+    speed of this process is given by:
+$
+    - angle.l sigma_( "ann" ) v angle.r dot.c N^(e q 2)
+$
+Thus we now have a different way of comparing $Gamma$ with $H$, which
+is to compare:
+$
+    angle.l sigma_( "ann" ) v angle.r dot.c N^( e q 2) quad "and" quad d/(d t) N^( e q )
+$
+The freeze out temperature is then given by the condition:
+$ 
+    angle.l sigma_( "ann" ) v angle.r dot.c N^( e q 2) tilde d/(d t) N^( e q )
+$
+
+Now we generalize this to the case of baryons and anti-baryons. We have the Boltzmann equation:
+$ 
+( d ( N _ ( B ) a ^ ( 3 ) ) ) / ( d t ) = - angle.l sigma _ ( "ann" ) v angle.r dot.c ( N _ ( B ) N _ ( overline( B ) ) a ^ ( 3 ) - N _ ( B ) ^ ( e q ) N _ ( overline( B ) ) ^ ( e q ) a ^ ( 3 ) )
+$
+Thus the freeze out temperature is given by the condition:
+
+#remark([
+We use this freeze out condition is because this is an annhilation process the number density appears in $Gamma $ is that of the other particles. 
+])
