@@ -156,7 +156,7 @@ Before calculating the freeze out temperature, we compare $Gamma$ with
 $H$. Now we use a different but equivalent way of doing this. Remember
 the Boltzmann equation:
 $
-   ( d N _ ( X ) ) / ( d t ) + 3 H N _ ( X ) = - angle.l sigma_( "ann") dot.c v angle.r dot.c ( N _ ( X ) ^ ( 2 ) - N _ ( X ) ^ ( e q ) zwj ^ ( 2 ) ).
+    ( d N_( X ) ) / ( d t ) + 3 H N_( X ) = - angle.l sigma_( "ann") dot.c v angle.r dot.c ( N_( X )^( 2 ) - N_( X )^( e q ) zwj^( 2 ) ).
 $
 We ask when the annihilation process freezes out, we see that:
 
@@ -175,16 +175,66 @@ $
     angle.l sigma_( "ann" ) v angle.r dot.c N^( e q 2) quad "and" quad d/(d t) N^( e q )
 $
 The freeze out temperature is then given by the condition:
-$ 
+$
     angle.l sigma_( "ann" ) v angle.r dot.c N^( e q 2) tilde d/(d t) N^( e q )
 $
 
-Now we generalize this to the case of baryons and anti-baryons. We have the Boltzmann equation:
-$ 
-( d ( N _ ( B ) a ^ ( 3 ) ) ) / ( d t ) = - angle.l sigma _ ( "ann" ) v angle.r dot.c ( N _ ( B ) N _ ( overline( B ) ) a ^ ( 3 ) - N _ ( B ) ^ ( e q ) N _ ( overline( B ) ) ^ ( e q ) a ^ ( 3 ) )
+Now we generalize this to the case of baryons and anti-baryons. We
+have the Boltzmann equation:
+$
+    ( d ( N_( B ) a^( 3 ) ) ) / ( d t ) = - angle.l sigma_( "ann" ) v angle.r dot.c ( N_( B ) N_( overline(B) ) a^( 3 ) - N_( B )^( e q ) N_( overline(B) )^( e q ) a^( 3 ) )
 $
 Thus the freeze out temperature is given by the condition:
-
+$
+    abs(d ( N_( overline(B) )^( e q ) a^( 3 ) )) / ( d t ) ) tilde lr(angle.l sigma_( "ann" ) v angle.r) dot.c N_( B )^( e q ) N_( overline(B) )^( e q ) a^( 3 ).
+$
 #remark([
-We use this freeze out condition is because this is an annhilation process the number density appears in $Gamma $ is that of the other particles. 
+    We use this freeze out condition is because this is an annhilation
+    process the number density appears in $Gamma$ is that of the other
+    particles.
 ])
+
+Now we use some trick to evaluate this condition. A fact is that the
+particle and anti-particle have opposite chemical potential, thus we
+have at equilibrium:
+$
+    N^( e q ) = ( ( m_( p ) T ) / ( 2 pi ) )^( 3 slash 2 ) e^( - ( m_( p ) - mu_( B ) ) / ( T ) ), quad N_( overline(B) )^(e q ) = ( ( m_( p ) T ) / ( 2 pi ) )^( 3 slash 2 ) e^( - ( m_( p ) + mu_( B ) ) / ( T ) ).
+$
+Thus we know that:
+$
+    N_( B )^( e q ) N_( overline(B) )^( e q ) = ( ( m_( p ) T ) / ( 2 pi ) )^( 3 ) e^( - 2 m_( p ) / ( T ) )
+$
+Then we use a trick of plugging in the number density of baryons in
+terms of photons (quite a common trick for evaluation)
+$N_B = eta N_gamma$ and $N_gamma tilde T^3$, we have:
+$
+    N_(overline(B))^(e q) tilde ( m_p^3 / ( eta) ) e^( - 2 m_( p ) / ( T ) )
+$<eq:approxnumberdensityanti>
+We can see that the number density of anti-baryons is exponentially
+suppressed by the factor $e^( - 2 m_( p ) / ( T ) )$, this dominate
+the time evolution of $a^3 N_(overline(B))^(e q)$ on the LHS. Thus we
+approximate:
+$
+    abs((d N_( overline(B) )^( e q ) a^( 3 ) ) / ( d t )) tilde abs((d N_( overline(B) )^( e q ) ) / ( d t )) a^( 3 )
+$
+Now remember in the radiation dominate era, we have:
+$
+    T = sqrt(M_0/(2 t)) "thus" abs((dot(T)) / ( T )) = 1/(2 t) = H
+$
+Thus the LHS of the freeze out condition is given by:
+$
+    abs(a^( 3 ) ( d N_( overline(B) )^( e q ) ) / ( d t )) tilde a^( 3 ) ( m_( p ) ) / ( T ) H dot.c N_( overline(B) )^( e q ). quad "where" H = T^2/M_0
+$
+Now the freeze out condition is purely a function of temperature and
+constants, we can solve it to get the freeze out temperature. The
+result is:
+$
+    T tilde 10 "keV"
+$
+We plug in this temperature into @eq:approxnumberdensityanti to get
+the number density of anti-baryons at freeze out, and we get:
+$
+    N_( overline(B) )^( e q ) tilde 10^(-10^5)
+$
+which is an extremely small number, thus we can safely say that there
+is no anti-baryons left after the annihilation process.
