@@ -76,7 +76,16 @@ A dark matter should be *stable* and *weakly interacting*. We want to
 know what kinds of particles can have these properties and form a good
 candidate for dark matter.
 
-=== Neutrinos
+=== Neutrinos and Mass Bounds
 
 A standard model candidate for dark matter is the neutrino, cause it
-is only one that interacts weakly enough.
+is only one that interacts weakly enough. However, the neutrino is not
+the dark matter, because it is too light.
+
+We can calculate the number (not number density but we still use
+$N_nu$) of Neutrinos, due to it is a fermion, we have:
+$
+    N_nu <= 1/(2 pi)^3 integral d^3 p d^3 x tilde p^3 r^3
+$
+Thus the total mass of neutrinos in a galaxy with
+
