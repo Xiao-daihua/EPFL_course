@@ -342,7 +342,7 @@ Thus, the number density deviate from the equilibrium value, and we
 have:
 $
     N(T) approx N^("eq")(T_*) (a(T_*) / a(T))^3
-$
+$<eq:freezeoutnumberdensity>
 where $T_*$ is the temperature at which $Gamma(T_*) approx H(T_*)$.
 This means the time we should not only consider the expansion of the
 universe, but also the interaction of the particle.
