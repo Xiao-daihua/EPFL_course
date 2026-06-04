@@ -46,5 +46,11 @@
 #include "doc/lec12.typ"
 
 #pagebreak()
+#include "doc/lec13.typ"
+
+#pagebreak()
+#include "doc/lec14.typ"
+
+#pagebreak()
 #bibliography("references.bib")
 

@@ -44,6 +44,9 @@ behave as: #figure(
         $omega > -1/3$],
 ) <fig-penrosediv>
 
+
+#YL([This diagram may be wrong!!! check it??])
+
 === Case 2: $omega < -1/3$ accelerating universe
 
 In this case, we find the integral @eq:integraleta diverge at $t = 0$

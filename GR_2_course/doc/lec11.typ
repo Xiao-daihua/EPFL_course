@@ -313,6 +313,7 @@ inhomogeneity of the universe, thus the universe is rather homogeneous
 and isotropic.
 
 === Subhorizon Modes I: Relativistic Matter
+<sec:relasubrela>
 
 Now we consider the case of $lambda << u_s H^(-1)$, thus the last term
 dominates, and we have:
@@ -325,7 +326,7 @@ $
 $
 This equation admit a general solution (which doesn't decay) as:
 $
-    phi.alt (eta) = = - 3 phi.alt_( ( i ) ) dot.c ( 1 ) / ( ( u_( s ) k eta )^( 2 ) ) [ cos ( u_( s ) k eta ) - ( sin ( u_( s ) k eta ) ) / ( u_( s ) k eta ) ]
+    phi.alt (eta)  = - 3 phi.alt_( ( i ) ) dot.c ( 1 ) / ( ( u_( s ) k eta )^( 2 ) ) [ cos ( u_( s ) k eta ) - ( sin ( u_( s ) k eta ) ) / ( u_( s ) k eta ) ]
 $
 If consider the limit of $u_s k eta >> 1$ (subhorizon), we have:
 $
