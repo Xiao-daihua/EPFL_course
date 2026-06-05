@@ -133,10 +133,18 @@ $
 Thus, we can consider two limit of the EoM:
 
 - If $k/abs(eta) >> k^2$ which is $abs(eta k)<< 1$. The mode is
-    *Outside the Horizon*.
+    *Outside the Horizon*. In this time, the EoM is given by:
+$
+    phi'' + 2 ( a' ) / ( a ) phi' = 0
+$
+where one classical solution is a constant.
 
 - If $k/abs(eta) << k^2$ which is $abs(eta k)>> 1$. The mode is
-    *Inside the Horizon*.
+    *Inside the Horizon*. The EoM is given by:
+$
+    phi'' - Delta phi = 0
+$
+This means that we have a wave solution.
 
 As time goes, we notice that for dS spacetime:
 $
@@ -146,15 +154,9 @@ Thus, we see that as time goes on $abs(eta)$ decreases and modes will
 exit the horizon, which is different from the usual radiation dominate
 FRW case.
 
-For some fixed $k$ if we take $t arrow.r - infinity$, then we have
-$abs(eta k) arrow.r infinity$, thus the mode is inside the horizon and
-the EoM is given by:
-$
-    phi'' + Delta phi = 0
-$
-Just as the flat spacetime case, in minus infinite time. Now we focus
-on *Long before the Modes Enter Horizons*
-
+Thus, we expect the perturbation to be initially a wave solution
+inside the horizon, then it will exit the horizon and become a
+constant solution.
 
 === Quantization of Inflation Perturbation
 
@@ -167,21 +169,164 @@ $chi$:
 $
     S_( chi ) & = ( 1 ) / ( 2 ) integral d^( 3 ) x d eta [ ( chi' - ( a' ) / ( a ) chi )^( 2 ) - ( diff_( i ) chi )^( 2 ) ] \ & = ( 1 ) / ( 2 ) integral d^( 3 ) x d eta [ chi'^( 2 ) - ( diff_( i ) chi )^( 2 ) + ( a'') / ( a ) chi^( 2 ) ],
 $
-It is further useful to do a Fourier transform of $chi$, we do an on
-shell mode expansion.
+We can do an on shell mode expansion. Note that this action behaves
+like a time dependent $omega$ harmonic oscillators.
 
-- At $eta arrow.r - infinity$ limit, we can negelect the gravitational
+- *Inside Horizon Limit* $abs(k eta) >> 1$: At
+    $eta arrow.r - infinity$ limit, we can negelect the gravitational
     effect $a''/a chi^2$ term and it just gives us the mode expansion
     of a free scalar field:
 $
     chi ( x, eta ) = integral ( d^( 3 ) k ) / ( ( 2 pi )^( 3 slash 2 ) sqrt(2 k) ) ( e^( i k eta - i k x ) A_( k )^( dagger ) + e^( - i k eta + i k x ) A_( k ) ),
 $
 
-- If we consider modes that are going to exit horizon, or at time to
-    exit the horizon, then we need
+- *Exit Horizon* $abs(k eta) tilde 1$: If we consider modes that are
+    going to exit horizon, or at time to exit the horizon, then we
+    need
 
 $
     chi (x , eta )_( { k } ) = integral_( { k } ) ( d^( 3 ) k ) / ( ( 2 pi )^( 3 slash 2 ) sqrt(2 k) ) ( e^( - i k x ) chi_( k )^( ( + ) ) ( eta ) A_( k )^( dagger ) + e^( i k x ) chi_( k )^( ( - ) ) ( eta ) A_( k) ),
 $
 in the flat spacetime limit we have
-$chi_k tilde e^(plus.minus i omega eta)$. 
+$chi_k tilde e^(plus.minus i omega eta)$. In fact we can solve this
+from EoM, the momentum space EoM is given by:
+$
+    chi'' - 2/eta^2 chi + k^2 chi = 0
+$
+Fixing the boundary condition to match the flat spacetime limit, we
+can get the solution:
+$
+    chi_k^((plus.minus)) = e^(plus.minus i k eta ) ( 1 plus.minus i / ( k eta ) )
+$
+
+- *Outside Horizon* $abs(k eta) <<1$: If we consider modes that are
+    outside the horizon, then the oscillation term is negligible, and
+    we have:
+$
+    chi(x, eta)_({k}) = integral_({k}) frac(d^3 k, (2pi)^(3/2) sqrt(2k)) (-frac(1, k eta)) (e^(-i k x + i alpha_k) A_k^dagger + e^(i k x - i alpha_k) A_k)
+$
+Thus we can also find that:
+$
+    phi(x, eta)_({k}) = integral_({k}) frac(d^3 k, (2pi)^(3/2) sqrt(2k)) frac(H, k) (e^(-i k x + i alpha_k) A_k^dagger + e^(i k x - i alpha_k) A_k)
+$
+The result is rational, since the field fluctuation is time
+independent outside the horizon, as we expected.
+
+#remark([
+    Notice that all these discussion is based on a certain range of
+    modes. We write the expansion as $chi_({k})$ shows that this
+    expansion is only valid for some certain modes.
+])
+
+We now focus on the super horizon modes, and we want to know the
+fluctuation of the field, which is given by the equal time correlation
+function, the above on shell mode expansion gives us:
+$
+    angle.l phi(x, eta)^2 angle.r = integral ( d^( 3 ) k ) / ( ( 2 pi )^( 3 ) 2 ) ( H^2 / k^3 )
+$
+In momentum space, we have:
+$
+    angle.l phi(k, eta) phi(k', eta) angle.r tilde delta^( 3 ) ( k + k' ) ( H^2 / ( 2 k^3 ) )
+$
+This is gives us the famous $1/k^3$ dependent power spectrum instead
+of the usual $1/k$ dependent in the flat spacetime.
+
+=== From Quantum To Classical
+
+It is important to address a picture. We usually evaluate a harmonic
+oscillator state whether it is in the ground state or semiclassical
+state by looking at the two point equal time correlation function.
+
+Then we may notice that, if we consider the $chi$ field:
+
+- At outside horizon limit:
+$
+    angle.l chi(k, eta) chi(k', eta) angle.r tilde delta^( 3 ) ( k + k' )1/ abs(k eta)^2 1/k
+$
+
+- At inside horizon limit:
+$
+    angle.l chi(k, eta) chi(k', eta) angle.r tilde delta^( 3 ) ( k + k' ) 1/k
+$
+At outside horizon limit the two point correlation function is much
+larger than the inside horizon limit:
+$
+    angle.l chi(k, eta) chi(k', eta) angle.r_( { abs(k eta) << 1 } ) >> angle.l chi(k, eta) chi(k', eta) angle.r_( { abs(k eta) >> 1 } )
+$
+We can interpret this as the following result that the state we are
+averaging upon is becoming more and more classical as time goes on,
+this is effected by the time dependent perturbation term in the
+action.
+
+
+=== Metric Perturbation from Inflation Perturbation
+
+Finally, we want to explain the energy density perturbation, which
+lead to the anisotropy that we observe in CMB. We develop the
+following argument.
+
+If we assume that the inflation ends (reheating) when the field value
+reaches some critical value $phi_"critical"$,
+
+#figure(
+    image("../assets/inflationend.png", width: 50%),
+    caption: [The end of inflation],
+) <fig-inflationend>
+then the presence of the perturbation will lead to that different
+region of the universe will end inflation at different time. Remember
+that we split the inflation field into a classical background and a
+perturbation, thus we have:
+$
+    phi_"full" ( x, t ) = phi.alt_( c ) ( t ) + phi ( x, t )
+$
+for a certain $x$, the lag or lead of time to reach the critical value
+is given by:
+$
+    delta t_r (x) = phi(x, t) / dot(phi.alt_( c ))
+$
+Because of this lag or lead in reheating, this cause the primordial
+inhomogeneity in energy density and the gravitational field. We can
+esitimate them from the lag or lead of reheating time, and we have:
+$
+    (delta a)/a = (dot(a) delta t_r)/a = H delta t_r
+$
+if we plug in the dS spacetime $a(t) tilde e^(H t)$, we can get:
+$
+    (delta a)/a = H delta t_r = H phi(x, t) / dot(phi.alt_( c ))
+$
+Note the $dot(phi.alt_( c ))$ is related to a small parameter (slow
+roll parameter) $epsilon$ as:
+$
+    dot(phi.alt_( c )) tilde sqrt(V epsilon)
+$
+and from the Friedmann equation we have $H M_"pl" tilde sqrt(V)$, thus
+we can get:
+$
+    phi.alt_((i)) tilde (delta a)/a tilde H phi(x, t) / dot(phi.alt_( c )) tilde H / sqrt(V epsilon) phi(x, t) tilde 1/ sqrt(epsilon) phi(x, t) / M_"pl"
+$
+Thus the metric perturbation is strongly related to the inflation
+field perturbation, given that:
+$
+    angle.l phi.alt_((i)) phi.alt_((i)) angle.r tilde 1/(epsilon M_"pl"^2) angle.l phi phi angle.r tilde delta^3(k+k') 1/(epsilon M_"pl"^2) H^2 / ( k^3)
+$
+This eventually lead to the anisotropy in we measure as @eq-anisocmb.
+Notice that if we want to match the observation, we need:
+$
+    H^2 / ( epsilon M_"pl"^2 ) tilde 10^(-10)
+$
+
+
+=== Slow roll Parameter Restriction
+
+In reality, the correlation function is not exactly $1/k^3$ but with a
+small deviation:
+$
+    P(k) tilde 1/k^(3+1-n_s)
+$
+This in fact will give us a restriction on the slow roll parameter $epsilon, eta$. The result is:
+$
+    n_s - 1 = - 6 epsilon + 2 eta
+$
+
+
+

@@ -37,7 +37,7 @@ In fact, observations shows that the correlation of the perturbation
 (at the last scattering surface) is given by a power law:
 $
     angle.l delta_"rad" (k) delta_"rad" (k') angle.r tilde delta^(3) (k + k') 10^(-10) (k_* / k)^(3+(n_s - 1))
-$
+$<eq-anisocmb>
 However, in fact this correlation causes a problem. If we read this
 observation result we know that:
 
