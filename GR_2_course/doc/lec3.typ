@@ -32,7 +32,7 @@ Then we can see that $omega > -1/3$ and $omega < -1/3$ gives two cases
 for the behavior of $eta$ as $t$ goes to zero and infinity.
 
 
-=== Case 1 : $omega > -1/3$ decelerating universe
+=== Case 1: $omega > -1/3$ decelerating universe
 
 In the case, we can find that the integral @eq:integraleta converge at
 $t = 0$ but diverge at $t = + infinity$. we can choose a suitable
@@ -275,19 +275,19 @@ $<redshiftinfitime>
 The frequency of the light is inversely proportional to the time
 interval $omega prop 1/t$, thus we can get:
 $
-    (omega_0) / (omega_1) = (delta t_1) / (delta t_0) = a(t_0) / a(t_1)
+    (omega_0) / (omega_1) = (delta t_1) / (delta t_0) = a(t_1) / a(t_0)
 $
 
-- Universe is Expanding: $a(t_0) > a(t_1)$ thus $omega_0 > omega_1$
+- Universe is Expanding: $a(t_0) > a(t_1)$ thus $omega_0< omega_1$
     which is called *Redshift*.
 
-- Universe is Contracting: $a(t_0) < a(t_1)$ thus $omega_0 < omega_1$
+- Universe is Contracting: $a(t_0) < a(t_1)$ thus $omega_0 > omega_1$
     which is called *Blueshift*.
 
 The redshift can be described by the following quantity:
 #definition[Redshift][
     The *Redshift* is defined as:
-    $ z = (lambda_0 - lambda_1) / lambda_0 = a(t_0) / a(t_1) - 1 $
+    $ z = (lambda_0 - lambda_1) / lambda_1 = a(t_0) / a(t_1) - 1 $
     note that
     $t_0$
     is the time of getting the light and
@@ -398,7 +398,7 @@ where $r$ then is implicitly a function of $t_1$ and $t_0$.
 
 - $omega_0 / omega_1$ is the ratio of the frequency of the light when
     getting and emitting, which is given by the redshift as:
-$ (omega_0) / (omega_1) = a(t_0) / a(t_1) $
+$ (omega_0) / (omega_1) = a(t_1) / a(t_0) $
 
 - $(delta t_1) / (delta t_0)$ is the time given by the difference of
     infinitesimal time changes. This is also given by the redshift,
@@ -409,7 +409,7 @@ $
 
 If we put all these together, we can get:
 $
-    P = L (S/(S_("tot") ) ) ((planck.reduce omega_0)/(planck.reduce omega_1) ) ((delta t_1) / (delta t_0) ) = L (S/(4 pi a(t_0)^2 r^2)) (a(t_0) / a(t_1)) (a(t_1) / a(t_0)) = L S / (4 pi a(t_0)^2 r^2)
+    P = L (S/(S_("tot") ) ) ((planck.reduce omega_0)/(planck.reduce omega_1) ) ((delta t_1) / (delta t_0) ) = L (S/(4 pi a(t_0)^2 r^2)) (a(t_1) / a(t_0))^2 = L S a(t_1)^2 / (4 pi a(t_0)^4 r^2)
 $
 This gives us the luminosity distance as: #corollary[Luminoity
     Distance in FRW Metric][

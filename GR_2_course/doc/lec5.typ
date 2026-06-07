@@ -64,7 +64,7 @@ physical momentum $p$, due to the fact that the comoving momentum is
 conserved, the number is equal to number of particle at $t_0$ with
 physical momentum $p a(t) / a_0$. Thus we have:
 $
-    n_i (p,t) = n_i (p a(t) / a_0, t_0) equiv n_(0 i) (p a(t) / a_0)
+    n_i (p,t) = n_i (p_0 = p a(t) / a_0, t_0) equiv n_(0 i) (p a(t) / a_0)
 $
 Why we care about this form of distribution depends on some "initial
 distribution"? it is because particles in the universe, they first
@@ -74,8 +74,9 @@ temperature lowers down, the interaction is not likely to happen, thus
 the particle will behave like a free particle and evolve.
 
 This procesure ensures us the knowledge of the distribution at the
-initial time $t_0$ (as a thermal equilibrium distribution) and we can
-use the above formula to see how the distribution evolves with time.
+initial time $t_0$ (for example a thermal equilibrium distribution)
+and we can use the above formula to see how the distribution evolves
+with time.
 
 See the diagram for illustration:
 

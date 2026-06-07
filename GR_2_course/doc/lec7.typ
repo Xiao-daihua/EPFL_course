@@ -75,7 +75,7 @@ There is a basic result in thermaldynamics that the difference of
 number density between particle and antiparticle is given by:
 #theorem[Particle-Antiparticle Asymmetry][
     The difference of number density between particle and antiparticle
-    at $T >> m, mu$is given by:
+    at $T >> m, mu$ is given by:
     $
         Delta N_i = cases(
             mu T^3 slash 6 quad "fermion",
@@ -86,7 +86,7 @@ number density between particle and antiparticle is given by:
 The proof is that we assume the Boltzmann distribution and take a
 limit. Then we use the fact that the chemical potential of
 antiparticle is the negative of the chemical potential of particle,
-which means that $mu_(bar(i)) = - mu_i$.
+which means that $mu_(overline(i)) = - mu_i$.
 
 With this result, we can see that:
 $

@@ -131,7 +131,7 @@ And usually the coefficient $omega$ is given by:
 We believe that $omega >= -1$ and cc is the lower bound, which is
 called the null energy condition.
 #remark([
-    We can see from the EFE that a matter with $omega < -1$ gives out
+    We can see from the EFE that a matter with $omega = -1$ gives out
     $rho = "const"$ in the energy consevation of matter, this is
     equivalent to having a cosmological constant of
     $Lambda = 8 pi G rho$.

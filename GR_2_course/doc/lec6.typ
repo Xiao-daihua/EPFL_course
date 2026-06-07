@@ -59,6 +59,7 @@ equation:
     electron mass, $T$ is the temperature, and $I = m_e + m_p - m_H$
     is the ionization energy of hydrogen.
 ]
+
 All elements other than photons can be view as thermal equilibrium
 non-relativistic particles, and the equilibrium number density can be
 calculated as @eq:nonrelativisticnumber. we copy it here for
@@ -98,10 +99,10 @@ To do the calculation, we need some facts and assumptions:
     after the freeze out of electrons and positrons, thus we have
     $N_e = N_p$.
 
-- Fact: from the derivation of BBN, we can prove that the baryon to
-    photon ratio is $eta = N_b slash N_gamma = 6 times 10^(-10)$, where
-    $N_b$ is the number density of baryons, and $N_gamma$ is the
-    number density of photons.
+- Fact: the baryon to photon ratio is
+    $eta = N_b slash N_gamma = 6 times 10^(-10)$, where $N_b$ is the
+    number density of baryons, and $N_gamma$ is the number density of
+    photons.
 
 - Fact: the fraction of protons in baryons is about 0.75, thus we have
     $N_p = 0.75 N_b$.
@@ -118,7 +119,7 @@ $
 $
 While $N_H$ can be expressed through the baryon to photon ratio as:
 $
-    N_H = N_(p "orig") = 0.75 N_b = 0.75 eta N_gamma = 0.75 eta (2 zeta(3) / pi^2) T^3
+    N_H = N_(p "original") = 0.75 N_b = 0.75 eta N_gamma = 0.75 eta (2 zeta(3) / pi^2) T^3
 $
 In the final equation we use the equilibrium number density of
 photons, given by @eq:relativisticnumber. With the number density of
@@ -134,7 +135,7 @@ The recombination happens when the scattering effect is as the same
 order as the expansion effect (freeze out), thus we have the
 condition:
 $
-    H = Gamma quad arrow.r.double quad B ( T^( 9 slash 4 ) ) / ( m_( e )^( 5 slash 4 ) ) e^( - l slash 2 T ) = ( T^( 2 ) ) / ( M_( 0 ) )
+    H = Gamma quad arrow.r.double quad B ( T^( 9 slash 4 ) ) / ( m_( e )^( 5 slash 4 ) ) e^( - I slash 2 T ) = ( T^( 2 ) ) / ( M_( 0 ) )
 $
 where $B$ is a constant given by:
 $
@@ -239,7 +240,7 @@ use the effective temperature to describe the distribution of the
 particle, see @sec:effectivetemperature the definition of effective
 temperature for massless particles. By definition:
 $
-    T_(nu,0) = T_(nu*) (a_* / a_0)
+    T_(nu,0) = T_(*)^nu (a_* / a_0)
 $
 where $T_(nu,0)$ is the effective temperature of neutrinos today,
 $T_nu_*$ is the freeze out temperature of neutrinos, $a_*$ is the
@@ -269,7 +270,7 @@ heat the photon up. Here is a time line of the process:
     image("../assets/freezeouts.png", width: 60%),
     caption: [Timeline of the neutrino freeze out and recombination
         process.],
-  ) <fig-freezeouts>
+) <fig-freezeouts>
 
 We can calculate the ratio using the conservation of entropy. We think
 that the universe is a closed system, there's nothing "outside" the
@@ -295,7 +296,7 @@ $
 Then neutrino effective temperature goes like $T tilde 1/a$, thus we
 have:
 $
-    (T_(nu *)) a_* tilde T_(nu,0) a_0
+    (T_(*)^nu) a_* = T_(nu,0) a_0
 $
 Then some time later the positrons and electrons annihilate each
 other, the entropy of the universe is given by:
@@ -307,18 +308,18 @@ is evolving as a relativistic equilibrium system and the temperature
 goes like $T tilde 1/a$. Then the photon freeze out the effective
 temperature still goes like $T tilde 1/a$. Thus we have:
 $
-    T a tilde T_(gamma,0) a_0
+    T_"rec" a_"rec" = T_(gamma,0) a_0
 $
 With all these ingrediants, we can calculate the ratio between the
 neutrino effective temperature and the photon effective temperature
 as:
 $
-    (T_(nu,0)) / (T_(gamma,0) ) = ((g_gamma + g_(e^+ e^-)) / g_gamma)^(1 slash 3) = (11/4)^(1 slash 3) = 1.401
+    (T_(gamma,0) )/(T_(nu,0)) = (a_"rec" T_"rec")/(a_* T_*^nu) = ((g_gamma + g_(e^+ e^-)) / g_gamma)^(1 slash 3) = (11/4)^(1 slash 3) = 1.401
 $
 From this equation we can get the effective temperature of neutrinos
 today from the CMB temperature:
 $
-    T_(nu,0) = (11/4)^(1 slash 3) T_("CMB") tilde 2 "K"
+    T_(nu,0) = T_("CMB") / 1.4 tilde 2 "K"
 $
 
 === Cosmological Bound on Neutrino Mass
