@@ -334,6 +334,14 @@ universe, which is one of the evidences for the expanding universe.
         metric.
 ])
 
+#note([
+    It is also important to note that we assume the bodies in the
+    universe have fixed co-moving coordinates in space, which means
+    that the coordinate distance and spacial coordinates are all
+    constants. However, due to the expansion of the universe the
+    physical distance is time dependent.
+])
+
 === Luminosity Distance
 
 We first define something as:

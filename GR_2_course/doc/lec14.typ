@@ -258,6 +258,7 @@ averaging upon is becoming more and more classical as time goes on,
 this is effected by the time dependent perturbation term in the
 action.
 
+== Inflation Perturbation to CMB Anisotropy
 
 === Metric Perturbation from Inflation Perturbation
 

@@ -4,8 +4,9 @@
 #show: notetemp.with(
     title: [Relativity and Cosmology II Lecture Note],
     author: [Note taken by: Yu Liu],
-    abstract: [This is the lecture note of the GR 2 course in EPFL 2026 spring
-        semester.],
+    abstract: [This is the lecture note of the GR 2 course in EPFL
+        2026 spring semester.
+    ],
 )
 
 
@@ -21,13 +22,13 @@
 #pagebreak()
 #include "doc/lec4.typ"
 
-#pagebreak() 
+#pagebreak()
 #include "doc/lec5.typ"
 
 #pagebreak()
 #include "doc/lec6.typ"
 
-#pagebreak() 
+#pagebreak()
 #include "doc/lec7.typ"
 
 #pagebreak()

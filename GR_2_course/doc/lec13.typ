@@ -72,7 +72,7 @@ inflation mode. And the perturbation can be given by the quantum
 fluctuation of the inflaton field.
 
 
-== Inflation
+== Inflation Idea
 === dS and Horizon Problem
 We assume that the universe is dS before the big bang. Remember in dS
 spacetime:
@@ -96,8 +96,8 @@ horizon problem.
 
 
 #figure(
-  image("../assets/horizon.png", width: 50%),
-  caption: [Illustration of solving Horizon Problem with dS.],
+    image("../assets/horizon.png", width: 50%),
+    caption: [Illustration of solving Horizon Problem with dS.],
 ) <fig-horizon>
 
 === Slow Roll Inflation
@@ -194,7 +194,7 @@ $
 Under these two conditions, we can see that the EoM of inflation field
 will be dominated by the friction and potential term, thus we have:
 $
-   & dot(phi) = - 1/(3H ) V' ( phi ) quad "Equation of Motion (SR)" \
-   & H = 1/(M_"pl") ((8 pi V)/3)^(1 slash 2) quad "Friedmann Equation (SR)"
+    & dot(phi) = - 1/(3H ) V' ( phi ) quad "Equation of Motion (SR)" \
+    & H = 1/(M_"pl") ((8 pi V)/3)^(1 slash 2) quad "Friedmann Equation (SR)"
 $
 

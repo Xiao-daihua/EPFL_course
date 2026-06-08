@@ -1,12 +1,20 @@
 #import "../env/lib.typ": *
 
-= Lecture 8: Baryogenesis and Dark Matter
+= Lecture 8: Baryongenesis and Dark Matter
 
 Before the BBN process, we need to first have a lot of baryons in the
 universe. In cosmology we initially assume that:
 
 - There are equal number of baryons and anti-baryons in the early
     universe.
+
+#note([
+    Note that this is different from the electron and positron case,
+    where we assume that electric charge is conserved, thus we have
+    more electrons than positrons in the early universe, to be equal
+    to the number of protons, thus the universe is electrically
+    neutral.
+])
 
 Thus it is clear that in the early universe, there should be a process
 of:
@@ -25,7 +33,7 @@ about some of the theoretical models of baryogenesis.
 
 == General Picture
 
-=== General Picture of Baryogenesis
+=== General Picture of Baryongenesis
 
 A modern assumed picture of the process is as follows:
 
@@ -57,8 +65,8 @@ There are several conditions for baryogenesis to happen, which are
 called the Sakharov's conditions:
 
 + *Baryon number violation*: there must be some process that violates
-    the baryon number, otherwise we cannot generate a baryon
-    asymmetry.
+    the baryon number, making $B = n_B - n_(overline(B))$ unconserved,
+    otherwise we cannot generate a baryon asymmetry.
 
 + *C and CP violation*: there must be some process that violates the C
     and CP symmetries.
@@ -94,9 +102,10 @@ suppressed, however, at high temperture, the sphaleron process can be
 very efficient.
 
 Naively, we see a process of violating baryon number. However, if we
-look deeper, it has the opposite effect we want, if we generate a
-baryon asymetry throught whatever process, the sphaleron process will
-wash out the baryon asymmetry.
+look deeper, it has the opposite effect we want. The sphaleron process
+is of thermal equilibrium if $T>= 100"GeV"$. Thus, if we generate a
+baryon asymetry throught whatever process in early universe, the
+sphaleron process will wash out the baryon asymmetry.
 
 - However, in SM $B-L$ is an exact symmetry, thus if some process
     generates a non-zero $B-L$ asymmetry, then the sphaleron process
@@ -146,7 +155,7 @@ in the true vacuum, the sphaleron process will stop as the temperature
 drops, thus the baryon asymmetry generated in the bubbles will be
 preserved.
 
-=== Residue of Antibaryons
+== Residue of Antibaryons
 
 We now try to calculate how much of the anti-baryons can survive after
 all the annihilation process. See page 316 of
@@ -186,7 +195,7 @@ $
 $
 Thus the freeze out temperature is given by the condition:
 $
-    abs(d ( N_( overline(B) )^( e q ) a^( 3 ) )) / ( d t ) ) tilde lr(angle.l sigma_( "ann" ) v angle.r) dot.c N_( B )^( e q ) N_( overline(B) )^( e q ) a^( 3 ).
+    abs((d  N_( overline(B) )^( e q ) a^( 3 ) ) / ( d t ) ) tilde lr(angle.l sigma_( "ann" ) v angle.r) dot.c N_( B )^( e q ) N_( overline(B) )^( e q ) a^( 3 ).
 $
 #remark([
     We use this freeze out condition is because this is an annhilation

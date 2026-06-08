@@ -71,7 +71,7 @@ $
     rho_i = cases(
         (pi^2 / 30) g_i T^4 quad & "Boson",
         ,
-        7/8( pi^2 / 20) g_i T^4 quad & "Fermion",
+        7/8( pi^2 / 30) g_i T^4 quad & "Fermion",
     )
 $
 

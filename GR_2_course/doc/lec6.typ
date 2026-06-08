@@ -289,7 +289,13 @@ $
 Then we consider right after the neutrinos freeze out, the interacting
 particles we assume only includes electrons, positrons and photons
 forming a plasma, and the neutrinos are already decoupled from the
-plasma. Thus the total entropy of the universe is given by:
+plasma.
+#note([
+    Here we also ignore the contribution of non-relativistic
+    particles, which has lower energy density gives lower entropy
+    density.
+])
+Thus the total entropy of the universe is given by:
 $
     S tilde (g_gamma + g_(e^+ e^-)) (T_*^nu)^3 a_*^3 quad g_(* gamma) = 2, quad g_(* e^+ e^-) = 7/8 (2+2)
 $

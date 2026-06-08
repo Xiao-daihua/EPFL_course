@@ -295,6 +295,10 @@ this gives us a Saha equation for the reaction:
     $
     where $I_A$ is the binding energy of the nucleus, and $g_A$ is the
     degeneracy of the nucleus.
+    $
+        I_A = Z m_p + (A - Z) m_n - m_A
+    $
+    and in the non-exponential part, we assume that $m_A = A m_p$.
 ]
 This equation can be written in terms of abundance:
 $
@@ -337,7 +341,7 @@ This also justifies why He dominant for it has the largest binding
 energy per neutron.
 
 
-=== Abundance of Deuterium
+== Abundance of Deuterium
 
 Using this formula, we can calculate the abundance of deuterium,
 helium-3, lithium-7, etc. at the temperature of $T_"NS"$ which gives
