@@ -141,7 +141,7 @@ conservation, thus we don't have too much equation.)
 - Einstein Field Equations:
 $
     & phi.alt = - psi \
-    &- k^2 phi.alt - 3 ( a' ) / ( a ) phi.alt' - 3 ( a' ) / ( a^( 2 ) ) phi.alt = 4 pi G a^( 2 ) dot.c delta rho_( t o t ) \
+    &- k^2 phi.alt - 3 ( a' ) / ( a ) phi.alt' - 3 ( a' / a)^( 2 ) phi.alt = 4 pi G a^( 2 ) dot.c delta rho_( t o t ) \
     & phi.alt' + ( a' ) / ( a ) phi.alt = - 4 pi G a^( 2 ) dot.c [ ( rho + p ) v ]_( t o t ) \
     & phi.alt''+ 3 ( a' ) / ( a ) phi.alt' + ( 2 ( a^(prime prime) ) / ( a ) - ( a^( prime 2 ) ) / ( a^( 2 ) ) ) phi.alt = 4 pi G a^( 2 ) dot.c delta p_( t o t )
 $
@@ -236,17 +236,20 @@ As discussed before, we now can see explicitly that the behavior of
 solution is depend on the mode, whether it is subhorizon or
 superhorizon.
 
-For the case of:
+- In the limit of:
 $
     u_s q = u_s k / a << H
 $
-The last term $u_s^2 k^2$ is negligible. However, as:
+The last term $u_s^2 k^2$ is negligible.
+
+- However, as:
 $
     u_s q = u_s k / a >> H
 $
-we know the last term $u_s^2 k^2$ dominates. This comparison can be
-written as one between the physical wavelength of the mode and the
-*sound horizon*:
+we know the last term $u_s^2 k^2$ dominates.
+
+This comparison can be written as one between the physical wavelength
+of the mode and the *sound horizon*:
 $
     lambda_s equiv u_s / H
 $
@@ -263,18 +266,37 @@ We list the relation here:
     that a sound wave travel after the big bang.
 ])
 
+#remark[Hubble Horizon and Sound Horizon][
+    It is also important to distinguish two concepts: the sound
+    horizon and the Hubble horizon.
 
-=== Superhorizon Modes
+    In this section, we consider modes within and outside the sound
+    horizon by comparing $u_s q$ and $H$. In the above section, we in
+    fact compare $q$ and $H$which considers mode inside and outside
+    the Hubble horizon.
+
+    Hubble horizon is a more general concept, since it doesn't depend
+    on $u_s$. In non-relativistic matter, $u_s$ is zero, thus the
+    sound horizon is zero, and all modes are outside the sound
+    horizon, but some modes can be inside the Hubble horizon.
+
+]
+
+=== Metric Perturbation EoM
 
 Now use the Friedmann equation and the spacial EFE with
 $k=Lambda =0$,@eq:klambda0friedmann,@eq:klambda0spatialefe, we see the
 mass term is related to the background matter component as:
 $
-    2 ( a^(prime prime) ) / ( a ) - ( a' ) / ( a )^2 ( 1 - 3 u_s^2 )= - 8 pi G a^( 2 ) (p - u_s^2 rho)
+    2 ( a^(prime prime) ) / ( a ) - ( a'/ a )^2 ( 1 - 3 u_s^2 )= - 8 pi G a^( 2 ) (p - u_s^2 rho)
 $
 Now we make an simple assumption:
 
-- For the component we have $p= omega rho$ and $u_s^2 = omega$.
+- For the component we have $p= omega rho$ and $u_s^2 = omega$. This
+    tells us that:
+$
+    p - u_s^2 rho = 0 quad arrow.r.double quad 2 ( a^(prime prime) ) / ( a ) - ( a'/ a )^2 ( 1 - 3 u_s^2 ) = 0
+$
 
 #remark([Claimed in the book that this is true for most hot big bang
     epoch])
@@ -283,6 +305,8 @@ Thus this "mass" term vanishes, and the equation becomes:
 $
     phi.alt'' + 3 ( a' ) / ( a ) ( 1 + u_s^2 ) phi.alt' + u_s^2 k^2 phi.alt = 0
 $
+
+=== Superhorizon Modes
 Now take the case that $lambda >> u_s H^(-1)$, the finial term is
 negligible, thus we have:
 $
@@ -304,7 +328,16 @@ the *relative perturbation* as:
 $
     delta = (delta rho) / rho
 $
-According to above equations, we have:
+Remember that:
+$
+    - k^2 phi.alt - 3 ( a' ) / ( a ) phi.alt' - 3 ( a'/ a)^( 2 ) phi.alt = 4 pi G a^( 2 ) dot.c delta rho
+$
+if we take the superhorizon limit that $k << 1$ and assume
+$phi.alt = "const"$ we have:
+$
+    delta rho = - 3 ( a' zwj^2 ) / ( a^( 4 ) ) phi.alt / ( 4 pi G ) = - 3 ( a' / a^2 )^2 phi.alt / ( 4 pi G )
+$
+With the Friedmann equation, we have
 $
     delta = - 2 phi.alt
 $
@@ -326,7 +359,7 @@ $
 $
 This equation admit a general solution (which doesn't decay) as:
 $
-    phi.alt (eta)  = - 3 phi.alt_( ( i ) ) dot.c ( 1 ) / ( ( u_( s ) k eta )^( 2 ) ) [ cos ( u_( s ) k eta ) - ( sin ( u_( s ) k eta ) ) / ( u_( s ) k eta ) ]
+    phi.alt (eta) = - 3 phi.alt_( ( i ) ) dot.c ( 1 ) / ( ( u_( s ) k eta )^( 2 ) ) [ cos ( u_( s ) k eta ) - ( sin ( u_( s ) k eta ) ) / ( u_( s ) k eta ) ]
 $
 If consider the limit of $u_s k eta >> 1$ (subhorizon), we have:
 $
@@ -334,6 +367,10 @@ $
 $
 The now we consider the *relative perturbation*, as
 $k arrow.r infinity$ using the second EFE, we have:
+$
+    - k^2 phi.alt - 3 ( a' ) / ( a ) phi.alt' - 3 ( a'/ a)^( 2 ) phi.alt = 4 pi G a^( 2 ) dot.c delta rho tilde -k^2 phi = 4 pi G a^( 2 ) dot.c delta rho
+$
+This gives us that:
 $
     & delta rho = -1/(4 pi G) ( k^2 / a^2 ) phi.alt \
     & delta = (delta rho) / rho tilde 6 phi.alt_( ( i ) ) dot.c cos ( u_( s ) k eta )

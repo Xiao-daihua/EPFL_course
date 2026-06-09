@@ -7,7 +7,7 @@
 
 Remember in the section before, we have noticed that the initial
 perturbation of the universe metric is a random number from a Gaussian
-distribution. Say:
+distribution. Say for subhorizon modes:
 $
     delta_"rad" (k) = 6 phi_((i)) (k) cos (u_s k eta)
 $
@@ -23,7 +23,7 @@ $
     angle.l phi_((i)) (k) phi_((i))^* (k') angle.r tilde sigma(k)^2 delta^(3) (k - k')
 $
 Also, with this ensemble we can estimate the two point correlation of
-the radiation perturbation:
+the subhorizon mode radiation perturbation:
 $
     angle.l delta_"rad" (k) delta_"rad" (k') angle.r tilde cos^2 (u_s k eta) sigma(k)^2 delta^(3) (k + k')
 $
@@ -33,11 +33,24 @@ $
     the mode to be correlated, this directly leads to the delta
     function of $delta(k) delta^*(k)$ which is $delta(k) delta(-k)$.
 ])
-In fact, observations shows that the correlation of the perturbation
-(at the last scattering surface) is given by a power law:
+In fact, observations shows that the correlation of the metric
+perturbation also called the *Primordial Power Spectrum* (at the last
+scattering surface) is given by a power law:
 $
-    angle.l delta_"rad" (k) delta_"rad" (k') angle.r tilde delta^(3) (k + k') 10^(-10) (k_* / k)^(3+(n_s - 1))
+    angle.l phi_((i))(k) phi_((i)) (k^prime) angle.r tilde delta^(3) (k + k') 10^(-10) (k_* / k)^(3+(n_s - 1))
 $<eq-anisocmb>
+
+#figure(
+  image("../assets/PPS.png", width: 50%),
+  caption: [Primordial Power Spectrum, here $cal(P) $ is the dimensionless power spectrum defined as $cal(P) tilde k^3 P$],
+) <fig-pps>
+
+#remark([
+    In fact we often use the spectrum of the curvature perturbation
+    $R$ instead of the metric perturbation $phi$ since it is gauge
+    invariant. Nevertheless, in suitable gauge (as the one we choose)
+    they are related.
+])
 However, in fact this correlation causes a problem. If we read this
 observation result we know that:
 
@@ -52,27 +65,32 @@ observation result we know that:
 The last point is a conflict with the standard cosmology we have
 discussed. Some long range point at the last scattering surface (LSS)
 will have past light cones that do not intersect, thus they cannot be
-correlated. However, observation tells us they are, due to the
-structural behavior at small $k$. This is called the *horizon
-problem*.
+correlated. #figure(
+    image("../assets/correlated.png", width: 40%),
+    caption: [The horizon problem],
+) <fig-correlated>
 
-#YL([I still don't understand what is the FRW penrose diagram look
-    like, why it doesn't meet????])
+However, observation tells us they are, due to the structural behavior
+at small $k$. This is called the *horizon problem*.
 
 To resolve this problem, we need to find a mechanism that can generate
 correlation at large scale. This is the motivation of inflation.
 Inflation is a theory for period before the big bang, which tells us
-why we have the power spectrum $P$. There are several features of
+why we have the power spectrum. There are several features of
 inflation:
 
 - It is a period of quasi-exponential expansion of the universe
 
 The homogeneous expansion can be given as a single field slow roll
 inflation mode. And the perturbation can be given by the quantum
-fluctuation of the inflaton field.
+fluctuation of the inflation field.
 
+#figure(
+  image("../assets/inflationcase.png", width: 90%),
+  caption: [The history of the universe in the inflation theory.],
+) <fig-inflationcase>
 
-== Inflation Idea
+== Inflation at Background Level I
 === dS and Horizon Problem
 We assume that the universe is dS before the big bang. Remember in dS
 spacetime:

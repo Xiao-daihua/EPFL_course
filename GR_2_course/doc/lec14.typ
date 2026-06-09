@@ -2,8 +2,7 @@
 
 = Lecture 14: Inflation and Quantum Fluctuation
 
-== Inflation at Background Level
-
+== Inflation at Background Level II
 
 === Slow Roll Parameters
 
@@ -16,8 +15,8 @@ $
     & dot(phi) = - 1/(3H ) V' ( phi ) quad "Equation of Motion (SR)" \
     & H = 1/(M_"pl") ((8 pi V)/3)^(1 slash 2) quad "Friedmann Equation (SR)"
 $
-We want to express the slow roll condition purely in terms of the
-potential, thus we see using the EoM we can get a relation between the
+We want to express the *slow roll condition purely in terms of the
+potential*, thus we see using the EoM we can get a relation between the
 kinetic energy and potential energy:
 $
     dot(phi) = - ( M_( "pl" ) ) / ( ( 24 pi )^( 1 slash 2 ) ) ( V^( prime ) ) / ( V^( 1 slash 2 ) ).

@@ -100,11 +100,10 @@ This is of the same order of the position of the first peak in
 
 Let's now treat the CMB temperature anisotropy more carefully. In
 modern cosmology, we believe that the initial perturbation $phi_((i))$
-of the energy density $delta$ is picked from some random distributions
-(that's why the CMB looks so random). Thus, if we think of CMB
-temperature as a result of perturbation, it then should depend on the
-initial perturbation $phi_((i))$, thus should be in some random
-distribution.
+is picked from some *random distribution* (that's why the CMB looks so
+random). Thus, if we think of CMB temperature as a result of
+perturbation, it then should depend on the initial perturbation
+$phi_((i))$, thus should be in some random distribution.
 
 We can make a fourier transformation of the CMB temperature
 anisotropy:
@@ -114,17 +113,18 @@ $
 The coefficients should be picked from some random distribution, in
 this discussion. We now assume:
 
-- The distribution is isotropic and the temperature is just picking
-    out numbers from the distribution.
+- The distribution is isotropic which means that the temperature
+    perturbation of different angles is just picking out numbers from
+    the *same distribution*.
 
 The isotropy of the distribution tells us that:
 $
     angle.l a_( l m ) a^*_( l' m') angle.r = C_l delta_( l l' ) delta_( m m' )
 $
 where we average over the distribution. In fact, observation shows
-that the distribution is a Gaussian. Thus, the number $C_l$ completely
-determines the distribution and all non-random information of the CMB
-temperature.
+that the *distribution is a Gaussian*. Thus, the number $C_l$
+completely determines the distribution and all non-random information
+of the CMB temperature.
 
 The fact that we can measure a distribution from a random picked
 result is strange. However, though we only have one universe,

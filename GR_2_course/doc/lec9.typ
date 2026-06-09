@@ -164,7 +164,7 @@ where we use $theta = a(x,t)/f_a$ as the dynamical variable, and the 0
 temperature potential is given as above. The equation of motion for
 the axion field is:
 $
-    dot.double(theta) + 3 H dot(theta) + m_( A )^( 2 ) theta = 0
+    dot.double(theta) + 3 H dot(theta) + m_( a )^( 2 ) theta = 0
 $
 
 - At high temperature, the $H$ term dominates, thus the axion field is
@@ -176,8 +176,7 @@ $
 
 #figure(
     image("../assets/axionocci.png", width: 40%),
-    caption: [The axion field starts to oscillate when the $m_a$ term
-        becomes],
+    caption: [The axion field starts to oscillate.],
 ) <fig-axionocci>
 We first estimate the initial energy density of the axion field when
 it starts to oscillate. The axion field is freezed at $theta_i$ before

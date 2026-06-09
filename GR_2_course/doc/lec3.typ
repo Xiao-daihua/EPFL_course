@@ -38,14 +38,14 @@ In the case, we can find that the integral @eq:integraleta converge at
 $t = 0$ but diverge at $t = + infinity$. we can choose a suitable
 $eta_*$ to make $eta$ go from $eta_*$ to $+ infinity$, and at
 $t = 0, eta = eta_*$ the metric is singular. Thus the penrose diagram
-behave as: #figure(
-    image("../assets/penrosediv.png", width: 20%),
+behaves as:
+
+#figure(
+    image("../assets/penrose.png", width: 20%),
     caption: [Penrose diagram for a decelerating universe with
         $omega > -1/3$],
-) <fig-penrosediv>
+) <fig-penrose>
 
-
-#YL([This diagram may be wrong!!! check it??])
 
 === Case 2: $omega < -1/3$ accelerating universe
 
@@ -68,6 +68,17 @@ light can never reach each other before touching the future infinity.
 
 This is interpret as the Universe is accerlating in expanding, thus
 the light can never catch up with the expansion of the universe.
+
+
+Also notice that the general penrose diagram of the FRW metric with
+$k = 0, Lambda = 0$ is like follows:
+
+#figure(
+    image("../assets/penrosefrw.png", width: 90%),
+    caption: [Penrose diagram for the general FRW metric with
+        $k = 0, Lambda = 0$],
+) <fig-penrosefrw>
+
 
 
 == De Sitter Spacetime

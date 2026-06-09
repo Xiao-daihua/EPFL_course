@@ -57,7 +57,7 @@ and the delta part is spacetime dependent.
 
 - Now if we assume the universe is static, then we have:
 $
-    v_0 = 0, quad arrow.r.double quad phi_0 =0
+    v_0 = 0, quad arrow.r.double quad phi_0 =0 quad "given by last fluid equation"
 $
 Yet however, we can see this not a solution to the EoM, nevertheless,
 we can just do this. Now let's perturb the EoM and keep everything to
@@ -99,7 +99,7 @@ $
     lambda_J = frac(2 pi, k_J) = sqrt(frac(pi v_s^2, G rho_0))
 $
 
-== Revision of General Relativity and Picture
+== General Picture and Cosmology with Conformal Time
 
 Now we turn into a more realistic calculation using the general
 relativity. Here is a big picture of how we do the calculation:
@@ -145,7 +145,7 @@ $<eq:klambda0friedmann>
 
 - *Spatial Component of EFE*:
 $
-    2 a^(prime prime)/a^3 - a^prime^2/a^4 = - 8 pi G p
+    2 a^(prime prime)/a^3 - (a^prime zwj^2)/a^4 = - 8 pi G p
 $<eq:klambda0spatialefe>
 
 - *Energy Conservation*:
@@ -164,7 +164,7 @@ $
 $
 - For Dark Energy Dominant Universe ($Lambda$ dominant):
 $
-    a(eta) = - (1)/(H eta) tilde e^(H t), quad eta tilde - e^(-H t)
+    a(eta) = - (1)/(H eta) = e^(H t), quad eta = -  e^(-H t)/H
 $
 @sec:generalmatter and @sec:cosmologicalconstant have a thorough
 discussion of these calculations.
@@ -229,7 +229,7 @@ metric:
 - For $h_(mu nu)$ we raise and lower with $eta_(mu nu)$, which is the
     Minkowski metric:
 $
-    h^mu_nu = eta^(mu alpha) h_(alpha nu), quad h^(mu nu) = eta^(mu alpha) eta^(nu beta) h_(alpha beta)
+    tensor(h,+mu,-nu) = eta^(mu alpha) h_(alpha nu), quad h^(mu nu) = eta^(mu alpha) eta^(nu beta) h_(alpha beta)
 $
 - For $gamma_(mu nu)$ we define the inverse:
 $
@@ -242,7 +242,7 @@ $
 Then we can consider the lineaized EFE, we have:
 #theorem[Linearized EFE and Energy Conservation][
     $
-        delta G_(mu nu) = 8 pi G delta T_(mu nu) quad delta nabla_mu T^(mu)_nu = 0
+        delta G_(mu nu) = 8 pi G delta T_(mu nu) quad delta nabla_mu tensor(T,+mu,-nu) = 0
     $
 ]
 
