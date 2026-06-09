@@ -16,8 +16,8 @@ $
     & H = 1/(M_"pl") ((8 pi V)/3)^(1 slash 2) quad "Friedmann Equation (SR)"
 $
 We want to express the *slow roll condition purely in terms of the
-potential*, thus we see using the EoM we can get a relation between the
-kinetic energy and potential energy:
+potential*, thus we see using the EoM we can get a relation between
+the kinetic energy and potential energy:
 $
     dot(phi) = - ( M_( "pl" ) ) / ( ( 24 pi )^( 1 slash 2 ) ) ( V^( prime ) ) / ( V^( 1 slash 2 ) ).
 $<eq-middleslrelat>
@@ -123,7 +123,7 @@ $
 We now expand the perturbation $phi$ in terms of Fourier modes,
 remember that in dS $a(eta) tilde - 1/(H eta)$. Thus:
 $
-    Delta phi tilde k^2 quad a'/a phi tilde 1/abs(eta) k
+    Delta phi tilde k^2 quad a'/a phi' tilde 1/abs(eta) k
 $
 #remark([
     #YL([I still don't understand how the second relation comes out.
@@ -136,14 +136,17 @@ Thus, we can consider two limit of the EoM:
 $
     phi'' + 2 ( a' ) / ( a ) phi' = 0
 $
-where one classical solution is a constant.
+where one classical solution is a constant:
+$
+    phi = "const"
+$
 
 - If $k/abs(eta) << k^2$ which is $abs(eta k)>> 1$. The mode is
     *Inside the Horizon*. The EoM is given by:
 $
     phi'' - Delta phi = 0
 $
-This means that we have a wave solution.
+This means that we have a wave solution for a massless scalar field.
 
 As time goes, we notice that for dS spacetime:
 $
@@ -208,7 +211,7 @@ Thus we can also find that:
 $
     phi(x, eta)_({k}) = integral_({k}) frac(d^3 k, (2pi)^(3/2) sqrt(2k)) frac(H, k) (e^(-i k x + i alpha_k) A_k^dagger + e^(i k x - i alpha_k) A_k)
 $
-The result is rational, since the field fluctuation is time
+The result is consistent, since the field fluctuation is time
 independent outside the horizon, as we expected.
 
 #remark([
@@ -295,7 +298,7 @@ $
     (delta a)/a = H delta t_r = H phi(x, t) / dot(phi.alt_( c ))
 $
 Note the $dot(phi.alt_( c ))$ is related to a small parameter (slow
-roll parameter) $epsilon$ as:
+roll parameter) $epsilon$ as @eq-middleslrelat:
 $
     dot(phi.alt_( c )) tilde sqrt(V epsilon)
 $
@@ -323,7 +326,8 @@ small deviation:
 $
     P(k) tilde 1/k^(3+1-n_s)
 $
-This in fact will give us a restriction on the slow roll parameter $epsilon, eta$. The result is:
+This in fact will give us a restriction on the slow roll parameter
+$epsilon, eta$. The result is:
 $
     n_s - 1 = - 6 epsilon + 2 eta
 $
