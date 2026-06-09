@@ -353,6 +353,23 @@ temperature* of the particle, depends on $Gamma/H$ is decresing or
 increasing with temperature, we can have freeze-out or freeze-in
 process.
 
+One interesting thing to know is that in thermal equilibrium,
+relativistic partical number density goes like:
+$
+    N tilde T^3
+$
+and in radiation dominant universe, we have $a(T) tilde 1/T$. Thus we
+see that radiation dominant universe, even if some radiation particle
+freezes out, the number density will still go as:
+$
+    N tilde T^3
+$
+Just like the equilibrium case. Thus, for particles like nutrinos and
+photons, we can always use the equilibrium number density to describe
+their number density. But one should be aware as we will see in a few
+chapters that the effective temperature for neutrinos is quite
+different from the CMB temperature.
+
 
 == Electron-Positron Gas Freeze-out
 

@@ -345,6 +345,10 @@ through the photon number density today, which is given by:
 $
     N_(nu,0) = 3/22 N_(gamma,0)
 $
+#note([
+    Note that in this calclulation $g_nu = 1$ and $g_gamma = 2$. We
+    note that the neutrinos are chiral particles.
+])
 
 In all above calculations we take the neutrinos to be massless
 particles, however, in reality from the neutrino oscillation

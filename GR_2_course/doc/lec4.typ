@@ -166,7 +166,7 @@ And from the thermaldynamics calculation we have
 @eq:relativisticenergydensity, we then can see the temperature
 dependency of the Hubble parameter:
 $
-    H = T^2/ M_0 quad M_0 = sqrt(45 / (4 pi^3 G g_*))
+    H = T^2/ M_0 quad M_0 = sqrt(45 / (4 pi^3 G g_*)) = M_"pl"/ (1.66 sqrt(g_*))
 $<eq:friedmannmatterrad>
 where $g_*$ is the effective number of species at the time.
 
