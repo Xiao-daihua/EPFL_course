@@ -9,7 +9,6 @@
     ],
 )
 
-
 #pagebreak()
 #include "doc/lec1.typ"
 
