@@ -6,8 +6,7 @@
     author: [Yu Liu],
     abstract: [This is my lecture note on QM4 in EPFL for 2026 spring
         semester. This is not a full note on the course, but focusing
-        on two main topics: (1) QM in a backgroun Gauge Field, (2)
-        Instantons in Quantum Theory],
+        on one main topic: QM in a background Gauge Field],
 )
 
 #pagebreak()
@@ -16,11 +15,11 @@
 #pagebreak()
 #include "doc/lec6.typ"
 
-#pagebreak()
-#include "doc/lec7.typ"
-
-#pagebreak()
-#include "doc/lec8.typ"
+// #pagebreak()
+// #include "doc/lec7.typ"
+//
+// #pagebreak()
+// #include "doc/lec8.typ"
 
 
 
