@@ -152,6 +152,8 @@ approximation is valid for non-relativistic particle.
 
 == Temperature Today
 
+=== Temperature Today (assuming Equilibrium)
+
 With these preparation of thermaldynamics, we can calculate the
 temperature today. We first assume that the universe is:
 
@@ -196,7 +198,8 @@ in thermal equilibrium. However, in fact:
     the matter and stop interacting with it.
 
 Yet its quite amazing that this really rough calculation can give us a
-quite sensible result.
+quite sensible result. In future discussions of effective temperature,
+we will see how it works.
 
 Here we can also draw a useful relation between $a(t)$ and $T$, for a
 radiation dominated universe and roughly assuming the thermal
@@ -204,3 +207,46 @@ equilibrium, we have:
 $
     a(t) / a_0 = (t / t_0)^(1/2) = (T_0 / T)
 $<eq:scalingtemperature>
+
+
+=== How to count $g_*$
+
+In the above relation of the Hubble parameter in the radiation
+dominated universe, we have:
+$
+    H = T^2/ M_0 = 1.66 sqrt(g_*) T^2 / M_"pl"
+$
+we know that $M_"pl" = 1.22 times 10^(19) "GeV"$, now we need to count
+$g_*$. We currently use the standard model of particle physics, which
+has the following particles:
+
+- Scalar Fields
+
+    - Higgs: $g_i = 1$ (one degree of freedom)
+
+- Fermions (times $7/8$ to get effective number of species)
+
+    - Electron: $g_i = 4$ (two spin states and particle-antiparticle)
+
+    - Neutrino: $g_i = 2 times 3$ (one spin state and
+        particle-antiparticle and there are 3 kinds of neutrino)
+
+    - Muon: $g_i = 4$ (two spin states and particle-antiparticle)
+
+    - Tau: $g_i = 4$ (two spin states and particle-antiparticle)
+
+    - Quarks: $g_i = 6 times 2 times 3 times 2 = 72$ (two spin states
+        and particle-antiparticle and there are 6 kinds of quarks and
+        each quark has three color states)
+
+- Vector Fields
+
+    - Photon: $g_i= 2$ (two polarization states)
+
+    - Gluon: $g_i = 8 times 2 = 16$ (eight gluons and two polarization
+        states)
+
+Thus in total we have:
+$
+    g_* tilde 106.75
+$

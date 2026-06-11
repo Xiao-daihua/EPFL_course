@@ -110,7 +110,11 @@ To do the calculation, we need some facts and assumptions:
 - Assume that at the temperature of interest most protons have
     combined with electrons to form hydrogen atoms, thus we have
     $N_H = N_(p "original")$.
-
+#note([
+    The Baryon to photon ratio is a very important parameter in
+    cosmology, which is true for most time in the history of the
+    universe.
+])
 With these assumptions, we now can see that the number density of
 electrons can be expressed through Saha equation assuming $N_e = N_p$
 as:
@@ -238,7 +242,7 @@ After freeze out, the particle is not interacting with others, thus
 its distribution evloves as a free particle. This means that we can
 use the effective temperature to describe the distribution of the
 particle, see @sec:effectivetemperature the definition of effective
-temperature for massless particles. By definition:
+temperature for relativistic particles at freeze out. By definition:
 $
     T_(nu,0) = T_(*)^nu (a_* / a_0)
 $
@@ -276,6 +280,8 @@ We can calculate the ratio using the conservation of entropy. We think
 that the universe is a closed system, there's nothing "outside" the
 universe. Thus, the total entropy of the universe is conserved.
 
+- How Entropy goes?
+
 We further assume that the universe is radiation dominated (as we
 always did) and the entropy density of relativistic particle is given
 by @eq:relaentropicdensity, then the total entropy of the universe is
@@ -290,38 +296,49 @@ Then we consider right after the neutrinos freeze out, the interacting
 particles we assume only includes electrons, positrons and photons
 forming a plasma, and the neutrinos are already decoupled from the
 plasma.
-#note([
-    Here we also ignore the contribution of non-relativistic
-    particles, which has lower energy density gives lower entropy
-    density.
-])
+
 Thus the total entropy of the universe is given by:
 $
     S tilde (g_gamma + g_(e^+ e^-)) (T_*^nu)^3 a_*^3 quad g_(* gamma) = 2, quad g_(* e^+ e^-) = 7/8 (2+2)
 $
-Then neutrino effective temperature goes like $T tilde 1/a$, thus we
-have:
-$
-    (T_(*)^nu) a_* = T_(nu,0) a_0
-$
+
 Then some time later the positrons and electrons annihilate each
 other, the entropy of the universe is given by:
 $
     S tilde g_(* gamma) T^3 a^3
 $
-And remeber that during all these process the electron photon plasma
-is evolving as a relativistic equilibrium system and the temperature
-goes like $T tilde 1/a$. Then the photon freeze out the effective
-temperature still goes like $T tilde 1/a$. Thus we have:
+
+- How Effective temperature goes?
+
+The neutrino effective temperature goes like $T tilde 1/a$, thus we
+have:
+$
+    (T_(*)^nu) a_* = T_(nu,0) a_0
+$
+Then the photon freeze out the effective temperature still goes like
+$T tilde 1/a$. Thus we have:
 $
     T_"rec" a_"rec" = T_(gamma,0) a_0
 $
+#note([
+    Note that the electron, photon gas doesn't evolve naively as
+    $T tilde 1/a$, this is because of the effect of the annihilation
+    of electrons and positrons, which gives out energy to photons and
+    heat the photon up.
+])
+
+- Calculate the ratio
+
 With all these ingrediants, we can calculate the ratio between the
 neutrino effective temperature and the photon effective temperature
 as:
 $
     (T_(gamma,0) )/(T_(nu,0)) = (a_"rec" T_"rec")/(a_* T_*^nu) = ((g_gamma + g_(e^+ e^-)) / g_gamma)^(1 slash 3) = (11/4)^(1 slash 3) = 1.401
 $
+#note([
+    In fact this effective temperature ratio relation is true for any
+    time after the recombination.
+])
 From this equation we can get the effective temperature of neutrinos
 today from the CMB temperature:
 $

@@ -118,7 +118,7 @@ at any time.
     experiment.
 ])
 
-- *Massless Particle*
+- *Relativistic Particle at the time of Freeze Out*
 
 For massless particle, the energy is given by $E(p) = p$, if we
 negelect the chemical potential, we have:
@@ -127,36 +127,67 @@ $
 $
 Then we define the effective temperature as:
 #definition[Effective Temperature for Massless Particle][
-    The effective temperature for a massless particle is given by:
+    The effective temperature for a relativistic particle at the time
+    of freeze out is given by:
     $
         T_"eff" (t) = T_0 a_0 / a(t)
     $
+    note that this is independent of the epoc we are in.
 ]
 Then the distribution of the particle can be written as:
 $
-    n_i (p,t) = g_i 1/(exp(p / T_"eff"(t)) plus.minus 1)
+    n_i (p,t) = g_i 1/(exp(p / T_"eff" (t)) plus.minus 1)
 $
 
-In fact in cosmology, we often use the mixed use the effective
-temperature of relativistic particle and the assumed equilibrium
-temperature of radiation dominant universe. A justification may be
+
+1. *Number density* using effective temperature
+
+    We can also get the number density of the particle:
+$
+    N_i (t) tilde g_i T_"eff"^3
+$
+
+2. *Energy density* using effective temperature
+
+    It is also important to clarify that only number density goes like
+    the case of plugging in the effective temperature into the
+    equilibrium distribution. The energy density, may not be the case
+    due to the fact that at later time the particle is not
+    relativistic anymore, thus the energy is not given by $E(p) = p$.
+
+    In that case, we often just use the effective temperature to
+    calculate the number density, and then use the relation:
+    $
+        rho tilde N m
+    $
+    to get the energy density.
+
+3. *Entropy density* using effective temperature
+
+    It is also interesting that plugging in the effective temperature
+    into the equation:
+    $
+        s tilde g_* T_"eff"^3
+    $
+    is true! though it is not true for energy density. This is because
+    the entropy density of freeze out particle goes like
+    $s tilde a^(-3)$, which is the same as $T_"eff"^3$, thus we can
+    get the above relation.
+
+Before in discussing CMB temperature, we in fact mixed the concept of
+effective temperature of photon and the assumed radiation dominate
+equilibrium temperature. A justification for the correct result may be
 that they both evolve as:
 $
     T_"eff" (t) = T_0 a_0 / a(t) quad "and" quad T(t) = T_0 a_0 / a(t)
 $
-It is invalid rigorously I know, yet it amazingly works for many
-cases. For example, before we calculate the temperature of the
-universe as a theraml equilibrium relativistic system and the
-temperature turns out to be quite as the same of CMB which is the
-effective temperature of the photons in the universe.
+#note([
+    Note that the left equation is general for effective temperature,
+    the right one is only for radiation dominant universe.
+])
 
-However, sometimes it can't give a correct result and we need some
-further justifications. Eg. the difference between the effective
-temperature of neutrinos and the CMB temperature. This happens due to
-some extra processes happening in the universe that makes the
-evolution of temperature not that simple.
 
-- *Massive Particle*
+- *Massive Particle at the time of Freeze Out*
 
 See section 2.5 of the book @gorbunovIntroductionTheoryEarly2017 for
 more details.
@@ -342,8 +373,25 @@ $
 Thus, the number density deviate from the equilibrium value, and we
 have:
 $
-    N(T) approx N^("eq")(T_*) (a(T_*) / a(T))^3
+    N(t) approx N^("eq")(T_*) ((a (T_*)) / a(T))^3
 $<eq:freezeoutnumberdensity>
+#note([
+    The $T$ we write here is the temperature of the universe at the
+    time we interested in, which serve as a time counting tool, not
+    the effective temperature. As a bonus, we can get the relation
+    between the number density and the current temperature at some
+    time. This may generally be different from the effective
+    temperature.
+])
+
+#note([
+    For particle freeze out when being relativistic, discussion of
+    effective temperature tells us that:
+    $
+        N(t) tilde g_i T_"eff"^3 tilde g_i (T_* a_* / a(t))^3
+    $
+    this is consistent with the above result.
+])
 where $T_*$ is the temperature at which $Gamma(T_*) approx H(T_*)$.
 This means the time we should not only consider the expansion of the
 universe, but also the interaction of the particle.
@@ -352,23 +400,6 @@ The critical temperature $T_*$ is called the *freeze-out/in
 temperature* of the particle, depends on $Gamma/H$ is decresing or
 increasing with temperature, we can have freeze-out or freeze-in
 process.
-
-One interesting thing to know is that in thermal equilibrium,
-relativistic partical number density goes like:
-$
-    N tilde T^3
-$
-and in radiation dominant universe, we have $a(T) tilde 1/T$. Thus we
-see that radiation dominant universe, even if some radiation particle
-freezes out, the number density will still go as:
-$
-    N tilde T^3
-$
-Just like the equilibrium case. Thus, for particles like nutrinos and
-photons, we can always use the equilibrium number density to describe
-their number density. But one should be aware as we will see in a few
-chapters that the effective temperature for neutrinos is quite
-different from the CMB temperature.
 
 
 == Electron-Positron Gas Freeze-out
