@@ -29,7 +29,7 @@ $
 Then we take a derivative of @eq-middleslrelat with respect to time,
 we can get the relation:
 $
-    dot.double(phi) = - ( M_( "pl" ) ) / ( ( 24 pi )^( 1 slash 2 ) ) ( ( V'') / ( V^( 1 slash 2 ) ) - ( 1 ) / ( 2 ) ( V^( prime 2 ) ) / ( V^( 3 slash 2 ) ) ) dot(phi) = - ( M_( P l )^( 2 ) ) / ( V^( prime 3 slash 2 ) ) ( ( V'') / ( V ) - ( 1 ) / ( 2 ) ( ( V' ) / ( V ) )^( 2 ) ) H dot(phi),
+    dot.double(phi) = - ( M_( "pl" ) ) / ( ( 24 pi )^( 1 slash 2 ) ) ( ( V'') / ( V^( 1 slash 2 ) ) - ( 1 ) / ( 2 ) ( V^( prime 2 ) ) / ( V^( 3 slash 2 ) ) ) dot(phi) = - ( M_( P l )^( 2 ) ) / ( 8 pi ) ( ( V'') / ( V ) - ( 1 ) / ( 2 ) ( ( V' ) / ( V ) )^( 2 ) ) H dot(phi),
 $
 The first slow roll condition can be expressed as:
 $

@@ -57,7 +57,7 @@ and the delta part is spacetime dependent.
 
 - Now if we assume the universe is static, then we have:
 $
-    v_0 = 0, quad arrow.r.double quad phi_0 =0 quad "given by last fluid equation"
+    H = 0, v_0 = 0, rho_0 = "const", quad arrow.r.double quad nabla phi_0 =0 quad "given by last fluid equation"
 $
 Yet however, we can see this not a solution to the EoM, nevertheless,
 we can just do this. Now let's perturb the EoM and keep everything to
@@ -164,7 +164,7 @@ $
 $
 - For Dark Energy Dominant Universe ($Lambda$ dominant):
 $
-    a(eta) = - (1)/(H eta) = e^(H t), quad eta = -  e^(-H t)/H
+    a(eta) = - (1)/(H eta) = e^(H t), quad eta = - e^(-H t)/H
 $
 @sec:generalmatter and @sec:cosmologicalconstant have a thorough
 discussion of these calculations.
@@ -229,7 +229,7 @@ metric:
 - For $h_(mu nu)$ we raise and lower with $eta_(mu nu)$, which is the
     Minkowski metric:
 $
-    tensor(h,+mu,-nu) = eta^(mu alpha) h_(alpha nu), quad h^(mu nu) = eta^(mu alpha) eta^(nu beta) h_(alpha beta)
+    tensor(h, +mu, -nu) = eta^(mu alpha) h_(alpha nu), quad h^(mu nu) = eta^(mu alpha) eta^(nu beta) h_(alpha beta)
 $
 - For $gamma_(mu nu)$ we define the inverse:
 $
@@ -242,7 +242,7 @@ $
 Then we can consider the lineaized EFE, we have:
 #theorem[Linearized EFE and Energy Conservation][
     $
-        delta G_(mu nu) = 8 pi G delta T_(mu nu) quad delta nabla_mu tensor(T,+mu,-nu) = 0
+        delta G_(mu nu) = 8 pi G delta T_(mu nu) quad delta nabla_mu tensor(T, +mu, -nu) = 0
     $
 ]
 

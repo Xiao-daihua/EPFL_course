@@ -413,6 +413,7 @@ where $r$ then is implicitly a function of $t_1$ and $t_0$.
     $
         S = 4 pi a^2 (t_0) r^2
     $
+  notice that the integral is over $a(t)^2 r sin(theta) d theta d phi$. 
 ])
 
 - $omega_0 / omega_1$ is the ratio of the frequency of the light when
@@ -466,14 +467,14 @@ equation gives @eq:friedmannrewrite. We copy it here:
 $
     H^2 = H_0^2 (Omega_Lambda + Omega_k (a_0 / a)^2 + Omega_m (a_0 / a)^3 + Omega_gamma (a_0 / a)^4)
 $
-#remark([
-    Note that in this equation we set a time $t_0$ to define $H_0$
-    ,$a_0$ and $Omega_i$ these constants. Here in the context of
-    distance, we take $t_0$ to be the time when the light is emitted
-    (note this conficted with the previous convention where we take
-    $t_0$ to be the time when the light is observed, and $t_1$ to be
-    the time when the light is emitted).
-])
+// #remark([
+//     Note that in this equation we set a time $t_0$ to define $H_0$
+//     ,$a_0$ and $Omega_i$ these constants. Here in the context of
+//     distance, we take $t_0$ to be the time when the light is emitted
+//     (note this conficted with the previous convention where we take
+//     $t_0$ to be the time when the light is observed, and $t_1$ to be
+//     the time when the light is emitted).
+// ])
 We make a change of variable $x = a / a_0$, then we have:
 $
     dot(x) = H_0 A(x) x, quad A(x)^2 = ( Omega_Lambda + Omega_k x^(-2) + Omega_m x^(-3) + Omega_gamma x^(-4) )

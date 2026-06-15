@@ -136,7 +136,7 @@ Then we define the effective temperature as:
 ]
 Then the distribution of the particle can be written as:
 $
-    n_i (p,t) = g_i 1/(exp(p / T_"eff" (t)) plus.minus 1)
+    n_i (p,t) = g_i 1/(exp(p / (T_"eff" (t))) plus.minus 1)
 $
 
 
@@ -482,9 +482,9 @@ $
 $
 #remark([
     We here are assuming that the universe happening all those
-    processes is radiation dominant, which is a good approximation for
-    the early universe. Thus, we can negelact the chemical potential
-    of the particle, and use this Hubble parameter to calculate the
+    processes is radiation dominant, which is true for the early
+    universe. Thus, we can negelact the chemical potential of the
+    particle, and use this Hubble parameter to calculate the
     freeze-out/in temperature.
 ])
 We draw the plot of $Gamma$ and $H$ as a function of temperature:

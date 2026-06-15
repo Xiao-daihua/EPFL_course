@@ -348,8 +348,8 @@ $
 === Cosmological Bound on Neutrino Mass
 
 We first calculate the number density of neutrinos today, which is
-given by the equilibrium number density of relativistic particles
-@eq:relativisticnumber:
+given by the number density from effective temperature, for particle
+freeze out when being relativistic:
 $
     N_(nu,0) = (3/4) g_nu (zeta(3) / pi^2) T_(nu,0)^3
 $

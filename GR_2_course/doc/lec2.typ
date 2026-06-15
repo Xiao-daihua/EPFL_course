@@ -91,7 +91,7 @@ or decelerating. If we assume that $Lambda=0$ then:
     $dot.double(a) < 0$
 
 - If $rho + 3 p < 0$ then the universe is accelerating
-    $dot.double(a) < 0$
+    $dot.double(a) > 0$
 
 === Energy Conservation of Matter
 

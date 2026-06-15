@@ -4,6 +4,8 @@
 
 == Multi Component Universe
 
+=== Adiabatic and Isocurvature Modes
+
 Now the actual universe is not just made of one component, but it is
 made of multiple components. At radiation dominated era, we have the
 perturbation of DM and Baryons.
@@ -16,6 +18,47 @@ conditions for the modes:
 
 - *Isocurvature mode*: initial condition for $phi_i eq 0$ and other
     perturbations are not 0.
+
+=== BAO Peak
+
+In reality in radiation dominated era, we don't only have radiation,
+but matters. There are two kinds of matter. Darkmatter and Baryons.
+Dark matter interacts weakly, but baryons interact strongly with
+radiation. Thus, the perturbation of baryons and radiation are tightly
+coupled, and they can be treated as a single fluid. Yet the dark
+matter is a single fluid itself.
+
+Under this picture, we can see that if there is an initial
+perturbation at big bang. Then due to the lack of sound speed, the
+dark matter perturbation will just stay the place it is and grow with
+the universe expansion. However, the perturbation of baryons and
+radiation will occilate with the sound speed of the fluid. Thus, at
+the recombination time (when Baryon and photon decouple), we can have
+a peak of baryon density at the position where the sound wave has just
+reached. This is illustrated in the following figure:
+
+
+#figure(
+    image("../assets/darkmatter.png", width: 50%),
+    caption: [The occilation of baryon and radiation fluid, and the
+        static dark matter perturbation.],
+) <fig-darkmatter>
+
+We can calculate the position of the peak, the speed of sound of the
+fluid is given by:
+$
+    u_s = sqrt((delta p) / (delta rho)) = sqrt((delta p_"rad") / (delta rho_"rad" + delta rho_"baryon"))
+$
+this can be calculated from the behavior of different energy density
+of the components and if we assume $rho_b << rho_gamma$ which is the
+case at early universe, we can have:
+$
+    u_s = 1 / sqrt(3)
+$
+Thus the position of the peak is given by:
+$
+    r tilde u_s eta_r tilde (1/sqrt(3)) eta_r tilde (a^* H^*)^(-1)/sqrt(3)
+$
 
 
 == CMB Anisotropies

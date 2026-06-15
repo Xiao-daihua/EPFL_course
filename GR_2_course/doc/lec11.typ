@@ -143,7 +143,7 @@ $
     & phi.alt = - psi \
     &- k^2 phi.alt - 3 ( a' ) / ( a ) phi.alt' - 3 ( a' / a)^( 2 ) phi.alt = 4 pi G a^( 2 ) dot.c delta rho_( t o t ) \
     & phi.alt' + ( a' ) / ( a ) phi.alt = - 4 pi G a^( 2 ) dot.c [ ( rho + p ) v ]_( t o t ) \
-    & phi.alt''+ 3 ( a' ) / ( a ) phi.alt' + ( 2 ( a^(prime prime) ) / ( a ) - ( a^( prime 2 ) ) / ( a^( 2 ) ) ) phi.alt = 4 pi G a^( 2 ) dot.c delta p_( t o t )
+    & phi.alt''+ 3 ( a' ) / ( a ) phi.alt' + (2  ( a^(prime prime) ) / ( a ) - ( a^( prime 2 ) ) / ( a^( 2 ) ) ) phi.alt = 4 pi G a^( 2 ) dot.c delta p_( t o t )
 $
 Here notice that we don't assume that the universe have only one
 component but many components, thus the energy density and pressure

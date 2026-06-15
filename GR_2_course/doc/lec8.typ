@@ -207,7 +207,7 @@ Now we use some trick to evaluate this condition. A fact is that the
 particle and anti-particle have opposite chemical potential, thus we
 have at equilibrium:
 $
-    N^( e q ) = ( ( m_( p ) T ) / ( 2 pi ) )^( 3 slash 2 ) e^( - ( m_( p ) - mu_( B ) ) / ( T ) ), quad N_( overline(B) )^(e q ) = ( ( m_( p ) T ) / ( 2 pi ) )^( 3 slash 2 ) e^( - ( m_( p ) + mu_( B ) ) / ( T ) ).
+    N_B^( e q ) = ( ( m_( p ) T ) / ( 2 pi ) )^( 3 slash 2 ) e^( - ( m_( p ) - mu_( B ) ) / ( T ) ), quad N_( overline(B) )^(e q ) = ( ( m_( p ) T ) / ( 2 pi ) )^( 3 slash 2 ) e^( - ( m_( p ) + mu_( B ) ) / ( T ) ).
 $
 Thus we know that:
 $

@@ -78,8 +78,8 @@ number density between particle and antiparticle is given by:
     at $T >> m, mu$ is given by:
     $
         Delta N_i = cases(
-            mu T^3 slash 6 quad "fermion",
-            mu T^3 slash 3 quad "boson"
+            mu T^2 slash 6 quad "fermion",
+            mu T^2 slash 3 quad "boson"
         )
     $
 ]
@@ -215,7 +215,7 @@ as the temperature at which deuterium can survive and being generated.
 
 The Saha equation for the above reaction is:
 $
-    (N_n N_p)/ N_D = ( ( m_p T ) / ( 2 pi ) )^( 3 slash 2 ) upright(e)^( I_D slash T )
+    (N_n N_p)/ N_D = ( ( m_p T ) / ( 2 pi ) )^( 3 slash 2 ) upright(e)^( -I_D slash T )
 $
 We can use the relation that $N_p = eta N_gamma$ and
 $N_gamma tilde T^3$, and $I_D$ is the binding energy of deuterium
